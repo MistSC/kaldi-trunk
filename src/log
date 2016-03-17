@@ -1,0 +1,78 @@
+The version of configure script matches kaldi.mk version. Good.
+test -d  || mkdir 
+make -C base 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/base'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/base'
+make -C matrix 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/matrix'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/matrix'
+make -C util 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/util'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/util'
+make -C tree 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/tree'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/tree'
+make -C thread 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/thread'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/thread'
+make -C gmm 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/gmm'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/gmm'
+make -C transform 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/transform'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/transform'
+make -C feat 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/feat'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/feat'
+make -C hmm 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/hmm'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/hmm'
+make -C sgmm 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/sgmm'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/sgmm'
+make -C fstext 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/fstext'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/fstext'
+make -C lm 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/lm'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/lm'
+make -C lat 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/lat'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/lat'
+make -C decoder 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/decoder'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/decoder'
+make -C kws 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/kws'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/kws'
+make -C cudamatrix 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/cudamatrix'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/cudamatrix'
+make -C nnet 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/nnet'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/nnet'
+make -C sgmm2 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/sgmm2'
+make[1]: Nothing to be done for `all'.
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/sgmm2'
+make -C nnet2 
+make[1]: Entering directory `/home/shen/kaldi-trunk/src/nnet2'
+g++ -std=c++11 -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/home/shen/kaldi-trunk/tools/ATLAS/include -I/home/shen/kaldi-trunk/tools/openfst/include  -g  -DHAVE_CUDA -I/usr/local/cuda/include    -c -o train-nnet.o train-nnet.cc
+make[1]: Leaving directory `/home/shen/kaldi-trunk/src/nnet2'

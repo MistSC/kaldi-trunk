@@ -1,0 +1,6 @@
+<NnetProto>
+<AffineTransform> <InputDim> 5 <OutputDim> 10 <BiasMean> -2.000000 <BiasRange> 4.000000 <ParamStddev> 0.368932 <MaxNorm> 0.000000
+<Sigmoid> <InputDim> 10 <OutputDim> 10
+<AffineTransform> <InputDim> 10 <OutputDim> 5 <BiasMean> 0.000000 <BiasRange> 0.000000 <ParamStddev> 1.278019 <LearnRateCoef> 1.000000 <BiasLearnRateCoef> 0.100000
+<Softmax> <InputDim> 5 <OutputDim> 5
+</NnetProto>
