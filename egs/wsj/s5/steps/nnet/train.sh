@@ -427,7 +427,7 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 40 11 50 20 >$nnet_proto || exit 1
+        $num_fea $num_tgt 2 40 11 128 16 >$nnet_proto || exit 1
       ;;
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac

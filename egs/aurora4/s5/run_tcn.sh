@@ -7,7 +7,7 @@
 
 
 #train TCN 
-dir=exp/tri5g_tcn
+dir=exp/tri5i_tcn
 ali=exp/tri2b_multi_ali_si84
 ali_dev=exp/tri2b_multi_ali_dev_0330
 #feature_transform=exp/tri3a_dnn_pretrain/final.feature_transform
