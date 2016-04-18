@@ -153,6 +153,7 @@ int main(int argc, char *argv[]) {
 
       // fwd-pass, nnet,
       nnet.Feedforward(feats_transf, &nnet_out);
+
       if (!KALDI_ISFINITE(nnet_out.Sum())) { // check there's no nan/inf,
         KALDI_ERR << "NaN or inf found in nn-output for " << utt;
       }

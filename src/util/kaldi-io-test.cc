@@ -349,9 +349,9 @@ int main(int argc, const char** argv) {
 #endif
 
   UnitTestNativeFilename();
-  UnitTestIoNew(false);
   UnitTestIoNew(true);
-  UnitTestIoPipe(true);
+  UnitTestIoNew(false);
+  UnitTestIoPipe(false);
   UnitTestIoPipe(false);
   UnitTestIoStandard();
   UnitTestClassifyRxfilename();

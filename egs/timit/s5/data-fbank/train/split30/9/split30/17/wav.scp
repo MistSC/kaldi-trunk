@@ -1,0 +1,4 @@
+FTMG0_SI1532 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR2/FTMG0/SI1532.WAV |
+FTMG0_SI2162 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR2/FTMG0/SI2162.WAV |
+FTMG0_SI902 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR2/FTMG0/SI902.WAV |
+FTMG0_SX182 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR2/FTMG0/SX182.WAV |

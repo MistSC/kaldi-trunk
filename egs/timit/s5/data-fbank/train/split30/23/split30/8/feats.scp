@@ -1,0 +1,5 @@
+MPGR0_SX150 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:622769
+MPGR0_SX240 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:625103
+MPGR0_SX330 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:628646
+MPGR0_SX420 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:632722
+MPGR0_SX60 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:637655

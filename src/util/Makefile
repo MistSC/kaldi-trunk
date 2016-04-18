@@ -5,6 +5,7 @@ all:
 
 include ../kaldi.mk
 
+BINFILES = kaldi-io-test
 TESTFILES = const-integer-set-test stl-utils-test text-utils-test \
     edit-distance-test hash-list-test kaldi-io-test parse-options-test \
     kaldi-table-test simple-options-test

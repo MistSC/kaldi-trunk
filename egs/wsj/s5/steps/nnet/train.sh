@@ -21,7 +21,7 @@ nnet_init=          # (optional) use this pre-initialized NN,
 nnet_proto=         # (optional) use this NN prototype for initialization,
 
 # feature processing,
-splice=5            # (default) splice features both-ways along time axis,
+splice=4            # (default) splice features both-ways along time axis,
 cmvn_opts=          # (optional) adds 'apply-cmvn' to input feature pipeline, see opts,
 delta_opts=         # (optional) adds 'add-deltas' to input feature pipeline, see opts,
 ivector=            # (optional) adds 'append-vector-to-feats', it's rx-filename,
@@ -427,7 +427,18 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 40 11 128 16 >$nnet_proto || exit 1
+        $num_fea $num_tgt 2 40 9 64 16 >$nnet_proto || exit 1
+      ;;
+    tcn_dnn)
+      echo "==========TCN initializing==================="
+      echo "===========input feature dimension==========="
+      echo $num_fea
+      echo $num_tgt
+      #echo "hidden layer number"
+      #echo $hid_layers
+      #echo $proto_opt
+      utils/nnet/make_tcn_proto.py $proto_opts \
+        $num_fea $num_tgt 2 40 9 64 16 >$nnet_proto || exit 1
       ;;
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac

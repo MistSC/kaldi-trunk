@@ -1,0 +1,12 @@
+FMAH0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:3191
+FMML0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:3436
+FNMR0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:3681
+FREW0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:3926
+FSEM0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:4171
+MAJC0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:4416
+MBDG0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:4661
+MBNS0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:4906
+MBWM0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:5151
+MCSH0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:5396
+MDLF0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:5641
+MDLS0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_dev.ark:5886

@@ -1,0 +1,8 @@
+MGRT0_SI1450 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:60812
+MGRT0_SI2080 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:75267
+MGRT0_SI820 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:80751
+MGRT0_SX10 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:94997
+MGRT0_SX100 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:102091
+MGRT0_SX190 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:113601
+MGRT0_SX280 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:120419
+MGRT0_SX370 /home/shen/kaldi-trunk/egs/timit/s5/fbank/raw_fbank_test.5.ark:125144

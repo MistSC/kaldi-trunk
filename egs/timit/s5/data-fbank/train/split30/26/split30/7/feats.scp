@@ -1,0 +1,5 @@
+MRPC1_SX402 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.9.ark:627879
+MRPC1_SX42 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.9.ark:631213
+MRRE0_SI1334 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.9.ark:633938
+MRRE0_SI704 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.9.ark:640783
+MRRE0_SI952 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.9.ark:645275

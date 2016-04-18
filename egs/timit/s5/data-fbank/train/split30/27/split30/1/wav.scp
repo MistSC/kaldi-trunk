@@ -1,0 +1,4 @@
+MSAT1_SI1073 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR6/MSAT1/SI1073.WAV |
+MSAT1_SI1703 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR6/MSAT1/SI1703.WAV |
+MSAT1_SI2333 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR6/MSAT1/SI2333.WAV |
+MSAT1_SX173 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR6/MSAT1/SX173.WAV |

@@ -2,7 +2,7 @@
 . ./cmd.sh ## You'll want to change cmd.sh to something that will work on your system.
            ## This relates to the queue.
 
-expindex=tri_dnn_layerwise_pretrain      # experiment index
+expindex=tri4b_dnn      # experiment index
 
 #Now begin train DNN systems on multi data
 . ./path.sh
@@ -11,7 +11,7 @@ ali=exp/tri2b_multi_ali_si84
 ali_dev=exp/tri2b_multi_ali_dev_0330
 echo "Layerwise pretrain DNN training"
   $cuda_cmd $dir/_train_nnet.log \
-    steps/nnet/train_new.sh --hid-layers 4 --learn-rate 0.008 --network-type "dnn" \
+    steps/nnet/train_new.sh --hid-layers 5 --learn-rate 0.008 --network-type "dnn" \
     data-fbank/train_si84_multi data-fbank/dev_0330 data/lang $ali $ali_dev $dir || exit 1;
 
 #Make graph and decode

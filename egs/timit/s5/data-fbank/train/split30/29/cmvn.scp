@@ -1,0 +1,15 @@
+MTLB0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:105846
+MTLC0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:106091
+MTML0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:106336
+MTMN0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:106581
+MTMT0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:106826
+MTPF0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:107071
+MTPG0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:107316
+MTPP0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:107561
+MTPR0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:107806
+MTQC0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:108051
+MTRC0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:108296
+MTRR0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:108541
+MTRT0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:108786
+MTWH1 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:109031
+MTXS0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_train.ark:109276

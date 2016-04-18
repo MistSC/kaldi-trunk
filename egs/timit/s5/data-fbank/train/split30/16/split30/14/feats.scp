@@ -1,0 +1,4 @@
+MGSL0_SX264 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.6.ark:239117
+MGSL0_SX354 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.6.ark:242946
+MGSL0_SX444 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.6.ark:246892
+MGSL0_SX84 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.6.ark:251695

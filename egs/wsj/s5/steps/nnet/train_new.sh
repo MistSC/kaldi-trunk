@@ -416,8 +416,7 @@ else
         echo "# initializing the NN nnet_pretrain_layer${i}.proto -> nnet_pretrain_layer${i}.init"
         nnet-initialize $dir_m/nnet_pretrain_layer${i}.proto $dir_m/nnet_pretrain_layer${i}.init
         echo "# concat "
-        j=$((i-1))
-        nnet-concat $dir_m/../layer${j}.init $dir_m/nnet_pretrain_layer${i}.init $dir_m/nnet_pretrain_layer${i}_final.init
+        nnet-concat $dir_m/../layer$(($i-1)).init $dir_m/nnet_pretrain_layer${i}.init $dir_m/nnet_pretrain_layer${i}_final.init
         steps/nnet/train_for_pretrain_scheduler.sh \
           ${scheduler_opts} \
           ${train_tool:+ --train-tool "$train_tool"} \
@@ -443,8 +442,7 @@ else
       echo "# initializing the NN nnet_pretrain_layer_last.proto -> nnet_pretrain_layer_last.init"
       nnet-initialize $dir_l/nnet_pretrain_layer_last.proto $dir_l/nnet_pretrain_layer_last.init
       echo "# concat "
-      ((j++))
-      nnet-concat $dir_l/../layer${j}.init $dir_l/nnet_pretrain_layer_last.init $dir_l/nnet_pretrain_layer_last_final.init
+      nnet-concat $dir_l/../layer$(($i-1)).init $dir_l/nnet_pretrain_layer_last.init $dir_l/nnet_pretrain_layer_last_final.init
       steps/nnet/train_for_pretrain_scheduler.sh \
         ${scheduler_opts} \
         ${train_tool:+ --train-tool "$train_tool"} \
@@ -465,7 +463,7 @@ else
       dir_f=$dir/pretrain_1
       echo " make prototype of nnet_pretrain_layer1.proto"
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 40 11 64 32 >$dir_f/nnet_pretrain_layer1.proto || exit 1
+        $num_fea $num_tgt 1 23 11 'tcn' 64 16 'dnn' >$dir_f/nnet_pretrain_layer1.proto || exit 1
       echo "# initializing the NN nnet_pretrain_layer1.proto -> nnet_pretrain_layer1.init"
       nnet-initialize $dir_f/nnet_pretrain_layer1.proto $dir_f/nnet_pretrain_layer1.init
       steps/nnet/train_for_pretrain_scheduler.sh \
@@ -489,7 +487,7 @@ else
         dir_m=$dir/pretrain_$i
         echo "# make prototype of nnet_pretrain_layer${i}.proto"
         utils/nnet/make_tcn_proto.py $proto_opts \
-          2048 $num_tgt 2 64 32 64 32 >$dir_m/nnet_pretrain_layer${i}.proto || exit 1
+          1024 $num_tgt 1 'tcn' 64 16 64 16 'dnn' >$dir_m/nnet_pretrain_layer${i}.proto || exit 1
         echo "# initializing the NN nnet_pretrain_layer${i}.proto -> nnet_pretrain_layer${i}.init"
         nnet-initialize $dir_m/nnet_pretrain_layer${i}.proto $dir_m/nnet_pretrain_layer${i}.init
         echo "# concat "
@@ -515,7 +513,7 @@ else
       dir_l=$dir/pretrain_last
       echo "# make prototype of nnet_pretrain_layer_last.proto"
       utils/nnet/make_tcn_proto.py $proto_opts \
-        2048 $num_tgt 2 64 32 64 32 >$dir_l/nnet_pretrain_layer_last.proto || exit 1
+        1024 $num_tgt 1 'tcn' 64 16 64 16 'dnn' >$dir_l/nnet_pretrain_layer_last.proto || exit 1
       echo "# initializing the NN nnet_pretrain_layer_last.proto -> nnet_pretrain_layer_last.init"
       nnet-initialize $dir_l/nnet_pretrain_layer_last.proto $dir_l/nnet_pretrain_layer_last.init
       echo "# concat "
@@ -533,6 +531,151 @@ else
         $dir_l/nnet_pretrain_layer_last_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_l || exit 1
       # copy final.nnet to main folder
       cp $dir_l/final.nnet $dir_l/../
+      ;;
+    hybrid_tdnn)
+      echo "# Network type: hybrid tdnn"
+      hid_layers=4
+      tcn_proto_array=(40 11 64 16 64 16 64 16)
+      dnn_proto_array=(1024 1024 1024 1024)
+      tcn_layers=2
+      dnn_layers=2
+      #network_prototype="$num_fea $num_tgt $hid_layers tcn $tcn_prototype dnn $dnn_prototype";
+      # first tcn layer
+      [ ! -d $dir/pretrain_1 ] && mkdir $dir/pretrain_1
+      dir_f=$dir/pretrain_1
+      echo " make prototype of nnet_pretrain_layer1.proto"
+      utils/nnet/make_tcn_proto.py $proto_opts \
+        $num_fea $num_tgt 1 \
+        'tcn' ${tcn_proto_array[0]} ${tcn_proto_array[1]} ${tcn_proto_array[2]} ${tcn_proto_array[3]} \
+        'dnn' \
+        >$dir_f/nnet_pretrain_layer1.proto || exit 1
+      echo "# initializing the NN nnet_pretrain_layer1.proto -> nnet_pretrain_layer1.init"
+      nnet-initialize $dir_f/nnet_pretrain_layer1.proto $dir_f/nnet_pretrain_layer1.init
+      steps/nnet/train_for_pretrain_scheduler.sh \
+        ${scheduler_opts} \
+        ${train_tool:+ --train-tool "$train_tool"} \
+        ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+        ${feature_transform:+ --feature-transform $feature_transform} \
+        --learn-rate $learn_rate \
+        ${frame_weights:+ --frame-weights "$frame_weights"} \
+        ${utt_weights:+ --utt-weights "$utt_weights"} \
+        ${config:+ --config $config} \
+        $dir_f/nnet_pretrain_layer1.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_f || exit 1
+      # remove the xxx.init/xxx.nnet tail
+      echo "# remove the final.nnet last two comopnent"
+      nnet-remove-component $dir_f/final.nnet 0 $dir_f/final.nnet
+      nnet-remove-component $dir_f/final.nnet 0 $dir_f/../layer1.init
+
+      # tcn layers
+      for((i=2;i<$tcn_layers+1;i++));do
+        [ ! -d $dir/pretrain_$i ] && mkdir $dir/pretrain_$i
+        dir_m=$dir/pretrain_$i
+        echo "# make prototype of nnet_pretrain_layer${i}.proto"
+        utils/nnet/make_tcn_proto.py $proto_opts \
+          $((${tcn_proto_array[$i]}*${tcn_proto_array[$i+1]})) $num_tgt 1 \
+          'tcn' ${tcn_proto_array[2*i-2]} ${tcn_proto_array[2*i-1]} ${tcn_proto_array[2*i]} ${tcn_proto_array[2*i+1]}  \
+          'dnn' \
+          >$dir_m/nnet_pretrain_layer${i}.proto || exit 1
+        echo "# initializing the NN nnet_pretrain_layer${i}.proto -> nnet_pretrain_layer${i}.init"
+        nnet-initialize $dir_m/nnet_pretrain_layer${i}.proto $dir_m/nnet_pretrain_layer${i}.init
+        echo "# concat "
+        nnet-concat $dir_m/../layer$(($i-1)).init $dir_m/nnet_pretrain_layer${i}.init $dir_m/nnet_pretrain_layer${i}_final.init
+        steps/nnet/train_for_pretrain_scheduler.sh \
+          ${scheduler_opts} \
+          ${train_tool:+ --train-tool "$train_tool"} \
+          ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+          ${feature_transform:+ --feature-transform $feature_transform} \
+          --learn-rate $learn_rate \
+          ${frame_weights:+ --frame-weights "$frame_weights"} \
+          ${utt_weights:+ --utt-weights "$utt_weights"} \
+          ${config:+ --config $config} \
+          $dir_m/nnet_pretrain_layer${i}_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_m || exit 1
+        # remove the xxx.init/xxx.nnet tail
+        echo "# remove the final.nnet last two comopnent"
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/final.nnet
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/../layer${i}.init
+      done
+
+      # concat projection layer
+      # dnn first layer
+      echo "# Projection layer to concat TCN and DNN"
+      [ ! -d $dir/pretrain_${i} ] && mkdir $dir/pretrain_${i}
+      dir_m=$dir/pretrain_${i}
+      echo $((${tcn_proto_array[2*(i-1)]}*${tcn_proto_array[2*(i-1)+1]}))
+      echo $num_tgt
+      echo ${dnn_proto_array[0]}
+      utils/nnet/make_tcn_projection_proto.py ${tcn_proto_array[2*(i-1)]} ${tcn_proto_array[2*(i-1)+1]} $num_tgt ${dnn_proto_array[0]} \
+        >$dir_m/nnet_pretrain_layer${i}.proto || exit 1
+      echo "# initializing the NN nnet_pretrain_layer${i}.proto -> nnet_pretrain_layer${i}.init"
+      nnet-initialize $dir_m/nnet_pretrain_layer${i}.proto $dir_m/nnet_pretrain_layer${i}.init
+      echo "# concat "
+      nnet-concat $dir_m/../layer$(($i-1)).init $dir_m/nnet_pretrain_layer${i}.init $dir_m/nnet_pretrain_layer${i}_final.init
+        steps/nnet/train_for_pretrain_scheduler.sh \
+          ${scheduler_opts} \
+          ${train_tool:+ --train-tool "$train_tool"} \
+          ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+          ${feature_transform:+ --feature-transform $feature_transform} \
+          --learn-rate $learn_rate \
+          ${frame_weights:+ --frame-weights "$frame_weights"} \
+          ${utt_weights:+ --utt-weights "$utt_weights"} \
+          ${config:+ --config $config} \
+          $dir_m/nnet_pretrain_layer${i}_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_m || exit 1
+        # remove the xxx.init/xxx.nnet tail
+        echo "# remove the final.nnet last two comopnent"
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/final.nnet
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/../layer${i}.init
+
+
+      # dnn layers
+      for((i=$tcn_layers+2;i<$tcn_layers+$dnn_layers;i++));do
+        [ ! -d $dir/pretrain_$i ] && mkdir $dir/pretrain_$i
+        dir_m=$dir/pretrain_$i
+        echo "# make prototype of nnet_pretrain_layer${i}.proto"
+        utils/nnet/make_nnet_proto.py $proto_opts \
+          ${dnn_proto_array[i-tcn_layers-2]} $num_tgt 1 ${dnn_proto_array[i-tcn_layers-1]} >$dir_m/nnet_pretrain_layer${i}.proto || exit 1
+        echo "# initializing the NN nnet_pretrain_layer${i}.proto -> nnet_pretrain_layer${i}.init"
+        nnet-initialize $dir_m/nnet_pretrain_layer${i}.proto $dir_m/nnet_pretrain_layer${i}.init
+        echo "# concat "
+        nnet-concat $dir_m/../layer$(($i-1)).init $dir_m/nnet_pretrain_layer${i}.init $dir_m/nnet_pretrain_layer${i}_final.init
+        steps/nnet/train_for_pretrain_scheduler.sh \
+          ${scheduler_opts} \
+          ${train_tool:+ --train-tool "$train_tool"} \
+          ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+          ${feature_transform:+ --feature-transform $feature_transform} \
+          --learn-rate $learn_rate \
+          ${frame_weights:+ --frame-weights "$frame_weights"} \
+          ${utt_weights:+ --utt-weights "$utt_weights"} \
+          ${config:+ --config $config} \
+          $dir_m/nnet_pretrain_layer${i}_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_m || exit 1
+        # remove the xxx.init/xxx.nnet tail
+        echo "# remove the final.nnet last two comopnent"
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/final.nnet
+        nnet-remove-component $dir_m/final.nnet 0 $dir_m/../layer${i}.init
+      done
+      
+      # last dnn layer
+      [ ! -d $dir/pretrain_last ] && mkdir $dir/pretrain_last
+      dir_l=$dir/pretrain_last
+      echo "# make prototype of nnet_pretrain_layer_last.proto"
+      utils/nnet/make_nnet_proto.py $proto_opts \
+        ${dnn_proto_array[i-tcn_layers-2]} $num_tgt 1 ${dnn_proto_array[i-tcn_layers-1]} >$dir_l/nnet_pretrain_layer_last.proto || exit 1
+      echo "# initializing the NN nnet_pretrain_layer_last.proto -> nnet_pretrain_layer_last.init"
+      nnet-initialize $dir_l/nnet_pretrain_layer_last.proto $dir_l/nnet_pretrain_layer_last.init
+      echo "# concat "
+      nnet-concat $dir_l/../layer$(($i-1)).init $dir_l/nnet_pretrain_layer_last.init $dir_l/nnet_pretrain_layer_last_final.init
+      steps/nnet/train_for_pretrain_scheduler.sh \
+        ${scheduler_opts} \
+        ${train_tool:+ --train-tool "$train_tool"} \
+        ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+        ${feature_transform:+ --feature-transform $feature_transform} \
+        --learn-rate $learn_rate \
+        ${frame_weights:+ --frame-weights "$frame_weights"} \
+        ${utt_weights:+ --utt-weights "$utt_weights"} \
+        ${config:+ --config $config} \
+        $dir_l/nnet_pretrain_layer_last_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_l || exit 1
+      # copy final.nnet to main folder
+      cp $dir_l/final.nnet $dir_l/../
+
       ;;
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac

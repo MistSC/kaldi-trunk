@@ -1,0 +1,5 @@
+FNLP0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_test.ark:1231
+FPAS0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_test.ark:1476
+FPKT0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_test.ark:1721
+MBPM0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_test.ark:1966
+MCMJ0 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/cmvn_test.ark:2211

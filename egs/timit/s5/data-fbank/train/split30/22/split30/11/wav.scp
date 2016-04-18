@@ -1,0 +1,4 @@
+MMPM0_SI1061 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR8/MMPM0/SI1061.WAV |
+MMPM0_SI1691 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR8/MMPM0/SI1691.WAV |
+MMPM0_SI2321 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR8/MMPM0/SI2321.WAV |
+MMPM0_SX161 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TRAIN/DR8/MMPM0/SX161.WAV |

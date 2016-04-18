@@ -142,13 +142,23 @@ if [ ! -z "$blocksoftmax_dims" ]; then
 fi
 
 # Run the decoding in the queue,
+#if [ $stage -le 0 ]; then
+#  $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
+#    nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
+#    latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
+#    --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
+#    $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
+#fi
+frame_index=11
+mkdir -p $dir/EachLayerFeats
 if [ $stage -le 0 ]; then
   $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
-    nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
+    nnet-forward-new $nnet_forward_opts --is-binary=false --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu --frame-index=$frame_index --is-binary=false --file-name=$dir/EachLayerFeats "$nnet" "$feats" ark:- \| \
     latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
     --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
     $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
 fi
+
 
 # Run the scoring
 if ! $skip_scoring ; then

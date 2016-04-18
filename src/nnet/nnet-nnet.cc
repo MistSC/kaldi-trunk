@@ -146,6 +146,198 @@ void Nnet::Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *o
   propagate_buf_[0].Resize(0,0);
   propagate_buf_[1].Resize(0,0);
 }
+/*
+void Nnet::Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *out, bool binary, const std::string &filename) 
+{
+  KALDI_ASSERT(NULL != out);
+
+  if (NumComponents() == 0) { 
+    out->Resize(in.NumRows(), in.NumCols());
+    out->CopyFromMat(in); 
+    return; 
+  }
+
+  if (NumComponents() == 1) {
+    Output output0(filename+"/layer0", binary, true);
+    in.Write(output0.Stream(), binary);
+    components_[0]->Propagate(in, out);
+    Output output1(filename+"/layer1", binary, true);
+    out->Write(output1.Stream(), binary);
+    return;
+  }
+
+  // we need at least 2 input buffers
+  KALDI_ASSERT(propagate_buf_.size() >= 2);
+
+  // prepare file
+  std::vector<std::string> filenames;
+  std::vector<Output*> outputs;
+  for(int32 i=0;i<=NumComponents();i++)
+  {
+    string fn=filename+"/layer"+ToString<int>(i);
+    filenames.push_back(fn);
+    Output *o = new Output(fn, binary, true);
+    outputs.push_back(o);
+    //outputs.push_back(Output(fn, binary, true));
+  }  
+
+  // propagate by using exactly 2 auxiliary buffers
+  int32 L = 0;
+  components_[L]->Propagate(in, &propagate_buf_[L%2]);
+  in.Write(outputs[0]->Stream(), binary);
+  outputs[0]->Close();
+
+  for(L++; L<=NumComponents()-2; L++) {
+    components_[L]->Propagate(propagate_buf_[(L-1)%2], &propagate_buf_[L%2]);
+    propagate_buf_[(L-1)%2].Write(outputs[L]->Stream(), binary);
+    outputs[L]->Close();
+  }
+
+  propagate_buf_[(L-1)%2].Write(outputs[L]->Stream(), binary);
+  outputs[L]->Close();
+  components_[L]->Propagate(propagate_buf_[(L-1)%2], out);
+  out->Write(outputs[L]->Stream(), binary);
+  outputs[L+1]->Close();
+  // release the buffers we don't need anymore
+  propagate_buf_[0].Resize(0,0);
+  propagate_buf_[1].Resize(0,0);
+  for (std::vector<Output*>::iterator i=outputs.begin();i!=outputs.end();++i)
+  {
+    delete *i;
+  }
+}
+*/
+
+/*
+void Nnet::Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *out, bool binary, const std::string &filename) 
+{
+  KALDI_ASSERT(NULL != out);
+ 
+  KALDI_LOG << filename;
+
+  if (NumComponents() == 0) { 
+    out->Resize(in.NumRows(), in.NumCols());
+    out->CopyFromMat(in); 
+    return; 
+  }
+
+  if (NumComponents() == 1) {
+    Output output0(filename+"/layer0", binary, false);
+    in.Write(output0.Stream(), binary);
+    components_[0]->Propagate(in, out);
+    Output output1(filename+"/layer1", binary, false);
+    out->Write(output1.Stream(), binary);
+    return;
+  }
+
+  // we need at least 2 input buffers
+  KALDI_ASSERT(propagate_buf_.size() >= 2);
+
+  // prepare file
+  std::vector<std::string> filenames;
+  std::vector<Output*> outputs;
+  for(int32 i=0;i<=NumComponents();i++)
+  {
+    string fn=filename+"/layer"+ToString<int>(i);
+    filenames.push_back(fn);
+  }  
+  
+  for(std::vector<std::string>::iterator i=filenames.begin();i!=filenames.end();++i)
+  {
+    KALDI_LOG << *i;
+  }
+
+  // propagate by using exactly 2 auxiliary buffers
+  Output ot;
+  int32 L = 0;
+  components_[L]->Propagate(in, &propagate_buf_[L%2]);
+  ot.Open(filenames[0], binary, false);
+  in.Write(ot.Stream(), binary);
+  ot.Close();
+
+  for(L++; L<=NumComponents()-2; L++) {
+    components_[L]->Propagate(propagate_buf_[(L-1)%2], &propagate_buf_[L%2]);
+    ot.Open(filenames[L], binary, false);
+    propagate_buf_[(L-1)%2].Write(ot.Stream(), binary);
+    ot.Close();
+  }
+
+  ot.Open(filenames[L], binary, false);
+  propagate_buf_[(L-1)%2].Write(ot.Stream(), binary);
+  ot.Close();
+
+  components_[L]->Propagate(propagate_buf_[(L-1)%2], out);
+
+  ot.Open(filenames[L], binary, false);
+  out->Write(ot.Stream(), binary);
+  ot.Close();
+  // release the buffers we don't need anymore
+  propagate_buf_[0].Resize(0,0);
+  propagate_buf_[1].Resize(0,0);
+}
+*/
+
+
+void Nnet::Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *out, bool binary, const std::string &filename) 
+{
+  KALDI_ASSERT(NULL != out);
+ 
+  KALDI_LOG << filename;
+
+  if (NumComponents() == 0) { 
+    out->Resize(in.NumRows(), in.NumCols());
+    out->CopyFromMat(in); 
+    return; 
+  }
+
+  if (NumComponents() == 1) {
+    Output ot;
+    ot.Open(filename, binary, false);
+    WriteToken(ot.Stream(), binary, "<Layer0>");
+    in.Write(ot.Stream(), binary);
+    components_[0]->Propagate(in, out);
+    WriteToken(ot.Stream(), binary, "<Layer1>");
+    out->Write(ot.Stream(), binary);
+    ot.Close();
+    return;
+  }
+
+  // we need at least 2 input buffers
+  KALDI_ASSERT(propagate_buf_.size() >= 2);
+  
+  // file to store data
+  std::string file = filename+"/features.txt";
+
+  // propagate by using exactly 2 auxiliary buffers
+  Output ot;
+  int32 L = 0;
+  components_[L]->Propagate(in, &propagate_buf_[L%2]);
+  ot.Open(file, binary, false);
+  WriteToken(ot.Stream(), binary, "<Layer0>");
+  in.Write(ot.Stream(), binary);
+
+  for(L++; L<=NumComponents()-2; L++) {
+    components_[L]->Propagate(propagate_buf_[(L-1)%2], &propagate_buf_[L%2]);
+    WriteToken(ot.Stream(), binary, "<Layer"+ToString<int32>(L)+">");
+    propagate_buf_[(L-1)%2].Write(ot.Stream(), binary);
+  }
+  
+  WriteToken(ot.Stream(), binary, "<Layer"+ToString<int32>(L)+">");
+  propagate_buf_[(L-1)%2].Write(ot.Stream(), binary);
+
+  components_[L]->Propagate(propagate_buf_[(L-1)%2], out);
+ 
+  WriteToken(ot.Stream(), binary, "<Layer"+ToString<int32>(L+1)+">");
+  out->Write(ot.Stream(), binary);
+  ot.Close();
+  // release the buffers we don't need anymore
+  propagate_buf_[0].Resize(0,0);
+  propagate_buf_[1].Resize(0,0);
+}
+
+
+
+
 
 
 int32 Nnet::OutputDim() const {

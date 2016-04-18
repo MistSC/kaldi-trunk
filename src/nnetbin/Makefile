@@ -12,7 +12,7 @@ BINFILES = nnet-train-frmshuff \
         nnet-train-mpe-sequential \
         nnet-train-lstm-streams nnet-train-blstm-streams \
         rbm-train-cd1-frmshuff rbm-convert-to-nnet \
-        nnet-forward nnet-copy nnet-info nnet-concat nnet-remove-component \
+        nnet-forward nnet-forward-new nnet-copy nnet-info nnet-concat nnet-remove-component \
         transf-to-nnet cmvn-to-nnet nnet-initialize \
         nnet-kl-hmm-acc nnet-kl-hmm-mat-to-component \
 	    feat-to-post paste-post train-transitions \

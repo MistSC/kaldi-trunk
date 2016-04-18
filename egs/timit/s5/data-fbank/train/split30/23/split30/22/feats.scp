@@ -1,0 +1,4 @@
+MPRT0_SX220 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:888310
+MPRT0_SX310 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:892776
+MPRT0_SX40 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:895954
+MPRT0_SX400 /home/shen/kaldi-trunk/egs/timit/s5/mfcc/raw_mfcc_train.8.ark:899822

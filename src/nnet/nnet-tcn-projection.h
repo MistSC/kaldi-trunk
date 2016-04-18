@@ -175,58 +175,63 @@ class TCNProjectionComponent : public UpdatableComponent {
   }
   
   std::string Info() const {
-    return std::string("info" );
+    return std::string("\n weights" + MomentStatistics(weight_) + 
+           "\n bias" + MomentStatistics(bias_));
   }
+
   std::string InfoGradient() const {
-    return std::string("infograd");     
+    return std::string("\n weights grad" + MomentStatistics(weight_grad_) +     
+           "\n bias grad" + MomentStatistics(weight_grad_));
   }
 
   
   // X: batch * (i1*i2)
   void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out)
   {
-    KALDI_LOG<< "TCN Projection propagate start";
     // propagate
     out->AddMatMat(1.0, in, kNoTrans, weight_, kTrans, 0.0);
     // add bias
     out->AddVecToRows(1.0, bias_, 1.0);
-    KALDI_LOG<< "TCN Projection propagate end";
   }
 
   void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
                         const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff) 
   {
-    KALDI_LOG<< "TCN Projection back propagate start";
     // multiply error derivative by weights
     in_diff->AddMatMat(1.0, out_diff, kNoTrans, weight_, kNoTrans, 0.0);  
-    KALDI_LOG<< "TCN Projection back propagate end";
   }
 
 
   void Update(const CuMatrixBase<BaseFloat> &input, const CuMatrixBase<BaseFloat> &diff)
   {
-    KALDI_LOG<< "TCN Projection update start";
     // initial gradient parameters
     weight_grad_.Resize(wei_dim_3_, wei_dim_1_ * wei_dim_2_);
     bias_grad_.Resize(wei_dim_3_);
     // we use following hyperparameters from the option class
     const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
     const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
+    const BaseFloat mmt = opts_.momentum;
+    const BaseFloat l2 = opts_.l2_penalty;
+    const BaseFloat l1 = opts_.l1_penalty;
 
     // we will also need the number of frames in the mini-batch
     const int32 batch_size = input.NumRows();
 
     // compute gradient
-    //KALDI_LOG<<"diff size: "<<diff.NumRows()<<" "<<diff.NumCols();
-    //KALDI_LOG<<"input size: "<<input.NumRows()<<" "<<input.NumCols();
-    weight_grad_.AddMatMat(1.0, diff, kTrans, input, kNoTrans, 0.0);
-    //KALDI_LOG<<"weight grad size: "<<weight_grad_.NumRows()<<" "<<weight_grad_.NumCols();
-    bias_grad_.AddRowSumMat(1.0, diff, 0.0);
-    //KALDI_LOG<<"bias grad size: "<<bias_grad_.Dim();
+    weight_grad_.AddMatMat(1.0, diff, kTrans, input, kNoTrans, mmt);
+    bias_grad_.AddRowSumMat(1.0, diff, mmt);
+    // l2 regularization
+    if (l2 != 0.0)
+    {
+        weight_.AddMat(-lr*l2*batch_size, weight_);
+    }
+    if (l1 != 0.0)
+    {
+        cu::RegularizeL1(&weight_, &weight_grad_, lr*l1*batch_size, lr);
+    }
     //update
     weight_.AddMat(-lr, weight_grad_);
     bias_.AddVec(-lr_bias, bias_grad_);
-    KALDI_LOG<< "TCN Projection update end";
   }
 
 

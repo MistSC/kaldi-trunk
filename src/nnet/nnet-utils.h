@@ -201,7 +201,6 @@ void PosteriorToMatrixMapped(const Posterior &post, const TransitionModel &model
   (*mat) = m; 
 }
 
-
 } // namespace nnet1
 } // namespace kaldi
 

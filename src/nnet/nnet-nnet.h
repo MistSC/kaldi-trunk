@@ -48,6 +48,7 @@ class Nnet {
   void Backpropagate(const CuMatrixBase<BaseFloat> &out_diff, CuMatrix<BaseFloat> *in_diff);
   /// Perform forward pass through the network, don't keep buffers (use it when not training)
   void Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *out);
+  void Feedforward(const CuMatrixBase<BaseFloat> &in, CuMatrix<BaseFloat> *out, bool binary, const std::string &filename); // this one can store each layer features
 
   /// Dimensionality on network input (input feature dim.)
   int32 InputDim() const;

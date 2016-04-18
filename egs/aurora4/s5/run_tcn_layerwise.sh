@@ -2,7 +2,7 @@
 . ./cmd.sh ## You'll want to change cmd.sh to something that will work on your system.
            ## This relates to the queue.
 
-expindex=tri_tcn_layerwise_7l_64_32     # experiment index
+expindex=tri_tcn_layerwise_4l_40_9_64_32     # experiment index
 
 #Now begin train DNN systems on multi data
 . ./path.sh

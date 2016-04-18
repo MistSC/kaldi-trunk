@@ -234,7 +234,6 @@ class TCNComponent : public UpdatableComponent {
   //X *1 w1 *2 w2 = w1 * X * w2^T
   void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out) 
   {  
-     KALDI_LOG<< "TCN propagate start";
      int32 batch_size = in.NumRows();        // get batch size
      // give initial size
      CuMatrix<BaseFloat> output(batch_size, wei_1_j1_ * wei_2_j2_);
@@ -277,14 +276,12 @@ class TCNComponent : public UpdatableComponent {
        delete *i;
      delete w1;
      delete w2;
-     KALDI_LOG<< "TCN propagate end";
   }
 
 
   void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
                         const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)                       
   {
-    KALDI_LOG<< "TCN back-propagate start";
     int32 batch_size = in.NumRows();                  //get batch size
     // give initial size
     CuMatrix<BaseFloat> temp(batch_size, wei_1_i1_ * wei_2_j2_);
@@ -325,16 +322,17 @@ class TCNComponent : public UpdatableComponent {
       delete *i;
     delete w1;
     delete w2;
-    KALDI_LOG<< "TCN back-propagate end";
   }
 
   //update back propagation
   void Update(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &diff) 
   {
-    KALDI_LOG<< "TCN update start";
     // we use following hyperparameters from the option class
     const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
     const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
+    const BaseFloat mmt = opts_.momentum;
+    const BaseFloat l2 = opts_.l2_penalty;
+    const BaseFloat l1 = opts_.l1_penalty;
 
     // we will also need the number of frames in the mini-batch
     const int32 batch_size = in.NumRows();
@@ -387,16 +385,31 @@ class TCNComponent : public UpdatableComponent {
     CuVector<BaseFloat> w1_grad_vec_temp(wei_1_j1_ * wei_1_i1_);
     w1_grad_vec_temp.AddRowSumMat(1.0,w1_grad_batch);
     mode_1_wei_grad_.CopyRowsFromVec(w1_grad_vec_temp); 
+    mode_1_wei_grad_.AddMat(mmt,mode_1_wei_grad_);
     // compute w2 grad
     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp_w2,reshaped_diff,kTrans,w1_vec,kNoTrans,0.0);
     AddMatMatBatched<BaseFloat>(1.0,reshaped_w2_grad_batch,reshaped_temp_w2,kNoTrans,reshaped_input,kNoTrans,0.0);
     CuVector<BaseFloat> w2_grad_vec_temp(wei_2_j2_ * wei_2_i2_);
     w2_grad_vec_temp.AddRowSumMat(1.0,w2_grad_batch);
     mode_2_wei_grad_.CopyRowsFromVec(w2_grad_vec_temp);
+    mode_2_wei_grad_.AddMat(mmt,mode_2_wei_grad_);
     // bias
     CuVector<BaseFloat> bias_grad_vec_temp(wei_1_j1_ * wei_2_j2_);
     bias_grad_vec_temp.AddRowSumMat(1.0,diff);
     bias_grad_.CopyRowsFromVec(bias_grad_vec_temp);
+    bias_grad_.AddMat(mmt,bias_grad_);
+    // l2 regularization
+    if (l2 != 0.0)
+    {
+      mode_1_wei_grad_.AddMat(-lr*l2*batch_size,mode_1_wei_grad_);
+      mode_2_wei_grad_.AddMat(-lr*l2*batch_size,mode_2_wei_grad_);
+    }
+    // l1 regularization
+    if (l1 != 0.0)
+    {
+      cu::RegularizeL1(&mode_1_wei_, &mode_1_wei_grad_, lr*l1*batch_size, lr);
+      cu::RegularizeL1(&mode_2_wei_, &mode_2_wei_grad_, lr*l1*batch_size, lr);
+    }
     // update
     mode_1_wei_.AddMat(-lr, mode_1_wei_grad_);
     mode_2_wei_.AddMat(-lr,mode_2_wei_grad_);
@@ -416,7 +429,6 @@ class TCNComponent : public UpdatableComponent {
       delete *i;
     delete w1;
     delete w2;
-    KALDI_LOG<< "TCN update end";
   }
 
   const CuMatrixBase<BaseFloat>& GetCuMatrixBase(CuMatrix<BaseFloat>& cumatrix)
