@@ -9,9 +9,9 @@
 
 # training options,
 learn_rate=0.008
-momentum=0.5             # 0.2 0.5
+momentum=0               # 0.2 0.5
 l1_penalty=0             # 0.0002 0.0005
-l2_penalty=0.0002        # 0.0002 0.0005
+l2_penalty=0             # 0.0002 0.0005
 
 # data processing,
 train_tool="nnet-train-frmshuff"

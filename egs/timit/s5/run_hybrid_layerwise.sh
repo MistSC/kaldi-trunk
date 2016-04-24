@@ -5,16 +5,30 @@
 #Now begin train TCN systems on multi data
 . ./path.sh
 
+# training scheduler,
+learn_rate=0.008
+momentum=0
+l1_penalty=0
+l2_penalty=0.00002
 
 #train TCN 
 gmmdir=exp/tri3
-dir=exp/tri5c_hybrid
+dir=exp/tri5m_hybrid
 ali=${gmmdir}_ali
 data=data-fbank
 
+tcn_proto=(23 11 64 16 64 16 64 16)
+dnn_proto=(1024 1024 1024 1024)
+
 echo "Layerwise pretrain hybrid training"
 $cuda_cmd $dir/_train_nnet.log \
-  steps/nnet/train_new.sh --learn-rate 0.008 --network-type "hybrid_tdnn" \
+  steps/nnet/train_new.sh --network-type "hybrid_tdnn" \
+    --learn-rate $learn_rate \
+    --momentum $momentum \
+    --l1-penalty $l1_penalty \
+    --l2-penalty $l2_penalty \
+    --tcn-proto-array $tcn_proto \
+    --dnn-proto-array $dnn_proto \
     $data/train_tr90 $data/train_cv10 data/lang $ali $ali $dir || exit 1;
 
 #make graph and decode for average

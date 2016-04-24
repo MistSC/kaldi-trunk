@@ -1,0 +1,35 @@
+# paste-feats --length-tolerance=2 "ark:compute-fbank-feats  --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.9.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.9.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true ark:- ark,scp:/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.9.ark,/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.9.scp 
+# Started at Thu Apr 21 18:55:48 CST 2016
+#
+copy-feats --compress=true ark:- ark,scp:/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.9.ark,/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.9.scp 
+paste-feats --length-tolerance=2 'ark:compute-fbank-feats  --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.9.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.9.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
+compute-fbank-feats --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.9.scp ark:- 
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SI1961
+compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.9.scp ark:- 
+process-kaldi-pitch-feats ark:- ark:- 
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SX109
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SX19
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SX199
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SX289
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MPAM0_SX379
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SI1473
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SI2098
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SI838
+LOG (compute-fbank-feats:main():compute-fbank-feats.cc:174) Processed 10 utterances
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SX118
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SX208
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SX28
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SX298
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTAS1_SX388
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTLS0_SI1370
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTLS0_SI2000
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTLS0_SI740
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTLS0_SX110
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key MTLS0_SX20
+LOG (compute-fbank-feats:main():compute-fbank-feats.cc:178)  Done 19 out of 19 utterances.
+LOG (compute-kaldi-pitch-feats:main():compute-kaldi-pitch-feats.cc:111) Done 19 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 19 utterances.
+LOG (paste-feats:main():paste-feats.cc:157) Done 19 utts, errors on 0
+LOG (copy-feats:main():copy-feats.cc:101) Copied 19 feature matrices.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Thu Apr 21 18:55:49 CST 2016, elapsed time 1 seconds

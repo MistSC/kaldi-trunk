@@ -1,0 +1,8 @@
+MWBT0_SI1553 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SI1553.WAV |
+MWBT0_SI2183 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SI2183.WAV |
+MWBT0_SI923 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SI923.WAV |
+MWBT0_SX113 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SX113.WAV |
+MWBT0_SX203 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SX203.WAV |
+MWBT0_SX23 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SX23.WAV |
+MWBT0_SX293 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SX293.WAV |
+MWBT0_SX383 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR1/MWBT0/SX383.WAV |

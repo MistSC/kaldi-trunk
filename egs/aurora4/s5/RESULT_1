@@ -109,6 +109,10 @@
 %WER 36.72 [ 11793 / 32118, 1292 ins, 2307 del, 8194 sub ] exp/tri7d_hybrid/decode_tgpr_5k_test_B/wer_7
 %WER 35.62 [ 1907 / 5353, 82 ins, 676 del, 1149 sub ] exp/tri7d_hybrid/decode_tgpr_5k_test_C/wer_7
 %WER 54.45 [ 17489 / 32118, 900 ins, 6321 del, 10268 sub ] exp/tri7d_hybrid/decode_tgpr_5k_test_D/wer_7
+%WER 99.89 [ 74858 / 74942, 0 ins, 65814 del, 9044 sub ] exp/tri7e_hybrid/decode_tgpr_5k_eval92/wer_14
+%WER 99.89 [ 5347 / 5353, 0 ins, 4701 del, 646 sub ] exp/tri7e_hybrid/decode_tgpr_5k_test_A/wer_14
+%WER 99.89 [ 32082 / 32118, 0 ins, 28206 del, 3876 sub ] exp/tri7e_hybrid/decode_tgpr_5k_test_B/wer_14
+%WER 99.89 [ 5347 / 5353, 0 ins, 4701 del, 646 sub ] exp/tri7e_hybrid/decode_tgpr_5k_test_C/wer_14
 %WER 14.25 [ 10681 / 74942, 819 ins, 2763 del, 7099 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_eval92/wer_9
 %WER 3.66 [ 196 / 5353, 40 ins, 19 del, 137 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_test_A/wer_10
 %WER 8.11 [ 2604 / 32118, 279 ins, 525 del, 1800 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_test_B/wer_9

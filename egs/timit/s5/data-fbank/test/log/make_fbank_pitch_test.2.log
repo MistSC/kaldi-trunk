@@ -1,0 +1,37 @@
+# paste-feats --length-tolerance=2 "ark:compute-fbank-feats  --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.2.scp ark:- |" "ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.2.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |" ark:- | copy-feats --compress=true ark:- ark,scp:/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.2.ark,/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.2.scp 
+# Started at Thu Apr 21 18:55:48 CST 2016
+#
+paste-feats --length-tolerance=2 'ark:compute-fbank-feats  --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.2.scp ark:- |' 'ark,s,cs:compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.2.scp ark:- | process-kaldi-pitch-feats  ark:- ark:- |' ark:- 
+copy-feats --compress=true ark:- ark,scp:/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.2.ark,/home/shen/kaldi-trunk/egs/timit/s5/data-fbank/test/data/raw_fbank_pitch_test.2.scp 
+compute-fbank-feats --verbose=2 --config=conf/fbank.conf scp,p:data-fbank/test/log/wav.2.scp ark:- 
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FJLM0_SX233
+process-kaldi-pitch-feats ark:- ark:- 
+compute-kaldi-pitch-feats --verbose=2 --config=conf/pitch.conf scp,p:data-fbank/test/log/wav.2.scp ark:- 
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FJLM0_SX323
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FJLM0_SX413
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FJLM0_SX53
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SI1564
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SI2194
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SI934
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SX124
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SX214
+LOG (compute-fbank-feats:main():compute-fbank-feats.cc:174) Processed 10 utterances
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SX304
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SX34
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMGD0_SX394
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SI2185
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SI822
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SI925
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SX115
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SX205
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SX25
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SX295
+LOG (compute-fbank-feats:main():compute-fbank-feats.cc:174) Processed 20 utterances
+VLOG[2] (compute-fbank-feats:main():compute-fbank-feats.cc:175) Processed features for key FMLD0_SX385
+LOG (compute-fbank-feats:main():compute-fbank-feats.cc:178)  Done 20 out of 20 utterances.
+LOG (compute-kaldi-pitch-feats:main():compute-kaldi-pitch-feats.cc:111) Done 20 utterances, 0 with errors.
+LOG (process-kaldi-pitch-feats:main():process-kaldi-pitch-feats.cc:85) Post-processed pitch for 20 utterances.
+LOG (paste-feats:main():paste-feats.cc:157) Done 20 utts, errors on 0
+LOG (copy-feats:main():copy-feats.cc:101) Copied 20 feature matrices.
+# Accounting: time=1 threads=1
+# Ended (code 0) at Thu Apr 21 18:55:49 CST 2016, elapsed time 1 seconds

@@ -13,6 +13,10 @@ hid_layers=4        # nr. of hidden layers (before sotfmax or bottleneck),
 hid_dim=1024        # number of neurons per layer,
 bn_dim=             # (optional) adds bottleneck and one more hidden layer to the NN,
 dbn=                # (optional) prepend layers to the initialized NN,
+tcn_proto_array=(23 11 64 16 64 16 64 16)
+dnn_proto_array=(1024 1024 1024 1024)
+
+
 
 proto_opts=         # adds options to 'make_nnet_proto.py',
 cnn_proto_opts=     # adds options to 'make_cnn_proto.py',
@@ -42,6 +46,10 @@ num_tgt=           # (optional) specifiy number of NN outputs, to be used with '
 
 # training scheduler,
 learn_rate=0.008   # initial learning rate,
+momentum=0                  # 0.2 0.5
+l1_penalty=0                # 0.0002 0.0005
+l2_penalty=0          # 0.00001 
+
 scheduler_opts=    # options, passed to the training scheduler,
 train_tool=        # optionally change the training tool,
 train_tool_opts=   # options for the training tool,
@@ -397,6 +405,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
@@ -423,6 +434,9 @@ else
           ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
           ${feature_transform:+ --feature-transform $feature_transform} \
           --learn-rate $learn_rate \
+          --momentum $momentum \
+          --l1-penalty $l1_penalty \
+          --l2-penalty $l2_penalty \
           ${frame_weights:+ --frame-weights "$frame_weights"} \
           ${utt_weights:+ --utt-weights "$utt_weights"} \
           ${config:+ --config $config} \
@@ -449,6 +463,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
@@ -472,6 +489,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
@@ -499,6 +519,9 @@ else
           ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
           ${feature_transform:+ --feature-transform $feature_transform} \
           --learn-rate $learn_rate \
+          --momentum $momentum \
+          --l1-penalty $l1_penalty \
+          --l2-penalty $l2_penalty \
           ${frame_weights:+ --frame-weights "$frame_weights"} \
           ${utt_weights:+ --utt-weights "$utt_weights"} \
           ${config:+ --config $config} \
@@ -525,6 +548,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
@@ -534,11 +560,11 @@ else
       ;;
     hybrid_tdnn)
       echo "# Network type: hybrid tdnn"
-      hid_layers=4
-      tcn_proto_array=(40 11 64 16 64 16 64 16)
-      dnn_proto_array=(1024 1024 1024 1024)
-      tcn_layers=2
-      dnn_layers=2
+      #hid_layers=7
+      #tcn_proto_array=(23 11 64 16 64 16 64 16)
+      #dnn_proto_array=(1024 1024 1024 1024)
+      tcn_layers=$(((${#tcn_proto_array[*]}-2)/2))
+      dnn_layers=$((${#dnn_proto_array[*]}))
       #network_prototype="$num_fea $num_tgt $hid_layers tcn $tcn_prototype dnn $dnn_prototype";
       # first tcn layer
       [ ! -d $dir/pretrain_1 ] && mkdir $dir/pretrain_1
@@ -557,6 +583,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
@@ -586,6 +615,9 @@ else
           ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
           ${feature_transform:+ --feature-transform $feature_transform} \
           --learn-rate $learn_rate \
+          --momentum $momentum \
+          --l1-penalty $l1_penalty \
+          --l2-penalty $l2_penalty \
           ${frame_weights:+ --frame-weights "$frame_weights"} \
           ${utt_weights:+ --utt-weights "$utt_weights"} \
           ${config:+ --config $config} \
@@ -616,6 +648,9 @@ else
           ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
           ${feature_transform:+ --feature-transform $feature_transform} \
           --learn-rate $learn_rate \
+          --momentum $momentum \
+          --l1-penalty $l1_penalty \
+          --l2-penalty $l2_penalty \
           ${frame_weights:+ --frame-weights "$frame_weights"} \
           ${utt_weights:+ --utt-weights "$utt_weights"} \
           ${config:+ --config $config} \
@@ -643,6 +678,9 @@ else
           ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
           ${feature_transform:+ --feature-transform $feature_transform} \
           --learn-rate $learn_rate \
+          --momentum $momentum \
+          --l1-penalty $l1_penalty \
+          --l2-penalty $l2_penalty \
           ${frame_weights:+ --frame-weights "$frame_weights"} \
           ${utt_weights:+ --utt-weights "$utt_weights"} \
           ${config:+ --config $config} \
@@ -669,6 +707,9 @@ else
         ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
         ${feature_transform:+ --feature-transform $feature_transform} \
         --learn-rate $learn_rate \
+        --momentum $momentum \
+        --l1-penalty $l1_penalty \
+        --l2-penalty $l2_penalty \
         ${frame_weights:+ --frame-weights "$frame_weights"} \
         ${utt_weights:+ --utt-weights "$utt_weights"} \
         ${config:+ --config $config} \
