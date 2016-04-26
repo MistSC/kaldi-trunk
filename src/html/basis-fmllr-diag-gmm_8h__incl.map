@@ -1,0 +1,33 @@
+<map id="transform/basis&#45;fmllr&#45;diag&#45;gmm.h" name="transform/basis&#45;fmllr&#45;diag&#45;gmm.h">
+<area shape="rect" id="node4" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1163,560,1321,587"/>
+<area shape="rect" id="node25" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="687,245,851,272"/>
+<area shape="rect" id="node35" href="$mle-full-gmm_8h.html" title="gmm/mle&#45;full&#45;gmm.h" alt="" coords="645,96,803,123"/>
+<area shape="rect" id="node41" href="$mle-am-diag-gmm_8h.html" title="gmm/mle&#45;am&#45;diag&#45;gmm.h" alt="" coords="1066,96,1259,123"/>
+<area shape="rect" id="node44" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="2560,320,2689,347"/>
+<area shape="rect" id="node48" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="2181,245,2304,272"/>
+<area shape="rect" id="node50" href="$transform-common_8h.html" title="transform/transform\l&#45;common.h" alt="" coords="43,395,195,437"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="2167,709,2296,736"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1576,635,1709,661"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="725,709,864,736"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="2089,635,2207,661"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="787,635,924,661"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="2004,709,2143,736"/>
+<area shape="rect" id="node26" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="1289,320,1428,347"/>
+<area shape="rect" id="node34" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="779,320,892,347"/>
+<area shape="rect" id="node28" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="979,403,1153,429"/>
+<area shape="rect" id="node29" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1067,485,1205,512"/>
+<area shape="rect" id="node31" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="1513,403,1649,429"/>
+<area shape="rect" id="node32" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="1675,403,1861,429"/>
+<area shape="rect" id="node33" href="$diag-gmm-inl_8h.html" title="gmm/diag&#45;gmm&#45;inl.h" alt="" coords="1280,403,1437,429"/>
+<area shape="rect" id="node30" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="2044,560,2196,587"/>
+<area shape="rect" id="node36" href="$full-gmm_8h.html" title="gmm/full&#45;gmm.h" alt="" coords="371,320,500,347"/>
+<area shape="rect" id="node38" href="$full-gmm-normal_8h.html" title="gmm/full&#45;gmm&#45;normal.h" alt="" coords="481,245,660,272"/>
+<area shape="rect" id="node39" href="$mle-diag-gmm_8h.html" title="gmm/mle&#45;diag&#45;gmm.h" alt="" coords="1079,171,1245,197"/>
+<area shape="rect" id="node37" href="$full-gmm-inl_8h.html" title="gmm/full&#45;gmm&#45;inl.h" alt="" coords="321,560,468,587"/>
+<area shape="rect" id="node40" href="$diag-gmm-normal_8h.html" title="gmm/diag&#45;gmm&#45;normal.h" alt="" coords="978,245,1165,272"/>
+<area shape="rect" id="node42" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="2289,171,2433,197"/>
+<area shape="rect" id="node43" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2422,485,2524,512"/>
+<area shape="rect" id="node46" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="2567,485,2680,512"/>
+<area shape="rect" id="node47" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="2661,403,2809,429"/>
+<area shape="rect" id="node49" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="2291,403,2433,429"/>
+</map>

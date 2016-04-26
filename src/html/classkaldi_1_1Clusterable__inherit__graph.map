@@ -1,0 +1,6 @@
+<map id="Clusterable" name="Clusterable">
+<area shape="rect" id="node2" href="$classkaldi_1_1GaussClusterable.html" title="GaussClusterable wraps Gaussian statistics in a form accessible to generic clustering algorithms..." alt="" coords="5,80,139,107"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1ScalarClusterable.html" title="ScalarClusterable clusters scalars with x^2 loss. " alt="" coords="163,80,297,107"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1SgmmClusterable.html" title="This header defines an object that can be used to create decision trees using a form of SGMM statisti..." alt="" coords="322,80,459,107"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1VectorClusterable.html" title="VectorClusterable wraps vectors in a form accessible to generic clustering algorithms. " alt="" coords="483,80,617,107"/>
+</map>

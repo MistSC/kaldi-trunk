@@ -1,0 +1,29 @@
+<map id="tree/build&#45;tree&#45;utils.cc" name="tree/build&#45;tree&#45;utils.cc">
+<area shape="rect" id="node4" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="397,469,499,496"/>
+<area shape="rect" id="node32" href="$build-tree-utils_8h.html" title="tree/build&#45;tree&#45;utils.h" alt="" coords="239,80,395,107"/>
+<area shape="rect" id="node11" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1320,544,1479,571"/>
+<area shape="rect" id="node20" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="835,693,964,720"/>
+<area shape="rect" id="node23" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1117,619,1251,645"/>
+<area shape="rect" id="node25" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1355,693,1493,720"/>
+<area shape="rect" id="node27" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="762,619,880,645"/>
+<area shape="rect" id="node30" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="905,619,1041,645"/>
+<area shape="rect" id="node29" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1040,693,1179,720"/>
+<area shape="rect" id="node33" href="$build-tree-questions_8h.html" title="tree/build&#45;tree&#45;questions.h" alt="" coords="213,155,405,181"/>
+<area shape="rect" id="node34" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="2091,229,2231,256"/>
+<area shape="rect" id="node35" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="2090,304,2232,331"/>
+<area shape="rect" id="node36" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="1333,304,1467,331"/>
+<area shape="rect" id="node38" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="2637,469,2776,496"/>
+<area shape="rect" id="node49" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="2202,387,2339,413"/>
+<area shape="rect" id="node37" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="1232,379,1361,421"/>
+<area shape="rect" id="node39" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="2851,544,3025,571"/>
+<area shape="rect" id="node40" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="2255,619,2395,645"/>
+<area shape="rect" id="node41" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="3240,693,3392,720"/>
+<area shape="rect" id="node42" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="2837,693,2991,720"/>
+<area shape="rect" id="node43" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="2953,619,3135,645"/>
+<area shape="rect" id="node44" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="2637,544,2776,571"/>
+<area shape="rect" id="node45" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="3343,619,3447,645"/>
+<area shape="rect" id="node46" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="2419,619,2623,645"/>
+<area shape="rect" id="node47" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="2445,544,2613,571"/>
+<area shape="rect" id="node48" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="3159,619,3317,645"/>
+<area shape="rect" id="node50" href="$clusterable-itf_8h.html" title="itf/clusterable&#45;itf.h" alt="" coords="1437,469,1572,496"/>
+</map>

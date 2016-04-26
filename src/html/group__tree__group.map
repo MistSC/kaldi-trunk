@@ -1,0 +1,7 @@
+<map id="Modules involved in tree building" name="Modules involved in tree building">
+<area shape="rect" id="node1" href="$group__tree__group__top.html" title="See Decision tree internals for context. " alt="" coords="215,5,377,46"/>
+<area shape="rect" id="node2" href="$group__tree__group__lower.html" title="See Decision tree internals and specifically Classes and functions involved in tree&#45;building for cont..." alt="" coords="201,69,391,125"/>
+<area shape="rect" id="node3" href="$group__tree__group__intermediate.html" title="These functions are are used in top&#45;level tree&#45;building code (Top&#45;level tree&#45;building functions); see..." alt="" coords="203,149,389,205"/>
+<area shape="rect" id="node4" href="$group__event__map__group.html" title="See Decision tree internals for overview, and specifically Event maps. " alt="" coords="247,229,345,256"/>
+<area shape="rect" id="node6" href="$group__tree__group__questions.html" title="See Decision tree internals (and specifically Questions (config class)) for context. " alt="" coords="203,281,389,322"/>
+</map>

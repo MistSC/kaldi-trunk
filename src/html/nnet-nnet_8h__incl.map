@@ -1,0 +1,33 @@
+<map id="nnet/nnet&#45;nnet.h" name="nnet/nnet&#45;nnet.h">
+<area shape="rect" id="node5" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1387,725,1545,752"/>
+<area shape="rect" id="node25" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="183,643,285,669"/>
+<area shape="rect" id="node27" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1103,155,1241,181"/>
+<area shape="rect" id="node46" href="$nnet-trnopts_8h.html" title="nnet/nnet&#45;trnopts.h" alt="" coords="2047,155,2193,181"/>
+<area shape="rect" id="node48" href="$nnet-component_8h.html" title="nnet/nnet&#45;component.h" alt="" coords="2157,80,2331,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="594,875,723,901"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1273,800,1407,827"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1151,875,1289,901"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="765,800,883,827"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1049,800,1185,827"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="748,875,887,901"/>
+<area shape="rect" id="node26" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="5,725,125,752"/>
+<area shape="rect" id="node28" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="801,229,975,256"/>
+<area shape="rect" id="node29" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="557,304,696,331"/>
+<area shape="rect" id="node34" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="537,477,676,504"/>
+<area shape="rect" id="node35" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1147,560,1299,587"/>
+<area shape="rect" id="node37" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1297,387,1451,413"/>
+<area shape="rect" id="node39" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="823,304,1005,331"/>
+<area shape="rect" id="node41" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="1031,304,1135,331"/>
+<area shape="rect" id="node42" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1311,304,1515,331"/>
+<area shape="rect" id="node43" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="1479,229,1647,256"/>
+<area shape="rect" id="node45" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="1722,304,1880,331"/>
+<area shape="rect" id="node31" href="$packed-matrix_8h.html" title="matrix/packed&#45;matrix.h" alt="" coords="545,560,716,587"/>
+<area shape="rect" id="node33" href="$sp-matrix-inl_8h.html" title="matrix/sp&#45;matrix&#45;inl.h" alt="" coords="527,387,685,413"/>
+<area shape="rect" id="node32" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1422,643,1604,669"/>
+<area shape="rect" id="node36" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1152,635,1292,677"/>
+<area shape="rect" id="node38" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="1282,470,1424,511"/>
+<area shape="rect" id="node40" href="$matrix-functions-inl_8h.html" title="matrix/matrix&#45;functions\l&#45;inl.h" alt="" coords="863,379,1033,421"/>
+<area shape="rect" id="node47" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="2106,477,2219,504"/>
+<area shape="rect" id="node49" href="$cu-matrix_8h.html" title="cudamatrix/cu&#45;matrix.h" alt="" coords="2159,304,2329,331"/>
+<area shape="rect" id="node50" href="$cu-vector_8h.html" title="cudamatrix/cu&#45;vector.h" alt="" coords="1849,229,2017,256"/>
+</map>

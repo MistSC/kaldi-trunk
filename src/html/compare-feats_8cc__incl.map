@@ -1,0 +1,30 @@
+<map id="featbin/compare&#45;feats.cc" name="featbin/compare&#45;feats.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1653,784,1812,811"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1057,80,1201,107"/>
+<area shape="rect" id="node37" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1680,619,1832,645"/>
+<area shape="rect" id="node43" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1781,453,1935,480"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1681,933,1809,960"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1805,859,1939,885"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="2457,933,2596,960"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1278,859,1396,885"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="2358,859,2495,885"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1467,933,1605,960"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1285,619,1429,645"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="506,701,608,728"/>
+<area shape="rect" id="node31" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="43,619,196,645"/>
+<area shape="rect" id="node32" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="915,304,1044,331"/>
+<area shape="rect" id="node34" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="1041,701,1153,728"/>
+<area shape="rect" id="node45" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="392,229,515,256"/>
+<area shape="rect" id="node48" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1065,155,1193,181"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1446,701,1559,728"/>
+<area shape="rect" id="node30" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="299,784,420,811"/>
+<area shape="rect" id="node41" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="844,379,992,405"/>
+<area shape="rect" id="node38" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1851,701,2033,728"/>
+<area shape="rect" id="node40" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1685,694,1825,735"/>
+<area shape="rect" id="node39" href="$kaldi-blas_8h.html" title="matrix/kaldi&#45;blas.h" alt="" coords="1873,784,2012,811"/>
+<area shape="rect" id="node44" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="1762,529,1904,570"/>
+<area shape="rect" id="node46" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="374,619,516,645"/>
+<area shape="rect" id="node47" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="846,701,948,728"/>
+<area shape="rect" id="node49" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1604,304,1743,331"/>
+<area shape="rect" id="node50" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="1711,379,1885,405"/>
+</map>

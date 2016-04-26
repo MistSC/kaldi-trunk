@@ -1,0 +1,380 @@
+\documentclass{article}
+\usepackage{epsfig}
+\pagestyle{empty}
+\begin{document}
+$\epsilon$
+\pagebreak
+
+$ HCLG \circ G^- \circ G' $
+\pagebreak
+
+$G^T-$
+\pagebreak
+
+$G$
+\pagebreak
+
+$F = G^- \circ G' $
+\pagebreak
+
+$HCLG \circ F$
+\pagebreak
+
+$ \mathcal{L}_{Xent}(\mathbf{t},\mathbf{y}) = -\sum_D{t_d \log y_d} $
+\pagebreak
+
+$ \mathcal{L}_{Mse}(\mathbf{t},\mathbf{y}) = \frac{1}{2}\sum_D{(t_d - y_d)^2} $
+\pagebreak
+
+$ t_d $
+\pagebreak
+
+$ \mathbf{t} $
+\pagebreak
+
+$ y_d $
+\pagebreak
+
+$ \mathbf{y} $
+\pagebreak
+
+$ L^{-1} $
+\pagebreak
+
+\[ K^\prime = \mathrm{Project} \left( \mathrm{ShortestPath} \left( \mathrm{Prune} \left( \mathrm{Prune} \left(K \circ L_2 \circ E^\prime \right) \circ L_1^{-1} \right) \right) \right) \]
+\pagebreak
+
+$K$
+\pagebreak
+
+$L_2$
+\pagebreak
+
+$E^\prime$
+\pagebreak
+
+$L_1$
+\pagebreak
+
+$K^\prime$
+\pagebreak
+
+$K \circ L_2 \circ E^\prime$
+\pagebreak
+
+$L_1^{-1}$
+\pagebreak
+
+$ v w^T $
+\pagebreak
+
+\[ M \leftarrow M + \alpha v w^T \]
+\pagebreak
+
+\[ A = \alpha B C^T + \beta A \]
+\pagebreak
+
+$ A = B C $
+\pagebreak
+
+$ A x $
+\pagebreak
+
+$ W \left[ \begin{array}{c} x \\ 1 \end{array} \right] $
+\pagebreak
+
+$ W = \left[ A ; b \right] $
+\pagebreak
+
+$ \frac{1}{2} \mathbf{logdet} (A A^T) $
+\pagebreak
+
+$ \mathbf{G}^{(ri)} $
+\pagebreak
+
+$0 \leq i < K$
+\pagebreak
+
+\[ \mathbf{G}^{(i)} = \sum_{t,j,m} \gamma_{jm}(t) \frac{1}{ \sigma^2_{jm}(i) } (\mu_{jm} - \mathbf{x}(t)) (\mu_{jm} - \mathbf{x}(t))^T \]
+\pagebreak
+
+$\mu_{jm} \in \Re^{K}$
+\pagebreak
+
+$\mathbf{x}(t)$
+\pagebreak
+
+$\sigma^2_{jm}(i)$
+\pagebreak
+
+$ K \leq d < D$
+\pagebreak
+
+\[ \mathbf{G}^{(i)} = \sum_{t,j,m} \gamma_{jm}(t) (\mu - \mathbf{x}(t)) (\mu - \mathbf{x}(t))^T , \]
+\pagebreak
+
+$\mu$
+\pagebreak
+
+$\mathbf{G}$
+\pagebreak
+
+$\mu_{jm}$
+\pagebreak
+
+\[ \mathbf{S}^{(i)} = \sum_{t,j,m} \gamma_{jm}(t) \frac{1}{ \sigma^2_{jm}(i) } \mathbf{x}(t) \mathbf{x}(t)^T \]
+\pagebreak
+
+$K \leq i < D$
+\pagebreak
+
+\[ \mathbf{S}^{(i)} = \sum_{t,j,m} \gamma_{jm}(t) \mathbf{x}(t) \mathbf{x}(t)^T , \]
+\pagebreak
+
+\[ \mathbf{G}^{(i)} = \mathbf{S}^{(i)} - \sum_{j,m} \gamma_{jm} \mu_{jm} \mu_{jm}^T , \]
+\pagebreak
+
+\[ \mathbf{G}^{(i)} = \mathbf{S}^{(i)} - \beta \mu \mu^T, \]
+\pagebreak
+
+$ \beta = \sum_{j,m} \gamma_{jm} $
+\pagebreak
+
+$\mu = \frac{1}{\beta} \sum_{j,m} \mu_{j,m}$
+\pagebreak
+
+$ O(K^3) $
+\pagebreak
+
+$O(K^2)$
+\pagebreak
+
+$\gamma_{jm}$
+\pagebreak
+
+$ 0 \leq i < D $
+\pagebreak
+
+$\mathbf{M}$
+\pagebreak
+
+$\mathbf{T}$
+\pagebreak
+
+$ \mu_{jm} \leftarrow \mathbf{T} \mu_{jm} $
+\pagebreak
+
+$ \mathbf{M} \leftarrow \mathbf{T} \mathbf{M} $
+\pagebreak
+
+$\mathbf{M} \leftarrow \mathbf{T} \mathbf{M} $
+\pagebreak
+
+$ \mathbf{x} \rightarrow \mathbf{A} \mathbf{x} + \mathbf{b} $
+\pagebreak
+
+$ \mathbf{x} \rightarrow \mathbf{W} \mathbf{x}^+ $
+\pagebreak
+
+$\mathbf{x}^+ = \left[\begin{array}{c} \mathbf{x} \\ 1 \end{array} \right]$
+\pagebreak
+
+\[ \mathbf{K} = \sum_{t,j,m} \gamma_{j,m}(t) \Sigma_{jm}^{-1} \mu_{jm} \mathbf{x}(t)^+ \]
+\pagebreak
+
+$\Sigma_{jm}^{-1}$
+\pagebreak
+
+$0 \leq i < D $
+\pagebreak
+
+\[ \mathbf{G}^{(i)} = \sum_{t,j,m} \gamma_{j,m}(t) \frac{1}{\sigma^2_{j,m}(i)} \mathbf{x}(t)^+ \left.\mathbf{x}(t)^+\right.^T \]
+\pagebreak
+
+\[\mathbf{A}^{(i)}, 0\leq i < N, \]
+\pagebreak
+
+$N$
+\pagebreak
+
+$\mathbf{A}^{(i)}$
+\pagebreak
+
+$\mathbf{b}$
+\pagebreak
+
+$\mathbf{W} = \left[ \mathbf{A}^{(i)} \, ; \, \mathbf{b} \right]$
+\pagebreak
+
+$\mathbf{W}$
+\pagebreak
+
+$\mathbf{y}(t)$
+\pagebreak
+
+$t$
+\pagebreak
+
+$\mathbf{x}$
+\pagebreak
+
+$\mathbf{y}$
+\pagebreak
+
+$\mathbf{y}' = \mathbf{A} \mathbf{x} + \mathbf{b}$
+\pagebreak
+
+$\mathbf{A}$
+\pagebreak
+
+$\sum_t (\mathbf{y}'(t) - \mathbf{y}(t) )^T (\mathbf{y}'(t) - \mathbf{y}(t) )$
+\pagebreak
+
+$\mathbf{\Sigma}^{(x)}$
+\pagebreak
+
+$\mathbf{\Sigma}^{(y')}$
+\pagebreak
+
+$\sqrt{ \frac{\mathbf{\Sigma}^{(x)}_{d,d}}{\mathbf{\Sigma}^{(y')}_{d,d}}}$
+\pagebreak
+
+\[ \mathbf{W}_s = \mathbf{D}_s \exp ( t_s \mathbf{A} ) \mathbf{B} , \]
+\pagebreak
+
+$\mathbf{B}$
+\pagebreak
+
+$\mathbf{D}_s$
+\pagebreak
+
+$t_s$
+\pagebreak
+
+\[ \mathbf{D}_s \in \Re^{D \times (D+1)}, \ t_s \in \Re, \ \mathbf{A} \in \Re^{(D+1)\times(D+1)}, \ \mathbf{B} \in \Re^{(D+1)\times (D+1)} . \]
+\pagebreak
+
+$[ {\mathbf I} \, \;\, {\mathbf 0} ]$
+\pagebreak
+
+$[ {\mathbf I} \, \;\, {\mathbf m} ]$
+\pagebreak
+
+$[ {\mathrm{diag}}( {\mathbf d} ) \, \;\, {\mathbf m} ]$
+\pagebreak
+
+$[ 0\ 0\ 0 \ \ldots\ 0 \ 1]$
+\pagebreak
+
+\[ \exp( l \mathbf{A} ) \exp( m \mathbf{A}) = \exp( (l+m) \mathbf{A} ) . \]
+\pagebreak
+
+$\mathbf{W}_s$
+\pagebreak
+
+$\exp(t \mathbf{A})$
+\pagebreak
+
+$\mathbf{C} \in \Re^{D\times D}$
+\pagebreak
+
+$\mathbf{C}^+ = \left[ \begin{array}{cc} \mathbf{C} & 0 \\ 0 & 1 \end{array} \right]$
+\pagebreak
+
+$\mathbf{W}_s = \mathbf{D}_s \mathbf{C}^+ \exp ( t_s \mathbf{A} ) \mathbf{B}$
+\pagebreak
+
+$\mathbf{C}$
+\pagebreak
+
+$\exp ( t_s \mathbf{A} ) \mathbf{B}$
+\pagebreak
+
+\[ \mathbf{C}^+ \exp ( t_s \mathbf{A} ) = \exp ( t_s \mathbf{C}^+ \mathbf{A} \left.\mathbf{C}^+\right.^{-1} ) \mathbf{C}^+ \]
+\pagebreak
+
+\[ \mathbf{A} \leftarrow \mathbf{C}^+ \mathbf{A} \left.\mathbf{C}^+\right.^{-1} , \ \ \mathbf{B} \leftarrow \mathbf{C}^+ \mathbf{B} . \]
+\pagebreak
+
+$ c^T z + 0.5 * z^T B z, $
+\pagebreak
+
+$ c + B z, $
+\pagebreak
+
+\[ \alpha = \frac{g^T g}{g^T B g}, \]
+\pagebreak
+
+\[ \min_x 0.5 * ||y - Ax||_2^2 + \tau ||x||_1, \]
+\pagebreak
+
+$ x \in R^n, y \in R^k $
+\pagebreak
+
+$ A \in R^{n \times k} $
+\pagebreak
+
+\[ \min_x 0.5 * x^T H x - g^T x + \tau ||x||_1, \]
+\pagebreak
+
+$ H = A^T A \in R^{n \times n} $
+\pagebreak
+
+$ g = A^T y \in R^n $
+\pagebreak
+
+$ x $
+\pagebreak
+
+\[ \min_x 0.5 * x^T H x - g^T x + \tau ||x||_1. \]
+\pagebreak
+
+$ v_1^T M v_2 $
+\pagebreak
+
+$ x(i) = exp(x(i)) / \sum_i exp(x(i)) $
+\pagebreak
+
+$ x(i) = x(i) - log(\sum_i exp(x(i))) $
+\pagebreak
+
+\[ v = ( re_0, im_0, re_1, im_1, ... ) \]
+\pagebreak
+
+\[ vout[m] \leftarrow \sum_{n = 0}^{N-1} vin[i] exp( -2pi m n / N ) \]
+\pagebreak
+
+\[ vout[m] <-- \sum_{n = 0}^{N-1} vin[i] exp( 2pi m n / N ) \]
+\pagebreak
+
+\[ Q(x) = x.g - 0.5 x^T H x \]
+\pagebreak
+
+$ x := Q^{-1} g. $
+\pagebreak
+
+\[ Q(x) = tr(M^T P Y) - 0.5 tr(P M Q M^T) \]
+\pagebreak
+
+$ M := Y Q^{-1} $
+\pagebreak
+
+\[ Q(M) = tr(M^T G) -0.5 tr(P_1 M Q_1 M^T) -0.5 tr(P_2 M Q_2 M^T). \]
+\pagebreak
+
+\[ f(t) = 2C sinc(2Ct), \]
+\pagebreak
+
+$ sinc(t) = sin(pi t) / (pi t) $
+\pagebreak
+
+$ sinc(0) = 1 $
+\pagebreak
+
+\[ s(t) = 1/S \sum_n x_n h(t - n/S) \]
+\pagebreak
+
+$ sqrt( (within-class-factor + \lambda_i) / (1 + \lambda_i) ) $
+\pagebreak
+
+\end{document}

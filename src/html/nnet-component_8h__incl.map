@@ -1,0 +1,35 @@
+<map id="nnet/nnet&#45;component.h" name="nnet/nnet&#45;component.h">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1357,725,1516,752"/>
+<area shape="rect" id="node25" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="596,163,735,189"/>
+<area shape="rect" id="node39" href="$cu-matrix_8h.html" title="cudamatrix/cu&#45;matrix.h" alt="" coords="2133,80,2304,107"/>
+<area shape="rect" id="node48" href="$cu-vector_8h.html" title="cudamatrix/cu&#45;vector.h" alt="" coords="1718,163,1887,189"/>
+<area shape="rect" id="node49" href="$nnet-trnopts_8h.html" title="nnet/nnet&#45;trnopts.h" alt="" coords="1243,560,1389,587"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="887,875,1016,901"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1656,800,1789,827"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1915,875,2053,901"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="990,800,1108,827"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="2287,800,2424,827"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1041,875,1180,901"/>
+<area shape="rect" id="node26" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="314,245,488,272"/>
+<area shape="rect" id="node27" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="43,320,183,347"/>
+<area shape="rect" id="node28" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="885,560,1037,587"/>
+<area shape="rect" id="node31" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="943,395,1096,421"/>
+<area shape="rect" id="node33" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="361,320,543,347"/>
+<area shape="rect" id="node34" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="95,245,233,272"/>
+<area shape="rect" id="node35" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="853,320,957,347"/>
+<area shape="rect" id="node36" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1033,320,1236,347"/>
+<area shape="rect" id="node37" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="1373,245,1541,272"/>
+<area shape="rect" id="node38" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="670,320,828,347"/>
+<area shape="rect" id="node29" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1449,643,1631,669"/>
+<area shape="rect" id="node30" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="891,635,1031,677"/>
+<area shape="rect" id="node32" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="946,470,1088,511"/>
+<area shape="rect" id="node40" href="$cu-matrixdim_8h.html" title="cudamatrix/cu&#45;matrixdim.h" alt="" coords="2500,395,2695,421"/>
+<area shape="rect" id="node41" href="$cu-common_8h.html" title="cudamatrix/cu&#45;common.h" alt="" coords="1955,320,2141,347"/>
+<area shape="rect" id="node42" href="$cu-value_8h.html" title="cudamatrix/cu&#45;value.h" alt="" coords="1769,245,1932,272"/>
+<area shape="rect" id="node43" href="$cu-array_8h.html" title="cudamatrix/cu&#45;array.h" alt="" coords="1718,320,1879,347"/>
+<area shape="rect" id="node44" href="$cu-math_8h.html" title="cudamatrix/cu&#45;math.h" alt="" coords="1957,245,2120,272"/>
+<area shape="rect" id="node45" href="$cu-rand_8h.html" title="cudamatrix/cu&#45;rand.h" alt="" coords="2602,245,2760,272"/>
+<area shape="rect" id="node46" href="$cu-sparse-matrix_8h.html" title="cudamatrix/cu&#45;sparse\l&#45;matrix.h" alt="" coords="2198,155,2359,197"/>
+<area shape="rect" id="node47" href="$cu-matrix-inl_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;inl.h" alt="" coords="1963,155,2121,197"/>
+<area shape="rect" id="node50" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1259,643,1372,669"/>
+</map>

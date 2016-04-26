@@ -1,0 +1,36 @@
+<map id="nnetbin/rbm&#45;train&#45;cd1&#45;frmshuff.cc" name="nnetbin/rbm&#45;train&#45;cd1&#45;frmshuff.cc">
+<area shape="rect" id="node2" href="$nnet-trnopts_8h.html" title="nnet/nnet&#45;trnopts.h" alt="" coords="1518,469,1664,496"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1467,619,1626,645"/>
+<area shape="rect" id="node22" href="$nnet-rbm_8h.html" title="nnet/nnet&#45;rbm.h" alt="" coords="1085,96,1211,123"/>
+<area shape="rect" id="node29" href="$cu-device_8h.html" title="cudamatrix/cu&#45;device.h" alt="" coords="318,619,488,645"/>
+<area shape="rect" id="node30" href="$base_2timer_8h.html" title="base/timer.h" alt="" coords="37,619,139,645"/>
+<area shape="rect" id="node32" href="$cu-rand_8h.html" title="cudamatrix/cu&#45;rand.h" alt="" coords="777,544,935,571"/>
+<area shape="rect" id="node34" href="$nnet-nnet_8h.html" title="nnet/nnet&#45;nnet.h" alt="" coords="1678,320,1807,347"/>
+<area shape="rect" id="node45" href="$nnet-loss_8h.html" title="nnet/nnet&#45;loss.h" alt="" coords="718,245,844,272"/>
+<area shape="rect" id="node46" href="$nnet-randomizer_8h.html" title="nnet/nnet&#45;randomizer.h" alt="" coords="672,395,846,421"/>
+<area shape="rect" id="node47" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="2421,245,2566,272"/>
+<area shape="rect" id="node21" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1468,544,1580,571"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="829,768,958,795"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="931,693,1064,720"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1144,768,1283,795"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1824,693,1942,720"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1140,693,1276,720"/>
+<area shape="rect" id="node23" href="$nnet-component_8h.html" title="nnet/nnet&#45;component.h" alt="" coords="1073,395,1247,421"/>
+<area shape="rect" id="node28" href="$cu-math_8h.html" title="cudamatrix/cu&#45;math.h" alt="" coords="321,544,484,571"/>
+<area shape="rect" id="node36" href="$nnet-utils_8h.html" title="nnet/nnet&#45;utils.h" alt="" coords="1216,245,1342,272"/>
+<area shape="rect" id="node44" href="$nnet-various_8h.html" title="nnet/nnet&#45;various.h" alt="" coords="1087,171,1234,197"/>
+<area shape="rect" id="node24" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1688,469,1827,496"/>
+<area shape="rect" id="node25" href="$cu-matrix_8h.html" title="cudamatrix/cu&#45;matrix.h" alt="" coords="675,469,846,496"/>
+<area shape="rect" id="node33" href="$cu-vector_8h.html" title="cudamatrix/cu&#45;vector.h" alt="" coords="430,469,599,496"/>
+<area shape="rect" id="node26" href="$cu-common_8h.html" title="cudamatrix/cu&#45;common.h" alt="" coords="563,619,750,645"/>
+<area shape="rect" id="node27" href="$cu-array_8h.html" title="cudamatrix/cu&#45;array.h" alt="" coords="774,619,935,645"/>
+<area shape="rect" id="node35" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2708,544,2810,571"/>
+<area shape="rect" id="node39" href="$posterior_8h.html" title="hmm/posterior.h" alt="" coords="1316,320,1444,347"/>
+<area shape="rect" id="node43" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="1374,395,1551,421"/>
+<area shape="rect" id="node40" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="2283,395,2406,421"/>
+<area shape="rect" id="node41" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="2478,469,2607,496"/>
+<area shape="rect" id="node42" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="2377,544,2490,571"/>
+<area shape="rect" id="node48" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="2105,469,2250,496"/>
+<area shape="rect" id="node49" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2835,469,2988,496"/>
+<area shape="rect" id="node50" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="2105,320,2234,347"/>
+</map>

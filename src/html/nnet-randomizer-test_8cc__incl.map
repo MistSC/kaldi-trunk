@@ -1,0 +1,31 @@
+<map id="nnet/nnet&#45;randomizer&#45;test.cc" name="nnet/nnet&#45;randomizer&#45;test.cc">
+<area shape="rect" id="node2" href="$nnet-randomizer_8h.html" title="nnet/nnet&#45;randomizer.h" alt="" coords="1687,96,1860,123"/>
+<area shape="rect" id="node3" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1730,749,1867,776"/>
+<area shape="rect" id="node26" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1717,171,1829,197"/>
+<area shape="rect" id="node27" href="$cu-matrix_8h.html" title="cudamatrix/cu&#45;matrix.h" alt="" coords="745,171,916,197"/>
+<area shape="rect" id="node42" href="$cu-math_8h.html" title="cudamatrix/cu&#45;math.h" alt="" coords="234,336,397,363"/>
+<area shape="rect" id="node7" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="572,981,711,1008"/>
+<area shape="rect" id="node9" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1193,832,1352,859"/>
+<area shape="rect" id="node19" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="735,981,864,1008"/>
+<area shape="rect" id="node21" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="929,907,1063,933"/>
+<area shape="rect" id="node23" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1610,907,1728,933"/>
+<area shape="rect" id="node25" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1452,981,1591,1008"/>
+<area shape="rect" id="node28" href="$cu-matrixdim_8h.html" title="cudamatrix/cu&#45;matrixdim.h" alt="" coords="487,493,681,520"/>
+<area shape="rect" id="node29" href="$cu-common_8h.html" title="cudamatrix/cu&#45;common.h" alt="" coords="676,411,863,437"/>
+<area shape="rect" id="node30" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1181,749,1363,776"/>
+<area shape="rect" id="node32" href="$cu-value_8h.html" title="cudamatrix/cu&#45;value.h" alt="" coords="46,336,209,363"/>
+<area shape="rect" id="node34" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1191,493,1344,520"/>
+<area shape="rect" id="node38" href="$cu-array_8h.html" title="cudamatrix/cu&#45;array.h" alt="" coords="318,411,479,437"/>
+<area shape="rect" id="node43" href="$cu-rand_8h.html" title="cudamatrix/cu&#45;rand.h" alt="" coords="1621,336,1779,363"/>
+<area shape="rect" id="node44" href="$cu-sparse-matrix_8h.html" title="cudamatrix/cu&#45;sparse\l&#45;matrix.h" alt="" coords="810,246,971,287"/>
+<area shape="rect" id="node48" href="$cu-matrix-inl_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;inl.h" alt="" coords="575,246,733,287"/>
+<area shape="rect" id="node31" href="$kaldi-blas_8h.html" title="matrix/kaldi&#45;blas.h" alt="" coords="848,832,987,859"/>
+<area shape="rect" id="node33" href="$cu-device_8h.html" title="cudamatrix/cu&#45;device.h" alt="" coords="43,411,213,437"/>
+<area shape="rect" id="node35" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="951,577,1093,618"/>
+<area shape="rect" id="node36" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="897,667,1049,693"/>
+<area shape="rect" id="node37" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="903,742,1043,783"/>
+<area shape="rect" id="node39" href="$cu-array-inl_8h.html" title="cudamatrix/cu&#45;array\l&#45;inl.h" alt="" coords="210,486,360,527"/>
+<area shape="rect" id="node40" href="$base_2timer_8h.html" title="base/timer.h" alt="" coords="234,584,336,611"/>
+<area shape="rect" id="node45" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="947,336,1115,363"/>
+<area shape="rect" id="node47" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1069,411,1272,437"/>
+</map>

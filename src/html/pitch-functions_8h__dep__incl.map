@@ -1,0 +1,7 @@
+<map id="feat/pitch&#45;functions.h" name="feat/pitch&#45;functions.h">
+<area shape="rect" id="node2" href="$pitch-functions-test_8cc.html" title="feat/pitch&#45;functions\l&#45;test.cc" alt="" coords="5,87,149,129"/>
+<area shape="rect" id="node3" href="$pitch-functions_8cc.html" title="feat/pitch&#45;functions.cc" alt="" coords="175,95,337,121"/>
+<area shape="rect" id="node4" href="$compute-and-process-kaldi-pitch-feats_8cc.html" title="featbin/compute&#45;and\l&#45;process&#45;kaldi&#45;pitch\l&#45;feats.cc" alt="" coords="362,80,517,136"/>
+<area shape="rect" id="node5" href="$compute-kaldi-pitch-feats_8cc.html" title="featbin/compute&#45;kaldi\l&#45;pitch&#45;feats.cc" alt="" coords="542,87,703,129"/>
+<area shape="rect" id="node6" href="$process-kaldi-pitch-feats_8cc.html" title="featbin/process&#45;kaldi\l&#45;pitch&#45;feats.cc" alt="" coords="728,87,881,129"/>
+</map>

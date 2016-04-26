@@ -1,0 +1,6 @@
+<map id="AffineComponent" name="AffineComponent">
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet2_1_1AffineComponentPreconditioned.html" title="AffineComponentPreconditioned" alt="" coords="5,237,232,264"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1nnet2_1_1AffineComponentPreconditionedOnline.html" title="Keywords: natural gradient descent, NG&#45;SGD, naturalgradient. " alt="" coords="257,230,484,271"/>
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters and contains some global param..." alt="" coords="163,80,325,107"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="195,5,292,32"/>
+</map>

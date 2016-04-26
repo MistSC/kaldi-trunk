@@ -1,0 +1,33 @@
+<map id="nnet3bin/nnet3&#45;compute.cc" name="nnet3bin/nnet3&#45;compute.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1269,784,1428,811"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="751,411,896,437"/>
+<area shape="rect" id="node37" href="$nnet-am-decodable-simple_8h.html" title="nnet3/nnet&#45;am&#45;decodable\l&#45;simple.h" alt="" coords="1840,155,2029,197"/>
+<area shape="rect" id="node45" href="$base_2timer_8h.html" title="base/timer.h" alt="" coords="2662,859,2764,885"/>
+<area shape="rect" id="node47" href="$_2nnet-utils_8h.html" title="nnet3/nnet&#45;utils.h" alt="" coords="1353,80,1487,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1623,933,1752,960"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1691,859,1824,885"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1777,933,1916,960"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="659,859,777,885"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1006,859,1143,885"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="733,933,872,960"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="913,635,1057,661"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="258,709,360,736"/>
+<area shape="rect" id="node31" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="376,635,529,661"/>
+<area shape="rect" id="node32" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="605,635,735,661"/>
+<area shape="rect" id="node33" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="673,709,785,736"/>
+<area shape="rect" id="node34" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="613,560,736,587"/>
+<area shape="rect" id="node35" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="811,485,940,512"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1438,709,1551,736"/>
+<area shape="rect" id="node30" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="94,784,215,811"/>
+<area shape="rect" id="node36" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1336,560,1475,587"/>
+<area shape="rect" id="node38" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="1691,635,1855,661"/>
+<area shape="rect" id="node39" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="1438,635,1615,661"/>
+<area shape="rect" id="node40" href="$decodable-itf_8h.html" title="itf/decodable&#45;itf.h" alt="" coords="1998,336,2129,363"/>
+<area shape="rect" id="node41" href="$nnet-optimize_8h.html" title="nnet3/nnet&#45;optimize.h" alt="" coords="2537,253,2700,280"/>
+<area shape="rect" id="node42" href="$nnet3_2nnet-compute_8h.html" title="nnet3/nnet&#45;compute.h" alt="" coords="2294,253,2460,280"/>
+<area shape="rect" id="node44" href="$am-nnet-simple_8h.html" title="nnet3/am&#45;nnet&#45;simple.h" alt="" coords="1595,485,1772,512"/>
+<area shape="rect" id="node43" href="$nnet-common_8h.html" title="nnet3/nnet&#45;common.h" alt="" coords="1337,336,1503,363"/>
+<area shape="rect" id="node48" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="2048,246,2219,287"/>
+<area shape="rect" id="node49" href="$nnet-descriptor_8h.html" title="This file contains class definitions for classes ForwardingDescriptor, SumDescriptor and Descriptor..." alt="" coords="1502,163,1673,189"/>
+<area shape="rect" id="node50" href="$nnet-computation-graph_8h.html" title="nnet3/nnet&#45;computation\l&#45;graph.h" alt="" coords="2104,155,2283,197"/>
+</map>

@@ -1,0 +1,14 @@
+<map id="ivector/ivector&#45;extractor.h" name="ivector/ivector&#45;extractor.h">
+<area shape="rect" id="node2" href="$ivector-extractor-test_8cc.html" title="ivector/ivector&#45;extractor\l&#45;test.cc" alt="" coords="5,81,179,122"/>
+<area shape="rect" id="node3" href="$ivector-extractor_8cc.html" title="ivector/ivector&#45;extractor.cc" alt="" coords="203,88,393,115"/>
+<area shape="rect" id="node4" href="$ivector-compute-dot-products_8cc.html" title="ivectorbin/ivector\l&#45;compute&#45;dot&#45;products.cc" alt="" coords="419,81,608,122"/>
+<area shape="rect" id="node5" href="$ivector-compute-lda_8cc.html" title="ivectorbin/ivector\l&#45;compute&#45;lda.cc" alt="" coords="632,81,761,122"/>
+<area shape="rect" id="node6" href="$ivector-extract-online_8cc.html" title="ivectorbin/ivector\l&#45;extract&#45;online.cc" alt="" coords="787,81,920,122"/>
+<area shape="rect" id="node7" href="$ivector-extract_8cc.html" title="ivectorbin/ivector\l&#45;extract.cc" alt="" coords="944,81,1073,122"/>
+<area shape="rect" id="node8" href="$ivector-extractor-acc-stats_8cc.html" title="ivectorbin/ivector\l&#45;extractor&#45;acc&#45;stats.cc" alt="" coords="1099,81,1265,122"/>
+<area shape="rect" id="node9" href="$ivector-extractor-est_8cc.html" title="ivectorbin/ivector\l&#45;extractor&#45;est.cc" alt="" coords="1291,81,1420,122"/>
+<area shape="rect" id="node10" href="$ivector-extractor-init_8cc.html" title="ivectorbin/ivector\l&#45;extractor&#45;init.cc" alt="" coords="1445,81,1575,122"/>
+<area shape="rect" id="node11" href="$ivector-extractor-sum-accs_8cc.html" title="ivectorbin/ivector\l&#45;extractor&#45;sum&#45;accs.cc" alt="" coords="1601,81,1769,122"/>
+<area shape="rect" id="node12" href="$ivector-normalize-length_8cc.html" title="ivectorbin/ivector\l&#45;normalize&#45;length.cc" alt="" coords="1794,81,1947,122"/>
+<area shape="rect" id="node13" href="$ivector-transform_8cc.html" title="ivectorbin/ivector\l&#45;transform.cc" alt="" coords="1971,81,2100,122"/>
+</map>

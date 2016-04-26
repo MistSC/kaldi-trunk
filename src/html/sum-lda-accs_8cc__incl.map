@@ -1,0 +1,34 @@
+<map id="bin/sum&#45;lda&#45;accs.cc" name="bin/sum&#45;lda&#45;accs.cc">
+<area shape="rect" id="node2" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="2009,155,2153,181"/>
+<area shape="rect" id="node44" href="$mle-am-diag-gmm_8h.html" title="gmm/mle&#45;am&#45;diag&#45;gmm.h" alt="" coords="1777,80,1969,107"/>
+<area shape="rect" id="node50" href="$lda-estimate_8h.html" title="transform/lda&#45;estimate.h" alt="" coords="1570,80,1752,107"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1467,603,1625,629"/>
+<area shape="rect" id="node21" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1983,453,2128,480"/>
+<area shape="rect" id="node24" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2874,528,2976,555"/>
+<area shape="rect" id="node26" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="3007,453,3160,480"/>
+<area shape="rect" id="node27" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="2407,379,2536,405"/>
+<area shape="rect" id="node29" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="2371,528,2484,555"/>
+<area shape="rect" id="node36" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="2156,304,2279,331"/>
+<area shape="rect" id="node38" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="2017,229,2145,256"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1531,752,1660,779"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1213,677,1347,704"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="956,752,1095,779"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1806,677,1924,704"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="707,677,844,704"/>
+<area shape="rect" id="node23" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1438,528,1551,555"/>
+<area shape="rect" id="node25" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="2925,603,3045,629"/>
+<area shape="rect" id="node32" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="5,752,157,779"/>
+<area shape="rect" id="node33" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="2465,453,2613,480"/>
+<area shape="rect" id="node35" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="396,752,549,779"/>
+<area shape="rect" id="node37" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="2638,453,2780,480"/>
+<area shape="rect" id="node39" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="801,528,940,555"/>
+<area shape="rect" id="node40" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="149,603,323,629"/>
+<area shape="rect" id="node41" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="1949,677,2088,704"/>
+<area shape="rect" id="node42" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="145,677,327,704"/>
+<area shape="rect" id="node43" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="348,603,487,629"/>
+<area shape="rect" id="node45" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="1490,304,1653,331"/>
+<area shape="rect" id="node48" href="$mle-diag-gmm_8h.html" title="gmm/mle&#45;diag&#45;gmm.h" alt="" coords="1271,229,1437,256"/>
+<area shape="rect" id="node46" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="1285,379,1424,405"/>
+<area shape="rect" id="node47" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="985,453,1159,480"/>
+<area shape="rect" id="node49" href="$diag-gmm-normal_8h.html" title="gmm/diag&#45;gmm&#45;normal.h" alt="" coords="1117,304,1304,331"/>
+</map>

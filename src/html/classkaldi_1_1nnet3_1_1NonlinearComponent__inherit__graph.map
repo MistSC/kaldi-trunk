@@ -1,0 +1,10 @@
+<map id="NonlinearComponent" name="NonlinearComponent">
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1LogSoftmaxComponent.html" title="LogSoftmaxComponent" alt="" coords="367,5,542,32"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1NoOpComponent.html" title="NoOpComponent" alt="" coords="388,56,521,83"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1nnet3_1_1NormalizeComponent.html" title="NormalizeComponent" alt="" coords="373,107,536,133"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1nnet3_1_1RectifiedLinearComponent.html" title="RectifiedLinearComponent" alt="" coords="360,157,549,184"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1nnet3_1_1SigmoidComponent.html" title="SigmoidComponent" alt="" coords="380,208,529,235"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1nnet3_1_1SoftmaxComponent.html" title="SoftmaxComponent" alt="" coords="379,259,530,285"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1nnet3_1_1TanhComponent.html" title="TanhComponent" alt="" coords="391,309,518,336"/>
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="6,157,103,184"/>
+</map>

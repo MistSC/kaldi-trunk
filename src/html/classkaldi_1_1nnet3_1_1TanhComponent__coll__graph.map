@@ -1,0 +1,7 @@
+<map id="TanhComponent" name="TanhComponent">
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1NonlinearComponent.html" title="This kind of Component is a base&#45;class for things like sigmoid, softmax and ReLU: nonlinearities that..." alt="" coords="151,291,309,317"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="5,187,101,213"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1Mutex.html" title="This class encapsulates mutex to ensure exclusive access to some critical section which manipulates s..." alt="" coords="127,187,188,213"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; double \&gt;" alt="" coords="269,96,453,123"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; double \&gt;" alt="" coords="273,187,425,213"/>
+</map>

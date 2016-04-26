@@ -1,0 +1,5 @@
+<map id="PerElementScaleComponent" name="PerElementScaleComponent">
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1NaturalGradientPerElementScaleComponent.html" title="NaturalGradientPerElement\lScaleComponent" alt="" coords="9,230,207,271"/>
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="27,80,189,107"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="59,5,156,32"/>
+</map>

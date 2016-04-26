@@ -1,0 +1,18 @@
+<map id="util/kaldi&#45;holder&#45;inl.h" name="util/kaldi&#45;holder&#45;inl.h">
+<area shape="rect" id="node6" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="219,328,321,355"/>
+<area shape="rect" id="node29" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="561,328,673,355"/>
+<area shape="rect" id="node33" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="735,80,888,107"/>
+<area shape="rect" id="node9" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="900,411,1059,437"/>
+<area shape="rect" id="node28" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="94,411,215,437"/>
+<area shape="rect" id="node18" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="587,560,716,587"/>
+<area shape="rect" id="node20" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1117,485,1251,512"/>
+<area shape="rect" id="node22" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1339,560,1477,587"/>
+<area shape="rect" id="node24" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="494,485,612,512"/>
+<area shape="rect" id="node26" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1523,485,1660,512"/>
+<area shape="rect" id="node25" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="741,560,880,587"/>
+<area shape="rect" id="node34" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="889,328,1071,355"/>
+<area shape="rect" id="node36" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="741,155,883,197"/>
+<area shape="rect" id="node35" href="$kaldi-blas_8h.html" title="matrix/kaldi&#45;blas.h" alt="" coords="1629,411,1768,437"/>
+<area shape="rect" id="node37" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="736,245,888,272"/>
+<area shape="rect" id="node38" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="723,321,863,362"/>
+</map>

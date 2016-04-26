@@ -1,0 +1,51 @@
+<map id="nnet3/nnet&#45;common.h" name="nnet3/nnet&#45;common.h">
+<area shape="rect" id="node2" href="$_2nnet-nnet_8h.html" title="nnet3/nnet&#45;nnet.h" alt="" coords="2556,269,2695,296"/>
+<area shape="rect" id="node8" href="$_2nnet-utils_8h.html" title="nnet3/nnet&#45;utils.h" alt="" coords="1221,525,1355,552"/>
+<area shape="rect" id="node34" href="$nnet-computation_8h.html" title="The two main classes defined in this header are struct ComputationRequest, which basically defines a ..." alt="" coords="1924,352,2114,379"/>
+<area shape="rect" id="node35" href="$nnet3_2nnet-compute_8h.html" title="nnet3/nnet&#45;compute.h" alt="" coords="2204,435,2370,461"/>
+<area shape="rect" id="node44" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="1643,81,1814,122"/>
+<area shape="rect" id="node45" href="$nnet-descriptor_8h.html" title="This file contains class definitions for classes ForwardingDescriptor, SumDescriptor and Descriptor..." alt="" coords="2376,179,2547,205"/>
+<area shape="rect" id="node47" href="$nnet-simple-component_8h.html" title="nnet3/nnet&#45;simple&#45;component.h" alt="" coords="1700,269,1930,296"/>
+<area shape="rect" id="node48" href="$nnet-general-component_8h.html" title="nnet3/nnet&#45;general\l&#45;component.h" alt="" coords="1049,171,1194,213"/>
+<area shape="rect" id="node49" href="$nnet-common-test_8cc.html" title="nnet3/nnet&#45;common&#45;test.cc" alt="" coords="2342,88,2544,115"/>
+<area shape="rect" id="node50" href="$nnet-common_8cc.html" title="nnet3/nnet&#45;common.cc" alt="" coords="2569,88,2740,115"/>
+<area shape="rect" id="node3" href="$am-nnet-simple_8h.html" title="nnet3/am&#45;nnet&#45;simple.h" alt="" coords="1628,525,1804,552"/>
+<area shape="rect" id="node7" href="$nnet-computation-graph_8h.html" title="nnet3/nnet&#45;computation\l&#45;graph.h" alt="" coords="1574,427,1752,469"/>
+<area shape="rect" id="node10" href="$nnet-test-utils_8h.html" title="This file contains various routines that are useful in test code. " alt="" coords="3259,616,3423,643"/>
+<area shape="rect" id="node11" href="$nnet-analyze-test_8cc.html" title="nnet3/nnet&#45;analyze\l&#45;test.cc" alt="" coords="3126,699,3272,741"/>
+<area shape="rect" id="node12" href="$nnet-compile-test_8cc.html" title="nnet3/nnet&#45;compile\l&#45;test.cc" alt="" coords="3296,699,3443,741"/>
+<area shape="rect" id="node13" href="$_2nnet-component-test_8cc.html" title="nnet3/nnet&#45;component\l&#45;test.cc" alt="" coords="3467,699,3638,741"/>
+<area shape="rect" id="node14" href="$nnet3_2nnet-compute-test_8cc.html" title="nnet3/nnet&#45;compute\l&#45;test.cc" alt="" coords="2252,699,2406,741"/>
+<area shape="rect" id="node15" href="$nnet-derivative-test_8cc.html" title="nnet3/nnet&#45;derivative\l&#45;test.cc" alt="" coords="2454,699,2612,741"/>
+<area shape="rect" id="node16" href="$nnet-example-test_8cc.html" title="nnet3/nnet&#45;example\l&#45;test.cc" alt="" coords="2728,699,2880,741"/>
+<area shape="rect" id="node17" href="$nnet3_2nnet-nnet-test_8cc.html" title="nnet3/nnet&#45;nnet&#45;test.cc" alt="" coords="3662,707,3836,733"/>
+<area shape="rect" id="node18" href="$nnet-optimize-test_8cc.html" title="nnet3/nnet&#45;optimize\l&#45;test.cc" alt="" coords="2950,699,3102,741"/>
+<area shape="rect" id="node20" href="$nnet-utils-test_8cc.html" title="nnet3/nnet&#45;utils&#45;test.cc" alt="" coords="3862,707,4032,733"/>
+<area shape="rect" id="node24" href="$_2nnet-nnet_8cc.html" title="nnet3/nnet&#45;nnet.cc" alt="" coords="1819,616,1963,643"/>
+<area shape="rect" id="node30" href="$nnet-compile_8h.html" title="nnet3/nnet&#45;compile.h" alt="" coords="3076,616,3234,643"/>
+<area shape="rect" id="node31" href="$nnet-compile-utils_8h.html" title="nnet3/nnet&#45;compile\l&#45;utils.h" alt="" coords="1456,518,1603,559"/>
+<area shape="rect" id="node33" href="$nnet-descriptor_8cc.html" title="nnet3/nnet&#45;descriptor.cc" alt="" coords="3179,525,3358,552"/>
+<area shape="rect" id="node38" href="$nnet3-acc-lda-stats_8cc.html" title="nnet3bin/nnet3&#45;acc\l&#45;lda&#45;stats.cc" alt="" coords="2648,609,2795,650"/>
+<area shape="rect" id="node39" href="$nnet3-compute-from-egs_8cc.html" title="nnet3bin/nnet3&#45;compute\l&#45;from&#45;egs.cc" alt="" coords="2819,609,3000,650"/>
+<area shape="rect" id="node40" href="$nnet3_2nnet-example_8h.html" title="nnet3/nnet&#45;example.h" alt="" coords="2342,352,2506,379"/>
+<area shape="rect" id="node41" href="$nnet-graph_8h.html" title="This file contains a few functions that treat the neural net as a graph on nodes: e..." alt="" coords="2632,352,2779,379"/>
+<area shape="rect" id="node42" href="$nnet3-info_8cc.html" title="nnet3bin/nnet3&#45;info.cc" alt="" coords="2803,352,2967,379"/>
+<area shape="rect" id="node43" href="$nnet3-init_8cc.html" title="nnet3bin/nnet3&#45;init.cc" alt="" coords="2993,352,3154,379"/>
+<area shape="rect" id="node4" href="$am-nnet-simple_8cc.html" title="nnet3/am&#45;nnet&#45;simple.cc" alt="" coords="1197,616,1379,643"/>
+<area shape="rect" id="node5" href="$nnet3-am-copy_8cc.html" title="nnet3bin/nnet3&#45;am&#45;copy.cc" alt="" coords="1404,616,1599,643"/>
+<area shape="rect" id="node6" href="$nnet3-copy_8cc.html" title="nnet3bin/nnet3&#45;copy.cc" alt="" coords="1624,616,1795,643"/>
+<area shape="rect" id="node32" href="$nnet-component-itf_8cc.html" title="nnet3/nnet&#45;component\l&#45;itf.cc" alt="" coords="1026,518,1196,559"/>
+<area shape="rect" id="node9" href="$nnet-am-decodable-simple_8cc.html" title="nnet3/nnet&#45;am&#45;decodable\l&#45;simple.cc" alt="" coords="882,609,1071,650"/>
+<area shape="rect" id="node19" href="$nnet-test-utils_8cc.html" title="nnet3/nnet&#45;test&#45;utils.cc" alt="" coords="1840,707,2011,733"/>
+<area shape="rect" id="node21" href="$nnet-combine_8h.html" title="nnet3/nnet&#45;combine.h" alt="" coords="1242,707,1406,733"/>
+<area shape="rect" id="node22" href="$nnet3_2nnet-combine_8cc.html" title="nnet3/nnet&#45;combine.cc" alt="" coords="551,789,722,816"/>
+<area shape="rect" id="node23" href="$nnet-diagnostics_8cc.html" title="nnet3/nnet&#45;diagnostics.cc" alt="" coords="364,707,551,733"/>
+<area shape="rect" id="node25" href="$nnet-training_8cc.html" title="nnet3/nnet&#45;training.cc" alt="" coords="87,616,250,643"/>
+<area shape="rect" id="node26" href="$nnet-utils_8cc.html" title="nnet3/nnet&#45;utils.cc" alt="" coords="274,616,414,643"/>
+<area shape="rect" id="node27" href="$nnet3-average_8cc.html" title="nnet3bin/nnet3&#45;average.cc" alt="" coords="439,616,634,643"/>
+<area shape="rect" id="node28" href="$nnet3-compute_8cc.html" title="nnet3bin/nnet3&#45;compute.cc" alt="" coords="658,616,856,643"/>
+<area shape="rect" id="node29" href="$nnet3-show-progress_8cc.html" title="nnet3bin/nnet3&#45;show\l&#45;progress.cc" alt="" coords="900,699,1055,741"/>
+<area shape="rect" id="node36" href="$nnet-diagnostics_8h.html" title="nnet3/nnet&#45;diagnostics.h" alt="" coords="1987,616,2168,643"/>
+<area shape="rect" id="node37" href="$nnet-example-utils_8h.html" title="nnet3/nnet&#45;example\l&#45;utils.h" alt="" coords="2598,518,2750,559"/>
+<area shape="rect" id="node46" href="$nnet-descriptor-test_8cc.html" title="nnet3/nnet&#45;descriptor\l&#45;test.cc" alt="" coords="2720,262,2880,303"/>
+</map>

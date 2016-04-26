@@ -1,0 +1,3 @@
+<map id="CindexSet" name="CindexSet">
+<area shape="rect" id="node2" href="$structkaldi_1_1nnet3_1_1ComputationGraph.html" title="The first step in compilation is to turn the ComputationSpecification into a ComputationGraph, where for each Cindex we have a list of other Cindexes that it depends on. " alt="" coords="379,93,523,120"/>
+</map>

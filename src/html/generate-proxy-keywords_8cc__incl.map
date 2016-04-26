@@ -1,0 +1,29 @@
+<map id="kwsbin/generate&#45;proxy&#45;keywords.cc" name="kwsbin/generate&#45;proxy&#45;keywords.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1164,501,1323,528"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="730,96,875,123"/>
+<area shape="rect" id="node38" href="$kaldi-fst-io_8h.html" title="fstext/kaldi&#45;fst&#45;io.h" alt="" coords="2366,245,2506,272"/>
+<area shape="rect" id="node43" href="$fstext-utils_8h.html" title="fstext/fstext&#45;utils.h" alt="" coords="1895,245,2035,272"/>
+<area shape="rect" id="node48" href="$prune-special_8h.html" title="fstext/prune&#45;special.h" alt="" coords="2663,328,2822,355"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1550,651,1679,677"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1788,576,1922,603"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1755,651,1894,677"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="604,576,722,603"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1322,576,1459,603"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1286,651,1424,677"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="730,328,875,355"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="448,419,550,445"/>
+<area shape="rect" id="node31" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="46,328,199,355"/>
+<area shape="rect" id="node32" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="900,328,1030,355"/>
+<area shape="rect" id="node34" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="1536,419,1648,445"/>
+<area shape="rect" id="node36" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="532,245,655,272"/>
+<area shape="rect" id="node37" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="634,171,763,197"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="898,419,1011,445"/>
+<area shape="rect" id="node30" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="300,501,420,528"/>
+<area shape="rect" id="node42" href="$kaldi-fst-io-inl_8h.html" title="fstext/kaldi&#45;fst&#45;io\l&#45;inl.h" alt="" coords="2471,321,2599,362"/>
+<area shape="rect" id="node44" href="$determinize-star_8h.html" title="fstext/determinize\l&#45;star.h" alt="" coords="2028,411,2167,453"/>
+<area shape="rect" id="node45" href="$remove-eps-local_8h.html" title="fstext/remove&#45;eps&#45;local.h" alt="" coords="2425,419,2610,445"/>
+<area shape="rect" id="node46" href="$fstext-utils-inl_8h.html" title="fstext/fstext&#45;utils\l&#45;inl.h" alt="" coords="1622,321,1751,362"/>
+<area shape="rect" id="node47" href="$factor_8h.html" title="fstext/factor.h" alt="" coords="2634,419,2744,445"/>
+<area shape="rect" id="node49" href="$lattice-weight_8h.html" title="fstext/lattice&#45;weight.h" alt="" coords="2242,419,2400,445"/>
+<area shape="rect" id="node50" href="$prune-special-inl_8h.html" title="fstext/prune&#45;special\l&#45;inl.h" alt="" coords="2821,411,2968,453"/>
+</map>

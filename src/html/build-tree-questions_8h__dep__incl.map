@@ -1,0 +1,29 @@
+<map id="tree/build&#45;tree&#45;questions.h" name="tree/build&#45;tree&#45;questions.h">
+<area shape="rect" id="node2" href="$build-tree-questions_8cc.html" title="tree/build&#45;tree&#45;questions.cc" alt="" coords="26,163,224,189"/>
+<area shape="rect" id="node3" href="$build-tree-utils_8h.html" title="tree/build&#45;tree&#45;utils.h" alt="" coords="1122,80,1278,107"/>
+<area shape="rect" id="node10" href="$extract-ctx_8cc.html" title="bin/extract&#45;ctx.cc" alt="" coords="29,253,160,280"/>
+<area shape="rect" id="node24" href="$tree-accu_8h.html" title="hmm/tree&#45;accu.h" alt="" coords="2515,80,2648,107"/>
+<area shape="rect" id="node28" href="$compile-questions_8cc.html" title="bin/compile&#45;questions.cc" alt="" coords="2673,80,2852,107"/>
+<area shape="rect" id="node4" href="$build-tree_8h.html" title="tree/build&#45;tree.h" alt="" coords="987,163,1112,189"/>
+<area shape="rect" id="node7" href="$build-tree-two-level_8cc.html" title="bin/build&#45;tree&#45;two\l&#45;level.cc" alt="" coords="290,246,423,287"/>
+<area shape="rect" id="node8" href="$bin_2build-tree_8cc.html" title="bin/build&#45;tree.cc" alt="" coords="448,253,571,280"/>
+<area shape="rect" id="node9" href="$cluster-phones_8cc.html" title="bin/cluster&#45;phones.cc" alt="" coords="1171,253,1328,280"/>
+<area shape="rect" id="node12" href="$sgmm-build-tree_8cc.html" title="sgmmbin/sgmm&#45;build\l&#45;tree.cc" alt="" coords="1352,246,1515,287"/>
+<area shape="rect" id="node13" href="$sgmm-cluster-phones_8cc.html" title="sgmmbin/sgmm&#45;cluster\l&#45;phones.cc" alt="" coords="1540,246,1714,287"/>
+<area shape="rect" id="node14" href="$build-tree-utils-test_8cc.html" title="tree/build&#45;tree&#45;utils\l&#45;test.cc" alt="" coords="1288,155,1432,197"/>
+<area shape="rect" id="node15" href="$build-tree-utils_8cc.html" title="tree/build&#45;tree&#45;utils.cc" alt="" coords="1456,163,1619,189"/>
+<area shape="rect" id="node16" href="$tree_2build-tree_8cc.html" title="tree/build&#45;tree.cc" alt="" coords="1643,163,1772,189"/>
+<area shape="rect" id="node17" href="$acc-tree-stats_8cc.html" title="bin/acc&#45;tree&#45;stats.cc" alt="" coords="2412,163,2564,189"/>
+<area shape="rect" id="node18" href="$sum-tree-stats_8cc.html" title="bin/sum&#45;tree&#45;stats.cc" alt="" coords="1798,163,1956,189"/>
+<area shape="rect" id="node19" href="$gmm-init-model-flat_8cc.html" title="gmmbin/gmm&#45;init&#45;model\l&#45;flat.cc" alt="" coords="1981,155,2163,197"/>
+<area shape="rect" id="node20" href="$gmm-init-model_8cc.html" title="gmmbin/gmm&#45;init&#45;model.cc" alt="" coords="2188,163,2387,189"/>
+<area shape="rect" id="node21" href="$sgmm-acc-tree-stats_8cc.html" title="sgmmbin/sgmm&#45;acc&#45;tree\l&#45;stats.cc" alt="" coords="249,155,434,197"/>
+<area shape="rect" id="node22" href="$sgmm-init-from-tree-stats_8cc.html" title="sgmmbin/sgmm&#45;init&#45;from\l&#45;tree&#45;stats.cc" alt="" coords="459,155,646,197"/>
+<area shape="rect" id="node23" href="$sgmm-sum-tree-stats_8cc.html" title="sgmmbin/sgmm&#45;sum&#45;tree\l&#45;stats.cc" alt="" coords="670,155,860,197"/>
+<area shape="rect" id="node5" href="$build-tree-test_8cc.html" title="tree/build&#45;tree&#45;test.cc" alt="" coords="596,253,756,280"/>
+<area shape="rect" id="node6" href="$context-dep_8cc.html" title="tree/context&#45;dep.cc" alt="" coords="782,253,928,280"/>
+<area shape="rect" id="node11" href="$gmm-init-trans_8cc.html" title="gmmbin/gmm&#45;init&#45;trans.cc" alt="" coords="953,253,1146,280"/>
+<area shape="rect" id="node25" href="$hmm-utils-test_8cc.html" title="hmm/hmm&#45;utils&#45;test.cc" alt="" coords="2590,163,2763,189"/>
+<area shape="rect" id="node26" href="$tree-accu_8cc.html" title="hmm/tree&#45;accu.cc" alt="" coords="2787,163,2926,189"/>
+<area shape="rect" id="node27" href="$convert-ali_8cc.html" title="bin/convert&#45;ali.cc" alt="" coords="2950,163,3079,189"/>
+</map>

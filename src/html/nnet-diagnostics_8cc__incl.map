@@ -1,0 +1,37 @@
+<map id="nnet3/nnet&#45;diagnostics.cc" name="nnet3/nnet&#45;diagnostics.cc">
+<area shape="rect" id="node2" href="$nnet-diagnostics_8h.html" title="nnet3/nnet&#45;diagnostics.h" alt="" coords="408,80,589,107"/>
+<area shape="rect" id="node50" href="$_2nnet-utils_8h.html" title="nnet3/nnet&#45;utils.h" alt="" coords="1551,469,1685,496"/>
+<area shape="rect" id="node3" href="$nnet3_2nnet-example_8h.html" title="nnet3/nnet&#45;example.h" alt="" coords="709,395,872,421"/>
+<area shape="rect" id="node41" href="$nnet-computation_8h.html" title="The two main classes defined in this header are struct ComputationRequest, which basically defines a ..." alt="" coords="341,635,531,661"/>
+<area shape="rect" id="node42" href="$nnet3_2nnet-compute_8h.html" title="nnet3/nnet&#45;compute.h" alt="" coords="251,320,417,347"/>
+<area shape="rect" id="node46" href="$nnet-optimize_8h.html" title="nnet3/nnet&#45;optimize.h" alt="" coords="693,237,856,264"/>
+<area shape="rect" id="node48" href="$nnet-example-utils_8h.html" title="nnet3/nnet&#45;example\l&#45;utils.h" alt="" coords="259,230,411,271"/>
+<area shape="rect" id="node49" href="$nnet-training_8h.html" title="nnet3/nnet&#45;training.h" alt="" coords="420,155,577,181"/>
+<area shape="rect" id="node4" href="$_2nnet-nnet_8h.html" title="nnet3/nnet&#45;nnet.h" alt="" coords="823,709,961,736"/>
+<area shape="rect" id="node39" href="$posterior_8h.html" title="hmm/posterior.h" alt="" coords="575,552,703,579"/>
+<area shape="rect" id="node40" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1834,949,1963,976"/>
+<area shape="rect" id="node5" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1167,1099,1325,1125"/>
+<area shape="rect" id="node23" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="1783,1024,1885,1051"/>
+<area shape="rect" id="node25" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="2103,1024,2241,1051"/>
+<area shape="rect" id="node35" href="$nnet-common_8h.html" title="nnet3/nnet&#45;common.h" alt="" coords="1042,949,1208,976"/>
+<area shape="rect" id="node36" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="1385,859,1556,901"/>
+<area shape="rect" id="node37" href="$nnet-descriptor_8h.html" title="This file contains class definitions for classes ForwardingDescriptor, SumDescriptor and Descriptor..." alt="" coords="1130,784,1301,811"/>
+<area shape="rect" id="node16" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1893,1248,2021,1275"/>
+<area shape="rect" id="node18" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1740,1173,1873,1200"/>
+<area shape="rect" id="node19" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1479,1248,1617,1275"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1181,1173,1299,1200"/>
+<area shape="rect" id="node22" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1426,1173,1563,1200"/>
+<area shape="rect" id="node24" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="1818,1099,1939,1125"/>
+<area shape="rect" id="node26" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="2741,1099,2915,1125"/>
+<area shape="rect" id="node27" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="2101,1173,2240,1200"/>
+<area shape="rect" id="node28" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="2841,1248,2993,1275"/>
+<area shape="rect" id="node29" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="2461,1248,2615,1275"/>
+<area shape="rect" id="node30" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="2826,1173,3008,1200"/>
+<area shape="rect" id="node31" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="2103,1099,2241,1125"/>
+<area shape="rect" id="node32" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="2697,1173,2801,1200"/>
+<area shape="rect" id="node33" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="2367,1173,2571,1200"/>
+<area shape="rect" id="node34" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="2316,1099,2484,1125"/>
+<area shape="rect" id="node43" href="$nnet-analyze_8h.html" title="nnet3/nnet&#45;analyze.h" alt="" coords="474,395,632,421"/>
+<area shape="rect" id="node44" href="$nnet-compile_8h.html" title="nnet3/nnet&#45;compile.h" alt="" coords="778,469,936,496"/>
+<area shape="rect" id="node45" href="$nnet-computation-graph_8h.html" title="nnet3/nnet&#45;computation\l&#45;graph.h" alt="" coords="879,545,1057,586"/>
+</map>

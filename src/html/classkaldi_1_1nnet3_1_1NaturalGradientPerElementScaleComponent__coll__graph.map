@@ -1,0 +1,13 @@
+<map id="NaturalGradientPerElementScaleComponent" name="NaturalGradientPerElementScaleComponent">
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1PerElementScaleComponent.html" title="PerElementScaleComponent" alt="" coords="993,108,1199,135"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="641,140,804,167"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="278,185,375,212"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html" title="Keywords for search: natural gradient, naturalgradient, NG&#45;SGD. " alt="" coords="1014,391,1178,417"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="225,395,428,421"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="233,445,421,472"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="636,79,809,105"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="224,57,429,84"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1Mutex.html" title="This class encapsulates mutex to ensure exclusive access to some critical section which manipulates s..." alt="" coords="692,496,753,523"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="637,395,808,421"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="645,445,801,472"/>
+</map>

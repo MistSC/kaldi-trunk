@@ -1,0 +1,33 @@
+<map id="gmm/diag&#45;gmm&#45;normal.h" name="gmm/diag&#45;gmm&#45;normal.h">
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="731,800,889,827"/>
+<area shape="rect" id="node25" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="1039,155,1213,181"/>
+<area shape="rect" id="node26" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1197,229,1336,256"/>
+<area shape="rect" id="node45" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="821,80,960,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="345,949,473,976"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="296,875,429,901"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="783,949,921,976"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1291,875,1409,901"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1130,875,1267,901"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1375,949,1513,976"/>
+<area shape="rect" id="node27" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="1678,304,1852,331"/>
+<area shape="rect" id="node28" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="1081,379,1220,405"/>
+<area shape="rect" id="node33" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="1121,552,1260,579"/>
+<area shape="rect" id="node34" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1857,635,2009,661"/>
+<area shape="rect" id="node36" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1567,461,1720,488"/>
+<area shape="rect" id="node38" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="1729,379,1911,405"/>
+<area shape="rect" id="node40" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="2221,379,2325,405"/>
+<area shape="rect" id="node41" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1398,379,1601,405"/>
+<area shape="rect" id="node42" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="1188,304,1356,331"/>
+<area shape="rect" id="node44" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="1987,379,2145,405"/>
+<area shape="rect" id="node30" href="$packed-matrix_8h.html" title="matrix/packed&#45;matrix.h" alt="" coords="1163,635,1333,661"/>
+<area shape="rect" id="node32" href="$sp-matrix-inl_8h.html" title="matrix/sp&#45;matrix&#45;inl.h" alt="" coords="1111,461,1269,488"/>
+<area shape="rect" id="node31" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1482,717,1664,744"/>
+<area shape="rect" id="node35" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1863,710,2003,751"/>
+<area shape="rect" id="node37" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="1611,545,1753,586"/>
+<area shape="rect" id="node39" href="$matrix-functions-inl_8h.html" title="matrix/matrix&#45;functions\l&#45;inl.h" alt="" coords="1796,454,1967,495"/>
+<area shape="rect" id="node46" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="603,155,740,181"/>
+<area shape="rect" id="node48" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="311,155,497,181"/>
+<area shape="rect" id="node49" href="$diag-gmm-inl_8h.html" title="gmm/diag&#45;gmm&#45;inl.h" alt="" coords="696,229,853,256"/>
+<area shape="rect" id="node47" href="$clusterable-itf_8h.html" title="itf/clusterable&#45;itf.h" alt="" coords="220,229,355,256"/>
+<area shape="rect" id="node50" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="882,635,984,661"/>
+</map>

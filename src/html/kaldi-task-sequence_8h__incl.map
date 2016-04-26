@@ -1,0 +1,13 @@
+<map id="thread/kaldi&#45;task&#45;sequence.h" name="thread/kaldi&#45;task&#45;sequence.h">
+<area shape="rect" id="node3" href="$kaldi-thread_8h.html" title="thread/kaldi&#45;thread.h" alt="" coords="119,80,275,107"/>
+<area shape="rect" id="node5" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="673,80,785,107"/>
+<area shape="rect" id="node29" href="$kaldi-semaphore_8h.html" title="thread/kaldi&#45;semaphore.h" alt="" coords="235,155,421,181"/>
+<area shape="rect" id="node4" href="$kaldi-barrier_8h.html" title="thread/kaldi&#45;barrier.h" alt="" coords="5,155,159,181"/>
+<area shape="rect" id="node6" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="825,155,984,181"/>
+<area shape="rect" id="node17" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="421,304,549,331"/>
+<area shape="rect" id="node20" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="659,229,792,256"/>
+<area shape="rect" id="node22" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="968,304,1107,331"/>
+<area shape="rect" id="node24" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1199,229,1317,256"/>
+<area shape="rect" id="node27" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1385,229,1521,256"/>
+<area shape="rect" id="node26" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1269,304,1408,331"/>
+</map>

@@ -1,0 +1,12 @@
+<map id="Plp" name="Plp">
+<area shape="rect" id="node7" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="361,316,549,343"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="361,369,548,396"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1SplitRadixComplexFft.html" title="SplitRadixComplexFft\l\&lt; BaseFloat \&gt;" alt="" coords="377,141,533,182"/>
+<area shape="rect" id="node15" href="$structkaldi_1_1PlpOptions.html" title="PlpOptions contains basic options for computing PLP features. " alt="" coords="708,681,799,708"/>
+<area shape="rect" id="node17" href="$structkaldi_1_1MelBanksOptions.html" title="MelBanksOptions" alt="" coords="389,748,521,775"/>
+<area shape="rect" id="node18" href="$structkaldi_1_1FrameExtractionOptions.html" title="FrameExtractionOptions" alt="" coords="367,825,542,852"/>
+<area shape="rect" id="node5" href="$structkaldi_1_1FeatureWindowFunction.html" title="FeatureWindowFunction" alt="" coords="1045,257,1216,284"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="675,309,831,336"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="856,372,1011,399"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1SplitRadixRealFft.html" title="SplitRadixRealFft\&lt;\l BaseFloat \&gt;" alt="" coords="685,138,822,179"/>
+</map>

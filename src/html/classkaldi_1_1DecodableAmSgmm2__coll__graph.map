@@ -1,0 +1,17 @@
+<map id="DecodableAmSgmm2" name="DecodableAmSgmm2">
+<area shape="rect" id="node2" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="1413,16,1560,43"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="404,649,591,676"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="403,848,591,875"/>
+<area shape="rect" id="node21" href="$classkaldi_1_1PackedMatrix.html" title="PackedMatrix\&lt; BaseFloat \&gt;" alt="" coords="398,951,597,977"/>
+<area shape="rect" id="node5" href="$structkaldi_1_1Sgmm2LikelihoodCache.html" title="Sgmm2LikelihoodCache caches SGMM likelihoods at two levels: the final pdf likelihoods, and the sub&#45;state level likelihoods, which means that with the SCTM system we can avoid redundant computation. " alt="" coords="409,72,585,99"/>
+<area shape="rect" id="node26" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="1427,1191,1547,1217"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="661,364,816,391"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1Sgmm2PerSpkDerivedVars.html" title="Sgmm2PerSpkDerivedVars" alt="" coords="1056,301,1251,328"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1AmSgmm2.html" title="Class for definition of the subspace Gmm acoustic model. " alt="" coords="1439,589,1534,616"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1FullGmm.html" title="FullGmm" alt="" coords="1114,476,1193,503"/>
+<area shape="rect" id="node18" href="$classkaldi_1_1DiagGmm.html" title="Gaussian Mixture Model with diagonal covariances. " alt="" coords="1110,589,1197,616"/>
+<area shape="rect" id="node25" href="$structkaldi_1_1Sgmm2PerFrameDerivedVars.html" title="Holds the per&#45;frame precomputed quantities x(t), x_{i}(t), z_{i}(t), and n_{i}(t) (cf..." alt="" coords="1048,941,1259,968"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="661,848,817,875"/>
+<area shape="rect" id="node28" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="1097,1147,1210,1173"/>
+<area shape="rect" id="node20" href="$classkaldi_1_1SpMatrix.html" title="SpMatrix\&lt; BaseFloat \&gt;" alt="" coords="853,985,1024,1012"/>
+</map>

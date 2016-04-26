@@ -1,0 +1,7 @@
+<map id="OnlinePitchFeatureImpl" name="OnlinePitchFeatureImpl">
+<area shape="rect" id="node4" href="$classkaldi_1_1ArbitraryResample.html" title="Class ArbitraryResample allows you to resample a signal (assumed zero outside the sample region..." alt="" coords="992,523,1131,549"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="259,279,447,305"/>
+<area shape="rect" id="node15" href="$structkaldi_1_1PitchExtractionOptions.html" title="PitchExtractionOptions" alt="" coords="270,736,437,763"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1LinearResample.html" title="LinearResample is a special case of ArbitraryResample, where we want to resample a signal at linearly..." alt="" coords="1000,400,1123,427"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="614,279,770,305"/>
+</map>

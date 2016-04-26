@@ -1,0 +1,34 @@
+<map id="sgmm2bin/sgmm2&#45;rescore&#45;lattice.cc" name="sgmm2bin/sgmm2&#45;rescore&#45;lattice.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="733,667,892,693"/>
+<area shape="rect" id="node18" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1621,261,1765,288"/>
+<area shape="rect" id="node31" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="2673,592,2775,619"/>
+<area shape="rect" id="node34" href="$am-sgmm2_8h.html" title="sgmm2/am&#45;sgmm2.h" alt="" coords="493,261,656,288"/>
+<area shape="rect" id="node39" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="1027,336,1204,363"/>
+<area shape="rect" id="node44" href="$fstext-lib_8h.html" title="fstext/fstext&#45;lib.h" alt="" coords="2545,261,2673,288"/>
+<area shape="rect" id="node48" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="1630,179,1756,205"/>
+<area shape="rect" id="node49" href="$lattice-functions_8h.html" title="lat/lattice&#45;functions.h" alt="" coords="1647,96,1803,123"/>
+<area shape="rect" id="node50" href="$decodable-am-sgmm2_8h.html" title="sgmm2/decodable&#45;am\l&#45;sgmm2.h" alt="" coords="987,171,1153,213"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="127,816,256,843"/>
+<area shape="rect" id="node14" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="280,741,413,768"/>
+<area shape="rect" id="node15" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="520,816,659,843"/>
+<area shape="rect" id="node16" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="753,741,871,768"/>
+<area shape="rect" id="node17" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="539,741,676,768"/>
+<area shape="rect" id="node19" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1574,509,1719,536"/>
+<area shape="rect" id="node22" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="1977,592,2079,619"/>
+<area shape="rect" id="node23" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2155,509,2308,536"/>
+<area shape="rect" id="node24" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1949,509,2079,536"/>
+<area shape="rect" id="node26" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="2155,592,2268,619"/>
+<area shape="rect" id="node28" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1432,419,1555,445"/>
+<area shape="rect" id="node29" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="874,336,1003,363"/>
+<area shape="rect" id="node21" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="914,592,1027,619"/>
+<area shape="rect" id="node30" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="445,592,584,619"/>
+<area shape="rect" id="node35" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="195,509,369,536"/>
+<area shape="rect" id="node36" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="339,419,477,445"/>
+<area shape="rect" id="node37" href="$full-gmm_8h.html" title="gmm/full&#45;gmm.h" alt="" coords="125,419,253,445"/>
+<area shape="rect" id="node38" href="$kaldi-thread_8h.html" title="thread/kaldi&#45;thread.h" alt="" coords="381,336,536,363"/>
+<area shape="rect" id="node40" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="851,509,991,536"/>
+<area shape="rect" id="node41" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="1795,502,1924,543"/>
+<area shape="rect" id="node43" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="1091,419,1255,445"/>
+<area shape="rect" id="node46" href="$context-fst_8h.html" title="fstext/context&#45;fst.h" alt="" coords="2703,419,2845,445"/>
+<area shape="rect" id="node47" href="$determinize-star_8h.html" title="fstext/determinize\l&#45;star.h" alt="" coords="2431,411,2569,453"/>
+</map>

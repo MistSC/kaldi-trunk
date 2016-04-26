@@ -1,0 +1,8 @@
+<map id="AffineComponent" name="AffineComponent">
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="105,125,268,152"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="5,5,101,32"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="328,125,531,152"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="547,203,720,229"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="555,125,760,152"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="344,203,515,229"/>
+</map>

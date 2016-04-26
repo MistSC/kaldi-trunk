@@ -1,0 +1,33 @@
+<map id="gmmbin/gmm&#45;get&#45;stats&#45;deriv.cc" name="gmmbin/gmm&#45;get&#45;stats&#45;deriv.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1183,643,1341,669"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="667,261,812,288"/>
+<area shape="rect" id="node36" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="1727,336,1891,363"/>
+<area shape="rect" id="node40" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="1359,411,1499,437"/>
+<area shape="rect" id="node44" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="1227,261,1404,288"/>
+<area shape="rect" id="node47" href="$indirect-diff-diag-gmm_8h.html" title="gmm/indirect&#45;diff&#45;diag\l&#45;gmm.h" alt="" coords="1809,97,1972,138"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="587,800,716,827"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1531,725,1664,752"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1157,800,1296,827"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="746,725,864,752"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1318,725,1455,752"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="792,800,931,827"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1033,485,1177,512"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="259,560,361,587"/>
+<area shape="rect" id="node30" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="300,485,453,512"/>
+<area shape="rect" id="node31" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="529,485,659,512"/>
+<area shape="rect" id="node32" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="406,560,519,587"/>
+<area shape="rect" id="node33" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="632,411,755,437"/>
+<area shape="rect" id="node34" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="726,336,855,363"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1582,560,1695,587"/>
+<area shape="rect" id="node35" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1796,560,1935,587"/>
+<area shape="rect" id="node37" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="2043,411,2181,437"/>
+<area shape="rect" id="node38" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="1778,485,1952,512"/>
+<area shape="rect" id="node39" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="2079,485,2216,512"/>
+<area shape="rect" id="node41" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="1363,560,1505,587"/>
+<area shape="rect" id="node42" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="646,560,780,587"/>
+<area shape="rect" id="node43" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="521,635,651,677"/>
+<area shape="rect" id="node46" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="1234,336,1397,363"/>
+<area shape="rect" id="node48" href="$diag-gmm-normal_8h.html" title="gmm/diag&#45;gmm&#45;normal.h" alt="" coords="2018,336,2205,363"/>
+<area shape="rect" id="node49" href="$mle-diag-gmm_8h.html" title="gmm/mle&#45;diag&#45;gmm.h" alt="" coords="1865,261,2031,288"/>
+<area shape="rect" id="node50" href="$mle-am-diag-gmm_8h.html" title="gmm/mle&#45;am&#45;diag&#45;gmm.h" alt="" coords="1727,187,1920,213"/>
+</map>

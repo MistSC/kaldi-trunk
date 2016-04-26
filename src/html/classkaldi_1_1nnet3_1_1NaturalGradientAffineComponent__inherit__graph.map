@@ -1,0 +1,5 @@
+<map id="NaturalGradientAffineComponent" name="NaturalGradientAffineComponent">
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1AffineComponent.html" title="AffineComponent" alt="" coords="55,155,188,181"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="40,80,203,107"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="73,5,169,32"/>
+</map>

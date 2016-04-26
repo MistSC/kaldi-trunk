@@ -1,0 +1,28 @@
+<map id="matrix/kaldi&#45;gpsr.h" name="matrix/kaldi&#45;gpsr.h">
+<area shape="rect" id="node4" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="613,651,772,677"/>
+<area shape="rect" id="node25" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1261,80,1400,107"/>
+<area shape="rect" id="node45" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="321,80,433,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="23,800,152,827"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="251,725,384,752"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="797,800,936,827"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1255,725,1373,752"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1085,725,1221,752"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1449,800,1588,827"/>
+<area shape="rect" id="node26" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="1695,155,1869,181"/>
+<area shape="rect" id="node27" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="1981,229,2120,256"/>
+<area shape="rect" id="node33" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="1876,403,2015,429"/>
+<area shape="rect" id="node34" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1187,485,1339,512"/>
+<area shape="rect" id="node36" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1045,312,1199,339"/>
+<area shape="rect" id="node38" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="1302,229,1484,256"/>
+<area shape="rect" id="node40" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="1173,229,1277,256"/>
+<area shape="rect" id="node41" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="763,229,967,256"/>
+<area shape="rect" id="node42" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="936,155,1104,181"/>
+<area shape="rect" id="node44" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="1509,229,1667,256"/>
+<area shape="rect" id="node29" href="$packed-matrix_8h.html" title="matrix/packed&#45;matrix.h" alt="" coords="1883,485,2053,512"/>
+<area shape="rect" id="node32" href="$sp-matrix-inl_8h.html" title="matrix/sp&#45;matrix&#45;inl.h" alt="" coords="1866,312,2024,339"/>
+<area shape="rect" id="node30" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="689,568,871,595"/>
+<area shape="rect" id="node31" href="$kaldi-blas_8h.html" title="matrix/kaldi&#45;blas.h" alt="" coords="797,651,936,677"/>
+<area shape="rect" id="node35" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1192,561,1332,602"/>
+<area shape="rect" id="node37" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="1054,395,1196,437"/>
+<area shape="rect" id="node39" href="$matrix-functions-inl_8h.html" title="matrix/matrix&#45;functions\l&#45;inl.h" alt="" coords="1325,305,1496,346"/>
+</map>

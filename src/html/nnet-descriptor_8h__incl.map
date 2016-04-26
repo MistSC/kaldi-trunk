@@ -1,0 +1,33 @@
+<map id="nnet3/nnet&#45;descriptor.h" name="nnet3/nnet&#45;descriptor.h">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1580,816,1739,843"/>
+<area shape="rect" id="node25" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="1217,733,1319,760"/>
+<area shape="rect" id="node27" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="939,253,1077,280"/>
+<area shape="rect" id="node43" href="$nnet-common_8h.html" title="nnet3/nnet&#45;common.h" alt="" coords="1738,171,1904,197"/>
+<area shape="rect" id="node47" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="1980,81,2151,122"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1426,965,1555,992"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1948,891,2081,917"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="2049,965,2188,992"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="938,891,1056,917"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1213,891,1349,917"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="897,965,1036,992"/>
+<area shape="rect" id="node26" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="1175,816,1296,843"/>
+<area shape="rect" id="node28" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="415,336,589,363"/>
+<area shape="rect" id="node29" href="$sp-matrix_8h.html" title="matrix/sp&#45;matrix.h" alt="" coords="145,411,284,437"/>
+<area shape="rect" id="node33" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="823,651,975,677"/>
+<area shape="rect" id="node35" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="936,485,1089,512"/>
+<area shape="rect" id="node37" href="$matrix-functions_8h.html" title="matrix/matrix&#45;functions.h" alt="" coords="542,411,724,437"/>
+<area shape="rect" id="node38" href="$tp-matrix_8h.html" title="matrix/tp&#45;matrix.h" alt="" coords="252,336,391,363"/>
+<area shape="rect" id="node39" href="$srfft_8h.html" title="matrix/srfft.h" alt="" coords="800,411,904,437"/>
+<area shape="rect" id="node40" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1163,411,1367,437"/>
+<area shape="rect" id="node41" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="1289,336,1457,363"/>
+<area shape="rect" id="node42" href="$optimization_8h.html" title="matrix/optimization.h" alt="" coords="929,411,1087,437"/>
+<area shape="rect" id="node31" href="$packed-matrix_8h.html" title="matrix/packed&#45;matrix.h" alt="" coords="195,485,365,512"/>
+<area shape="rect" id="node32" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1010,733,1192,760"/>
+<area shape="rect" id="node34" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="828,726,968,767"/>
+<area shape="rect" id="node36" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="937,561,1079,602"/>
+<area shape="rect" id="node44" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1671,651,1816,677"/>
+<area shape="rect" id="node45" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1899,568,2012,595"/>
+<area shape="rect" id="node46" href="$cu-matrix-lib_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;lib.h" alt="" coords="1823,246,1981,287"/>
+<area shape="rect" id="node48" href="$nnet-parse_8h.html" title="nnet3/nnet&#45;parse.h" alt="" coords="1425,485,1569,512"/>
+<area shape="rect" id="node49" href="$kaldi-mutex_8h.html" title="thread/kaldi&#45;mutex.h" alt="" coords="1980,171,2133,197"/>
+</map>

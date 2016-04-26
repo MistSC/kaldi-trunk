@@ -1,0 +1,7 @@
+<map id="LatticeWordAligner" name="LatticeWordAligner">
+<area shape="rect" id="node3" href="$structkaldi_1_1WordBoundaryInfo.html" title="WordBoundaryInfo" alt="" coords="933,211,1070,237"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="941,337,1061,364"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="163,520,351,547"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="546,416,659,443"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="525,545,681,572"/>
+</map>

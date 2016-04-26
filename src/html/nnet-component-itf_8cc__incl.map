@@ -1,0 +1,31 @@
+<map id="nnet3/nnet&#45;component&#45;itf.cc" name="nnet3/nnet&#45;component&#45;itf.cc">
+<area shape="rect" id="node5" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="495,427,665,469"/>
+<area shape="rect" id="node40" href="$nnet-parse_8h.html" title="nnet3/nnet&#45;parse.h" alt="" coords="627,525,772,552"/>
+<area shape="rect" id="node43" href="$nnet-simple-component_8h.html" title="nnet3/nnet&#45;simple&#45;component.h" alt="" coords="335,344,564,371"/>
+<area shape="rect" id="node45" href="$nnet-general-component_8h.html" title="nnet3/nnet&#45;general\l&#45;component.h" alt="" coords="165,337,309,378"/>
+<area shape="rect" id="node46" href="$nnet-computation-graph_8h.html" title="nnet3/nnet&#45;computation\l&#45;graph.h" alt="" coords="805,97,984,138"/>
+<area shape="rect" id="node6" href="$nnet-common_8h.html" title="nnet3/nnet&#45;common.h" alt="" coords="849,525,1015,552"/>
+<area shape="rect" id="node19" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="976,1013,1109,1040"/>
+<area shape="rect" id="node41" href="$kaldi-mutex_8h.html" title="thread/kaldi&#45;mutex.h" alt="" coords="144,616,297,643"/>
+<area shape="rect" id="node7" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1440,939,1599,965"/>
+<area shape="rect" id="node24" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1562,616,1707,643"/>
+<area shape="rect" id="node27" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1825,856,1937,883"/>
+<area shape="rect" id="node38" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1277,616,1416,643"/>
+<area shape="rect" id="node39" href="$cu-matrix-lib_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;lib.h" alt="" coords="678,609,836,650"/>
+<area shape="rect" id="node17" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1587,1088,1716,1115"/>
+<area shape="rect" id="node21" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1261,1088,1400,1115"/>
+<area shape="rect" id="node22" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1235,1013,1353,1040"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1801,1013,1937,1040"/>
+<area shape="rect" id="node25" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1682,773,1827,800"/>
+<area shape="rect" id="node28" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2207,773,2309,800"/>
+<area shape="rect" id="node29" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2004,699,2157,725"/>
+<area shape="rect" id="node30" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1413,699,1543,725"/>
+<area shape="rect" id="node32" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="1422,773,1535,800"/>
+<area shape="rect" id="node35" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="960,773,1112,800"/>
+<area shape="rect" id="node36" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="945,856,1127,883"/>
+<area shape="rect" id="node37" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="779,849,919,890"/>
+<area shape="rect" id="node44" href="$natural-gradient-online_8h.html" title="nnet3/natural&#45;gradient\l&#45;online.h" alt="" coords="253,518,419,559"/>
+<area shape="rect" id="node47" href="$_2nnet-nnet_8h.html" title="nnet3/nnet&#45;nnet.h" alt="" coords="1516,261,1655,288"/>
+<area shape="rect" id="node49" href="$nnet-computation_8h.html" title="The two main classes defined in this header are struct ComputationRequest, which basically defines a ..." alt="" coords="1179,187,1369,213"/>
+<area shape="rect" id="node48" href="$nnet-descriptor_8h.html" title="This file contains class definitions for classes ForwardingDescriptor, SumDescriptor and Descriptor..." alt="" coords="1870,344,2041,371"/>
+</map>
