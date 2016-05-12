@@ -1,5 +1,16 @@
 var NAVTREEINDEX55 =
 {
+"namespacemembers_v.html":[2,1,0,22],
+"namespacemembers_vars.html":[2,1,2],
+"namespacemembers_w.html":[2,1,0,23],
+"namespacemembers_x.html":[2,1,0,24],
+"namespacemembers_y.html":[2,1,0,25],
+"namespacemembers_z.html":[2,1,0,26],
+"namespacernnlm.html":[2,0,2],
+"namespacernnlm.html":[3,0,2],
+"namespaces.html":[2,0],
+"natural-gradient-online-test_8cc.html":[4,0,23,2],
+"natural-gradient-online-test_8cc.html#a7012eb43a414f870091986ffeec55aea":[4,0,23,2,2],
 "natural-gradient-online-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,23,2,1],
 "natural-gradient-online-test_8cc_source.html":[4,0,23,2],
 "natural-gradient-online_8cc.html":[4,0,23,3],
@@ -238,16 +249,5 @@ var NAVTREEINDEX55 =
 "nnet-component_8cc_source.html":[4,0,20,6],
 "nnet-component_8h.html":[4,0,20,7],
 "nnet-component_8h_source.html":[4,0,20,7],
-"nnet-computation-graph_8cc.html":[4,0,23,24],
-"nnet-computation-graph_8cc.html#a0042e072cd4a3244fe595534db8c9392":[4,0,23,24,1],
-"nnet-computation-graph_8cc.html#a170051dd847dd17ea4826fe55635fb72":[4,0,23,24,15],
-"nnet-computation-graph_8cc.html#a2fb066857e6cd5f7839f8403ac734c11":[4,0,23,24,8],
-"nnet-computation-graph_8cc.html#a3767518aebb1ba1be4b3d1a8a63c28c6":[4,0,23,24,12],
-"nnet-computation-graph_8cc.html#a49f9f182fa8dc05d6672c4b7fcad737f":[4,0,23,24,17],
-"nnet-computation-graph_8cc.html#a528aef1b8eedf012c43f002c56204599":[4,0,23,24,16],
-"nnet-computation-graph_8cc.html#a5e98138365913329d832053de3c95f1f":[4,0,23,24,5],
-"nnet-computation-graph_8cc.html#a7097241ff38efdc19a12ff8f710a8d47":[4,0,23,24,3],
-"nnet-computation-graph_8cc.html#a83e0cb29ecc50f5275d89e4962156ea4":[4,0,23,24,10],
-"nnet-computation-graph_8cc.html#a903671e83b2e9744669360e9aa51d08e":[4,0,23,24,13],
-"nnet-computation-graph_8cc.html#a99ec798a701dc7e5d115267aa2fdb173":[4,0,23,24,0]
+"nnet-computation-graph_8cc.html":[4,0,23,24]
 };

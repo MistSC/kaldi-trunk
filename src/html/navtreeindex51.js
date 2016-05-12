@@ -1,5 +1,17 @@
 var NAVTREEINDEX51 =
 {
+"kaldi-utils_8h.html#a3508b7804094b45e5dff6d17361106d2":[4,0,0,13,6],
+"kaldi-utils_8h.html#a53b53274b9a990864c4275852ed280fc":[4,0,0,13,10],
+"kaldi-utils_8h.html#a5b9b0bbc72ddd36adc10ed8914496f0f":[4,0,0,13,13],
+"kaldi-utils_8h.html#a6197729d508080eaa4a807ccea4a12f0":[4,0,0,13,15],
+"kaldi-utils_8h.html#a61d7854c20dc53362038896af515d2cd":[4,0,0,13,3],
+"kaldi-utils_8h.html#a785d5ea9e0e8788f3333dd6dbb1ce77b":[4,0,0,13,9],
+"kaldi-utils_8h.html#a9e6f95e56d45a404911be5dd72777784":[4,0,0,13,7],
+"kaldi-utils_8h.html#ab61d8d3af3a2d6d19a095d5759f1b124":[4,0,0,13,11],
+"kaldi-utils_8h.html#ab8b2f16654ac15f963c23e0df0ebea1e":[4,0,0,13,14],
+"kaldi-utils_8h.html#ac9092fffa42237131fee6df4fa5c09a0":[4,0,0,13,4],
+"kaldi-utils_8h.html#af3c7e6cf7a7f44b4d84475de9adcae14":[4,0,0,13,2],
+"kaldi-utils_8h_source.html":[4,0,0,13],
 "kaldi-vector-inl_8h.html":[4,0,19,12],
 "kaldi-vector-inl_8h.html#ga2b96afd0bdc05b4c649784df90d45494":[4,0,19,12,1],
 "kaldi-vector-inl_8h.html#ga3a35396824349955844e150b598485bd":[4,0,19,12,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX51 =
 "lattice-oracle_8cc.html#a622cbd688230172c44ab0044df614c49":[4,0,17,31,2],
 "lattice-oracle_8cc.html#a9a787cbbc3def480abbaf39db13feac1":[4,0,17,31,4],
 "lattice-oracle_8cc.html#aa20a74424dfad15d205fc75e7a155b08":[4,0,17,31,6],
-"lattice-oracle_8cc.html#af314faf5549863b2076dd761ee1006c3":[4,0,17,31,7],
-"lattice-oracle_8cc.html#af32aec9dfd0165361a2f03806191ef9d":[4,0,17,31,1],
-"lattice-oracle_8cc_source.html":[4,0,17,31],
-"lattice-project_8cc.html":[4,0,17,32],
-"lattice-project_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,17,32,0],
-"lattice-project_8cc_source.html":[4,0,17,32],
-"lattice-prune_8cc.html":[4,0,17,33],
-"lattice-prune_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,17,33,0],
-"lattice-prune_8cc_source.html":[4,0,17,33],
-"lattice-push_8cc.html":[4,0,17,34],
-"lattice-push_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,17,34,0],
-"lattice-push_8cc_source.html":[4,0,17,34],
-"lattice-rescore-mapped_8cc.html":[4,0,17,35]
+"lattice-oracle_8cc.html#af314faf5549863b2076dd761ee1006c3":[4,0,17,31,7]
 };

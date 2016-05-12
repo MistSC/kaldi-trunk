@@ -267,6 +267,105 @@ static void _copy_from_smat_trans(Real* mat_out, const MatrixElement<OtherReal>*
 
 template<typename Real>
 __global__
+static void _reshape_from_tensor(Real* dst,
+                                 const Real *src, 
+                                 MatrixDim dst_dim,
+                                 TensorDim src_dim,
+                                 int mode) 
+{
+  int i = blockIdx.x;
+  int j = blockIdx.y;
+  int k = blockIdx.z;
+  int l = threadIdx.x;
+  int src_index;
+  int dst_index;
+  switch(mode)
+  {
+  case 1:
+    // M(l,i1*i2*i3)->M(l*i2*i3,i1)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    { 
+      src_index = src_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      dst_index = dst_dim.stride * ((src_dim.i2*src_dim.i3)*l + src_dim.i3*j + k) + i;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 2:
+    // M(l,i1*i2*i3)->M(l*i1*i3,i2)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      dst_index = dst_dim.stride * ((src_dim.i1*src_dim.i3)*l + src_dim.i3*i + k) + j;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 3:
+    // M(l,i1*i2*i3)->M(l*i1*i2,i3)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      dst_index = dst_dim.stride * ((src_dim.i1*src_dim.i2)*l + src_dim.i2*i + j) + k;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 10:
+    // M(l*i2*i3,i1)->M(l,i1*i2*i3)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride * ((src_dim.i2*src_dim.i3)*l + src_dim.i3*j + k) + i;
+      dst_index = dst_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 20:
+    // M(l*i1*i3,i2)->M(l,i1*i2*i3)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride * ((src_dim.i1*src_dim.i3)*l + src_dim.i3*i + k) + j;
+      dst_index = dst_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 30:
+    // M(l*i2*i3,i1)->M(l,i1*i2*i3)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride * ((src_dim.i1*src_dim.i2)*l + src_dim.i2*i + j) + k;
+      dst_index = dst_dim.stride*l + (src_dim.i2*src_dim.i3)*i + src_dim.i3*j + k;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+
+  break;
+  }
+}
+
+
+template<typename Real>
+__global__
 static void _trace_mat_smat_trans(const Real* mat_in, const MatrixElement<Real>* smat_in, MatrixDim mat_d_in, MatrixIndexT_cuda smat_d_in, Real* trace_vec_out) {
   int smat_index = blockIdx.x * blockDim.x + threadIdx.x;
   if (smat_index >= smat_d_in) return;
@@ -2147,6 +2246,11 @@ void cudaFD_copy_from_tp(dim3 Gr, dim3 Bl, float* A, const double* B, MatrixDim 
   _copy_from_tp<<<Gr,Bl>>>(A,B,dmat);
 }
 
+// sc function
+void cudaF_reshape_from_tensor(dim3 Gr, dim3 Bl, float* dst, const float* src, MatrixDim dst_dim, TensorDim src_dim, int mode) {
+  _reshape_from_tensor<<<Gr,Bl>>>(dst, src, dst_dim, src_dim, mode);
+}
+
 void cudaF_transpose_matrix(dim3 Gr, dim3 Bl, float* mat, MatrixDim d) {
   _transpose_matrix<<<Gr,Bl>>>(mat, d);
 }
@@ -2613,6 +2717,11 @@ void cudaD_copy_from_tp(dim3 Gr, dim3 Bl, double* A, const double* B, MatrixDim 
 }
 void cudaDF_copy_from_tp(dim3 Gr, dim3 Bl, double* A, const float* B, MatrixDim dmat) {
   _copy_from_tp<<<Gr,Bl>>>(A,B,dmat);
+}
+
+// sc function
+void cudaD_reshape_from_tensor(dim3 Gr, dim3 Bl, double* dst, const double* src, MatrixDim dst_dim, TensorDim src_dim, int mode) {
+  _reshape_from_tensor<<<Gr,Bl>>>(dst, src, dst_dim, src_dim, mode);
 }
 
 void cudaD_transpose_matrix(dim3 Gr, dim3 Bl, double* mat, MatrixDim d) {

@@ -1,6 +1,7 @@
 var kaldi_matrix_8h =
 [
     [ "SubMatrix", "classkaldi_1_1SubMatrix.html", "classkaldi_1_1SubMatrix" ],
+    [ "Tensor", "classkaldi_1_1Tensor.html", "classkaldi_1_1Tensor" ],
     [ "ApproxEqual", "kaldi-matrix_8h.html#gac40376fb52c026998409ea7e456b954d", null ],
     [ "AssertEqual", "kaldi-matrix_8h.html#gaa3d5c57d875ff2426a0f6a2586ed40be", null ],
     [ "AttemptComplexPower", "kaldi-matrix_8h.html#ga60ae3be7ddb17c33df1129b43d712a87", null ],

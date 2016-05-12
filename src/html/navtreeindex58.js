@@ -1,5 +1,16 @@
 var NAVTREEINDEX58 =
 {
+"nnet-shrink_8cc.html":[4,0,22,52],
+"nnet-shrink_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,52,0],
+"nnet-shrink_8cc_source.html":[4,0,22,52],
+"nnet-shuffle-egs-discriminative_8cc.html":[4,0,22,53],
+"nnet-shuffle-egs-discriminative_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,53,0],
+"nnet-shuffle-egs-discriminative_8cc_source.html":[4,0,22,53],
+"nnet-shuffle-egs_8cc.html":[4,0,22,54],
+"nnet-shuffle-egs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,54,0],
+"nnet-shuffle-egs_8cc_source.html":[4,0,22,54],
+"nnet-simple-component_8cc.html":[4,0,23,58],
+"nnet-simple-component_8cc.html#a25b3b76367d2844fb0f48334f1bd5691":[4,0,23,58,2],
 "nnet-simple-component_8cc.html#a264b986f95f2cb1e5bc7032967c69a27":[4,0,23,58,1],
 "nnet-simple-component_8cc.html#ac37caf62dbe225383341d770509b2d55":[4,0,23,58,0],
 "nnet-simple-component_8cc_source.html":[4,0,23,58],
@@ -238,16 +249,5 @@ var NAVTREEINDEX58 =
 "nnet3-am-init_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,5,0],
 "nnet3-am-init_8cc_source.html":[4,0,24,5],
 "nnet3-am-train-transitions_8cc.html":[4,0,24,6],
-"nnet3-am-train-transitions_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,6,0],
-"nnet3-am-train-transitions_8cc.html#ad96e7aef845800f1dc88fa2ad1aade28":[4,0,24,6,1],
-"nnet3-am-train-transitions_8cc_source.html":[4,0,24,6],
-"nnet3-average_8cc.html":[4,0,24,7],
-"nnet3-average_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,7,1],
-"nnet3-average_8cc.html#a531fb996dacc711604f4a827662ec913":[4,0,24,7,0],
-"nnet3-average_8cc_source.html":[4,0,24,7],
-"nnet3-combine_8cc.html":[4,0,24,8],
-"nnet3-combine_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,8,0],
-"nnet3-combine_8cc_source.html":[4,0,24,8],
-"nnet3-compute-from-egs_8cc.html":[4,0,24,9],
-"nnet3-compute-from-egs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,9,1]
+"nnet3-am-train-transitions_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,6,0]
 };

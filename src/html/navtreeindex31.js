@@ -1,5 +1,17 @@
 var NAVTREEINDEX31 =
 {
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#a7bc261b04ea91663bea36634558ed779":[3,0,1,2,16,9],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#a85d9ab9fa2bbfa0d948ce086d3bea6b2":[3,0,1,2,16,7],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#a867786ea3b54c02b3b6de5cd226de734":[3,0,1,2,16,8],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#a9a96cabeed06e457889cfd93f84ced34":[3,0,1,2,16,10],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#ac58bcd0064a287ce8fec11ae9e10d2fe":[3,0,1,2,16,5],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#adc1d6d10a144d1a06fc669680828f5b0":[3,0,1,2,16,2],
+"classkaldi_1_1nnet2_1_1NormalizeComponent.html#afb616dcd4338670dd519442b9b95abed":[3,0,1,2,16,3],
+"classkaldi_1_1nnet2_1_1OnlinePreconditioner.html":[3,0,1,2,61],
+"classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a008c4e6cc13410d1b983ad2b06fffeaf":[3,0,1,2,61,26],
+"classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a04f608ae169f9f8893c5611d379ce5ae":[3,0,1,2,61,16],
+"classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a0ecfb5492a4bb8115f1b875c13ae40c9":[3,0,1,2,61,15],
+"classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a13754c332c9474526441d5f609af7d7d":[3,0,1,2,61,2],
 "classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a16fd6ba3f18fe4b8f34a6c0569d13ee1":[3,0,1,2,61,17],
 "classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a1bffda16ce504620d0ea2d1118cd0653":[3,0,1,2,61,32],
 "classkaldi_1_1nnet2_1_1OnlinePreconditioner.html#a1f899327134e367c4e7843d23dc4c039":[3,0,1,2,61,4],
@@ -237,17 +249,5 @@ var NAVTREEINDEX31 =
 "classkaldi_1_1nnet2_1_1TanhComponent.html#a30d12ffbf13e896c54c381a036572abc":[3,0,1,2,18,4],
 "classkaldi_1_1nnet2_1_1TanhComponent.html#a50cd20f1a3852806142d87723391c69c":[3,0,1,2,18,6],
 "classkaldi_1_1nnet2_1_1TanhComponent.html#a7bc261b04ea91663bea36634558ed779":[3,0,1,2,18,9],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#a7decc56c582dfe439910b87bc18eebea":[3,0,1,2,18,2],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#a810314e9ffef5bb55807f10654c5d46c":[3,0,1,2,18,0],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#a867786ea3b54c02b3b6de5cd226de734":[3,0,1,2,18,8],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#ab5f95e60a0e39c0e6a2b3704a99f42d1":[3,0,1,2,18,1],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#ac58bcd0064a287ce8fec11ae9e10d2fe":[3,0,1,2,18,5],
-"classkaldi_1_1nnet2_1_1TanhComponent.html#afb616dcd4338670dd519442b9b95abed":[3,0,1,2,18,3],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html":[3,0,1,2,11],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a0d6ac2b7329981543aa1299d94c9556d":[3,0,1,2,11,15],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a1632ab44f61acf34f6ac93b9daf93baf":[3,0,1,2,11,12],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a17f20e0b2d35ec6866a6b479e7d9e867":[3,0,1,2,11,7],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a2291e94d519e3ea5a11e78c96ef39579":[3,0,1,2,11,0],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a2af26d78825cc522c324976403bf4e4e":[3,0,1,2,11,2],
-"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a30ee54c8b84d1a029b8ccba15c471648":[3,0,1,2,11,1]
+"classkaldi_1_1nnet2_1_1TanhComponent.html#a7decc56c582dfe439910b87bc18eebea":[3,0,1,2,18,2]
 };

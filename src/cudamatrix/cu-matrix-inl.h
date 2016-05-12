@@ -91,6 +91,77 @@ inline CuSubMatrix<Real>::CuSubMatrix(const CuMatrixBase<Real> &mat,
 }                            
 
 
+// Constructor... note that this is not const-safe as it would
+// be quite complicated to implement a "const Tensor" class that
+// would not allow its contents to be changed.
+/*
+template<typename Real>
+inline CuTensor<Real>::CuTensor(const CuMatrixBase<Real> &mat,
+                                const MatrixIndexT batch_size,
+                                const MatrixIndexT num_i1,
+                                const MatrixIndexT num_i2,
+                                const MatrixIndexT num_i3)
+{
+  if (num_i1 == 0 || num_i2 == 0 || num_i3 == 0 || batch_size == 0)
+  {
+    KALDI_ASSERT(num_i1 == 0 && num_i2 == 0 && num_i3 == 0 && batch_size == 0);
+    // Everything will have been set to zero in CuMastrixBase's default
+    // initializer, so nothing to do.
+  }
+  else
+  {
+    KALDI_ASSERT(mat.num_cols_ == num_i1*num_i2*num_i3 &&
+                 mat.num_rows_ == batch_size);
+    this->data_ = mat.data_;
+
+    this->num_cols_ = mat.num_cols_;
+    this->num_rows_ = mat.num_rows_;
+    this->stride_ = mat.Stride();
+
+    this->batch_size_ = batch_size;
+    this->num_i1_ = num_i1;
+    this->num_i2_ = num_i2;
+    this->num_i3_ = num_i3;
+  }
+}
+*/
+
+
+
+/*
+// reshape tensor to a special matrix
+template<typename Real>
+inline void CuTensor<Real>::ReshapeToMatrix(MatrixBase<Real> *M,
+                                            MatrixIndexT mode)
+{
+  KALDI_ASSERT(M->NumRows() >=0 && M->NumCols() >= 0 && mode >= 0 && mode <= 3 &&
+               M->NumRows() * M->NumCols() ==
+               this->num_i1_ * this->num_i2_ * this->num_i3_ * this->batch_size_);
+  KALDI_LOG<<M->NumRows()<<"  "<<M->NumCols()<<"  "<<M->Stride();
+#if HAVE_CUDA == 1
+  if (CuDevice::Instantiate().Enabled())
+  {
+    Timer tim;
+    dim3 dimBlock(CU2DBLOCK, CU2DBLOCK);
+    dim3 dimGrid(n_blocks(this->num_cols_, CU2DBLOCK),
+                 n_blocks(this->num_rows_, CU2DBLOCK));
+    switch(mode)
+    {
+      case 1:
+        // M(l*i2*i3,i1)
+        KALDI_ASSERT(M->NumCols() == this->num_i1_);
+        cuda_resape_to_matrix(dimGrid, dimBlock, M->Data(), this->data_, M->Dim(), this->TDim(), mode);
+        //cuda_copy_to_rows(dimGrid, dimBlock, dst.Data(), data_, Dim());
+    }
+    CU_SAFE_CALL(cudaGetLastError());
+    CuDevice::Instantiate().AccuProfile(__func__, tim.Elapsed());
+  } else
+#endif
+  {
+  }
+}
+*/
+
 } // namespace kaldi
 
 #endif

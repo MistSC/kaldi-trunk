@@ -1,5 +1,16 @@
 var NAVTREEINDEX57 =
 {
+"nnet-graph_8h.html#ac4457943f315ab2e900b1f81606404f8":[4,0,23,46,0],
+"nnet-graph_8h.html#ae4c2ac8a9e96d220776910b2a9ae2971":[4,0,23,46,2],
+"nnet-graph_8h.html#ae72c79fbb6ec81b69aaee02701fa23e5":[4,0,23,46,3],
+"nnet-graph_8h_source.html":[4,0,23,46],
+"nnet-info_8cc.html":[4,0,25,8],
+"nnet-info_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,25,8,0],
+"nnet-info_8cc_source.html":[4,0,25,8],
+"nnet-init_8cc.html":[4,0,22,35],
+"nnet-init_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,35,0],
+"nnet-init_8cc_source.html":[4,0,22,35],
+"nnet-initialize_8cc.html":[4,0,25,9],
 "nnet-initialize_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,25,9,0],
 "nnet-initialize_8cc_source.html":[4,0,25,9],
 "nnet-insert_8cc.html":[4,0,22,36],
@@ -238,16 +249,5 @@ var NAVTREEINDEX57 =
 "nnet-sentence-averaging-component_8h_source.html":[4,0,20,27],
 "nnet-show-progress_8cc.html":[4,0,22,51],
 "nnet-show-progress_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,51,0],
-"nnet-show-progress_8cc_source.html":[4,0,22,51],
-"nnet-shrink_8cc.html":[4,0,22,52],
-"nnet-shrink_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,52,0],
-"nnet-shrink_8cc_source.html":[4,0,22,52],
-"nnet-shuffle-egs-discriminative_8cc.html":[4,0,22,53],
-"nnet-shuffle-egs-discriminative_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,53,0],
-"nnet-shuffle-egs-discriminative_8cc_source.html":[4,0,22,53],
-"nnet-shuffle-egs_8cc.html":[4,0,22,54],
-"nnet-shuffle-egs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,22,54,0],
-"nnet-shuffle-egs_8cc_source.html":[4,0,22,54],
-"nnet-simple-component_8cc.html":[4,0,23,58],
-"nnet-simple-component_8cc.html#a25b3b76367d2844fb0f48334f1bd5691":[4,0,23,58,2]
+"nnet-show-progress_8cc_source.html":[4,0,22,51]
 };

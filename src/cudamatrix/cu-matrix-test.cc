@@ -67,6 +67,25 @@ static void RandZeroToOneMatrix(MatrixBase<Real>* mat) {
       (*mat)(r,c) = RandUniform();
 }
 
+/*
+ * PRINT
+ */
+template<typename Real>
+static void Print(const CuMatrixBase<Real>& M,std::string m_name)
+{
+  std::cout<< "====Print matrix " + m_name +"======" <<std::endl;
+  for(int32 i=0;i<M.NumRows();i++)
+  {
+    for(int32 j=0;j<M.NumCols();j++)
+    {
+      std::cout << M(i,j) <<" ";
+    }
+    std::cout<<std::endl;
+  }
+  std::cout<< "======End of print=========" <<std::endl;
+
+}
+
 
 /*
  * Unit tests
@@ -2508,6 +2527,118 @@ static void Test4()
 
 */
 
+template<typename Real>
+static void UnitTestCuTensor()
+{
+  int32 r = 10;
+  int32 c = 512;
+  CuMatrix<Real> M(r,c);
+  M.SetZero();
+  for(int32 i=0;i<r;i++)
+    for(int32 j=0;j<c;j++)
+      M(i,j)=i*c+j;
+ 
+  int32 i1,i2,i3,ib;
+  i1=8;i2=8;i3=8;ib=r;
+  CuTensor<Real> T(M,ib,i1,i2,i3);
+  std::cout<< "Print matrix M" <<std::endl;
+  for(int32 i=0;i<r;i++)
+    for(int32 j=0;j<c;j++)
+      std::cout << M(i,j) <<" ";
+  std::cout<<std::endl;
+  
+  std::cout<< "Print dimension of tensor T" <<std::endl;
+  std::cout<< T.NumI1() <<" "<< T.NumI2() << " "<< T.NumI3() << " "<< T.NumBS() <<" "<<std::endl;
+  std::cout<< CuValue<Real>(M.Data()) <<std::endl;
+ 
+  std::cout<< "Print Tensor T" <<std::endl;
+  for(int32 l=0;l<ib;l++)
+    for(int32 i=0;i<i1;i++)
+      for(int32 j=0;j<i2;j++)
+        for(int32 k=0;k<i3;k++)
+          std::cout << T.Index(l,i,j,k) <<" ";
+  std::cout<<std::endl;
+
+  CuMatrix<Real> N1(ib*i2*i3,i1);
+  N1.ReshapeFromTensor(T,1);
+  std::cout<< "Print reshaped matrix N1" <<std::endl;
+  for(int32 i=0;i<ib*i2*i3;i++)
+    for(int32 j=0;j<i1;j++)
+      std::cout << N1(i,j) <<" ";
+  std::cout<<std::endl;
+
+  CuMatrix<Real> N2(ib*i1*i3,i2);
+  N2.ReshapeFromTensor(T,2);
+  std::cout<< "Print reshaped matrix N2" <<std::endl;
+  for(int32 i=0;i<ib*i1*i3;i++)
+    for(int32 j=0;j<i2;j++)
+      std::cout << N2(i,j) <<" ";
+  std::cout<<std::endl;
+
+  CuMatrix<Real> N3(ib*i1*i2,i3);
+  N3.ReshapeFromTensor(T,3);
+  std::cout<< "Print reshaped matrix N3" <<std::endl;
+  for(int32 i=0;i<ib*i1*i2;i++)
+    for(int32 j=0;j<i3;j++)
+      std::cout << N3(i,j) <<" ";
+  std::cout<<std::endl;
+}
+
+template<typename Real>
+static void UnitTestCuTensorRs()
+{
+  int ib,i2,i3,i1;
+  ib = 6; i1 = 2; i2 = 3; i3 = 4;
+  CuMatrix<Real> M(ib,i1*i2*i3);
+  for(int i=0;i<ib;i++)
+    for(int j=0;j<i1*i2*i3;j++)
+      M(i,j)=i*i1*i2*i3+j;
+
+  CuTensor<Real> T(M,ib,i1,i2,i3);
+  CuTensor<Real> T1(ib,i1,i2,i3,2);
+
+  T1.ReshapeFromTensor(T,2);
+  T.ReshapeFromTensor(T1,20);
+
+  Print<Real>(M,"M");
+  Print<Real>(T,"T");
+  Print<Real>(T1,"T1");
+
+}
+
+template<typename Real>
+static void UnitTestCuMatrixMul()
+{
+  int ib,i2,i3,i1;
+  ib = 5; i1 = 3; i2 = 4; i3 = 5;
+  int j;
+  j = 5;
+  CuMatrix<Real> M(ib,i1*i2*i3);
+  for(int i=0;i<ib;i++)
+    for(int j=0;j<i1*i2*i3;j++)
+      M(i,j)=i*i1*i2*i3+j;
+
+  CuTensor<Real> T(M,ib,i1,i2,i3);
+  CuTensor<Real> T1(ib,i1,i2,i3,3);
+
+  T1.ReshapeFromTensor(T,3);
+
+  CuMatrix<Real> W(j,i3);
+  W.Set(0.01);
+  CuTensor<Real> res(ib,i1,i2,j,3);
+
+  res.mode_3_product(T,kNoTrans,W,kTrans);
+
+
+  Print<Real>(T,"T");
+  std::cout<< "T type is "<< T.ReshapeType()  <<std::endl;
+  Print<Real>(T1,"T1");
+  std::cout<< "T1 type is "<< T1.ReshapeType()  <<std::endl;
+  Print<Real>(W,"W");
+  Print<Real>(res,"res");
+  std::cout<< "res type is "<< res.ReshapeType()  <<std::endl;
+}
+
 template<typename Real> void CudaMatrixUnitTest() 
 {
 /*
@@ -2614,6 +2745,9 @@ template<typename Real> void CudaMatrixUnitTest()
   Test3<Real>();
   Test4<Real>();
 */
+  //UnitTestCuMatrixIndex<Real>();
+  //UnitTestCuTensorRs<Real>();
+  UnitTestCuMatrixMul<Real>();
 }
 
 

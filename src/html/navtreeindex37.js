@@ -1,5 +1,17 @@
 var NAVTREEINDEX37 =
 {
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a78b33652566522183152981014dc4e30":[3,0,1,3,87,8],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a7bc261b04ea91663bea36634558ed779":[3,0,1,3,87,13],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a7cd01eb7954c695fc74bea35da762abc":[3,0,1,3,87,7],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a879b982812078b2e9c7c3c756e32be4e":[3,0,1,3,87,11],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a8e7d2790fc7e94fe9780ccc937de1270":[3,0,1,3,87,12],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a91e3700c969e273a48e42cb60d4b6bec":[3,0,1,3,87,0],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#aaf65a85a9cc15ad16bc9968c08758f97":[3,0,1,3,87,3],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ab7d46c9e0bdb44ef975cfbd362b49345":[3,0,1,3,87,17],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ac4f5c35427c2657c50173313e99e3f01":[3,0,1,3,87,6],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ac88a864398e6912a94e09786f1d87019":[3,0,1,3,87,10],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad29de11456b2a8d0c3cc520615d73c81":[3,0,1,3,87,18],
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad40e6c6591d69cb45797537b448a2b99":[3,0,1,3,87,1],
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad5da0494b3a3f4bc33ff83c9b5ff5b40":[3,0,1,3,87,14],
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#af135d6a50796feb18cb5270d53f108a7":[3,0,1,3,87,2],
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#aff1d8b40ec6fd345f03408dd2bf9b69a":[3,0,1,3,87,15],
@@ -237,17 +249,5 @@ var NAVTREEINDEX37 =
 "clustering.html#clustering_sec_kmeans":[18,1,0],
 "clustering.html#clustering_sec_tree_cluster":[18,1,1],
 "cmvn-to-nnet_8cc.html":[4,0,25,0],
-"cmvn-to-nnet_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,25,0,0],
-"cmvn-to-nnet_8cc_source.html":[4,0,25,0],
-"cmvn_8cc.html":[4,0,31,2],
-"cmvn_8cc.html#a771f08f18f71bf75d3b022725144d04b":[4,0,31,2,4],
-"cmvn_8cc.html#aa91571e4366ec02a5cb59da474d3d162":[4,0,31,2,2],
-"cmvn_8cc.html#aafe1dd3bc8a8c9c1dee15035bcc571d1":[4,0,31,2,5],
-"cmvn_8cc.html#aca8530206c1495b3b1a3ac45bc19ada2":[4,0,31,2,1],
-"cmvn_8cc.html#acfaf41df793a970b24b80498344cdc48":[4,0,31,2,3],
-"cmvn_8cc.html#ad794283889d661f2aeca309036888981":[4,0,31,2,0],
-"cmvn_8cc_source.html":[4,0,31,2],
-"cmvn_8h.html":[4,0,31,3],
-"cmvn_8h.html#a771f08f18f71bf75d3b022725144d04b":[4,0,31,3,4],
-"cmvn_8h.html#aa91571e4366ec02a5cb59da474d3d162":[4,0,31,3,2]
+"cmvn-to-nnet_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,25,0,0]
 };

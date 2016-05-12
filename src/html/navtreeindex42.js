@@ -1,5 +1,17 @@
 var NAVTREEINDEX42 =
 {
+"edit-distance-inl_8h.html#a492b0a1d8f894f6bf4781e4a52a6a226":[4,0,33,5,2],
+"edit-distance-inl_8h.html#a5017c9b6fb9d1958ca00fc9b0a7cda4b":[4,0,33,5,1],
+"edit-distance-inl_8h.html#ad67e6b7d9a76043024ece4b095a1d960":[4,0,33,5,3],
+"edit-distance-inl_8h_source.html":[4,0,33,5],
+"edit-distance-test_8cc.html":[4,0,33,6],
+"edit-distance-test_8cc.html#a12c3df1597732b48c3dfeff9aac2d767":[4,0,33,6,5],
+"edit-distance-test_8cc.html#a28bacb87372b1774b610396b2511c749":[4,0,33,6,1],
+"edit-distance-test_8cc.html#a70f7bd090ff1c09e3d1fc9410daace02":[4,0,33,6,2],
+"edit-distance-test_8cc.html#ae160b6f2f7ff935b1f09a784d7a91933":[4,0,33,6,4],
+"edit-distance-test_8cc.html#ae3f04b5851ce8a6495e56cd881a8b710":[4,0,33,6,3],
+"edit-distance-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,33,6,0],
+"edit-distance-test_8cc_source.html":[4,0,33,6],
 "edit-distance_8h.html":[4,0,33,7],
 "edit-distance_8h.html#a492b0a1d8f894f6bf4781e4a52a6a226":[4,0,33,7,1],
 "edit-distance_8h.html#a5017c9b6fb9d1958ca00fc9b0a7cda4b":[4,0,33,7,0],
@@ -237,17 +249,5 @@ var NAVTREEINDEX42 =
 "feature-plp-test_8cc.html#a03d4600ba687329b516b0a18d197337f":[4,0,4,9,2],
 "feature-plp-test_8cc.html#a676817c025f354083968147f717f57c9":[4,0,4,9,3],
 "feature-plp-test_8cc.html#a86598b34428f7e6554713d5543be223a":[4,0,4,9,1],
-"feature-plp-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,4,9,0],
-"feature-plp-test_8cc_source.html":[4,0,4,9],
-"feature-plp_8cc.html":[4,0,4,10],
-"feature-plp_8cc_source.html":[4,0,4,10],
-"feature-plp_8h.html":[4,0,4,11],
-"feature-plp_8h_source.html":[4,0,4,11],
-"feature-sdc-test_8cc.html":[4,0,4,12],
-"feature-sdc-test_8cc.html#a199d84517bc44ba6360bf3e7f46c2516":[4,0,4,12,2],
-"feature-sdc-test_8cc.html#a802553eb4118a81ad1eb1eaded13c02d":[4,0,4,12,3],
-"feature-sdc-test_8cc.html#ac8c85b779c67aa5ce1514e980667858d":[4,0,4,12,1],
-"feature-sdc-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,4,12,0],
-"feature-sdc-test_8cc_source.html":[4,0,4,12],
-"feature-spectrogram_8cc.html":[4,0,4,13]
+"feature-plp-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,4,9,0]
 };

@@ -370,7 +370,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-utils_8h_source.html#l00130">130</a> of file <a class="el" href="nnet-utils_8h_source.html">nnet-utils.h</a>.</p>
 
-<p>References <a class="el" href="kaldi-error_8h_source.html#l00160">KALDI_ERR</a>, <a class="el" href="kaldi-math_8h_source.html#l00073">KALDI_ISINF</a>, <a class="el" href="kaldi-math_8h_source.html#l00072">KALDI_ISNAN</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02444">CuMatrixBase&lt; Real &gt;::Sum()</a>.</p>
+<p>References <a class="el" href="kaldi-error_8h_source.html#l00160">KALDI_ERR</a>, <a class="el" href="kaldi-math_8h_source.html#l00073">KALDI_ISINF</a>, <a class="el" href="kaldi-math_8h_source.html#l00072">KALDI_ISNAN</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02434">CuMatrixBase&lt; Real &gt;::Sum()</a>.</p>
 
 <p>Referenced by <a class="el" href="nnet-rbm_8h_source.html#l00254">Rbm::RbmUpdate()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                                                                      {</div>
@@ -402,7 +402,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-utils_8h_source.html#l00140">140</a> of file <a class="el" href="nnet-utils_8h_source.html">nnet-utils.h</a>.</p>
 
-<p>References <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, <a class="el" href="cu-matrix_8cc_source.html#l00647">CuMatrixBase&lt; Real &gt;::MulElements()</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02444">CuMatrixBase&lt; Real &gt;::Sum()</a>.</p>
+<p>References <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, <a class="el" href="cu-matrix_8cc_source.html#l00637">CuMatrixBase&lt; Real &gt;::MulElements()</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02434">CuMatrixBase&lt; Real &gt;::Sum()</a>.</p>
 
 <p>Referenced by <a class="el" href="nnet-rbm_8h_source.html#l00254">Rbm::RbmUpdate()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                                                  {</div>
@@ -715,7 +715,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-utils_8h_source.html#l00120">120</a> of file <a class="el" href="nnet-utils_8h_source.html">nnet-utils.h</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l00408">CuMatrixBase&lt; Real &gt;::CopyToMat()</a>, <a class="el" href="nnet-utils_8h_source.html#l00061">MomentStatistics()</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, and <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l00398">CuMatrixBase&lt; Real &gt;::CopyToMat()</a>, <a class="el" href="nnet-utils_8h_source.html#l00061">MomentStatistics()</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, and <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                                                          {</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;  Matrix&lt;Real&gt; mat_host(mat.NumRows(),mat.NumCols());</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;  mat.CopyToMat(&amp;mat_host);</div>
@@ -937,14 +937,14 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-component-test_8cc_source.html#l00041">41</a> of file <a class="el" href="nnet-component-test_8cc_source.html">nnet-component-test.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l00454">CuMatrix&lt; Real &gt;::Read()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l00444">CuMatrix&lt; Real &gt;::Read()</a>.</p>
 
 <p>Referenced by <a class="el" href="nnet-component-test_8cc_source.html#l00273">UnitTestAveragePooling2DComponent()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00311">UnitTestConvolutional2DComponent()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00129">UnitTestConvolutionalComponent3x3()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00099">UnitTestConvolutionalComponentUnity()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00055">UnitTestLengthNorm()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00236">UnitTestMaxPooling2DComponent()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00171">UnitTestMaxPoolingComponent()</a>, and <a class="el" href="nnet-component-test_8cc_source.html#l00073">UnitTestSimpleSentenceAveragingComponent()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                                                     {</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    std::istringstream is(s + <span class="stringliteral">&quot;\n&quot;</span>);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    m-&gt;<a class="code" href="classkaldi_1_1CuMatrix.html#a8e7d2790fc7e94fe9780ccc937de1270">Read</a>(is, <span class="keyword">false</span>); <span class="comment">// false for ascii</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
-<div class="ttc" id="classkaldi_1_1CuMatrix_html_a8e7d2790fc7e94fe9780ccc937de1270"><div class="ttname"><a href="classkaldi_1_1CuMatrix.html#a8e7d2790fc7e94fe9780ccc937de1270">kaldi::CuMatrix::Read</a></div><div class="ttdeci">void Read(std::istream &amp;is, bool binary)</div><div class="ttdoc">I/O functions. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00454">cu-matrix.cc:454</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrix_html_a8e7d2790fc7e94fe9780ccc937de1270"><div class="ttname"><a href="classkaldi_1_1CuMatrix.html#a8e7d2790fc7e94fe9780ccc937de1270">kaldi::CuMatrix::Read</a></div><div class="ttdeci">void Read(std::istream &amp;is, bool binary)</div><div class="ttdoc">I/O functions. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00444">cu-matrix.cc:444</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1240,7 +1240,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-component-test_8cc_source.html#l00055">55</a> of file <a class="el" href="nnet-component-test_8cc_source.html">nnet-component-test.cc</a>.</p>
 
-<p>References <a class="el" href="cu-vector_8cc_source.html#l01128">CuVectorBase&lt; Real &gt;::AddColSumMat()</a>, <a class="el" href="cu-vector_8cc_source.html#l00367">CuVectorBase&lt; Real &gt;::ApplyPow()</a>, <a class="el" href="kaldi-math_8h_source.html#l00273">kaldi::AssertEqual()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00647">CuMatrixBase&lt; Real &gt;::MulElements()</a>, <a class="el" href="nnet-component_8h_source.html#l00221">Component::Propagate()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00046">ReadComponentFromString()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00041">ReadCuMatrixFromString()</a>, and <a class="el" href="cu-vector_8cc_source.html#l00973">CuVectorBase&lt; Real &gt;::Set()</a>.</p>
+<p>References <a class="el" href="cu-vector_8cc_source.html#l01128">CuVectorBase&lt; Real &gt;::AddColSumMat()</a>, <a class="el" href="cu-vector_8cc_source.html#l00367">CuVectorBase&lt; Real &gt;::ApplyPow()</a>, <a class="el" href="kaldi-math_8h_source.html#l00273">kaldi::AssertEqual()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00637">CuMatrixBase&lt; Real &gt;::MulElements()</a>, <a class="el" href="nnet-component_8h_source.html#l00221">Component::Propagate()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00046">ReadComponentFromString()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00041">ReadCuMatrixFromString()</a>, and <a class="el" href="cu-vector_8cc_source.html#l00973">CuVectorBase&lt; Real &gt;::Set()</a>.</p>
 
 <p>Referenced by <a class="el" href="nnet-component-test_8cc_source.html#l00346">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            {</div>
@@ -1263,7 +1263,7 @@ Functions</h2></td></tr>
 <div class="ttc" id="classkaldi_1_1CuVector_html"><div class="ttname"><a href="classkaldi_1_1CuVector.html">kaldi::CuVector&lt; BaseFloat &gt;</a></div></div>
 <div class="ttc" id="classkaldi_1_1CuMatrix_html"><div class="ttname"><a href="classkaldi_1_1CuMatrix.html">kaldi::CuMatrix&lt; BaseFloat &gt;</a></div></div>
 <div class="ttc" id="namespacekaldi_1_1nnet1_html_a2e553e0c26ad5fde7fef7d48ed5110c1"><div class="ttname"><a href="namespacekaldi_1_1nnet1.html#a2e553e0c26ad5fde7fef7d48ed5110c1">kaldi::nnet1::ReadComponentFromString</a></div><div class="ttdeci">Component * ReadComponentFromString(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> <a href="nnet-component-test_8cc_source.html#l00046">nnet-component-test.cc:46</a></div></div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a93f1ecf679bf0ab28200c1cec33bd1ba"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a93f1ecf679bf0ab28200c1cec33bd1ba">kaldi::CuMatrixBase::MulElements</a></div><div class="ttdeci">void MulElements(const CuMatrixBase&lt; Real &gt; &amp;A)</div><div class="ttdoc">Multiply two matrices elementwise: C = C .* A. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00647">cu-matrix.cc:647</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a93f1ecf679bf0ab28200c1cec33bd1ba"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a93f1ecf679bf0ab28200c1cec33bd1ba">kaldi::CuMatrixBase::MulElements</a></div><div class="ttdeci">void MulElements(const CuMatrixBase&lt; Real &gt; &amp;A)</div><div class="ttdoc">Multiply two matrices elementwise: C = C .* A. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00637">cu-matrix.cc:637</a></div></div>
 <div class="ttc" id="structkaldi_1_1nnet1_1_1Component_html_aaa5db876de71ec16a23afbf1fbd76b43"><div class="ttname"><a href="structkaldi_1_1nnet1_1_1Component.html#aaa5db876de71ec16a23afbf1fbd76b43">kaldi::nnet1::Component::Propagate</a></div><div class="ttdeci">void Propagate(const CuMatrixBase&lt; BaseFloat &gt; &amp;in, CuMatrix&lt; BaseFloat &gt; *out)</div><div class="ttdoc">Perform forward pass propagation Input-&gt;Output. </div><div class="ttdef"><b>Definition:</b> <a href="nnet-component_8h_source.html#l00221">nnet-component.h:221</a></div></div>
 <div class="ttc" id="namespacekaldi_html_aeb6ba6085493e3f15358e49751342177"><div class="ttname"><a href="namespacekaldi.html#aeb6ba6085493e3f15358e49751342177">kaldi::AssertEqual</a></div><div class="ttdeci">static void AssertEqual(float a, float b, float relative_tolerance=0.001)</div><div class="ttdoc">assert abs(a - b) &lt;= relative_tolerance * (abs(a)+abs(b)) </div><div class="ttdef"><b>Definition:</b> <a href="kaldi-math_8h_source.html#l00273">kaldi-math.h:273</a></div></div>
 <div class="ttc" id="structkaldi_1_1nnet1_1_1Component_html"><div class="ttname"><a href="structkaldi_1_1nnet1_1_1Component.html">kaldi::nnet1::Component</a></div><div class="ttdoc">Abstract class, building block of the network. </div><div class="ttdef"><b>Definition:</b> <a href="nnet-component_8cc_source.html#l00054">nnet-component.cc:54</a></div></div>
@@ -1350,7 +1350,7 @@ Functions</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-component-test_8cc_source.html#l00171">171</a> of file <a class="el" href="nnet-component-test_8cc_source.html">nnet-component-test.cc</a>.</p>
 
-<p>References <a class="el" href="kaldi-math_8h_source.html#l00273">kaldi::AssertEqual()</a>, <a class="el" href="nnet-component_8h_source.html#l00235">Component::Backpropagate()</a>, <a class="el" href="nnet-component_8cc_source.html#l00208">Component::Init()</a>, <a class="el" href="kaldi-error_8h_source.html#l00164">KALDI_LOG</a>, <a class="el" href="nnet-component_8h_source.html#l00221">Component::Propagate()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00041">ReadCuMatrixFromString()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00490">CuMatrixBase&lt; Real &gt;::Set()</a>.</p>
+<p>References <a class="el" href="kaldi-math_8h_source.html#l00273">kaldi::AssertEqual()</a>, <a class="el" href="nnet-component_8h_source.html#l00235">Component::Backpropagate()</a>, <a class="el" href="nnet-component_8cc_source.html#l00208">Component::Init()</a>, <a class="el" href="kaldi-error_8h_source.html#l00164">KALDI_LOG</a>, <a class="el" href="nnet-component_8h_source.html#l00221">Component::Propagate()</a>, <a class="el" href="nnet-component-test_8cc_source.html#l00041">ReadCuMatrixFromString()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00480">CuMatrixBase&lt; Real &gt;::Set()</a>.</p>
 
 <p>Referenced by <a class="el" href="nnet-component-test_8cc_source.html#l00346">main()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                                     {</div>
@@ -1491,7 +1491,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet1.html">nnet1</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:52 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:45 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

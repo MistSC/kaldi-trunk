@@ -1,5 +1,16 @@
 var NAVTREEINDEX62 =
 {
+"simple-options_8cc.html#a5aff2630938df1898170af3b01f35df0":[4,0,33,29,1],
+"simple-options_8cc_source.html":[4,0,33,29],
+"simple-options_8h.html":[4,0,33,30],
+"simple-options_8h_source.html":[4,0,33,30],
+"sinusoid-detection-test_8cc.html":[4,0,4,29],
+"sinusoid-detection-test_8cc.html#a0da1154e341edeb64ab40ffebb66e862":[4,0,4,29,9],
+"sinusoid-detection-test_8cc.html#a326516066a063f34b869a3d1b0cf63e8":[4,0,4,29,5],
+"sinusoid-detection-test_8cc.html#a63c2db9effde7adfb1ae78c518a575a0":[4,0,4,29,1],
+"sinusoid-detection-test_8cc.html#a7aec249e72142ec166074033f037be8f":[4,0,4,29,7],
+"sinusoid-detection-test_8cc.html#a96b7b2a92f61b578d1b313c5725a924f":[4,0,4,29,6],
+"sinusoid-detection-test_8cc.html#aa06db7f8ff32f2f813e90f73c46f5919":[4,0,4,29,8],
 "sinusoid-detection-test_8cc.html#ab2b10dd2072eef44f501e75424ad6589":[4,0,4,29,4],
 "sinusoid-detection-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,4,29,3],
 "sinusoid-detection-test_8cc.html#aec6f739cdcee2182985d8afd27ca54d4":[4,0,4,29,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX62 =
 "structfst_1_1LatticeDeterminizerPruned_1_1Task.html#a61b6865f0be848099f7d2e689894d086":[3,0,0,47,6,3],
 "structfst_1_1LatticeDeterminizerPruned_1_1Task.html#afb8fb645496a5d0591ab124e3b514916":[3,0,0,47,6,2],
 "structfst_1_1LatticeDeterminizerPruned_1_1TaskCompare.html":[3,0,0,47,7],
-"structfst_1_1LatticeDeterminizerPruned_1_1TaskCompare.html#a66e4ea45736fad8464d43f551ae47e34":[3,0,0,47,7,0],
-"structfst_1_1LatticeDeterminizerPruned_1_1TempArc.html":[3,0,0,47,8],
-"structfst_1_1LatticeDeterminizerPruned_1_1TempArc.html#a006dac336059b2fefc65a455958789a6":[3,0,0,47,8,2],
-"structfst_1_1LatticeDeterminizerPruned_1_1TempArc.html#a8fad55e4a68788e398c09b8c5039d0d5":[3,0,0,47,8,1],
-"structfst_1_1LatticeDeterminizerPruned_1_1TempArc.html#ac348b84fbc0a26e6fcf42ea1b47639ca":[3,0,0,47,8,3],
-"structfst_1_1LatticeDeterminizerPruned_1_1TempArc.html#ac3f2f236a15c5a4af29f92c8ce9817ec":[3,0,0,47,8,0],
-"structfst_1_1LatticeDeterminizer_1_1Element.html":[3,0,0,13,0],
-"structfst_1_1LatticeDeterminizer_1_1Element.html#a006dac336059b2fefc65a455958789a6":[3,0,0,13,0,3],
-"structfst_1_1LatticeDeterminizer_1_1Element.html#a2fa24115869d9dcecefde8e742de452a":[3,0,0,13,0,2],
-"structfst_1_1LatticeDeterminizer_1_1Element.html#aa168bace309604cad321e22bc7a48350":[3,0,0,13,0,0],
-"structfst_1_1LatticeDeterminizer_1_1Element.html#ac1443d80e0c1a2779b9a940c05d171eb":[3,0,0,13,0,1],
-"structfst_1_1LatticeDeterminizer_1_1Element.html#ac348b84fbc0a26e6fcf42ea1b47639ca":[3,0,0,13,0,4]
+"structfst_1_1LatticeDeterminizerPruned_1_1TaskCompare.html#a66e4ea45736fad8464d43f551ae47e34":[3,0,0,47,7,0]
 };

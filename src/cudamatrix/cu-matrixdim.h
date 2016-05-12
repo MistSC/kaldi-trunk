@@ -55,6 +55,14 @@ extern "C" {
     int32_cuda stride;
   } MatrixDim;
 
+  typedef struct TensorDim_ {
+    int32_cuda i1;
+    int32_cuda i2;
+    int32_cuda i3;
+    int32_cuda ib;
+    int32_cuda stride;
+  } TensorDim;
+
 // we define the following constants here because this file is included
 // both by the C++ code and also CUDA code.
 

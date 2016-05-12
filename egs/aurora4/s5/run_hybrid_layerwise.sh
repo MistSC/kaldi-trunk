@@ -6,13 +6,13 @@
 . ./path.sh
 
 # training scheduler
-learn_rate=0.008
+learn_rate=0.006
 momentum=0
-l1_penalty=0
-l2_penalty=0.00002
+l1_penalty=0.00000003    # 0.0000005
+l2_penalty=0
 
 # train TCN 
-dir=exp/tri7e_hybrid
+dir=exp/tri7l_hybrid
 ali=exp/tri2b_multi_ali_si84
 ali_dev=exp/tri2b_multi_ali_dev_0330
 

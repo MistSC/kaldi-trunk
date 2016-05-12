@@ -1,5 +1,16 @@
 var NAVTREEINDEX61 =
 {
+"reverse-feats_8cc.html":[4,0,5,39],
+"reverse-feats_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,5,39,0],
+"reverse-feats_8cc_source.html":[4,0,5,39],
+"reverse-weights_8cc.html":[4,0,1,65],
+"reverse-weights_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,65,0],
+"reverse-weights_8cc_source.html":[4,0,1,65],
+"sausages_8cc.html":[4,0,16,19],
+"sausages_8cc_source.html":[4,0,16,19],
+"sausages_8h.html":[4,0,16,20],
+"sausages_8h_source.html":[4,0,16,20],
+"scale-post_8cc.html":[4,0,1,66],
 "scale-post_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,66,0],
 "scale-post_8cc_source.html":[4,0,1,66],
 "select-feats_8cc.html":[4,0,5,40],
@@ -238,16 +249,5 @@ var NAVTREEINDEX61 =
 "simple-options-test_8cc.html#af962e006c2c7a9c59c2404ac362705b4":[4,0,33,28,1],
 "simple-options-test_8cc_source.html":[4,0,33,28],
 "simple-options_8cc.html":[4,0,33,29],
-"simple-options_8cc.html#a3454657d604c35b16555140b123a90af":[4,0,33,29,0],
-"simple-options_8cc.html#a5aff2630938df1898170af3b01f35df0":[4,0,33,29,1],
-"simple-options_8cc_source.html":[4,0,33,29],
-"simple-options_8h.html":[4,0,33,30],
-"simple-options_8h_source.html":[4,0,33,30],
-"sinusoid-detection-test_8cc.html":[4,0,4,29],
-"sinusoid-detection-test_8cc.html#a0da1154e341edeb64ab40ffebb66e862":[4,0,4,29,9],
-"sinusoid-detection-test_8cc.html#a326516066a063f34b869a3d1b0cf63e8":[4,0,4,29,5],
-"sinusoid-detection-test_8cc.html#a63c2db9effde7adfb1ae78c518a575a0":[4,0,4,29,1],
-"sinusoid-detection-test_8cc.html#a7aec249e72142ec166074033f037be8f":[4,0,4,29,7],
-"sinusoid-detection-test_8cc.html#a96b7b2a92f61b578d1b313c5725a924f":[4,0,4,29,6],
-"sinusoid-detection-test_8cc.html#aa06db7f8ff32f2f813e90f73c46f5919":[4,0,4,29,8]
+"simple-options_8cc.html#a3454657d604c35b16555140b123a90af":[4,0,33,29,0]
 };

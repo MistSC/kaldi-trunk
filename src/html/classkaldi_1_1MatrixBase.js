@@ -141,6 +141,7 @@ var classkaldi_1_1MatrixBase =
     [ "Matrix< Real >", "classkaldi_1_1MatrixBase.html#a632eee2b7d00ee761d85c6c18f9ea005", null ],
     [ "PackedMatrix< Real >", "classkaldi_1_1MatrixBase.html#a5df5118a7131cd8adb2c3ffce020331c", null ],
     [ "SubMatrix< Real >", "classkaldi_1_1MatrixBase.html#a707fd5655f03a07072153f6f255c3d53", null ],
+    [ "Tensor< Real >", "classkaldi_1_1MatrixBase.html#a77f9552484b95ea18577ec79bf048351", null ],
     [ "data_", "classkaldi_1_1MatrixBase.html#ac2f903c4d28be2d76febeb70c49bbd0b", null ],
     [ "num_cols_", "classkaldi_1_1MatrixBase.html#a450082748d9b4882d1ce074d1af59a17", null ],
     [ "num_rows_", "classkaldi_1_1MatrixBase.html#a67d96c77dd3e450528faf1755002e42b", null ],

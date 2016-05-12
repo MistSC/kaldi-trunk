@@ -382,7 +382,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00058">58</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l00794">CuMatrixBase&lt; Real &gt;::GroupPnormDeriv()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00771">CuMatrixBase&lt; Real &gt;::MulRowsGroupMat()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l00784">CuMatrixBase&lt; Real &gt;::GroupPnormDeriv()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00761">CuMatrixBase&lt; Real &gt;::MulRowsGroupMat()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                                                                       {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <span class="keywordflow">if</span> (!in_deriv)  <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <a class="code" href="namespacekaldi.html#aa66ff8367094543664b3b6a13d77c139">BaseFloat</a> p = 2.0;</div>
@@ -390,9 +390,9 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  in_deriv-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#ab935690d3a4bef5c23552d954678f7c9">GroupPnormDeriv</a>(in_value, out_value, p);</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  in_deriv-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a0bb9285c3b3d6c789c70da92831ae344">MulRowsGroupMat</a>(out_deriv);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ab935690d3a4bef5c23552d954678f7c9"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ab935690d3a4bef5c23552d954678f7c9">kaldi::CuMatrixBase::GroupPnormDeriv</a></div><div class="ttdeci">void GroupPnormDeriv(const CuMatrixBase&lt; Real &gt; &amp;input, const CuMatrixBase&lt; Real &gt; &amp;output, Real power)</div><div class="ttdoc">Calculate derivatives for the GroupPnorm function above... </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00794">cu-matrix.cc:794</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ab935690d3a4bef5c23552d954678f7c9"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ab935690d3a4bef5c23552d954678f7c9">kaldi::CuMatrixBase::GroupPnormDeriv</a></div><div class="ttdeci">void GroupPnormDeriv(const CuMatrixBase&lt; Real &gt; &amp;input, const CuMatrixBase&lt; Real &gt; &amp;output, Real power)</div><div class="ttdoc">Calculate derivatives for the GroupPnorm function above... </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00784">cu-matrix.cc:784</a></div></div>
 <div class="ttc" id="namespacekaldi_html_aa66ff8367094543664b3b6a13d77c139"><div class="ttname"><a href="namespacekaldi.html#aa66ff8367094543664b3b6a13d77c139">kaldi::BaseFloat</a></div><div class="ttdeci">float BaseFloat</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-types_8h_source.html#l00029">kaldi-types.h:29</a></div></div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a0bb9285c3b3d6c789c70da92831ae344"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a0bb9285c3b3d6c789c70da92831ae344">kaldi::CuMatrixBase::MulRowsGroupMat</a></div><div class="ttdeci">void MulRowsGroupMat(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">divide each row into src.NumCols() groups, and then scale i&#39;th row&#39;s jth group of elements by src[i...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00771">cu-matrix.cc:771</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a0bb9285c3b3d6c789c70da92831ae344"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a0bb9285c3b3d6c789c70da92831ae344">kaldi::CuMatrixBase::MulRowsGroupMat</a></div><div class="ttdeci">void MulRowsGroupMat(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">divide each row into src.NumCols() groups, and then scale i&#39;th row&#39;s jth group of elements by src[i...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00761">cu-matrix.cc:761</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -643,13 +643,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00051">51</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01298">CuMatrixBase&lt; Real &gt;::GroupPnorm()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01288">CuMatrixBase&lt; Real &gt;::GroupPnorm()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                                                                   {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  <a class="code" href="namespacekaldi.html#aa66ff8367094543664b3b6a13d77c139">BaseFloat</a> p = 2.0;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#ae6d41b3236bb08ae2e30a1553045a23c">GroupPnorm</a>(in, p);  <span class="comment">// TODO: when done, replace with Group2Norm function.</span></div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
 <div class="ttc" id="namespacekaldi_html_aa66ff8367094543664b3b6a13d77c139"><div class="ttname"><a href="namespacekaldi.html#aa66ff8367094543664b3b6a13d77c139">kaldi::BaseFloat</a></div><div class="ttdeci">float BaseFloat</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-types_8h_source.html#l00029">kaldi-types.h:29</a></div></div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ae6d41b3236bb08ae2e30a1553045a23c"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ae6d41b3236bb08ae2e30a1553045a23c">kaldi::CuMatrixBase::GroupPnorm</a></div><div class="ttdeci">void GroupPnorm(const CuMatrixBase&lt; Real &gt; &amp;src, Real pow)</div><div class="ttdoc">Apply the function y(i) = (sum_{j = i*G}^{(i+1)*G-1} x_j ^ (power)) ^ (1 / p) where G = x...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01298">cu-matrix.cc:1298</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ae6d41b3236bb08ae2e30a1553045a23c"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ae6d41b3236bb08ae2e30a1553045a23c">kaldi::CuMatrixBase::GroupPnorm</a></div><div class="ttdeci">void GroupPnorm(const CuMatrixBase&lt; Real &gt; &amp;src, Real pow)</div><div class="ttdoc">Apply the function y(i) = (sum_{j = i*G}^{(i+1)*G-1} x_j ^ (power)) ^ (1 / p) where G = x...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01288">cu-matrix.cc:1288</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -891,7 +891,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1PnormComponent.html">PnormComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:48 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

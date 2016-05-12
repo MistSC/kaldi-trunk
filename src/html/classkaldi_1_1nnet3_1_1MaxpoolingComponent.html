@@ -408,7 +408,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l04194">4194</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8h_source.html#l00492">CuMatrixBase&lt; Real &gt;::ColRange()</a>, <a class="el" href="cu-matrix_8cc_source.html#l02821">CuMatrixBase&lt; Real &gt;::EqualElementMask()</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01639">MaxpoolingComponent::input_dim_</a>, <a class="el" href="kaldi-error_8h_source.html#l00143">KALDI_ASSERT</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01641">MaxpoolingComponent::pool_size_</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01642">MaxpoolingComponent::pool_stride_</a>.</p>
+<p>References <a class="el" href="cu-matrix_8h_source.html#l00492">CuMatrixBase&lt; Real &gt;::ColRange()</a>, <a class="el" href="cu-matrix_8cc_source.html#l02811">CuMatrixBase&lt; Real &gt;::EqualElementMask()</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01639">MaxpoolingComponent::input_dim_</a>, <a class="el" href="kaldi-error_8h_source.html#l00143">KALDI_ASSERT</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01641">MaxpoolingComponent::pool_size_</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01642">MaxpoolingComponent::pool_stride_</a>.</p>
 <div class="fragment"><div class="line"><a name="l04200"></a><span class="lineno"> 4200</span>&#160;                                                                            {</div>
 <div class="line"><a name="l04201"></a><span class="lineno"> 4201</span>&#160;  <a class="code" href="namespacekaldi.html#ab7903878916593daecbeb95b98115ab0">int32</a> num_patches = <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#a34160584d82072ed039ec2b5672b99ab">input_dim_</a> / <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#aeeaf1f3093761c211a62695ec73546e3">pool_stride_</a>;</div>
 <div class="line"><a name="l04202"></a><span class="lineno"> 4202</span>&#160;  <a class="code" href="namespacekaldi.html#ab7903878916593daecbeb95b98115ab0">int32</a> num_pools = num_patches / <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#aa14baf3a683b3b9c4dbc1528bd488dea">pool_size_</a>;</div>
@@ -780,7 +780,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l04175">4175</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8h_source.html#l00492">CuMatrixBase&lt; Real &gt;::ColRange()</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01639">MaxpoolingComponent::input_dim_</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01641">MaxpoolingComponent::pool_size_</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01642">MaxpoolingComponent::pool_stride_</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00490">CuMatrixBase&lt; Real &gt;::Set()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8h_source.html#l00492">CuMatrixBase&lt; Real &gt;::ColRange()</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01639">MaxpoolingComponent::input_dim_</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01641">MaxpoolingComponent::pool_size_</a>, <a class="el" href="nnet-simple-component_8h_source.html#l01642">MaxpoolingComponent::pool_stride_</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00480">CuMatrixBase&lt; Real &gt;::Set()</a>.</p>
 <div class="fragment"><div class="line"><a name="l04177"></a><span class="lineno"> 4177</span>&#160;                                                                        {</div>
 <div class="line"><a name="l04178"></a><span class="lineno"> 4178</span>&#160;  <a class="code" href="namespacekaldi.html#ab7903878916593daecbeb95b98115ab0">int32</a> num_patches = <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#a34160584d82072ed039ec2b5672b99ab">input_dim_</a> / <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#aeeaf1f3093761c211a62695ec73546e3">pool_stride_</a>;</div>
 <div class="line"><a name="l04179"></a><span class="lineno"> 4179</span>&#160;  <a class="code" href="namespacekaldi.html#ab7903878916593daecbeb95b98115ab0">int32</a> num_pools = num_patches / <a class="code" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html#aa14baf3a683b3b9c4dbc1528bd488dea">pool_size_</a>;</div>
@@ -1104,7 +1104,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1MaxpoolingComponent.html">MaxpoolingComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:49 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

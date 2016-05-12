@@ -26,6 +26,7 @@ var namespacekaldi =
     [ "Matrix", "classkaldi_1_1Matrix.html", "classkaldi_1_1Matrix" ],
     [ "HtkHeader", "structkaldi_1_1HtkHeader.html", "structkaldi_1_1HtkHeader" ],
     [ "SubMatrix", "classkaldi_1_1SubMatrix.html", "classkaldi_1_1SubMatrix" ],
+    [ "Tensor", "classkaldi_1_1Tensor.html", "classkaldi_1_1Tensor" ],
     [ "VectorBase", "classkaldi_1_1VectorBase.html", "classkaldi_1_1VectorBase" ],
     [ "Vector", "classkaldi_1_1Vector.html", "classkaldi_1_1Vector" ],
     [ "SubVector", "classkaldi_1_1SubVector.html", "classkaldi_1_1SubVector" ],

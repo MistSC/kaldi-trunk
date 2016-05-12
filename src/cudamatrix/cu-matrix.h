@@ -84,6 +84,8 @@ class CuMatrixBase {
   friend class CuTpMatrix<double>;
   friend class CuVectorBase<Real>;
   friend class CuSubMatrix<Real>;
+  friend class CuTensor<float>;
+  friend class CuTensor<double>;
   friend class CuRand<Real>;
   friend class CuSubVector<Real>;
   friend class CuBlockMatrix<Real>;
@@ -233,6 +235,8 @@ class CuMatrixBase {
   template<typename OtherReal>
   void CopyFromMat(const CuMatrixBase<OtherReal> &M,
                    MatrixTransposeType trans = kNoTrans);
+
+  void ReshapeFromTensor(const CuTensor<Real> &T, MatrixIndexT mode);
 
   template<typename OtherReal>
   void CopyToMat(MatrixBase<OtherReal> *dst,
@@ -622,6 +626,7 @@ class CuMatrixBase {
 template<typename Real>
 class CuMatrix: public CuMatrixBase<Real> {
  public:
+  //friend class CuTensor<Real>;
 
   CuMatrix() { }
 
@@ -687,7 +692,8 @@ class CuMatrix: public CuMatrixBase<Real> {
 
   /// Allocate the memory
   void Resize(MatrixIndexT rows, MatrixIndexT cols,
-              MatrixResizeType resize_type = kSetZero);
+              MatrixResizeType resize_type = kSetZero,
+              MatrixStrideType stride_type = kDefaultStride);
 
   void Swap(Matrix<Real> *mat);
   void Swap(CuMatrix<Real> *mat);
@@ -699,7 +705,7 @@ class CuMatrix: public CuMatrixBase<Real> {
   void Read(std::istream &is, bool binary);
 
   /// Destructor
-  ~CuMatrix() { Destroy(); }
+  virtual ~CuMatrix() { Destroy(); }
 
   inline const Matrix<Real> &Mat() const {
     return *(reinterpret_cast<const Matrix<Real>* >(this));
@@ -723,8 +729,8 @@ class CuMatrix: public CuMatrixBase<Real> {
                         Real *tot_objf,
                         Real *tot_weight);
 
- private:
-  void Destroy();
+  // private:
+  void Destroy();  // let CuTensor use destroy
 };
 
 
@@ -763,6 +769,126 @@ class CuSubMatrix: public CuMatrixBase<Real> {
   /// Disallow assignment.
   CuSubMatrix<Real> &operator = (const CuSubMatrix<Real> &other);
 };
+
+/// This class is used for a piece of a CuMatrix.
+template<typename Real>
+class CuTensor: public CuMatrix<Real> {
+ public:
+   
+  CuTensor(const CuMatrixBase<Real> &T,
+           const MatrixIndexT batch_size,
+           const MatrixIndexT num_i1,
+           const MatrixIndexT num_i2,
+           const MatrixIndexT num_i3)
+  {
+    this->Resize(T.NumRows(),T.NumCols(),kSetZero,kStrideEqualNumCols);
+    this->CopyFromMat(T);
+
+    this->batch_size_ = batch_size;
+    this->num_i1_ = num_i1;
+    this->num_i2_ = num_i2;
+    this->num_i3_ = num_i3;
+    this->reshape_type_ = 0;
+  };
+  
+  CuTensor(//MatrixIndexT rows,
+           //MatrixIndexT cols,
+           MatrixIndexT batch_size,
+           MatrixIndexT num_i1,
+           MatrixIndexT num_i2,
+           MatrixIndexT num_i3,
+           MatrixIndexT rt)
+  {
+    if(rt == 0)
+      this->Resize(batch_size,num_i1*num_i2*num_i3,kSetZero,kStrideEqualNumCols);
+    else if(rt == 1)
+      this->Resize(batch_size*num_i2*num_i3,num_i1,kSetZero,kStrideEqualNumCols);
+    else if(rt == 2)
+      this->Resize(batch_size*num_i1*num_i3,num_i2,kSetZero,kStrideEqualNumCols);
+    else if(rt == 3)
+      this->Resize(batch_size*num_i1*num_i2,num_i3,kSetZero,kStrideEqualNumCols);
+
+    this->reshape_type_ = rt;
+    this->batch_size_ = batch_size;
+    this->num_i1_ = num_i1;
+    this->num_i2_ = num_i2;
+    this->num_i3_ = num_i3;
+  };
+
+  CuTensor(MatrixIndexT rows,
+           MatrixIndexT cols)
+  {
+    this->Resize(rows,cols,kSetZero,kStrideEqualNumCols);
+  };
+
+ 
+  // overload () for get the value of each index
+  inline Real Index(MatrixIndexT ib,
+                    MatrixIndexT i1,
+                    MatrixIndexT i2,
+                    MatrixIndexT i3) const
+  {
+    // avoid pointer out of range
+    KALDI_ASSERT(i1>=0 && i2>=0 && i3>=0 && ib>=0 &&
+                 i1 * i2 *i3 <= this->num_cols_ &&
+                 ib <= this->num_rows_);
+    return CuValue<Real>(this->data_ + this->stride_ * ib + (num_i2_*num_i3_) * i1 + num_i3_ * i2 + i3);
+  }
+
+  // overload () for get the value of each index
+  inline CuValue<Real> Index(MatrixIndexT ib,
+                      MatrixIndexT i1,
+                      MatrixIndexT i2,
+                      MatrixIndexT i3)
+  {
+    // avoid pointer out of range
+    KALDI_ASSERT(i1>=0 && i2>=0 && i3>=0 && ib>=0 &&
+                 i1 * i2 *i3 <= this->num_cols_ &&
+                 ib <= this->num_rows_);
+    return CuValue<Real>(this->data_ + this->stride_ * ib + (num_i2_*num_i3_) * i1 + num_i3_ * i2 + i3);
+  }
+  
+  // reshape tensor to a special matrix
+  void ReshapeFromTensor(const CuTensor<Real> &T,
+                               MatrixIndexT mode);
+ 
+  MatrixIndexT NumI1() const { return num_i1_; }
+  MatrixIndexT NumI2() const { return num_i2_; }
+  MatrixIndexT NumI3() const { return num_i3_; }
+  MatrixIndexT NumBS() const { return batch_size_; }
+  MatrixIndexT ReshapeType() const { return reshape_type_; }
+  // TensorDim is a struct containing "i1", "i2", "i3", "batch_size" and "stride",
+  // that is an argument of most CUDA kernels.
+  TensorDim TDim() const {
+    TensorDim d = { num_i1_, num_i2_, num_i3_, batch_size_, this->stride_ };
+    return d;
+  }
+
+  // mode n product
+  // attention: v0 gives the tensor with reshape type 0
+  void mode_1_product_v0(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+  void mode_2_product_v0(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+  void mode_3_product_v0(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+  // attention: these function give tensor with the same reshape type as T
+  void mode_1_product(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+  void mode_2_product(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+  void mode_3_product(const CuTensor<Real>& T, MatrixTransposeType transT, const CuMatrix<Real>& M, MatrixTransposeType transM);
+
+
+
+  ~CuTensor() { this->Destroy(); }
+
+ protected:
+  MatrixIndexT num_i1_;
+  MatrixIndexT num_i2_;
+  MatrixIndexT num_i3_;
+  MatrixIndexT batch_size_;
+  MatrixIndexT reshape_type_;
+ private:
+  /// Disallow assignment.
+  CuTensor<Real> &operator = (const CuTensor<Real> &other);
+};
+
 
 
 template<typename Real>

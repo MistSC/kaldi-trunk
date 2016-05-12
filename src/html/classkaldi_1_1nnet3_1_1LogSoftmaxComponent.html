@@ -424,7 +424,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l02544">2544</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-vector_8cc_source.html#l01128">CuVectorBase&lt; Real &gt;::AddColSumMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00891">CuMatrixBase&lt; Real &gt;::AddMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l02059">CuMatrixBase&lt; Real &gt;::ApplyExp()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00332">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, <a class="el" href="matrix-common_8h_source.html#l00032">kaldi::kNoTrans</a>, <a class="el" href="cu-matrix_8cc_source.html#l00747">CuMatrixBase&lt; Real &gt;::MulRowsVec()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00603">CuMatrixBase&lt; Real &gt;::Scale()</a>.</p>
+<p>References <a class="el" href="cu-vector_8cc_source.html#l01128">CuVectorBase&lt; Real &gt;::AddColSumMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00881">CuMatrixBase&lt; Real &gt;::AddMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l02049">CuMatrixBase&lt; Real &gt;::ApplyExp()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00322">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, <a class="el" href="matrix-common_8h_source.html#l00032">kaldi::kNoTrans</a>, <a class="el" href="cu-matrix_8cc_source.html#l00737">CuMatrixBase&lt; Real &gt;::MulRowsVec()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, and <a class="el" href="cu-matrix_8cc_source.html#l00593">CuMatrixBase&lt; Real &gt;::Scale()</a>.</p>
 <div class="fragment"><div class="line"><a name="l02550"></a><span class="lineno"> 2550</span>&#160;                                                                            {</div>
 <div class="line"><a name="l02551"></a><span class="lineno"> 2551</span>&#160;  <span class="keywordflow">if</span> (in_deriv == NULL)</div>
 <div class="line"><a name="l02552"></a><span class="lineno"> 2552</span>&#160;    <span class="keywordflow">return</span>;</div>
@@ -564,13 +564,13 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l02536">2536</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01428">CuMatrixBase&lt; Real &gt;::ApplyLogSoftMaxPerRow()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01418">CuMatrixBase&lt; Real &gt;::ApplyLogSoftMaxPerRow()</a>.</p>
 <div class="fragment"><div class="line"><a name="l02538"></a><span class="lineno"> 2538</span>&#160;                                                                        {</div>
 <div class="line"><a name="l02539"></a><span class="lineno"> 2539</span>&#160;  <span class="comment">// Applies log softmax function to each row of the output. For each row, we do</span></div>
 <div class="line"><a name="l02540"></a><span class="lineno"> 2540</span>&#160;  <span class="comment">// x_i = x_i - log(sum_j exp(x_j))</span></div>
 <div class="line"><a name="l02541"></a><span class="lineno"> 2541</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a3241a69c779b7de9b3a5d26f81d4b504">ApplyLogSoftMaxPerRow</a>(in);</div>
 <div class="line"><a name="l02542"></a><span class="lineno"> 2542</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a3241a69c779b7de9b3a5d26f81d4b504"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a3241a69c779b7de9b3a5d26f81d4b504">kaldi::CuMatrixBase::ApplyLogSoftMaxPerRow</a></div><div class="ttdeci">void ApplyLogSoftMaxPerRow(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">LogSoftmax nonlinearity Y = LogSoftmax(X) : Yij = Xij - log(sum_k(e^Xik)), done to each row for each ...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01428">cu-matrix.cc:1428</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a3241a69c779b7de9b3a5d26f81d4b504"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a3241a69c779b7de9b3a5d26f81d4b504">kaldi::CuMatrixBase::ApplyLogSoftMaxPerRow</a></div><div class="ttdeci">void ApplyLogSoftMaxPerRow(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">LogSoftmax nonlinearity Y = LogSoftmax(X) : Yij = Xij - log(sum_k(e^Xik)), done to each row for each ...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01418">cu-matrix.cc:1418</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -652,7 +652,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1LogSoftmaxComponent.html">LogSoftmaxComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:48 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

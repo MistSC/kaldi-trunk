@@ -1,6 +1,7 @@
 var matrix_common_8h =
 [
     [ "SubMatrix", "classkaldi_1_1SubMatrix.html", "classkaldi_1_1SubMatrix" ],
+    [ "Tensor", "classkaldi_1_1Tensor.html", "classkaldi_1_1Tensor" ],
     [ "CuMatrixBase", "classkaldi_1_1CuMatrixBase.html", "classkaldi_1_1CuMatrixBase" ],
     [ "CuSubMatrix", "classkaldi_1_1CuSubMatrix.html", "classkaldi_1_1CuSubMatrix" ],
     [ "CuMatrix", "classkaldi_1_1CuMatrix.html", "classkaldi_1_1CuMatrix" ],

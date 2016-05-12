@@ -423,12 +423,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00403">403</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01453">CuMatrixBase&lt; Real &gt;::DiffSigmoid()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01443">CuMatrixBase&lt; Real &gt;::DiffSigmoid()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                                                                         {</div>
 <div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;  <span class="keywordflow">if</span> (in_deriv != NULL)</div>
 <div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;    in_deriv-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a50495cd2ff9a2480bd0370bccd662a8b">DiffSigmoid</a>(out_value, out_deriv);</div>
 <div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a50495cd2ff9a2480bd0370bccd662a8b"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a50495cd2ff9a2480bd0370bccd662a8b">kaldi::CuMatrixBase::DiffSigmoid</a></div><div class="ttdeci">void DiffSigmoid(const CuMatrixBase&lt; Real &gt; &amp;value, const CuMatrixBase&lt; Real &gt; &amp;diff)</div><div class="ttdoc">Differentiate backward through the sigmoid function. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01453">cu-matrix.cc:1453</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a50495cd2ff9a2480bd0370bccd662a8b"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a50495cd2ff9a2480bd0370bccd662a8b">kaldi::CuMatrixBase::DiffSigmoid</a></div><div class="ttdeci">void DiffSigmoid(const CuMatrixBase&lt; Real &gt; &amp;value, const CuMatrixBase&lt; Real &gt; &amp;diff)</div><div class="ttdoc">Differentiate backward through the sigmoid function. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01443">cu-matrix.cc:1443</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -541,11 +541,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00397">397</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01256">CuMatrixBase&lt; Real &gt;::Sigmoid()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01246">CuMatrixBase&lt; Real &gt;::Sigmoid()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                                                                     {</div>
 <div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#aae5806cc9e96c577cec331f3a915017d">Sigmoid</a>(in);</div>
 <div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_aae5806cc9e96c577cec331f3a915017d"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#aae5806cc9e96c577cec331f3a915017d">kaldi::CuMatrixBase::Sigmoid</a></div><div class="ttdeci">void Sigmoid(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">Set each element to the sigmoid of the corresponding element of &quot;src&quot;: element by element...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01256">cu-matrix.cc:1256</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_aae5806cc9e96c577cec331f3a915017d"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#aae5806cc9e96c577cec331f3a915017d">kaldi::CuMatrixBase::Sigmoid</a></div><div class="ttdeci">void Sigmoid(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">Set each element to the sigmoid of the corresponding element of &quot;src&quot;: element by element...</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01246">cu-matrix.cc:1246</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -617,7 +617,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00414">414</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="matrix-common_8h_source.html#l00037">kaldi::kUndefined</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00490">CuMatrixBase&lt; Real &gt;::Set()</a>, and <a class="el" href="nnet-component-itf_8cc_source.html#l00217">NonlinearComponent::StoreStatsInternal()</a>.</p>
+<p>References <a class="el" href="matrix-common_8h_source.html#l00037">kaldi::kUndefined</a>, <a class="el" href="cu-matrix_8h_source.html#l00196">CuMatrixBase&lt; Real &gt;::NumCols()</a>, <a class="el" href="cu-matrix_8h_source.html#l00195">CuMatrixBase&lt; Real &gt;::NumRows()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00480">CuMatrixBase&lt; Real &gt;::Set()</a>, and <a class="el" href="nnet-component-itf_8cc_source.html#l00217">NonlinearComponent::StoreStatsInternal()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                                                                          {</div>
 <div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160;  <span class="comment">// derivative of the nonlinearity is out_value * (1.0 - out_value);</span></div>
 <div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;  CuMatrix&lt;BaseFloat&gt; temp_deriv(out_value.<a class="code" href="classkaldi_1_1CuMatrixBase.html#ab204078beff8151c95d1828544acf92c">NumRows</a>(), out_value.<a class="code" href="classkaldi_1_1CuMatrixBase.html#afe58124fbfb387ddc20513bf3075b16e">NumCols</a>(),</div>
@@ -674,7 +674,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1SigmoidComponent.html">SigmoidComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:48 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

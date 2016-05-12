@@ -128,8 +128,6 @@ $(document).ready(function(){initNavTree('classkaldi_1_1HtkMatrixHolder.html',''
 Collaboration diagram for HtkMatrixHolder:</div>
 <div class="dyncontent">
 <div class="center"><img src="classkaldi_1_1HtkMatrixHolder__coll__graph.png" border="0" usemap="#HtkMatrixHolder_coll__map" alt="Collaboration graph"/></div>
-<map name="HtkMatrixHolder_coll__map" id="HtkMatrixHolder_coll__map">
-</map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -315,7 +313,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="kaldi-holder-inl_8h_source.html#l00707">707</a> of file <a class="el" href="kaldi-holder-inl_8h_source.html">kaldi-holder-inl.h</a>.</p>
 
-<p>References <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, <a class="el" href="kaldi-matrix_8cc_source.html#l02070">kaldi::ReadHtk()</a>, and <a class="el" href="kaldi-holder-inl_8h_source.html#l00725">HtkMatrixHolder::t_</a>.</p>
+<p>References <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, <a class="el" href="kaldi-matrix_8cc_source.html#l02142">kaldi::ReadHtk()</a>, and <a class="el" href="kaldi-holder-inl_8h_source.html#l00725">HtkMatrixHolder::t_</a>.</p>
 <div class="fragment"><div class="line"><a name="l00707"></a><span class="lineno">  707</span>&#160;                            {</div>
 <div class="line"><a name="l00708"></a><span class="lineno">  708</span>&#160;    <span class="keywordtype">bool</span> ans = <a class="code" href="group__matrix__funcs__io.html#ga15cdd4665237e32efbb5c6830e001dfb">ReadHtk</a>(is, &amp;<a class="code" href="classkaldi_1_1HtkMatrixHolder.html#a309ab12e5106fe441dbb10b165825a91">t_</a>.first, &amp;<a class="code" href="classkaldi_1_1HtkMatrixHolder.html#a309ab12e5106fe441dbb10b165825a91">t_</a>.second);</div>
 <div class="line"><a name="l00709"></a><span class="lineno">  709</span>&#160;    <span class="keywordflow">if</span> (!ans) {</div>
@@ -326,7 +324,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00714"></a><span class="lineno">  714</span>&#160;  }</div>
 <div class="ttc" id="classkaldi_1_1HtkMatrixHolder_html_a309ab12e5106fe441dbb10b165825a91"><div class="ttname"><a href="classkaldi_1_1HtkMatrixHolder.html#a309ab12e5106fe441dbb10b165825a91">kaldi::HtkMatrixHolder::t_</a></div><div class="ttdeci">T t_</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-holder-inl_8h_source.html#l00725">kaldi-holder-inl.h:725</a></div></div>
 <div class="ttc" id="group__error__group_html_ga994be213ddf127b5d6f20a43a02b513a"><div class="ttname"><a href="group__error__group.html#ga994be213ddf127b5d6f20a43a02b513a">KALDI_WARN</a></div><div class="ttdeci">#define KALDI_WARN</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-error_8h_source.html#l00162">kaldi-error.h:162</a></div></div>
-<div class="ttc" id="group__matrix__funcs__io_html_ga15cdd4665237e32efbb5c6830e001dfb"><div class="ttname"><a href="group__matrix__funcs__io.html#ga15cdd4665237e32efbb5c6830e001dfb">kaldi::ReadHtk</a></div><div class="ttdeci">bool ReadHtk(std::istream &amp;is, Matrix&lt; Real &gt; *M_ptr, HtkHeader *header_ptr)</div><div class="ttdoc">Extension of the HTK header. </div><div class="ttdef"><b>Definition:</b> <a href="kaldi-matrix_8cc_source.html#l02070">kaldi-matrix.cc:2070</a></div></div>
+<div class="ttc" id="group__matrix__funcs__io_html_ga15cdd4665237e32efbb5c6830e001dfb"><div class="ttname"><a href="group__matrix__funcs__io.html#ga15cdd4665237e32efbb5c6830e001dfb">kaldi::ReadHtk</a></div><div class="ttdeci">bool ReadHtk(std::istream &amp;is, Matrix&lt; Real &gt; *M_ptr, HtkHeader *header_ptr)</div><div class="ttdoc">Extension of the HTK header. </div><div class="ttdef"><b>Definition:</b> <a href="kaldi-matrix_8cc_source.html#l02142">kaldi-matrix.cc:2142</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -399,7 +397,7 @@ Private Attributes</h2></td></tr>
 
 <p>Definition at line <a class="el" href="kaldi-holder-inl_8h_source.html#l00695">695</a> of file <a class="el" href="kaldi-holder-inl_8h_source.html">kaldi-holder-inl.h</a>.</p>
 
-<p>References <a class="el" href="kaldi-error_8h_source.html#l00160">KALDI_ERR</a>, <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, and <a class="el" href="kaldi-matrix_8cc_source.html#l02170">kaldi::WriteHtk()</a>.</p>
+<p>References <a class="el" href="kaldi-error_8h_source.html#l00160">KALDI_ERR</a>, <a class="el" href="kaldi-error_8h_source.html#l00162">KALDI_WARN</a>, and <a class="el" href="kaldi-matrix_8cc_source.html#l02242">kaldi::WriteHtk()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00695"></a><span class="lineno">  695</span>&#160;                                                             {</div>
 <div class="line"><a name="l00696"></a><span class="lineno">  696</span>&#160;    <span class="keywordflow">if</span> (!binary)</div>
 <div class="line"><a name="l00697"></a><span class="lineno">  697</span>&#160;      <a class="code" href="group__error__group.html#ga0251fa005e2fdb1dcc6e24f06afe3b1f">KALDI_ERR</a> &lt;&lt; <span class="stringliteral">&quot;Non-binary HTK-format write not supported.&quot;</span>;</div>
@@ -408,7 +406,7 @@ Private Attributes</h2></td></tr>
 <div class="line"><a name="l00700"></a><span class="lineno">  700</span>&#160;      <a class="code" href="group__error__group.html#ga994be213ddf127b5d6f20a43a02b513a">KALDI_WARN</a> &lt;&lt; <span class="stringliteral">&quot;Error detected writing HTK-format matrix.&quot;</span>;</div>
 <div class="line"><a name="l00701"></a><span class="lineno">  701</span>&#160;    <span class="keywordflow">return</span> ans;</div>
 <div class="line"><a name="l00702"></a><span class="lineno">  702</span>&#160;  }</div>
-<div class="ttc" id="group__matrix__funcs__io_html_ga9386f382792c7274655d5453b1e54d38"><div class="ttname"><a href="group__matrix__funcs__io.html#ga9386f382792c7274655d5453b1e54d38">kaldi::WriteHtk</a></div><div class="ttdeci">bool WriteHtk(std::ostream &amp;os, const MatrixBase&lt; Real &gt; &amp;M, HtkHeader htk_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-matrix_8cc_source.html#l02170">kaldi-matrix.cc:2170</a></div></div>
+<div class="ttc" id="group__matrix__funcs__io_html_ga9386f382792c7274655d5453b1e54d38"><div class="ttname"><a href="group__matrix__funcs__io.html#ga9386f382792c7274655d5453b1e54d38">kaldi::WriteHtk</a></div><div class="ttdeci">bool WriteHtk(std::ostream &amp;os, const MatrixBase&lt; Real &gt; &amp;M, HtkHeader htk_hdr)</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-matrix_8cc_source.html#l02242">kaldi-matrix.cc:2242</a></div></div>
 <div class="ttc" id="group__error__group_html_ga0251fa005e2fdb1dcc6e24f06afe3b1f"><div class="ttname"><a href="group__error__group.html#ga0251fa005e2fdb1dcc6e24f06afe3b1f">KALDI_ERR</a></div><div class="ttdeci">#define KALDI_ERR</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-error_8h_source.html#l00160">kaldi-error.h:160</a></div></div>
 <div class="ttc" id="group__error__group_html_ga994be213ddf127b5d6f20a43a02b513a"><div class="ttname"><a href="group__error__group.html#ga994be213ddf127b5d6f20a43a02b513a">KALDI_WARN</a></div><div class="ttdeci">#define KALDI_WARN</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-error_8h_source.html#l00162">kaldi-error.h:162</a></div></div>
 </div><!-- fragment -->
@@ -448,7 +446,7 @@ Private Attributes</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="classkaldi_1_1HtkMatrixHolder.html">HtkMatrixHolder</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:49 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:42 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,5 +1,16 @@
 var NAVTREEINDEX59 =
 {
+"nnet3-am-train-transitions_8cc.html#ad96e7aef845800f1dc88fa2ad1aade28":[4,0,24,6,1],
+"nnet3-am-train-transitions_8cc_source.html":[4,0,24,6],
+"nnet3-average_8cc.html":[4,0,24,7],
+"nnet3-average_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,7,1],
+"nnet3-average_8cc.html#a531fb996dacc711604f4a827662ec913":[4,0,24,7,0],
+"nnet3-average_8cc_source.html":[4,0,24,7],
+"nnet3-combine_8cc.html":[4,0,24,8],
+"nnet3-combine_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,8,0],
+"nnet3-combine_8cc_source.html":[4,0,24,8],
+"nnet3-compute-from-egs_8cc.html":[4,0,24,9],
+"nnet3-compute-from-egs_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,9,1],
 "nnet3-compute-from-egs_8cc_source.html":[4,0,24,9],
 "nnet3-compute-prob_8cc.html":[4,0,24,10],
 "nnet3-compute-prob_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,24,10,0],
@@ -238,16 +249,5 @@ var NAVTREEINDEX59 =
 "post-to-phone-post_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,59,0],
 "post-to-phone-post_8cc_source.html":[4,0,1,59],
 "post-to-tacc_8cc.html":[4,0,1,60],
-"post-to-tacc_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,60,0],
-"post-to-tacc_8cc_source.html":[4,0,1,60],
-"post-to-weights_8cc.html":[4,0,1,61],
-"post-to-weights_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,61,0],
-"post-to-weights_8cc_source.html":[4,0,1,61],
-"posterior-test_8cc.html":[4,0,11,8],
-"posterior-test_8cc.html#a1ca5e83138f2e475beac27b49bda9a77":[4,0,11,8,2],
-"posterior-test_8cc.html#a782fd99fe8e640c98a5d3aa435766bcc":[4,0,11,8,1],
-"posterior-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,11,8,0],
-"posterior-test_8cc_source.html":[4,0,11,8],
-"posterior_8cc.html":[4,0,11,9],
-"posterior_8cc.html#ga0dfbba277ea6654cc320245091f4cf11":[4,0,11,9,13]
+"post-to-tacc_8cc.html#a0ddf1224851353fc92bfbff6f499fa97":[4,0,1,60,0]
 };

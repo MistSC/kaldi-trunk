@@ -10,7 +10,8 @@ include ../kaldi.mk
 
 # you can uncomment matrix-lib-speed-test if you want to do the speed tests.
 
-TESTFILES = matrix-lib-test kaldi-gpsr-test sparse-matrix-test #matrix-lib-speed-test
+BINFILES = matrix-lib-test
+TESTFILES = kaldi-gpsr-test sparse-matrix-test matrix-lib-test #matrix-lib-speed-test
 
 OBJFILES = kaldi-matrix.o kaldi-vector.o packed-matrix.o sp-matrix.o tp-matrix.o \
            matrix-functions.o qr.o srfft.o kaldi-gpsr.o compressed-matrix.o \

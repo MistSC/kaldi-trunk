@@ -1,5 +1,17 @@
 var NAVTREEINDEX36 =
 {
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af12dc036070d7e3229a0232e214c226e":[3,0,1,3,4,24],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af1d78e1270f4d516f8ba6c0c692b0f3d":[3,0,1,3,4,30],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af659a9e1c6ede20999b0996a58f97f34":[3,0,1,3,4,27],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af679b81005104cca1fc03ef8ee3b36d0":[3,0,1,3,4,29],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af830848160afd5bf477387d1c5825d8c":[3,0,1,3,4,21],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#afb9bffca178027f3e5d52ec73a1ee0fe":[3,0,1,3,4,20],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html":[3,0,1,3,3],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a1841a25fc1c29ef9c7cf351aa2b072e8":[3,0,1,3,3,2],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2869049af2282ea8218bc9bd71b52092":[3,0,1,3,3,7],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a295a391825411ca346362302c6b71a64":[3,0,1,3,3,1],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2c38aaa86b3a82cc7a1693f9798753f0":[3,0,1,3,3,9],
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2dbee5c3528b25493ecded7e22083138":[3,0,1,3,3,10],
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a40de84aa34756dd2c783f5f8a131670a":[3,0,1,3,3,4],
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a52ab183819345fee768bb649bc8df38c":[3,0,1,3,3,5],
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a56f9e1400aa5c977c8dd7675b6adb7c2":[3,0,1,3,3,12],
@@ -237,17 +249,5 @@ var NAVTREEINDEX36 =
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#a249fc827890bdb6b8722d4c9c59178a0":[3,0,1,3,87,9],
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#a34160584d82072ed039ec2b5672b99ab":[3,0,1,3,87,16],
 "classkaldi_1_1nnet3_1_1SumGroupComponent.html#a4be1dee25302fce78724541a50d612d6":[3,0,1,3,87,4],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a6fbf57705407f6653f53232cf1f8773e":[3,0,1,3,87,5],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a78b33652566522183152981014dc4e30":[3,0,1,3,87,8],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a7bc261b04ea91663bea36634558ed779":[3,0,1,3,87,13],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a7cd01eb7954c695fc74bea35da762abc":[3,0,1,3,87,7],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a879b982812078b2e9c7c3c756e32be4e":[3,0,1,3,87,11],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a8e7d2790fc7e94fe9780ccc937de1270":[3,0,1,3,87,12],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a91e3700c969e273a48e42cb60d4b6bec":[3,0,1,3,87,0],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#aaf65a85a9cc15ad16bc9968c08758f97":[3,0,1,3,87,3],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ab7d46c9e0bdb44ef975cfbd362b49345":[3,0,1,3,87,17],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ac4f5c35427c2657c50173313e99e3f01":[3,0,1,3,87,6],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ac88a864398e6912a94e09786f1d87019":[3,0,1,3,87,10],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad29de11456b2a8d0c3cc520615d73c81":[3,0,1,3,87,18],
-"classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad40e6c6591d69cb45797537b448a2b99":[3,0,1,3,87,1]
+"classkaldi_1_1nnet3_1_1SumGroupComponent.html#a6fbf57705407f6653f53232cf1f8773e":[3,0,1,3,87,5]
 };

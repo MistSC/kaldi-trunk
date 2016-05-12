@@ -39,6 +39,11 @@ typedef enum {
 } MatrixResizeType;
 
 typedef enum {
+  kDefaultStride,
+  kStrideEqualNumCols,
+} MatrixStrideType;
+
+typedef enum {
   kTakeLower,
   kTakeUpper,
   kTakeMean,
@@ -50,6 +55,7 @@ template<typename Real> class Vector;
 template<typename Real> class SubVector;
 template<typename Real> class MatrixBase;
 template<typename Real> class SubMatrix;
+template<typename Real> class Tensor;
 template<typename Real> class Matrix;
 template<typename Real> class SpMatrix;
 template<typename Real> class TpMatrix;
@@ -68,6 +74,7 @@ template<typename Real> class CuPackedMatrix;
 template<typename Real> class CuSpMatrix;
 template<typename Real> class CuTpMatrix;
 template<typename Real> class CuSparseMatrix;
+template<typename Real> class CuTensor;
 
 class CompressedMatrix;
 class GeneralMatrix;

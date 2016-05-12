@@ -11,15 +11,16 @@
 
 namespace kaldi {
 namespace nnet1 {
-class TCNComponent : public UpdatableComponent {
+class TCN3WayComponent : public UpdatableComponent {
  public:
  TCNComponent(int32 dim_in,int32 dim_out)
     : UpdatableComponent(dim_in, dim_out),
       //initial dimension parameters
       dim_in_(dim_in),dim_out_(dim_out),
-      wei_1_i1_(0.0),wei_2_i2_(0.0),wei_1_j1_(0.0),wei_2_j2_(0.0),
-      input_dim_1_(0.0),input_dim_2_(0.0),
-      output_dim_1_(0.0),output_dim_2_(0.0),
+      wei_1_i1_(0.0),wei_2_i2_(0.0),wei_3_i3_(0.0),
+      wei_1_j1_(0.0),wei_2_j2_(0.0),wei_3_j3_(0.0),
+      input_dim_1_(0.0),input_dim_2_(0.0),input_dim_3_(0.0),
+      output_dim_1_(0.0),output_dim_2_(0.0),output_dim_3_(0.0),
       //initial learning rate
       learn_rate_coef_(1.0), bias_learn_rate_coef_(1.0)
   { }
@@ -46,8 +47,10 @@ class TCNComponent : public UpdatableComponent {
       else if (token == "<ParamStddev>")   ReadBasicType(is, false, &param_stddev);
       else if (token == "<InputDim1>")       ReadBasicType(is, false, &input_dim_1_);
       else if (token == "<InputDim2>")       ReadBasicType(is, false, &input_dim_2_);
+      else if (token == "<InputDim3>")       ReadBasicType(is, false, &input_dim_3_);
       else if (token == "<OutputDim1>")      ReadBasicType(is, false, &output_dim_1_);
       else if (token == "<OutputDim2>")      ReadBasicType(is, false, &output_dim_2_);
+      else if (token == "<OutputDim3>")      ReadBasicType(is, false, &output_dim_3_);
       //else if (token == "<LearnRateCoef>") ReadBasicType(is, false, &learn_rate_coef);
       //else if (token == "<BiasLearnRateCoef>") ReadBasicType(is, false, &bias_learn_rate_coef);
       else KALDI_ERR << "Unknown token " << token << ", a typo in config?"
@@ -74,10 +77,10 @@ class TCNComponent : public UpdatableComponent {
     //                      Sanity checks:                           //
     //===============================================================//
     // input sanity checks
-    KALDI_ASSERT(dim_in_ == input_dim_1_ * input_dim_2_);
+    KALDI_ASSERT(dim_in_ == input_dim_1_ * input_dim_2_ * input_dim_3_);
         
     // output sanity checks
-    KALDI_ASSERT(dim_out_ == output_dim_1_ * output_dim_2_);
+    KALDI_ASSERT(dim_out_ == output_dim_1_ * output_dim_2_ * output_dim_3_);
 
     //===============================================================//
     //                Initialize parameters                          //
@@ -88,10 +91,13 @@ class TCNComponent : public UpdatableComponent {
     wei_1_j1_ = output_dim_1_;
     wei_2_i2_ = input_dim_2_;
     wei_2_j2_ = output_dim_2_;
+    wei_3_i3_ = input_dim_3_;
+    wei_3_j3_ = output_dim_3_;
 
     //initialize weights
     Matrix<BaseFloat> mat_w1(wei_1_j1_,wei_1_i1_);
     Matrix<BaseFloat> mat_w2(wei_2_j2_,wei_2_i2_);
+    Matrix<BaseFloat> mat_w3(wei_3_j3_,wei_3_i3_);
     for (int32 r = 0; r < wei_1_j1_; r++) {
       for (int32 c = 0; c < wei_1_i1_; c++) {
         // 0-mean Gauss with given std_dev for weight 1
@@ -104,16 +110,22 @@ class TCNComponent : public UpdatableComponent {
         mat_w2(r, c) = param_stddev * RandGauss();
       }
     }
+    for (int32 r = 0; r < wei_3_j3_; r++) {
+      for (int32 c = 0; c < wei_3_i3_; c++) {
+        // 0-mean Gauss with given std_dev for weight 2
+        mat_w3(r, c) = param_stddev * RandGauss();
+      }
+    }
+
     mode_1_wei_ = mat_w1;     //mode 1 product weight
     mode_2_wei_ = mat_w2;     //mode 2 product weight
+    mode_3_wei_ = mat_w3;     //mode 3 product weight
 
     //initialize bias
-    Matrix<BaseFloat> mat_b(wei_1_j1_,wei_2_j2_);
-    for (int32 r = 0; r < wei_1_j1_; r++) {
-      for (int32 c = 0; c< wei_2_j2_; c++) {
+    Matrix<BaseFloat> mat_b(wei_1_j1_ * wei_2_j2_ * wei_3_j3_);
+    for (int32 c = 0; r < wei_1_j1_ * wei_2_j2_ * wei_3_j3_; r++) {
         // +/- 1/2*bias_range      from bias_mean:
-        mat_b(r,c) = bias_mean + (RandUniform() - 0.5) * bias_range;
-      }
+        mat_b(0,c) = bias_mean + (RandUniform() - 0.5) * bias_range;
     }
     bias_ = mat_b;
 
@@ -133,10 +145,14 @@ class TCNComponent : public UpdatableComponent {
     ReadBasicType(is, binary, &input_dim_1_);
     ExpectToken(is, binary, "<InputDim2>");
     ReadBasicType(is, binary, &input_dim_2_);
+    ExpectToken(is, binary, "<InputDim3>");
+    ReadBasicType(is, binary, &input_dim_3_);
     ExpectToken(is, binary, "<OutputDim1>");
     ReadBasicType(is, binary, &output_dim_1_);
     ExpectToken(is, binary, "<OutputDim2>");
     ReadBasicType(is, binary, &output_dim_2_);
+    ExpectToken(is, binary, "<OutputDim3>");
+    ReadBasicType(is, binary, &output_dim_3_);
     
     // weight dimension parameters
     ExpectToken(is, binary, "<Wei1Col>");
@@ -147,12 +163,20 @@ class TCNComponent : public UpdatableComponent {
     ReadBasicType(is, binary, &wei_2_i2_);
     ExpectToken(is, binary, "<Wei2Row>");
     ReadBasicType(is, binary, &wei_2_j2_);
+    ExpectToken(is, binary, "<Wei3Col>");
+    ReadBasicType(is, binary, &wei_3_i3_);
+    ExpectToken(is, binary, "<Wei3Row>");
+    ReadBasicType(is, binary, &wei_3_j3_);
+
 
     // trainable parameters
     ExpectToken(is, binary, "<Mode1Weight>");
     mode_1_wei_.Read(is, binary);
     ExpectToken(is, binary, "<Mode2Weight>");
     mode_2_wei_.Read(is, binary);
+    ExpectToken(is, binary, "<Mode2Weight>");
+    mode_3_wei_.Read(is, binary);
+
     ExpectToken(is, binary, "<Bias>");
     bias_.Read(is, binary);
   }
@@ -168,10 +192,15 @@ class TCNComponent : public UpdatableComponent {
     WriteBasicType(os, binary, input_dim_1_);
     WriteToken(os, binary, "<InputDim2>");
     WriteBasicType(os, binary, input_dim_2_);
+    WriteToken(os, binary, "<InputDim3>");
+    WriteBasicType(os, binary, input_dim_3_);
     WriteToken(os, binary, "<OutputDim1>");
     WriteBasicType(os, binary, output_dim_1_);
     WriteToken(os, binary, "<OutputDim2>");
     WriteBasicType(os, binary, output_dim_2_);
+    WriteToken(os, binary, "<OutputDim3>");
+    WriteBasicType(os, binary, output_dim_3_);
+
 
     // weight dimension parameters
     WriteToken(os, binary, "<Wei1Col>");
@@ -182,12 +211,20 @@ class TCNComponent : public UpdatableComponent {
     WriteBasicType(os, binary, wei_2_i2_);
     WriteToken(os, binary, "<Wei2Row>");
     WriteBasicType(os, binary, wei_2_j2_);
+    WriteToken(os, binary, "<Wei3Col>");
+    WriteBasicType(os, binary, wei_3_i3_);
+    WriteToken(os, binary, "<Wei3Row>");
+    WriteBasicType(os, binary, wei_3_j3_);
+
 
     // trainable parameters
     WriteToken(os, binary, "<Mode1Weight>");
     mode_1_wei_.Write(os, binary);
     WriteToken(os, binary, "<Mode2Weight>");
     mode_2_wei_.Write(os, binary);
+    WriteToken(os, binary, "<Mode3Weight>");
+    mode_3_wei_.Write(os, binary);
+
     WriteToken(os, binary, "<Bias>");
     bias_.Write(os, binary);
     
@@ -195,8 +232,9 @@ class TCNComponent : public UpdatableComponent {
 
   int32 NumParams() const {
     return mode_1_wei_.NumRows() * mode_1_wei_.NumCols()\
-           +mode_2_wei_.NumRows() * mode_2_wei_.NumCols()\
-           +bias_.NumRows() * bias_.NumCols(); 
+           + mode_2_wei_.NumRows() * mode_2_wei_.NumCols()\
+           + mode_3_wei_.NumRows() * mode_3_wei_.NumCols()\
+           + bias_.NumRows() * bias_.NumCols(); 
   }
 
   void GetParams(Vector<BaseFloat>* wei_copy) const {
@@ -204,124 +242,70 @@ class TCNComponent : public UpdatableComponent {
     wei_copy->Resize(NumParams());
     int32 weight_1_num_elem = mode_1_wei_.NumRows() * mode_1_wei_.NumCols();
     int32 weight_2_num_elem = mode_2_wei_.NumRows() * mode_2_wei_.NumCols();
+    int32 weight_3_num_elem = mode_3_wei_.NumRows() * mode_3_wei_.NumCols();
     int32 bias_num_elem = bias_.NumRows() * bias_.NumCols();
     //Range(o,l) o:original l:length
     wei_copy->Range(0, weight_1_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_1_wei_));
     wei_copy->Range(weight_1_num_elem, weight_2_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_2_wei_));
-    wei_copy->Range(weight_1_num_elem+weight_2_num_elem, bias_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(bias_));
+    wei_copy->Range(weight_1_num_elem+weight_2_num_elem,weight_3_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_3_wei_));
+    wei_copy->Range(weight_1_num_elem+weight_2_num_elem+weight_3_num_elem, bias_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(bias_));
   }
 
   std::string Info() const {
     //Optionally print some additional info
     return std::string("\n  mode_1_weights") + MomentStatistics(mode_1_wei_) +
-           "\n  mode_2_weights" +  MomentStatistics(mode_2_wei_) +
-           "\n  bias" + MomentStatistics(bias_);
+                       "\n  mode_2_weights" +  MomentStatistics(mode_2_wei_) +
+                       "\n  mode_3_weights" +  MomentStatistics(mode_3_wei_) +
+                       "\n  bias" + MomentStatistics(bias_);
   }
   std::string InfoGradient() const {
     //Reimplemented from Component
     return std::string("\n  mode_1_grad") + MomentStatistics(mode_1_wei_grad_) +
-           "\n  mode_2_grad" + MomentStatistics(mode_2_wei_grad_) +            
-           ", lr-coef " + ToString(learn_rate_coef_) +
-           "\n  bias_grad" + MomentStatistics(bias_grad_) +
-           ", lr-coef " + ToString(bias_learn_rate_coef_);
+                       "\n  mode_2_grad" + MomentStatistics(mode_2_wei_grad_) +            
+                       "\n  mode_3_grad" + MomentStatistics(mode_3_wei_grad_) +            
+                       ", lr-coef " + ToString(learn_rate_coef_) +
+                       "\n  bias_grad" + MomentStatistics(bias_grad_) +
+                       ", lr-coef " + ToString(bias_learn_rate_coef_);
   }
 
 
-  //if n=1  X:i1*i2 w:j1*i1 out:j1*i2
-  //out = w * X
-  //if n=2  X:i1*i2 w:j2*i2 out:i1*j2
-  //out = X * w^T
-  //X *1 w1 *2 w2 = w1 * X * w2^T
   void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out) 
   {  
      int32 batch_size = in.NumRows();        // get batch size
-     // give initial size
-     CuMatrix<BaseFloat> output(batch_size, wei_1_j1_ * wei_2_j2_);
-     CuMatrix<BaseFloat> temp(batch_size, wei_1_j1_ * wei_2_i2_);
-     // reshape to std::vector
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_input;
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_output;
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp;
-     // w1_vec and w2_vec used to parallel
-     std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
-     std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-     CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-     CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);
-     // initial some vectors
-     for(int32 i = 0; i < batch_size; i++)
-     {
-        CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,wei_1_i1_,wei_2_i2_);
-        CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,wei_1_j1_,wei_2_i2_);
-        CuSubMatrix<BaseFloat> *temp_reshaped_output = new CuSubMatrix<BaseFloat>(output,i,wei_1_j1_,wei_2_j2_);
-        w1_vec.push_back(w1);
-        w2_vec.push_back(w2);
-        reshaped_input.push_back(temp_reshaped_input);
-        reshaped_temp.push_back(temp_reshaped_temp);
-        reshaped_output.push_back(temp_reshaped_output);
-     }
-
-     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp,w1_vec,kNoTrans,reshaped_input,kNoTrans,0.0);
-     AddMatMatBatched<BaseFloat>(1.0,reshaped_output,reshaped_temp,kNoTrans,w2_vec,kTrans,0.0);
-  
-     out->CopyFromMat(output);
-     CuVector<BaseFloat> bias_vec(wei_1_j1_ * wei_2_j2_);
-     bias_vec.CopyRowsFromMat(bias_);
-     out->AddVecToRows(1.0,bias_vec,1.0);
-     // delete pointers
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
-       delete *i;
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_output.begin(); i!=reshaped_output.end(); ++i)
-       delete *i;
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp.begin(); i!=reshaped_temp.end(); ++i)
-       delete *i;
-     delete w1;
-     delete w2;
+     CuTensor<BaseFloat> input(in,batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_);
+     CuTensor<BaseFloat> rs_input(batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_,1);
+     rs_input.ReshapeFromTensor(input,1);
+     CuTensor<BaseFloat> mode_1_res(batch_size,wei_1_j1_,wei_2_i2_,wei_3_i3_,1);
+     CuTensor<BaseFloat> mode_2_res(batch_size,wei_1_j1_,wei_2_j2_,wei_3_i3_,2);
+     CuTensor<BaseFloat> mode_3_res(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,3);
+     // mode n product
+     mode_1_res.mode_1_product(rs_input,kNoTrans,mode_1_wei_,kTrans);
+     mode_2_res.mode_2_product(mode_1_resi,kNoTrans,mode_2_wei_,kTrans);
+     mode_3_res.mode_3_product(mode_2_res,kNoTrans,mode_3_wei_,kTrans);
+     // copy tensor result
+     out->ReshapeFromTensor(mode_3_res,30);
+     // add bias
+     out->AddVecToRows(1.0, bias_, 1.0);
   }
 
 
   void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
                         const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)                       
   {
-    int32 batch_size = in.NumRows();                  //get batch size
-    // give initial size
-    CuMatrix<BaseFloat> temp(batch_size, wei_1_i1_ * wei_2_j2_);
-    CuMatrix<BaseFloat> input_diff(batch_size, wei_1_i1_ * wei_2_i2_);
-    // reshape to std::vector
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_input_diff;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_output_diff;
-    // w1_vec and w2_vec used to parallel
-    std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
-    std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);    
-
-    // initial some vectors
-    for(int32 i = 0; i < in.NumRows(); i++)
-    {
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,wei_1_i1_,wei_2_j2_);               //i1 * j2
-       CuSubMatrix<BaseFloat> *temp_reshaped_output_diff = new CuSubMatrix<BaseFloat>(out_diff,i,wei_1_j1_,wei_2_j2_);    //j1 * j2
-       CuSubMatrix<BaseFloat> *temp_reshaped_input_diff = new CuSubMatrix<BaseFloat>(input_diff,i,wei_1_i1_,wei_2_i2_);   //i1 * i2
-       w1_vec.push_back(w1);
-       w2_vec.push_back(w2);
-       reshaped_temp.push_back(temp_reshaped_temp);
-       reshaped_output_diff.push_back(temp_reshaped_output_diff);
-       reshaped_input_diff.push_back(temp_reshaped_input_diff);
-    }
-
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_temp,w1_vec,kTrans,reshaped_output_diff,kNoTrans,0.0);
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_input_diff,reshaped_temp,kNoTrans,w2_vec,kNoTrans,0.0);
+    int32 batch_size = out_diff.NumRows();                  //get batch size
+    CuTensor<BaseFloat> outdiff(out_diff,batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_);
+    CuTensor<BaseFloat> rs_outdiff(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,1);
+    rs_outdiff.ReshapeFromTensor(outdiff,1);
+    CuTensor<BaseFloat> mode_1_res(batch_size,wei_1_i1_,wei_2_j2_,wei_3_j3_,1);
+    CuTensor<BaseFloat> mode_2_res(batch_size,wei_1_i1_,wei_2_i2_,wei_3_j3_,2);
+    CuTensor<BaseFloat> mode_3_res(batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_,3);
+    // mode n product
+    mode_1_res.mode_1_product(rs_outdiff,kNoTrans,mode_1_wei_,kNoTrans);
+    mode_2_res.mode_2_product(mode_1_res,kNoTrans,mode_2_wei_,kNoTrans);
+    mode_3_res.mode_3_product(mode_2_res,kNoTrans,mode_3_wei_,kNoTrans);
     
-    in_diff->CopyFromMat(input_diff);
-    // delete pointers
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp.begin(); i!=reshaped_temp.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input_diff.begin(); i!=reshaped_input_diff.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_output_diff.begin(); i!=reshaped_output_diff.end(); ++i)
-      delete *i;
-    delete w1;
-    delete w2;
+    // reshaped to matrix
+    in_diff->ReshapeFromTensor(mode_3_res,30);
   }
 
   //update back propagation
@@ -336,100 +320,55 @@ class TCNComponent : public UpdatableComponent {
 
     // we will also need the number of frames in the mini-batch
     const int32 batch_size = in.NumRows();
-    // give initial size
-    mode_1_wei_grad_.Resize(wei_1_j1_, wei_1_i1_);
-    mode_2_wei_grad_.Resize(wei_2_j2_, wei_2_i2_);
-    bias_grad_.Resize(wei_1_j1_, wei_2_j2_);
-    CuMatrix<BaseFloat> input(batch_size, wei_1_j1_ * wei_2_i2_);
-    CuMatrix<BaseFloat> dif(batch_size, wei_1_j1_ * wei_2_j2_);
-    CuMatrix<BaseFloat> temp_w1(batch_size, wei_1_j1_ * wei_2_i2_);
-    CuMatrix<BaseFloat> temp_w2(batch_size, wei_2_j2_ * wei_1_i1_);
-    CuMatrix<BaseFloat> w1_grad_batch(batch_size, wei_1_j1_ * wei_1_i1_);
-    CuMatrix<BaseFloat> w2_grad_batch(batch_size, wei_2_j2_ * wei_2_i2_);
-    // reshape to std::vector
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_input;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_diff;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp_w1;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp_w2;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_w1_grad_batch;
-    std::vector< CuSubMatrix<BaseFloat>* > reshaped_w2_grad_batch;
-    // w1_vec and w2_vec used to parallel
-    std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
-    std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);    
+    int32 i1,i2,i3,ib,j1,j2,j3;
+    i1 = wei_1_i1_; i2 = wei_2_i2_; i3 = wei_3_i3_; ib = batch_size;
+    j1 = wei_1_j1_; j2 = wei_2_j2_; j3 = wei_3_j3_;
 
-    // initial some vectors
-    for(int32 i = 0; i < in.NumRows(); i++)
-    {  
-       CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,wei_1_i1_,wei_2_i2_);
-       CuSubMatrix<BaseFloat> *temp_reshaped_diff = new CuSubMatrix<BaseFloat>(diff,i,wei_1_j1_,wei_2_j2_);
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp_w1 = new CuSubMatrix<BaseFloat>(temp_w1,i,wei_1_j1_,wei_2_i2_);                  //j1 * i2
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp_w2 = new CuSubMatrix<BaseFloat>(temp_w2,i,wei_2_j2_,wei_1_i1_);                  //j2 * i1
-       CuSubMatrix<BaseFloat> *temp_w1_grad_batch = new CuSubMatrix<BaseFloat>(w1_grad_batch,i,wei_1_j1_,wei_1_i1_);               //j1 * i1
-       CuSubMatrix<BaseFloat> *temp_w2_grad_batch = new CuSubMatrix<BaseFloat>(w2_grad_batch,i,wei_2_j2_,wei_2_i2_);               //j2 * i2
-       w1_vec.push_back(w1);
-       w2_vec.push_back(w2);
-       reshaped_input.push_back(temp_reshaped_input);
-       reshaped_diff.push_back(temp_reshaped_diff);
-       reshaped_temp_w1.push_back(temp_reshaped_temp_w1);
-       reshaped_temp_w2.push_back(temp_reshaped_temp_w2);
-       reshaped_w1_grad_batch.push_back(temp_w1_grad_batch);
-       reshaped_w2_grad_batch.push_back(temp_w2_grad_batch);
-    }
     // compute gradient
-    // we have w1 and w2 gradient
-    // compute w1 grad
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_temp_w1,reshaped_diff,kNoTrans,w2_vec,kNoTrans,0.0);
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_w1_grad_batch,reshaped_temp_w1,kNoTrans,reshaped_input,kTrans,0.0);
-    CuVector<BaseFloat> w1_grad_vec_temp(wei_1_j1_ * wei_1_i1_);
-    w1_grad_vec_temp.AddRowSumMat(1.0,w1_grad_batch);
-    mode_1_wei_grad_.CopyRowsFromVec(w1_grad_vec_temp); 
-    mode_1_wei_grad_.AddMat(mmt,mode_1_wei_grad_);
-    // compute w2 grad
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_temp_w2,reshaped_diff,kTrans,w1_vec,kNoTrans,0.0);
-    AddMatMatBatched<BaseFloat>(1.0,reshaped_w2_grad_batch,reshaped_temp_w2,kNoTrans,reshaped_input,kNoTrans,0.0);
-    CuVector<BaseFloat> w2_grad_vec_temp(wei_2_j2_ * wei_2_i2_);
-    w2_grad_vec_temp.AddRowSumMat(1.0,w2_grad_batch);
-    mode_2_wei_grad_.CopyRowsFromVec(w2_grad_vec_temp);
-    mode_2_wei_grad_.AddMat(mmt,mode_2_wei_grad_);
+    CuTensor<Real> t_input(in,ib,i1,i2,i3);
+    CuTensor<Real> t_diff(in,ib,j1,j2,j3);
+    // copute w1 gradient
+    CuMatrix<BaseFloat> *m2 = new CuMatrix<BaseFloat>(ib,i1,j2,i3,0);          // (b,i1*j2*i3)
+    CuMatrix<BaseFloat> *m3 = new CuMatrix<BaseFloat>(ib,i1,j2,j3,0);          // (b,i1*j2*j3)
+    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,1);     // (b*j2*j3,j1)
+    CuMatrix<BaseFloat> *rs_m1 = new CuMatrix<BaseFloat>(ib,i1,j2,j3,1);       // (b*j2*j3,i1)
+    m2->mode_2_product_v0(t_input,kNoTrans,mode_2_wei_,kTrans);                // (b,i1*j2*i3)
+    m3->mode_3_product_v0(m2,kNoTrans,mode_3_wei_,kTrans);                     // (b,i1*j2*j3)
+    rs_diff->ReshapeFromTensor(t_diff,1);                                      // (b*j2*j3,j1) 
+    rs_m1->ReshapeFromTensor(m3,1);                                            // (b*j2*j3,i1)
+    mode_1_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m1,kNoTrans,0.0);         // (j1*i1) 
+    delete m2,m3,rs_diff,rs_m1;
+    // copute w2 gradient
+    CuMatrix<BaseFloat> *m1 = new CuMatrix<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
+    CuMatrix<BaseFloat> *m3 = new CuMatrix<BaseFloat>(ib,j1,i2,j3,0);          // (b,j1*i2*j3)
+    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,2);     // (b*j1*j3,j2)
+    CuMatrix<BaseFloat> *rs_m2 = new CuMatrix<BaseFloat>(ib,j1,i2,j3,2);       // (b*j1*j3,i2)
+    m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
+    m3->mode_3_product_v0(m1,kNoTrans,mode_3_wei_,kTrans);                     // (b,j1*i2*j3)
+    rs_diff->ReshapeFromTensor(t_diff,2);                                      // (b*j1*j3,j2) 
+    rs_m3->ReshapeFromTensor(m3,2);                                            // (b*j1*j3,i2)
+    mode_2_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m2,kNoTrans,0.0);         // (j2*i2) 
+    delete m1,m3,rs_diff,rs_m2;
+    // copute w3 gradient
+    CuMatrix<BaseFloat> *m1 = new CuMatrix<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
+    CuMatrix<BaseFloat> *m2 = new CuMatrix<BaseFloat>(ib,j1,j2,i3,0);          // (b,j1*j2*i3)
+    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,3);     // (b*j1*j2,j3)
+    CuMatrix<BaseFloat> *rs_m3 = new CuMatrix<BaseFloat>(ib,j1,j2,i3,3);       // (b*j1*j2,i3)
+    m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
+    m2->mode_2_product_v0(m1,kNoTrans,mode_2_wei_,kTrans);                     // (b,j1*i2*j3)
+    rs_diff->ReshapeFromTensor(t_diff,3);                                      // (b*j1*j2,j3) 
+    rs_m3->ReshapeFromTensor(m2,3);                                            // (b*j1*j2,i3)
+    mode_3_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m3,kNoTrans,0.0);         // (j3*i3) 
+    delete m1,m2,rs_diff,rs_m3;
     // bias
-    CuVector<BaseFloat> bias_grad_vec_temp(wei_1_j1_ * wei_2_j2_);
-    bias_grad_vec_temp.AddRowSumMat(1.0,diff);
-    bias_grad_.CopyRowsFromVec(bias_grad_vec_temp);
-    bias_grad_.AddMat(mmt,bias_grad_);
-    // l2 regularization
-    if (l2 != 0.0)
-    {
-      mode_1_wei_grad_.AddMat(-lr*l2*batch_size,mode_1_wei_grad_);
-      mode_2_wei_grad_.AddMat(-lr*l2*batch_size,mode_2_wei_grad_);
-    }
-    // l1 regularization
-    if (l1 != 0.0)
-    {
-      cu::RegularizeL1(&mode_1_wei_, &mode_1_wei_grad_, lr*l1*batch_size, lr);
-      cu::RegularizeL1(&mode_2_wei_, &mode_2_wei_grad_, lr*l1*batch_size, lr);
-    }
+    bias_grad_.AddRowSumMat(1.0, diff, 0.0);
     // update
-    mode_1_wei_.AddMat(-lr, mode_1_wei_grad_);
+    mode_1_wei_.AddMat(-lr,mode_1_wei_grad_);
     mode_2_wei_.AddMat(-lr,mode_2_wei_grad_);
-    bias_.AddMat(-lr_bias,bias_grad_);
-    // delete pointers
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_diff.begin(); i!=reshaped_diff.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w1.begin(); i!=reshaped_temp_w1.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w2.begin(); i!=reshaped_temp_w2.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w1_grad_batch.begin(); i!=reshaped_w1_grad_batch.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w2_grad_batch.begin(); i!=reshaped_w2_grad_batch.end(); ++i)
-      delete *i;
-    delete w1;
-    delete w2;
-  }
+    mode_3_wei_.AddMat(-lr,mode_3_wei_grad_);
+    bias_.AddVec(-lr_bias, bias_grad_);
+
+   }
 
   const CuMatrixBase<BaseFloat>& GetCuMatrixBase(CuMatrix<BaseFloat>& cumatrix)
   {
@@ -439,11 +378,12 @@ class TCNComponent : public UpdatableComponent {
 
  private:
   int32 wei_1_i1_,wei_1_j1_,       //weight 1 dimensions for input data row
-        wei_2_i2_,wei_2_j2_;       //weight 2 dimensions for input data column
+        wei_2_i2_,wei_2_j2_,       //weight 2 dimensions for input data column
+        wei_3_i3_,wei_3_j3_;       //weight 3 dimensions for input data column
 
-  int32 input_dim_1_,input_dim_2_;   //input matrix dimension
-  int32 output_dim_1_,output_dim_2_; //output matrix dimension
-  int32 dim_in_,dim_out_;      //these two parameter is used for checking
+  int32 input_dim_1_,input_dim_2_,input_dim_3_;       //input matrix dimension
+  int32 output_dim_1_,output_dim_2_,output_dim_3_;    //output matrix dimension
+  int32 dim_in_,dim_out_;                             //these two parameter is used for checking
 
   BaseFloat learn_rate_coef_;
   BaseFloat bias_learn_rate_coef_;
@@ -451,12 +391,14 @@ class TCNComponent : public UpdatableComponent {
   //weight of mode 1 2 product and bias
   CuMatrix<BaseFloat> mode_1_wei_;           //j1*i1
   CuMatrix<BaseFloat> mode_2_wei_;           //j2*i2
-  CuMatrix<BaseFloat> bias_;                 //j1*j2
+  CuMatrix<BaseFloat> mode_3_wei_;           //j3*i3
+  CuVector<BaseFloat> bias_;                 //j1*j2*j3
 
   //gradient of mode 1 2 product and bias
   CuMatrix<BaseFloat>  mode_1_wei_grad_;
   CuMatrix<BaseFloat>  mode_2_wei_grad_;
-  CuMatrix<BaseFloat>  bias_grad_;
+  CuMatrix<BaseFloat>  mode_3_wei_grad_;
+  CuVector<BaseFloat>  bias_grad_;
 
 };
 

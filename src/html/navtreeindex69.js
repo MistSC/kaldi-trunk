@@ -1,5 +1,16 @@
 var NAVTREEINDEX69 =
 {
+"structkaldi_1_1nnet3_1_1CheckComputationOptions.html#ae6464bdbe1cede5eace3852a696187a5":[3,0,1,3,14,0],
+"structkaldi_1_1nnet3_1_1CindexHasher.html":[3,0,1,3,20],
+"structkaldi_1_1nnet3_1_1CindexHasher.html#a15fe01309c5a309f9c4644519c1280b7":[3,0,1,3,20,0],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html":[3,0,1,3,8],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#a3fe323f6183a65e27ea4eb4bffa47cf1":[3,0,1,3,8,4],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#a7de16b7028d867506075397470f1992e":[3,0,1,3,8,2],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#a7e2f2187dbe95784f681502df62a8a31":[3,0,1,3,8,7],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#a871e379381145c5a45090cdd7d2ed776":[3,0,1,3,8,3],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#a9af5ef119481090002c77d80ac74a7bb":[3,0,1,3,8,5],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#ac241c75a1be44d7c0c117349bff692ed":[3,0,1,3,8,0],
+"structkaldi_1_1nnet3_1_1CommandAttributes.html#aceea580576deeb8a8fea17e057ca06d8":[3,0,1,3,8,1],
 "structkaldi_1_1nnet3_1_1CommandAttributes.html#adc32f11032cd64f2508a486ceccf5e84":[3,0,1,3,8,6],
 "structkaldi_1_1nnet3_1_1ComparePair.html":[3,0,1,3,21],
 "structkaldi_1_1nnet3_1_1ComparePair.html#a03915790f0cd681a3e67e9295113592f":[3,0,1,3,21,1],
@@ -238,16 +249,5 @@ var NAVTREEINDEX69 =
 "structkaldi_1_1nnet3_1_1NnetGenerationOptions.html":[3,0,1,3,100],
 "structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#a0a1e055bc0549096198aeb23c2334f56":[3,0,1,3,100,3],
 "structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#a70f271dfaf7bf4717194243762c55305":[3,0,1,3,100,1],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#a8295a1404635172cdb78dfa70321b52b":[3,0,1,3,100,5],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#aa218ec96ac8161feee41797c780a16f0":[3,0,1,3,100,0],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#ab158eb25445ca9f0bd470a95d72d8a0f":[3,0,1,3,100,8],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#ab943ae5561c1bcd0cd6569777f2f027f":[3,0,1,3,100,2],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#ac167399ae759029871cd9967e0867b00":[3,0,1,3,100,6],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#ac45e3c4c76c165aa21cfb9264c8b8796":[3,0,1,3,100,4],
-"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#acffad1c86574c7a758713e2f5829fc31":[3,0,1,3,100,7],
-"structkaldi_1_1nnet3_1_1NnetIo.html":[3,0,1,3,56],
-"structkaldi_1_1nnet3_1_1NnetIo.html#a614fab134d174f207080401d15ccd235":[3,0,1,3,56,5],
-"structkaldi_1_1nnet3_1_1NnetIo.html#a6bccb1d0c9cdd50097e07e5fbd59e480":[3,0,1,3,56,2],
-"structkaldi_1_1nnet3_1_1NnetIo.html#a7fa8d995a7e143c57622a09337a23c64":[3,0,1,3,56,1],
-"structkaldi_1_1nnet3_1_1NnetIo.html#a84345a57ee4e5dade232e7af464ea151":[3,0,1,3,56,7]
+"structkaldi_1_1nnet3_1_1NnetGenerationOptions.html#a8295a1404635172cdb78dfa70321b52b":[3,0,1,3,100,5]
 };

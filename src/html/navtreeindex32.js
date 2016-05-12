@@ -1,5 +1,17 @@
 var NAVTREEINDEX32 =
 {
+"classkaldi_1_1nnet2_1_1TanhComponent.html#a810314e9ffef5bb55807f10654c5d46c":[3,0,1,2,18,0],
+"classkaldi_1_1nnet2_1_1TanhComponent.html#a867786ea3b54c02b3b6de5cd226de734":[3,0,1,2,18,8],
+"classkaldi_1_1nnet2_1_1TanhComponent.html#ab5f95e60a0e39c0e6a2b3704a99f42d1":[3,0,1,2,18,1],
+"classkaldi_1_1nnet2_1_1TanhComponent.html#ac58bcd0064a287ce8fec11ae9e10d2fe":[3,0,1,2,18,5],
+"classkaldi_1_1nnet2_1_1TanhComponent.html#afb616dcd4338670dd519442b9b95abed":[3,0,1,2,18,3],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html":[3,0,1,2,11],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a0d6ac2b7329981543aa1299d94c9556d":[3,0,1,2,11,15],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a1632ab44f61acf34f6ac93b9daf93baf":[3,0,1,2,11,12],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a17f20e0b2d35ec6866a6b479e7d9e867":[3,0,1,2,11,7],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a2291e94d519e3ea5a11e78c96ef39579":[3,0,1,2,11,0],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a2af26d78825cc522c324976403bf4e4e":[3,0,1,2,11,2],
+"classkaldi_1_1nnet2_1_1UpdatableComponent.html#a30ee54c8b84d1a029b8ccba15c471648":[3,0,1,2,11,1],
 "classkaldi_1_1nnet2_1_1UpdatableComponent.html#a36873742fd6ae5311c593a7b437365c1":[3,0,1,2,11,3],
 "classkaldi_1_1nnet2_1_1UpdatableComponent.html#a54d861e97312ba5098568f28fe2b579b":[3,0,1,2,11,4],
 "classkaldi_1_1nnet2_1_1UpdatableComponent.html#a6911f6b4eaea6a02490a5cc0e7127ff6":[3,0,1,2,11,6],
@@ -237,17 +249,5 @@ var NAVTREEINDEX32 =
 "classkaldi_1_1nnet3_1_1CompositeComponent.html#a7bc261b04ea91663bea36634558ed779":[3,0,1,3,99,20],
 "classkaldi_1_1nnet3_1_1CompositeComponent.html#a7fb2dee124e1bd368d4942a815446a72":[3,0,1,3,99,10],
 "classkaldi_1_1nnet3_1_1CompositeComponent.html#a84123bd768a9a5f8a63a416363d1c367":[3,0,1,3,99,1],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#a8619ba84ef93f98fa42dbcd11011e3a3":[3,0,1,3,99,21],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#a8cbbffc6b7aa97d5e9734b771eb59e75":[3,0,1,3,99,18],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#a8e7d2790fc7e94fe9780ccc937de1270":[3,0,1,3,99,16],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#a947a5e99fe5ff5534ecfbb3f987febe1":[3,0,1,3,99,19],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#aae4dcf2378af33e3384b938680e25d07":[3,0,1,3,99,0],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#abfee972431c5488d69a56fc1114c7cdc":[3,0,1,3,99,24],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ac255fb49fbe44a4114354011723713ef":[3,0,1,3,99,7],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ac4f5c35427c2657c50173313e99e3f01":[3,0,1,3,99,8],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ac88a864398e6912a94e09786f1d87019":[3,0,1,3,99,14],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#acdb3e97b46276e3c9f4f696c2bef3943":[3,0,1,3,99,2],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ad40e6c6591d69cb45797537b448a2b99":[3,0,1,3,99,3],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ad5da0494b3a3f4bc33ff83c9b5ff5b40":[3,0,1,3,99,23],
-"classkaldi_1_1nnet3_1_1CompositeComponent.html#ad8ca42ab9569d725aa8fd732ca570fbd":[3,0,1,3,99,11]
+"classkaldi_1_1nnet3_1_1CompositeComponent.html#a8619ba84ef93f98fa42dbcd11011e3a3":[3,0,1,3,99,21]
 };

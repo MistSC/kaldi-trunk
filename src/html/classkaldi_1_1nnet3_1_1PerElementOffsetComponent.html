@@ -476,7 +476,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l01903">1903</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-vector_8cc_source.html#l01115">CuVectorBase&lt; Real &gt;::AddRowSumMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00332">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, <a class="el" href="nnet-component-itf_8h_source.html#l00409">UpdatableComponent::learning_rate_</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01176">PerElementOffsetComponent::offsets_</a>.</p>
+<p>References <a class="el" href="cu-vector_8cc_source.html#l01115">CuVectorBase&lt; Real &gt;::AddRowSumMat()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00322">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, <a class="el" href="nnet-component-itf_8h_source.html#l00409">UpdatableComponent::learning_rate_</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01176">PerElementOffsetComponent::offsets_</a>.</p>
 <div class="fragment"><div class="line"><a name="l01910"></a><span class="lineno"> 1910</span>&#160;                                             {</div>
 <div class="line"><a name="l01911"></a><span class="lineno"> 1911</span>&#160;  <a class="code" href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html#a6a24a6e92c2c15299035ae4268a89c5d">PerElementOffsetComponent</a> *to_update =</div>
 <div class="line"><a name="l01912"></a><span class="lineno"> 1912</span>&#160;      <span class="keyword">dynamic_cast&lt;</span><a class="code" href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html#a6a24a6e92c2c15299035ae4268a89c5d">PerElementOffsetComponent</a>*<span class="keyword">&gt;</span>(to_update_in);</div>
@@ -489,7 +489,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="line"><a name="l01919"></a><span class="lineno"> 1919</span>&#160;  <span class="keywordflow">if</span> (to_update != NULL)</div>
 <div class="line"><a name="l01920"></a><span class="lineno"> 1920</span>&#160;    to_update-&gt;offsets_.AddRowSumMat(to_update-&gt;learning_rate_, out_deriv);</div>
 <div class="line"><a name="l01921"></a><span class="lineno"> 1921</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a79817f1cbd9d8478d4137d6dd815a584"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a79817f1cbd9d8478d4137d6dd815a584">kaldi::CuMatrixBase::CopyFromMat</a></div><div class="ttdeci">void CopyFromMat(const MatrixBase&lt; OtherReal &gt; &amp;src, MatrixTransposeType trans=kNoTrans)</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00332">cu-matrix.cc:332</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a79817f1cbd9d8478d4137d6dd815a584"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a79817f1cbd9d8478d4137d6dd815a584">kaldi::CuMatrixBase::CopyFromMat</a></div><div class="ttdeci">void CopyFromMat(const MatrixBase&lt; OtherReal &gt; &amp;src, MatrixTransposeType trans=kNoTrans)</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00322">cu-matrix.cc:322</a></div></div>
 <div class="ttc" id="classkaldi_1_1nnet3_1_1PerElementOffsetComponent_html_a6a24a6e92c2c15299035ae4268a89c5d"><div class="ttname"><a href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html#a6a24a6e92c2c15299035ae4268a89c5d">kaldi::nnet3::PerElementOffsetComponent::PerElementOffsetComponent</a></div><div class="ttdeci">PerElementOffsetComponent()</div><div class="ttdef"><b>Definition:</b> <a href="nnet-simple-component_8h_source.html#l01132">nnet-simple-component.h:1132</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -992,14 +992,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l01895">1895</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01023">CuMatrixBase&lt; Real &gt;::AddVecToRows()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00332">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01176">PerElementOffsetComponent::offsets_</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01013">CuMatrixBase&lt; Real &gt;::AddVecToRows()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00322">CuMatrixBase&lt; Real &gt;::CopyFromMat()</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l01176">PerElementOffsetComponent::offsets_</a>.</p>
 <div class="fragment"><div class="line"><a name="l01898"></a><span class="lineno"> 1898</span>&#160;                                        {</div>
 <div class="line"><a name="l01899"></a><span class="lineno"> 1899</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a79817f1cbd9d8478d4137d6dd815a584">CopyFromMat</a>(in);</div>
 <div class="line"><a name="l01900"></a><span class="lineno"> 1900</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a5d4bcaf73515787cf3c40710e8557e48">AddVecToRows</a>(1.0, <a class="code" href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html#a53ffed10fc900e858d31fcf189b78860">offsets_</a>);</div>
 <div class="line"><a name="l01901"></a><span class="lineno"> 1901</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a79817f1cbd9d8478d4137d6dd815a584"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a79817f1cbd9d8478d4137d6dd815a584">kaldi::CuMatrixBase::CopyFromMat</a></div><div class="ttdeci">void CopyFromMat(const MatrixBase&lt; OtherReal &gt; &amp;src, MatrixTransposeType trans=kNoTrans)</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00332">cu-matrix.cc:332</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a79817f1cbd9d8478d4137d6dd815a584"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a79817f1cbd9d8478d4137d6dd815a584">kaldi::CuMatrixBase::CopyFromMat</a></div><div class="ttdeci">void CopyFromMat(const MatrixBase&lt; OtherReal &gt; &amp;src, MatrixTransposeType trans=kNoTrans)</div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l00322">cu-matrix.cc:322</a></div></div>
 <div class="ttc" id="classkaldi_1_1nnet3_1_1PerElementOffsetComponent_html_a53ffed10fc900e858d31fcf189b78860"><div class="ttname"><a href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html#a53ffed10fc900e858d31fcf189b78860">kaldi::nnet3::PerElementOffsetComponent::offsets_</a></div><div class="ttdeci">CuVector&lt; BaseFloat &gt; offsets_</div><div class="ttdef"><b>Definition:</b> <a href="nnet-simple-component_8h_source.html#l01176">nnet-simple-component.h:1176</a></div></div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a5d4bcaf73515787cf3c40710e8557e48"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a5d4bcaf73515787cf3c40710e8557e48">kaldi::CuMatrixBase::AddVecToRows</a></div><div class="ttdeci">void AddVecToRows(Real alpha, const CuVectorBase&lt; Real &gt; &amp;row, Real beta=1.0)</div><div class="ttdoc">(for each row r of *this), r = alpha * row + beta * r </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01023">cu-matrix.cc:1023</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a5d4bcaf73515787cf3c40710e8557e48"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a5d4bcaf73515787cf3c40710e8557e48">kaldi::CuMatrixBase::AddVecToRows</a></div><div class="ttdeci">void AddVecToRows(Real alpha, const CuVectorBase&lt; Real &gt; &amp;row, Real beta=1.0)</div><div class="ttdoc">(for each row r of *this), r = alpha * row + beta * r </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01013">cu-matrix.cc:1013</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -1377,7 +1377,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html">PerElementOffsetComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:49 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

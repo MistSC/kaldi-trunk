@@ -1,5 +1,17 @@
 var NAVTREEINDEX35 =
 {
+"classkaldi_1_1nnet3_1_1Nnet.html#a7d47c6c3536d985d00cc6dd702c63f72":[3,0,1,3,62,28],
+"classkaldi_1_1nnet3_1_1Nnet.html#a8a64eae7a6e12ad5d48551ae6f550311":[3,0,1,3,62,33],
+"classkaldi_1_1nnet3_1_1Nnet.html#a8ff63e09c5733b86fcc9c2c3a49a785f":[3,0,1,3,62,10],
+"classkaldi_1_1nnet3_1_1Nnet.html#a9c3ab694a70c4c9811128077258fd020":[3,0,1,3,62,14],
+"classkaldi_1_1nnet3_1_1Nnet.html#aaece27f33a60949c8884568873c53bcc":[3,0,1,3,62,21],
+"classkaldi_1_1nnet3_1_1Nnet.html#ab1b9ede63de755642e79f7287a62b92c":[3,0,1,3,62,36],
+"classkaldi_1_1nnet3_1_1Nnet.html#ac919a991060ede6983343719401686de":[3,0,1,3,62,5],
+"classkaldi_1_1nnet3_1_1Nnet.html#ad19e91d521688189d0841977907dc19b":[3,0,1,3,62,13],
+"classkaldi_1_1nnet3_1_1Nnet.html#ad4a6b3c2f528c4a6361bb1d88bdbb324":[3,0,1,3,62,42],
+"classkaldi_1_1nnet3_1_1Nnet.html#ad8740407dcbe723bb66ef06980cc5103":[3,0,1,3,62,31],
+"classkaldi_1_1nnet3_1_1Nnet.html#aeb1ab96672865311e3812fb89d8d1d8c":[3,0,1,3,62,35],
+"classkaldi_1_1nnet3_1_1Nnet.html#aec852f8d1a728548e913b25b5b90bbc5":[3,0,1,3,62,17],
 "classkaldi_1_1nnet3_1_1Nnet.html#aec8d6dfed3e4ab080d3ff4cf6a1126e3":[3,0,1,3,62,7],
 "classkaldi_1_1nnet3_1_1Nnet.html#aedd575f5710c4e3b7136c7ef6e5b5962":[3,0,1,3,62,6],
 "classkaldi_1_1nnet3_1_1Nnet.html#aeee6bf1f85e344ed0991c8f19631ff19":[3,0,1,3,62,8],
@@ -237,17 +249,5 @@ var NAVTREEINDEX35 =
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#ab5eb4e0382c25808345f1d7a963a148f":[3,0,1,3,4,13],
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#abd17f633a8fc0939bc5bd0e83bd7153c":[3,0,1,3,4,33],
 "classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#ac415c4be36a5c62618b5d50c3d8868dd":[3,0,1,3,4,0],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af101bbf82527b43a60a43a287270fd0f":[3,0,1,3,4,10],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af12dc036070d7e3229a0232e214c226e":[3,0,1,3,4,24],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af1d78e1270f4d516f8ba6c0c692b0f3d":[3,0,1,3,4,30],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af659a9e1c6ede20999b0996a58f97f34":[3,0,1,3,4,27],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af679b81005104cca1fc03ef8ee3b36d0":[3,0,1,3,4,29],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af830848160afd5bf477387d1c5825d8c":[3,0,1,3,4,21],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#afb9bffca178027f3e5d52ec73a1ee0fe":[3,0,1,3,4,20],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html":[3,0,1,3,3],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a1841a25fc1c29ef9c7cf351aa2b072e8":[3,0,1,3,3,2],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2869049af2282ea8218bc9bd71b52092":[3,0,1,3,3,7],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a295a391825411ca346362302c6b71a64":[3,0,1,3,3,1],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2c38aaa86b3a82cc7a1693f9798753f0":[3,0,1,3,3,9],
-"classkaldi_1_1nnet3_1_1OnlineNaturalGradientSimple.html#a2dbee5c3528b25493ecded7e22083138":[3,0,1,3,3,10]
+"classkaldi_1_1nnet3_1_1OnlineNaturalGradient.html#af101bbf82527b43a60a43a287270fd0f":[3,0,1,3,4,10]
 };

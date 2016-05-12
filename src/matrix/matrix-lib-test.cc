@@ -153,7 +153,6 @@ template<typename Real> static bool ApproxEqual(Vector<Real> &A, Vector<Real> &B
   return true;
 }
 */
-
 template<typename Real> static void CholeskyUnitTestTr() {
   for (MatrixIndexT i = 0; i < 5; i++) {
     MatrixIndexT dimM = 2 + Rand() % 10;
@@ -3919,7 +3918,7 @@ template<typename Real> static void UnitTestMatrixExponential() {
   }
 }
 
-
+/*
 static void UnitTestMatrixExponentialBackprop() {
   for (MatrixIndexT p = 0; p < 10; p++) {
     MatrixIndexT dim = 1 + Rand() % 5;
@@ -3960,6 +3959,7 @@ static void UnitTestMatrixExponentialBackprop() {
     AssertEqual(f_diff, f_diff2);
   }
 }
+*/
 template<typename Real>
 static void UnitTestPca(bool full_test) {
   // We'll test that we can exactly reconstruct the vectors, if
@@ -4537,37 +4537,88 @@ static void UnitTestTopEigs() {
     }
   }
 }
-
-template<typename Real> static void UnitTestTriVecSolver() {
-  for (MatrixIndexT iter = 0; iter < 100; iter++) {
-    int32 dim = 1 + Rand() % 20;
-    Vector<Real> b(dim);
-    b.SetRandn();
-    TpMatrix<Real> T(dim);
-    T.SetRandn();
+/*
+template<typename real> static void unittesttrivecsolver() {
+  for (matrixindext iter = 0; iter < 100; iter++) {
+    int32 dim = 1 + rand() % 20;
+    vector<real> b(dim);
+    b.setrandn();
+    tpmatrix<real> t(dim);
+    t.setrandn();
 
     bool bad = false;
     for (int32 i = 0; i < dim; i++) {
-      if (fabs(T(i, i)) < 0.2)
+      if (fabs(t(i, i)) < 0.2)
         bad = true;
     }
     if (bad) {
-      // Test may fail due to almost-singular matrix.
+      // test may fail due to almost-singular matrix.
       continue;
     }
 
-    Vector<Real> x(b);
-    MatrixTransposeType trans = (iter % 2 == 0 ? kTrans : kNoTrans);
-    x.Solve(T, trans);  // solve for T x = b
-    Vector<Real> b2(dim);
-    b2.AddTpVec((Real)1.0, T, trans, x, (Real)0.0);
-    KALDI_LOG << "b is " << b << ", b2 is " << b2;
-    AssertEqual(b, b2, 0.01);
+    vector<real> x(b);
+    matrixtransposetype trans = (iter % 2 == 0 ? ktrans : knotrans);
+    x.solve(t, trans);  // solve for t x = b
+    vector<real> b2(dim);
+    b2.addtpvec((real)1.0, t, trans, x, (real)0.0);
+    kaldi_log << "b is " << b << ", b2 is " << b2;
+    assertequal(b, b2, 0.01);
   }
+}
+*/
+template<typename Real> 
+void UnitTestTensor() {
+    int32 r = 5;
+    int32 c = 24;
+    Matrix<Real> M(r,c);
+    M.SetZero();
+    for(int32 i=0;i<r;i++)
+      for(int32 j=0;j<c;j++)
+         M(i,j)=i*c+j;
+
+    int32 i1,i2,i3,ib;
+    i1=2;i2=3;i3=4;ib=r;
+    Tensor<Real> T(M,ib,i1,i2,i3);
+    for(int32 i=0;i<r;i++)
+      for(int32 j=0;j<c;j++)
+        std::cout << M(i,j) <<" ";
+    std::cout<<std::endl;
+
+    for(int32 l=0;l<ib;l++)
+      for(int32 i=0;i<i1;i++)
+        for(int32 j=0;j<i2;j++)
+          for(int32 k=0;k<i3;k++)
+            std::cout << T(l,i,j,k) <<" ";
+    std::cout<<std::endl;
+
+    Matrix<Real> *N1 =new Matrix<Real>(ib*i2*i3,i1);
+    T.ReshapeToMatrix(N1,1);
+    for(int32 i=0;i<ib*i2*i3;i++)
+      for(int32 j=0;j<i1;j++)
+        std::cout << N1->operator()(i,j) <<" ";
+    std::cout<<std::endl;
+    Matrix<Real> *N2 =new Matrix<Real>(ib*i1*i3,i2);
+    T.ReshapeToMatrix(N2,2);
+    for(int32 i=0;i<ib*i1*i3;i++)
+      for(int32 j=0;j<i2;j++)
+        std::cout << N2->operator()(i,j) <<" ";
+    std::cout<<std::endl;
+    Matrix<Real> *N3 =new Matrix<Real>(ib*i1*i2,i3);
+    T.ReshapeToMatrix(N3,3);
+    for(int32 i=0;i<ib*i1*i2;i++)
+      for(int32 j=0;j<i3;j++)
+        std::cout << N3->operator()(i,j) <<" ";
+    std::cout<<std::endl;
+
+    std::cout<<std::endl;
+    delete N1;
+    delete N2;
+    delete N3;
 }
 
 
 template<typename Real> static void MatrixUnitTest(bool full_test) {
+  /*
   UnitTestLinearCgd<Real>();
   UnitTestGeneralMatrix<BaseFloat>();
   UnitTestTridiagonalize<Real>();
@@ -4715,6 +4766,8 @@ template<typename Real> static void MatrixUnitTest(bool full_test) {
   // UnitTestSvdSpeed<Real>();
   KALDI_LOG << " Point K";
   UnitTestTriVecSolver<Real>();
+  */
+  UnitTestTensor<Real>();
 }
 
 

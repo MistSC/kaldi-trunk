@@ -1511,6 +1511,148 @@ SubMatrix<Real>::SubMatrix(Real *data,
 }
 
 
+// Constructor... note that this is not const-safe as it would
+// be quite complicated to implement a "const Tensor" class that
+// would not allow its contents to be changed.
+template<typename Real>
+Tensor<Real>::Tensor(const MatrixBase<Real>& T,
+                     MatrixIndexT batch_size,
+                     MatrixIndexT num_i1,
+                     MatrixIndexT num_i2,
+                     MatrixIndexT num_i3)
+{
+    KALDI_ASSERT(T.num_cols_ == num_i1*num_i2*num_i3 &&
+                 T.num_rows_ == batch_size);
+
+    this->num_cols_ = T.num_cols_; 
+    this->num_rows_ = T.num_rows_;
+    this->stride_ = T.Stride();
+    this->batch_size_ = batch_size;
+    this->num_i1_ = num_i1;
+    this->num_i2_ = num_i2;
+    this->num_i3_ = num_i3;
+    this->data_ = T.data_;
+}
+
+template<typename Real>
+Tensor<Real>::Tensor(Real* data,
+                     MatrixIndexT num_rows,
+                     MatrixIndexT num_cols,
+                     MatrixIndexT stride):
+  MatrixBase<Real>(data, num_cols, num_rows, stride)
+  { // caution: reversed order!
+    if (data == NULL) 
+    {
+      KALDI_ASSERT(num_rows * num_cols == 0);
+      this->num_rows_ = 0;
+      this->num_cols_ = 0;
+      this->stride_ = 0;
+    } 
+    else 
+    {
+      KALDI_ASSERT(this->stride_ >= this->num_cols_);
+    }
+  }
+// this function return the tensor index of reshaped matrix
+template<typename Real>
+Real* Tensor<Real>::GetLocatin(MatrixIndexT ib,  //batch index
+                               MatrixIndexT i1, 
+                               MatrixIndexT i2, 
+                               MatrixIndexT i3)
+{
+    // avoid pointer out of range
+    KALDI_ASSERT(i1>=0 && i2>=0 && i3>=0 && ib>=0 &&
+                 i1 * i2 *i3 <= this->num_cols_ &&
+                 ib <= this->num_rows_);
+    // return the index
+    return this->data_ + this->stride_ * ib +
+                 (this->num_i2_*this->num_i3_) * i1 +
+                 (this->num_i3_) * i2 + i3;
+}
+
+// overload () for get the value of each index
+template<typename Real>
+Real& Tensor<Real>::operator()(MatrixIndexT ib,  //batch index
+                               MatrixIndexT i1, 
+                               MatrixIndexT i2, 
+                               MatrixIndexT i3)
+{
+    // avoid pointer out of range
+    KALDI_ASSERT(i1>=0 && i2>=0 && i3>=0 && ib>=0 &&
+                 i1 * i2 *i3 <= this->num_cols_ &&
+                 ib <= this->num_rows_);
+    // return the index
+    return *(GetLocatin(ib,i1,i2,i3));
+}
+
+// reshape tensor to a special matrix
+template<typename Real>
+void Tensor<Real>::ReshapeToMatrix(MatrixBase<Real> *M,
+                                   MatrixIndexT mode)
+{
+    KALDI_ASSERT(M->NumRows() >=0 && M->NumCols() >= 0 && mode >= 0 && mode <= 3 &&
+                 M->NumRows() * M->NumCols() == 
+                 this->num_i1_ * this->num_i2_ * this->num_i3_ * this->batch_size_);
+    KALDI_LOG<<M->NumRows()<<"  "<<M->NumCols()<<"  "<<M->Stride();
+    switch(mode)
+    {
+      case 1:
+        // M(l*i2*i3,i1)
+        KALDI_ASSERT(M->NumCols() == this->num_i1_);
+        for(int32 l=0;l<batch_size_;l++)
+        {
+          for(int32 i=0;i<num_i1_;i++)
+          {
+            for(int32 j=0;j<num_i2_;j++)
+            {
+              for(int32 k=0;k<num_i3_;k++)
+              {
+                // M->Data() + l*M->Stride() + i*(num_i2_*num_i3_) + j*num_i3_ + k;
+                // (M->Data() + l*M->Stride() + i*(num_i2_*num_i3_) + j*num_i3_ + k) = this->GetLocatin(l,i,j,k);
+                *(M->Data() + (l*(num_i2_*num_i3_) + j*num_i3_ + k)*M->Stride() + i) = this->operator()(l,i,j,k);
+              } 
+            }
+          }
+        }
+      break;
+      case 2:
+        // M(l*i1*i3,i2)
+        KALDI_ASSERT(M->NumCols() == this->num_i2_);
+        for(int32 l=0;l<batch_size_;l++)
+        {
+          for(int32 i=0;i<num_i1_;i++)
+          {
+            for(int32 j=0;j<num_i2_;j++)
+            {
+              for(int32 k=0;k<num_i3_;k++)
+              {
+                *(M->Data() + (l*(num_i1_*num_i3_) + i*num_i3_ + k)*M->Stride() + j) = this->operator()(l,i,j,k);
+              } 
+            }
+          }
+        }
+      break;
+      case 3:
+        // M(l*i1*i2,i3)
+        KALDI_ASSERT(M->NumCols() == this->num_i3_);
+        for(int32 l=0;l<batch_size_;l++)
+        {
+          for(int32 i=0;i<num_i1_;i++)
+          {
+            for(int32 j=0;j<num_i2_;j++)
+            {
+              for(int32 k=0;k<num_i3_;k++)
+              {
+                *(M->Data() + (l*(num_i1_*num_i2_) + i*num_i2_ + j)*M->Stride() + k) = this->operator()(l,i,j,k);
+              } 
+            }
+          }
+        }
+      break;
+
+    }
+}
+
 template<typename Real>
 void MatrixBase<Real>::Add(const Real alpha) {
   Real *data = data_;
@@ -2850,6 +2992,8 @@ template class MatrixBase<float>;
 template class MatrixBase<double>;
 template class SubMatrix<float>;
 template class SubMatrix<double>;
+template class Tensor<float>;
+template class Tensor<double>;
 
 } // namespace kaldi
 

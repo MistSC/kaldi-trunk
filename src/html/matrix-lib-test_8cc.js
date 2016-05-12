@@ -72,7 +72,6 @@ var matrix_lib_test_8cc =
     [ "UnitTestLinearCgd", "matrix-lib-test_8cc.html#a08dd0f97324c1c6f1cd537a764972b67", null ],
     [ "UnitTestMat2Vec", "matrix-lib-test_8cc.html#ab7a788f61b1da225d9780df0f08860b9", null ],
     [ "UnitTestMatrixExponential", "matrix-lib-test_8cc.html#a1bdaddd2ab9cd86b5eaf4ed4dc1377fe", null ],
-    [ "UnitTestMatrixExponentialBackprop", "matrix-lib-test_8cc.html#a8a52f402faf754cb12b09249daafe0ea", null ],
     [ "UnitTestMax2", "matrix-lib-test_8cc.html#a2469e727047166359a76f359dec5871d", null ],
     [ "UnitTestMaxAbsEig", "matrix-lib-test_8cc.html#a09bf03e32eead2eeacbe37e486263729", null ],
     [ "UnitTestMaxMin", "matrix-lib-test_8cc.html#a41329910167f31a70ab92747c4518980", null ],
@@ -128,6 +127,7 @@ var matrix_lib_test_8cc =
     [ "UnitTestSvdZero", "matrix-lib-test_8cc.html#a2331fe6adae62bd79c7df1016fec89ae", null ],
     [ "UnitTestSymAddMat2", "matrix-lib-test_8cc.html#a43d0d5c15005e7533749efe40ca34f63", null ],
     [ "UnitTestTanh", "matrix-lib-test_8cc.html#ac0d520ff512d8c3664e873077bd140be", null ],
+    [ "UnitTestTensor", "matrix-lib-test_8cc.html#a8c5615bad490fec7ce8537f0fc0a47a3", null ],
     [ "UnitTestTopEigs", "matrix-lib-test_8cc.html#a21bd0fa7f9cc60ee58d313ee7fe257a4", null ],
     [ "UnitTestTp2", "matrix-lib-test_8cc.html#aee624225cbc69b3c4c3a801be9df86a3", null ],
     [ "UnitTestTp2Sp", "matrix-lib-test_8cc.html#aa8a7f5e87f64f5677dda51f43fcd49a3", null ],
@@ -140,7 +140,6 @@ var matrix_lib_test_8cc =
     [ "UnitTestTridiag", "matrix-lib-test_8cc.html#aac820fee90473c3a793c18123969b880", null ],
     [ "UnitTestTridiagonalize", "matrix-lib-test_8cc.html#adc114acf5251d68af7bf5b5050564dfc", null ],
     [ "UnitTestTridiagonalizeAndQr", "matrix-lib-test_8cc.html#a595238bac15f12ab364bb12ba04356cc", null ],
-    [ "UnitTestTriVecSolver", "matrix-lib-test_8cc.html#a7ae2a131a4ce03d11cbe1ca6c0893838", null ],
     [ "UnitTestVecmul", "matrix-lib-test_8cc.html#a324fc1368e738517578dd3ed2c7b6373", null ],
     [ "UnitTestVectorMax", "matrix-lib-test_8cc.html#ad8cf1e5c49e2dd503ba7749d06618e03", null ],
     [ "UnitTestVectorMin", "matrix-lib-test_8cc.html#ae11e14daa4458edac4c48b0efaa3f1d9", null ]

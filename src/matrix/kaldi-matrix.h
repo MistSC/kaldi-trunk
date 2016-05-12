@@ -51,6 +51,7 @@ class MatrixBase {
   friend class CuMatrix<Real>;
   friend class CuSubMatrix<Real>;
   friend class CuPackedMatrix<Real>;
+  friend class CuTensor<Real>;
 
   friend class PackedMatrix<Real>;
 
@@ -514,7 +515,7 @@ class MatrixBase {
 
   // so it can get around const restrictions on the pointer to data_.
   friend class SubMatrix<Real>;
-
+  friend class Tensor<Real>;
   /// Add a scalar to each element
   void Add(const Real alpha);
 
@@ -930,6 +931,61 @@ class SubMatrix : public MatrixBase<Real> {
   SubMatrix<Real> &operator = (const SubMatrix<Real> &other);
 };
 /// @} End of "addtogroup matrix_funcs_io".
+
+/**
+  Tensor representation.
+  Can work as a reference of matrix using this class.
+  Note that Tensor is not very const-correct-- it allows you to
+  change the contents of a const Matrix.  Be careful!
+*/
+
+template<typename Real>
+class Tensor : public MatrixBase<Real> {
+ public:
+  // Initialize a Tensor from a matrix;
+  // This initializer is against the proper semantics of "const", since
+  // Tensor can change its contents.  It would be hard to implement
+  // a "const-safe" version of this class.
+  Tensor(const MatrixBase<Real>& T, 
+         MatrixIndexT batch_size,
+         MatrixIndexT num_i1,
+         MatrixIndexT num_i2,
+         MatrixIndexT num_i3);
+  
+  // This initializer is mostly intended for use in CuMatrix and related
+  // classes.  Be careful!
+  Tensor(Real* data,
+         MatrixIndexT num_rows,
+         MatrixIndexT num_cols,
+         MatrixIndexT stride);
+
+  // this function return the tensor index of reshaped matrix
+  Real* GetLocatin(MatrixIndexT ib,     //batch index
+                   MatrixIndexT i1, 
+                   MatrixIndexT i2, 
+                   MatrixIndexT i3);
+  // overload () for get the value of each index
+  Real& operator()(MatrixIndexT ib,     //batch index
+                   MatrixIndexT i1, 
+                   MatrixIndexT i2, 
+                   MatrixIndexT i3);
+  // reshape tensor to a special matrix
+  void ReshapeToMatrix(MatrixBase<Real> *M,
+                       MatrixIndexT mode);
+
+  ~Tensor<Real>() {}
+
+ protected:
+   MatrixIndexT num_i1_;
+   MatrixIndexT num_i2_;
+   MatrixIndexT num_i3_;
+   MatrixIndexT batch_size_;
+ private:
+  /// Disallow assignment.
+  Tensor<Real> &operator = (const Tensor<Real> &other);
+};
+/// @} End of "addtogroup matrix_funcs_io".
+
 
 /// \addtogroup matrix_funcs_scalar
 /// @{

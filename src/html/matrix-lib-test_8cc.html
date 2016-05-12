@@ -522,8 +522,6 @@ Functions</h2></td></tr>
 <tr class="memitem:a1bdaddd2ab9cd86b5eaf4ed4dc1377fe"><td class="memTemplParams" colspan="2">template&lt;typename Real &gt; </td></tr>
 <tr class="memitem:a1bdaddd2ab9cd86b5eaf4ed4dc1377fe"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a1bdaddd2ab9cd86b5eaf4ed4dc1377fe">UnitTestMatrixExponential</a> ()</td></tr>
 <tr class="separator:a1bdaddd2ab9cd86b5eaf4ed4dc1377fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8a52f402faf754cb12b09249daafe0ea"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a8a52f402faf754cb12b09249daafe0ea">UnitTestMatrixExponentialBackprop</a> ()</td></tr>
-<tr class="separator:a8a52f402faf754cb12b09249daafe0ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68d3d312f5a42b5f87ca0bb232e84cc3"><td class="memTemplParams" colspan="2">template&lt;typename Real &gt; </td></tr>
 <tr class="memitem:a68d3d312f5a42b5f87ca0bb232e84cc3"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a68d3d312f5a42b5f87ca0bb232e84cc3">UnitTestPca</a> (bool full_test)</td></tr>
 <tr class="separator:a68d3d312f5a42b5f87ca0bb232e84cc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -557,9 +555,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a21bd0fa7f9cc60ee58d313ee7fe257a4"><td class="memTemplParams" colspan="2">template&lt;class Real &gt; </td></tr>
 <tr class="memitem:a21bd0fa7f9cc60ee58d313ee7fe257a4"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a21bd0fa7f9cc60ee58d313ee7fe257a4">UnitTestTopEigs</a> ()</td></tr>
 <tr class="separator:a21bd0fa7f9cc60ee58d313ee7fe257a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7ae2a131a4ce03d11cbe1ca6c0893838"><td class="memTemplParams" colspan="2">template&lt;typename Real &gt; </td></tr>
-<tr class="memitem:a7ae2a131a4ce03d11cbe1ca6c0893838"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a7ae2a131a4ce03d11cbe1ca6c0893838">UnitTestTriVecSolver</a> ()</td></tr>
-<tr class="separator:a7ae2a131a4ce03d11cbe1ca6c0893838"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c5615bad490fec7ce8537f0fc0a47a3"><td class="memTemplParams" colspan="2">template&lt;typename Real &gt; </td></tr>
+<tr class="memitem:a8c5615bad490fec7ce8537f0fc0a47a3"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a8c5615bad490fec7ce8537f0fc0a47a3">UnitTestTensor</a> ()</td></tr>
+<tr class="separator:a8c5615bad490fec7ce8537f0fc0a47a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8a7376886f24285335b904248d9b9e38"><td class="memTemplParams" colspan="2">template&lt;typename Real &gt; </td></tr>
 <tr class="memitem:a8a7376886f24285335b904248d9b9e38"><td class="memTemplItemLeft" align="right" valign="top">static void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespacekaldi.html#a8a7376886f24285335b904248d9b9e38">MatrixUnitTest</a> (bool full_test)</td></tr>
 <tr class="separator:a8a7376886f24285335b904248d9b9e38"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -580,18 +578,18 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Definition at line <a class="el" href="matrix-lib-test_8cc_source.html#l04725">4725</a> of file <a class="el" href="matrix-lib-test_8cc_source.html">matrix-lib-test.cc</a>.</p>
+<p>Definition at line <a class="el" href="matrix-lib-test_8cc_source.html#l04747">4747</a> of file <a class="el" href="matrix-lib-test_8cc_source.html">matrix-lib-test.cc</a>.</p>
 
 <p>References <a class="el" href="kaldi-error_8h_source.html#l00164">KALDI_LOG</a>, and <a class="el" href="kaldi-error_8h_source.html#l00064">kaldi::SetVerboseLevel()</a>.</p>
-<div class="fragment"><div class="line"><a name="l04725"></a><span class="lineno"> 4725</span>&#160;           {</div>
-<div class="line"><a name="l04726"></a><span class="lineno"> 4726</span>&#160;  <span class="keyword">using namespace </span>kaldi;</div>
-<div class="line"><a name="l04727"></a><span class="lineno"> 4727</span>&#160;  <span class="keywordtype">bool</span> full_test = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l04728"></a><span class="lineno"> 4728</span>&#160;  <a class="code" href="group__error__group.html#gae479e5d903a78b5a9caa88aabe6b400d">SetVerboseLevel</a>(5);</div>
-<div class="line"><a name="l04729"></a><span class="lineno"> 4729</span>&#160;  kaldi::MatrixUnitTest&lt;float&gt;(full_test);</div>
-<div class="line"><a name="l04730"></a><span class="lineno"> 4730</span>&#160;  kaldi::MatrixUnitTest&lt;double&gt;(full_test);</div>
-<div class="line"><a name="l04731"></a><span class="lineno"> 4731</span>&#160;  <a class="code" href="group__error__group.html#gaf8fb55454306b60c9c1e07a6ef9d341a">KALDI_LOG</a> &lt;&lt; <span class="stringliteral">&quot;Tests succeeded.&quot;</span>;</div>
-<div class="line"><a name="l04732"></a><span class="lineno"> 4732</span>&#160;</div>
-<div class="line"><a name="l04733"></a><span class="lineno"> 4733</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l04747"></a><span class="lineno"> 4747</span>&#160;           {</div>
+<div class="line"><a name="l04748"></a><span class="lineno"> 4748</span>&#160;  <span class="keyword">using namespace </span>kaldi;</div>
+<div class="line"><a name="l04749"></a><span class="lineno"> 4749</span>&#160;  <span class="keywordtype">bool</span> full_test = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l04750"></a><span class="lineno"> 4750</span>&#160;  <a class="code" href="group__error__group.html#gae479e5d903a78b5a9caa88aabe6b400d">SetVerboseLevel</a>(5);</div>
+<div class="line"><a name="l04751"></a><span class="lineno"> 4751</span>&#160;  kaldi::MatrixUnitTest&lt;float&gt;(full_test);</div>
+<div class="line"><a name="l04752"></a><span class="lineno"> 4752</span>&#160;  kaldi::MatrixUnitTest&lt;double&gt;(full_test);</div>
+<div class="line"><a name="l04753"></a><span class="lineno"> 4753</span>&#160;  <a class="code" href="group__error__group.html#gaf8fb55454306b60c9c1e07a6ef9d341a">KALDI_LOG</a> &lt;&lt; <span class="stringliteral">&quot;Tests succeeded.&quot;</span>;</div>
+<div class="line"><a name="l04754"></a><span class="lineno"> 4754</span>&#160;</div>
+<div class="line"><a name="l04755"></a><span class="lineno"> 4755</span>&#160;}</div>
 <div class="ttc" id="group__error__group_html_gae479e5d903a78b5a9caa88aabe6b400d"><div class="ttname"><a href="group__error__group.html#gae479e5d903a78b5a9caa88aabe6b400d">kaldi::SetVerboseLevel</a></div><div class="ttdeci">void SetVerboseLevel(int32 i)</div><div class="ttdoc">This should be rarely used; command-line programs set the verbose level automatically from ParseOptio...</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-error_8h_source.html#l00064">kaldi-error.h:64</a></div></div>
 <div class="ttc" id="group__error__group_html_gaf8fb55454306b60c9c1e07a6ef9d341a"><div class="ttname"><a href="group__error__group.html#gaf8fb55454306b60c9c1e07a6ef9d341a">KALDI_LOG</a></div><div class="ttdeci">#define KALDI_LOG</div><div class="ttdef"><b>Definition:</b> <a href="kaldi-error_8h_source.html#l00164">kaldi-error.h:164</a></div></div>
 </div><!-- fragment -->
@@ -603,7 +601,7 @@ Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_109f68d84cef4a133396a0be144fa9b1.html">matrix</a></li><li class="navelem"><a class="el" href="matrix-lib-test_8cc.html">matrix-lib-test.cc</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:44 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:36 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

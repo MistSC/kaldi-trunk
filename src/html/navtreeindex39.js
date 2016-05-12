@@ -1,5 +1,17 @@
 var NAVTREEINDEX39 =
 {
+"cu-block-matrix_8cc.html":[4,0,2,6],
+"cu-block-matrix_8cc.html#a928f554da1e21330e21f2a66cf1bcad2":[4,0,2,6,1],
+"cu-block-matrix_8cc.html#a95d61f1f566b0cde3269163b4cc0a3e3":[4,0,2,6,0],
+"cu-block-matrix_8cc.html#af5c23f1997663bf4e1ca23bc9c7a3b04":[4,0,2,6,2],
+"cu-block-matrix_8cc_source.html":[4,0,2,6],
+"cu-block-matrix_8h.html":[4,0,2,7],
+"cu-block-matrix_8h.html#a95d61f1f566b0cde3269163b4cc0a3e3":[4,0,2,7,2],
+"cu-block-matrix_8h_source.html":[4,0,2,7],
+"cu-common_8cc.html":[4,0,2,8],
+"cu-common_8cc.html#a5d2f46b43d52fa14edc037f584aaa75a":[4,0,2,8,0],
+"cu-common_8cc_source.html":[4,0,2,8],
+"cu-common_8h.html":[4,0,2,9],
 "cu-common_8h_source.html":[4,0,2,9],
 "cu-device-test_8cc.html":[4,0,2,10],
 "cu-device-test_8cc.html#a0b02e4a73d45aea8fbffebdfc27da77a":[4,0,2,10,3],
@@ -237,17 +249,5 @@ var NAVTREEINDEX39 =
 "cu-packed-matrix_8h.html#aca5e4676523e1958a126739a13dfd634":[4,0,2,27,1],
 "cu-packed-matrix_8h_source.html":[4,0,2,27],
 "cu-rand_8cc.html":[4,0,2,28],
-"cu-rand_8cc_source.html":[4,0,2,28],
-"cu-rand_8h.html":[4,0,2,29],
-"cu-rand_8h_source.html":[4,0,2,29],
-"cu-randkernels-ansi_8h.html":[4,0,2,30],
-"cu-randkernels-ansi_8h_source.html":[4,0,2,30],
-"cu-randkernels_8h.html":[4,0,2,31],
-"cu-randkernels_8h_source.html":[4,0,2,31],
-"cu-sp-matrix-speed-test_8cc.html":[4,0,2,32],
-"cu-sp-matrix-speed-test_8cc.html#a0c4ffe88aa464e5c6c47755ad3c9115d":[4,0,2,32,0],
-"cu-sp-matrix-speed-test_8cc.html#a193379bfb4febb0e9aff3132179ad9a5":[4,0,2,32,2],
-"cu-sp-matrix-speed-test_8cc.html#a8ad136e7c2fecbb7813b447ce516ef66":[4,0,2,32,4],
-"cu-sp-matrix-speed-test_8cc.html#ac08d3374f98e967fecfc8de9a8034778":[4,0,2,32,3],
-"cu-sp-matrix-speed-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,2,32,1]
+"cu-rand_8cc_source.html":[4,0,2,28]
 };

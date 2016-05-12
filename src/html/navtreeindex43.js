@@ -1,5 +1,17 @@
 var NAVTREEINDEX43 =
 {
+"feature-plp-test_8cc_source.html":[4,0,4,9],
+"feature-plp_8cc.html":[4,0,4,10],
+"feature-plp_8cc_source.html":[4,0,4,10],
+"feature-plp_8h.html":[4,0,4,11],
+"feature-plp_8h_source.html":[4,0,4,11],
+"feature-sdc-test_8cc.html":[4,0,4,12],
+"feature-sdc-test_8cc.html#a199d84517bc44ba6360bf3e7f46c2516":[4,0,4,12,2],
+"feature-sdc-test_8cc.html#a802553eb4118a81ad1eb1eaded13c02d":[4,0,4,12,3],
+"feature-sdc-test_8cc.html#ac8c85b779c67aa5ce1514e980667858d":[4,0,4,12,1],
+"feature-sdc-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,4,12,0],
+"feature-sdc-test_8cc_source.html":[4,0,4,12],
+"feature-spectrogram_8cc.html":[4,0,4,13],
 "feature-spectrogram_8cc_source.html":[4,0,4,13],
 "feature-spectrogram_8h.html":[4,0,4,14],
 "feature-spectrogram_8h_source.html":[4,0,4,14],
@@ -237,17 +249,5 @@ var NAVTREEINDEX43 =
 "fstext-utils-test_8cc.html":[4,0,8,21],
 "fstext-utils-test_8cc.html#a13814f452b825aa9f51ae8050af77971":[4,0,8,21,12],
 "fstext-utils-test_8cc.html#a280ad72c50c6a6ceaa3159ca6bae9894":[4,0,8,21,13],
-"fstext-utils-test_8cc.html#a2aae6c34ab901e1d36fefbf9ffc5d0a8":[4,0,8,21,7],
-"fstext-utils-test_8cc.html#a46cc54bb3eb71e64f7d163ab55be9da4":[4,0,8,21,4],
-"fstext-utils-test_8cc.html#a5fbd45173abd899086592301f18f2522":[4,0,8,21,10],
-"fstext-utils-test_8cc.html#a8b5aea17ab28307f7a332647f2cae6c6":[4,0,8,21,5],
-"fstext-utils-test_8cc.html#a9ad6f174a14946dd388b86ffaaeb8a5e":[4,0,8,21,6],
-"fstext-utils-test_8cc.html#a9d158f20467d8f3f9f852ba343e9af8a":[4,0,8,21,9],
-"fstext-utils-test_8cc.html#aaadd097e429dad191dd0e94ee35cc90e":[4,0,8,21,3],
-"fstext-utils-test_8cc.html#ad30f8a00c803d4a579a28faeca1a89d5":[4,0,8,21,11],
-"fstext-utils-test_8cc.html#ad43ed53e50d8135efafbfc90157930b9":[4,0,8,21,2],
-"fstext-utils-test_8cc.html#ae6595d247b3991fc5b4dac9ec45ad1a5":[4,0,8,21,8],
-"fstext-utils-test_8cc.html#ae66f6b31b5ad750f1fe042a706a4e3d4":[4,0,8,21,1],
-"fstext-utils-test_8cc_source.html":[4,0,8,21],
-"fstext-utils_8h.html":[4,0,8,22]
+"fstext-utils-test_8cc.html#a2aae6c34ab901e1d36fefbf9ffc5d0a8":[4,0,8,21,7]
 };

@@ -356,12 +356,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l02475">2475</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l02147">CuMatrixBase&lt; Real &gt;::CopyCols()</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l00797">SumGroupComponent::reverse_indexes_</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l02137">CuMatrixBase&lt; Real &gt;::CopyCols()</a>, and <a class="el" href="nnet-simple-component_8h_source.html#l00797">SumGroupComponent::reverse_indexes_</a>.</p>
 <div class="fragment"><div class="line"><a name="l02481"></a><span class="lineno"> 2481</span>&#160;                                                                          {</div>
 <div class="line"><a name="l02482"></a><span class="lineno"> 2482</span>&#160;  in_deriv-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a3a73af5f31b4d673cce6976fc49fa080">CopyCols</a>(out_deriv, <a class="code" href="classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad29de11456b2a8d0c3cc520615d73c81">reverse_indexes_</a>);</div>
 <div class="line"><a name="l02483"></a><span class="lineno"> 2483</span>&#160;}</div>
 <div class="ttc" id="classkaldi_1_1nnet3_1_1SumGroupComponent_html_ad29de11456b2a8d0c3cc520615d73c81"><div class="ttname"><a href="classkaldi_1_1nnet3_1_1SumGroupComponent.html#ad29de11456b2a8d0c3cc520615d73c81">kaldi::nnet3::SumGroupComponent::reverse_indexes_</a></div><div class="ttdeci">CuArray&lt; int32 &gt; reverse_indexes_</div><div class="ttdef"><b>Definition:</b> <a href="nnet-simple-component_8h_source.html#l00797">nnet-simple-component.h:797</a></div></div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a3a73af5f31b4d673cce6976fc49fa080"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a3a73af5f31b4d673cce6976fc49fa080">kaldi::CuMatrixBase::CopyCols</a></div><div class="ttdeci">void CopyCols(const CuMatrixBase&lt; Real &gt; &amp;src, const CuArray&lt; MatrixIndexT &gt; &amp;indexes)</div><div class="ttdoc">Copies column r from column indexes[r] of src. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l02147">cu-matrix.cc:2147</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a3a73af5f31b4d673cce6976fc49fa080"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a3a73af5f31b4d673cce6976fc49fa080">kaldi::CuMatrixBase::CopyCols</a></div><div class="ttdeci">void CopyCols(const CuMatrixBase&lt; Real &gt; &amp;src, const CuArray&lt; MatrixIndexT &gt; &amp;indexes)</div><div class="ttdoc">Copies column r from column indexes[r] of src. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l02137">cu-matrix.cc:2137</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -755,11 +755,11 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l02469">2469</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="nnet-simple-component_8h_source.html#l00795">SumGroupComponent::indexes_</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02325">CuMatrixBase&lt; Real &gt;::SumColumnRanges()</a>.</p>
+<p>References <a class="el" href="nnet-simple-component_8h_source.html#l00795">SumGroupComponent::indexes_</a>, and <a class="el" href="cu-matrix_8cc_source.html#l02315">CuMatrixBase&lt; Real &gt;::SumColumnRanges()</a>.</p>
 <div class="fragment"><div class="line"><a name="l02471"></a><span class="lineno"> 2471</span>&#160;                                                                      {</div>
 <div class="line"><a name="l02472"></a><span class="lineno"> 2472</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#a9f34cdfc3ac370ec35cf4653ecfe97a6">SumColumnRanges</a>(in, <a class="code" href="classkaldi_1_1nnet3_1_1SumGroupComponent.html#aff1d8b40ec6fd345f03408dd2bf9b69a">indexes_</a>);</div>
 <div class="line"><a name="l02473"></a><span class="lineno"> 2473</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a9f34cdfc3ac370ec35cf4653ecfe97a6"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a9f34cdfc3ac370ec35cf4653ecfe97a6">kaldi::CuMatrixBase::SumColumnRanges</a></div><div class="ttdeci">void SumColumnRanges(const CuMatrixBase&lt; Real &gt; &amp;src, const CuArray&lt; Int32Pair &gt; &amp;indexes)</div><div class="ttdoc">For each row r of this and for each column c, sets (*this)(r, c) to the sum  src(r, j), where j ranges from indexes[c].first through indexes[c].second - 1. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l02325">cu-matrix.cc:2325</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_a9f34cdfc3ac370ec35cf4653ecfe97a6"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#a9f34cdfc3ac370ec35cf4653ecfe97a6">kaldi::CuMatrixBase::SumColumnRanges</a></div><div class="ttdeci">void SumColumnRanges(const CuMatrixBase&lt; Real &gt; &amp;src, const CuArray&lt; Int32Pair &gt; &amp;indexes)</div><div class="ttdoc">For each row r of this and for each column c, sets (*this)(r, c) to the sum  src(r, j), where j ranges from indexes[c].first through indexes[c].second - 1. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l02315">cu-matrix.cc:2315</a></div></div>
 <div class="ttc" id="classkaldi_1_1nnet3_1_1SumGroupComponent_html_aff1d8b40ec6fd345f03408dd2bf9b69a"><div class="ttname"><a href="classkaldi_1_1nnet3_1_1SumGroupComponent.html#aff1d8b40ec6fd345f03408dd2bf9b69a">kaldi::nnet3::SumGroupComponent::indexes_</a></div><div class="ttdeci">CuArray&lt; Int32Pair &gt; indexes_</div><div class="ttdef"><b>Definition:</b> <a href="nnet-simple-component_8h_source.html#l00795">nnet-simple-component.h:795</a></div></div>
 </div><!-- fragment -->
 </div>
@@ -1051,7 +1051,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1SumGroupComponent.html">SumGroupComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:49 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -55,6 +55,8 @@ void cudaF_copy_from_tp_trans(dim3 Gr, dim3 Bl, float* A, const float* B, Matrix
 void cudaFD_copy_from_tp_trans(dim3 Gr, dim3 Bl, float* A, const double* B, MatrixDim dmat);
 void cudaF_copy_from_tp(dim3 Gr, dim3 Bl, float* A, const float* B, MatrixDim dmat);
 void cudaFD_copy_from_tp(dim3 Gr, dim3 Bl, float* A, const double* B, MatrixDim dmat);
+// sc function
+void cudaF_reshape_from_tensor(dim3 Gr, dim3 Bl, float* dst, const float* src, MatrixDim dst_dim, TensorDim src_dim, int mode);
 void cudaF_apply_exp(dim3 Gr, dim3 Bl, float* mat, MatrixDim d);
 void cudaF_apply_pow(dim3 Gr, dim3 Bl, float* mat, float power, MatrixDim d);
 void cudaF_apply_pow_abs(dim3 Gr, dim3 Bl, float* mat, float power, bool include_sign,  MatrixDim d);
@@ -197,6 +199,8 @@ void cudaD_copy_from_tp_trans(dim3 Gr, dim3 Bl, double* A, const double* B, Matr
 void cudaDF_copy_from_tp_trans(dim3 Gr, dim3 Bl, double* A, const float* B, MatrixDim dmat);
 void cudaD_copy_from_tp(dim3 Gr, dim3 Bl, double* A, const double* B, MatrixDim dmat);
 void cudaDF_copy_from_tp(dim3 Gr, dim3 Bl, double* A, const float* B, MatrixDim dmat);
+// sc function
+void cudaD_reshape_from_tensor(dim3 Gr, dim3 Bl, double* dst, const double* src, MatrixDim dst_dim,TensorDim src_dim, int mode);
 void cudaD_apply_exp(dim3 Gr, dim3 Bl, double* mat, MatrixDim d);
 void cudaD_apply_pow(dim3 Gr, dim3 Bl, double* mat, double power, MatrixDim d);
 void cudaD_apply_pow_abs(dim3 Gr, dim3 Bl, double* mat, double power, bool include_sign, MatrixDim d);

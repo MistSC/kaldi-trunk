@@ -423,12 +423,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00593">593</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01498">CuMatrixBase&lt; Real &gt;::DiffTanh()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01488">CuMatrixBase&lt; Real &gt;::DiffTanh()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00600"></a><span class="lineno">  600</span>&#160;                                                                      {</div>
 <div class="line"><a name="l00601"></a><span class="lineno">  601</span>&#160;  <span class="keywordflow">if</span> (in_deriv != NULL)</div>
 <div class="line"><a name="l00602"></a><span class="lineno">  602</span>&#160;    in_deriv-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#aa96216e7ba0877d0db608a3b57e32aba">DiffTanh</a>(out_value, out_deriv);</div>
 <div class="line"><a name="l00603"></a><span class="lineno">  603</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_aa96216e7ba0877d0db608a3b57e32aba"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#aa96216e7ba0877d0db608a3b57e32aba">kaldi::CuMatrixBase::DiffTanh</a></div><div class="ttdeci">void DiffTanh(const CuMatrixBase&lt; Real &gt; &amp;value, const CuMatrixBase&lt; Real &gt; &amp;diff)</div><div class="ttdoc">Differentiate backward through the tanh function. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01498">cu-matrix.cc:1498</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_aa96216e7ba0877d0db608a3b57e32aba"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#aa96216e7ba0877d0db608a3b57e32aba">kaldi::CuMatrixBase::DiffTanh</a></div><div class="ttdeci">void DiffTanh(const CuMatrixBase&lt; Real &gt; &amp;value, const CuMatrixBase&lt; Real &gt; &amp;diff)</div><div class="ttdoc">Differentiate backward through the tanh function. </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01488">cu-matrix.cc:1488</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -541,14 +541,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00584">584</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l01475">CuMatrixBase&lt; Real &gt;::Tanh()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l01465">CuMatrixBase&lt; Real &gt;::Tanh()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00586"></a><span class="lineno">  586</span>&#160;                                                                  {</div>
 <div class="line"><a name="l00587"></a><span class="lineno">  587</span>&#160;  <span class="comment">// Apply tanh function to each element of the output...</span></div>
 <div class="line"><a name="l00588"></a><span class="lineno">  588</span>&#160;  <span class="comment">// the tanh function may be written as -1 + ( 2 / (1 + e^{-2 x})),</span></div>
 <div class="line"><a name="l00589"></a><span class="lineno">  589</span>&#160;  <span class="comment">// which is a scaled and shifted sigmoid.</span></div>
 <div class="line"><a name="l00590"></a><span class="lineno">  590</span>&#160;  out-&gt;<a class="code" href="classkaldi_1_1CuMatrixBase.html#ac21c2992057adbce518977e8131d3e3f">Tanh</a>(in);</div>
 <div class="line"><a name="l00591"></a><span class="lineno">  591</span>&#160;}</div>
-<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ac21c2992057adbce518977e8131d3e3f"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ac21c2992057adbce518977e8131d3e3f">kaldi::CuMatrixBase::Tanh</a></div><div class="ttdeci">void Tanh(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">Compute the hyperbolic tangent (tanh) function; element by element, *this = tanh(src). </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01475">cu-matrix.cc:1475</a></div></div>
+<div class="ttc" id="classkaldi_1_1CuMatrixBase_html_ac21c2992057adbce518977e8131d3e3f"><div class="ttname"><a href="classkaldi_1_1CuMatrixBase.html#ac21c2992057adbce518977e8131d3e3f">kaldi::CuMatrixBase::Tanh</a></div><div class="ttdeci">void Tanh(const CuMatrixBase&lt; Real &gt; &amp;src)</div><div class="ttdoc">Compute the hyperbolic tangent (tanh) function; element by element, *this = tanh(src). </div><div class="ttdef"><b>Definition:</b> <a href="cu-matrix_8cc_source.html#l01465">cu-matrix.cc:1465</a></div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -620,7 +620,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Definition at line <a class="el" href="nnet-simple-component_8cc_source.html#l00612">612</a> of file <a class="el" href="nnet-simple-component_8cc_source.html">nnet-simple-component.cc</a>.</p>
 
-<p>References <a class="el" href="cu-matrix_8cc_source.html#l00541">CuMatrixBase&lt; Real &gt;::Add()</a>, <a class="el" href="cu-matrix_8cc_source.html#l02004">CuMatrixBase&lt; Real &gt;::ApplyPow()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00603">CuMatrixBase&lt; Real &gt;::Scale()</a>, and <a class="el" href="nnet-component-itf_8cc_source.html#l00217">NonlinearComponent::StoreStatsInternal()</a>.</p>
+<p>References <a class="el" href="cu-matrix_8cc_source.html#l00531">CuMatrixBase&lt; Real &gt;::Add()</a>, <a class="el" href="cu-matrix_8cc_source.html#l01994">CuMatrixBase&lt; Real &gt;::ApplyPow()</a>, <a class="el" href="cu-matrix_8cc_source.html#l00593">CuMatrixBase&lt; Real &gt;::Scale()</a>, and <a class="el" href="nnet-component-itf_8cc_source.html#l00217">NonlinearComponent::StoreStatsInternal()</a>.</p>
 <div class="fragment"><div class="line"><a name="l00612"></a><span class="lineno">  612</span>&#160;                                                                       {</div>
 <div class="line"><a name="l00613"></a><span class="lineno">  613</span>&#160;  <span class="comment">// derivative of the onlinearity is out_value * (1.0 - out_value);</span></div>
 <div class="line"><a name="l00614"></a><span class="lineno">  614</span>&#160;  CuMatrix&lt;BaseFloat&gt; temp_deriv(out_value);</div>
@@ -673,7 +673,7 @@ Additional Inherited Members</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespacekaldi.html">kaldi</a></li><li class="navelem"><a class="el" href="namespacekaldi_1_1nnet3.html">nnet3</a></li><li class="navelem"><a class="el" href="classkaldi_1_1nnet3_1_1TanhComponent.html">TanhComponent</a></li>
-    <li class="footer">Generated on Tue Apr 26 2016 14:54:55 for Kaldi by
+    <li class="footer">Generated on Thu Apr 28 2016 15:42:48 for Kaldi by
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>
