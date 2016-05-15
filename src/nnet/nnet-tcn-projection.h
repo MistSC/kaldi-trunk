@@ -93,8 +93,8 @@ class TCNProjectionComponent : public UpdatableComponent {
     }
     weight_ = mat;
     //initial bias
-    Vector<BaseFloat> vec(wei_dim_3_);
-    for (int32 i=0; i<wei_dim_3_; i++)
+    Vector<BaseFloat> vec(wei_dim_1_ * wei_dim_2_);
+    for (int32 i=0; i<wei_dim_1_ * wei_dim_2_; i++)
     {
       vec(i) = bias_mean + (RandUniform() - 0.5) * bias_range;
     }

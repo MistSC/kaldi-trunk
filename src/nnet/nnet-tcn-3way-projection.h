@@ -1,7 +1,7 @@
 // nnet/nnet-tcn-projection.h
 
-#ifndef KALDI_NNET_NNET_TCN_PROJECTION_H_
-#define KALDI_NNET_NNET_TCN_PROJECTION_H_
+#ifndef KALDI_NNET_NNET_TCN_PROJECTION_3WAY_H_
+#define KALDI_NNET_NNET_TCN_PROJECTION_3WAY_H_
 
 
 #include <vector>
@@ -13,22 +13,22 @@
 
 namespace kaldi {
 namespace nnet1 {
-class TCNProjectionComponent : public UpdatableComponent {
+class TCN3WayProjectionComponent : public UpdatableComponent {
   public:
-  TCNProjectionComponent(int32 dim_in, int32 dim_out)
+  TCN3WayProjectionComponent(int32 dim_in, int32 dim_out)
     : UpdatableComponent(dim_in, dim_out),
       //initial dimension parameters
-      wei_dim_1_(0.0),wei_dim_2_(0.0),wei_dim_3_(0.0),
-      input_dim_1_(0.0),input_dim_2_(0.0),
+      wei_dim_1_(0.0),wei_dim_2_(0.0),wei_dim_3_(0.0),wei_dim_4_(0.0),
+      input_dim_1_(0.0),input_dim_2_(0.0),input_dim_3_(0.0),
       dim_in_(dim_in), dim_out_(dim_out),
       //initial learning rate
       learn_rate_coef_(1.0), bias_learn_rate_coef_(1.0)
   { }
-  ~TCNProjectionComponent()
+  ~TCN3WayProjectionComponent()
   { }
 
-  Component* Copy() const { return new TCNProjectionComponent(*this); }
-  ComponentType GetType() const { return scTCNProjectionComponent; }
+  Component* Copy() const { return new TCN3WayProjectionComponent(*this); }
+  ComponentType GetType() const { return scTCN3WayProjectionComponent; }
   
   
   void InitData(std::istream &is) {
@@ -39,16 +39,12 @@ class TCNProjectionComponent : public UpdatableComponent {
     std::string token; 
     while (!is.eof()) {
       ReadToken(is, false, &token); 
-      /**/ /*if (token == "<InputDim>") ReadBasicType(is, false, &input_dim_);
-      else if (token == "<OutputDim>") ReadBasicType(is, false, &output_dim_);*/
       if (token == "<BiasMean>")    ReadBasicType(is, false, &bias_mean);
       else if (token == "<BiasRange>")   ReadBasicType(is, false, &bias_range);
       else if (token == "<ParamStddev>") ReadBasicType(is, false, &param_stddev);
-
-      //else if (token == "<LearnRateCoef>") ReadBasicType(is, false, &learn_rate_coef);
-      //else if (token == "<BiasLearnRateCoef>") ReadBasicType(is, false, &bias_learn_rate_coef);
       else if (token == "<InputDim1>") ReadBasicType(is, false, &input_dim_1_);
       else if (token == "<InputDim2>") ReadBasicType(is, false, &input_dim_2_);
+      else if (token == "<InputDim3>") ReadBasicType(is, false, &input_dim_3_);
       else KALDI_ERR << "Unknown token " << token << ", a typo in config?"
                      << " (ParamStddev|BiasMean|BiasRange|LearnRateCoef|BiasLearnRateCoef)";
       is >> std::ws; // eat-up whitespace
@@ -72,7 +68,7 @@ class TCNProjectionComponent : public UpdatableComponent {
     //                      Sanity checks:                           //
     //===============================================================//
     // input sanity checks
-    KALDI_ASSERT(dim_in_ == input_dim_1_ * input_dim_2_);
+    KALDI_ASSERT(dim_in_ == input_dim_1_ * input_dim_2_ * input_dim_3_);
     // output sanity checks
     //KALDI_ASSERT(dim_out_);
 
@@ -82,19 +78,20 @@ class TCNProjectionComponent : public UpdatableComponent {
     //initial dimension parameters
     wei_dim_1_ = input_dim_1_;
     wei_dim_2_ = input_dim_2_;
-    wei_dim_3_ = dim_out_;
+    wei_dim_3_ = input_dim_3_;
+    wei_dim_4_ = dim_out_;
 
     //initialize weights
-    Matrix<BaseFloat>  mat(wei_dim_3_,wei_dim_1_ * wei_dim_2_); //initial to 0
-    for (int32 i=0; i<wei_dim_3_; i++) {
-      for (int32 j=0; j<wei_dim_1_ * wei_dim_2_; j++) {
+    Matrix<BaseFloat>  mat(wei_dim_4_,wei_dim_1_ * wei_dim_2_ * wei_dim_3_); //initial to 0
+    for (int32 i=0; i<wei_dim_4_; i++) {
+      for (int32 j=0; j<wei_dim_1_ * wei_dim_2_ * wei_dim_3_; j++) {
           mat(i,j) = param_stddev * RandGauss(); // 0-mean Gauss with given std_dev
       }
     }
     weight_ = mat;
     //initial bias
-    Vector<BaseFloat> vec(wei_dim_3_);
-    for (int32 i=0; i<wei_dim_3_; i++)
+    Vector<BaseFloat> vec(wei_dim_4_);
+    for (int32 i=0; i<wei_dim_4_; i++)
     {
       vec(i) = bias_mean + (RandUniform() - 0.5) * bias_range;
     }
@@ -116,6 +113,8 @@ class TCNProjectionComponent : public UpdatableComponent {
     ReadBasicType(is, binary, &input_dim_1_);
     ExpectToken(is, binary, "<InputDim2>");
     ReadBasicType(is, binary, &input_dim_2_);
+    ExpectToken(is, binary, "<InputDim3>");
+    ReadBasicType(is, binary, &input_dim_3_);
     ExpectToken(is, binary, "<OutputDim>");
     ReadBasicType(is, binary, &dim_out_);
     // weights dimension parameters
@@ -125,6 +124,9 @@ class TCNProjectionComponent : public UpdatableComponent {
     ReadBasicType(is, binary, &wei_dim_2_);
     ExpectToken(is, binary, "<WeightDim3>");
     ReadBasicType(is, binary, &wei_dim_3_);
+    ExpectToken(is, binary, "<WeightDim4>");
+    ReadBasicType(is, binary, &wei_dim_4_);
+
     // weights and bias
     //give size to weights
     ExpectToken(is, binary, "<Weight>");
@@ -144,6 +146,8 @@ class TCNProjectionComponent : public UpdatableComponent {
     WriteBasicType(os, binary, input_dim_1_);
     WriteToken(os, binary, "<InputDim2>");
     WriteBasicType(os, binary, input_dim_2_);
+    WriteToken(os, binary, "<InputDim3>");
+    WriteBasicType(os, binary, input_dim_3_);
     WriteToken(os, binary, "<OutputDim>");
     WriteBasicType(os, binary, dim_out_);
     // weights dimension parameters
@@ -153,6 +157,9 @@ class TCNProjectionComponent : public UpdatableComponent {
     WriteBasicType(os, binary, wei_dim_2_);
     WriteToken(os, binary, "<WeightDim3>");
     WriteBasicType(os, binary, wei_dim_3_);
+    WriteToken(os, binary, "<WeightDim4>");
+    WriteBasicType(os, binary, wei_dim_4_);
+
     // weights and bias
     WriteToken(os, binary, "<Weight>");
     weight_.Write(os, binary);
@@ -162,7 +169,7 @@ class TCNProjectionComponent : public UpdatableComponent {
 
 
   //get parameters of weight
-  int32 NumParams() const { return wei_dim_1_ * wei_dim_2_ * wei_dim_3_ + bias_.Dim(); }
+  int32 NumParams() const { return wei_dim_1_ * wei_dim_2_ * wei_dim_3_ * wei_dim_4_ + bias_.Dim(); }
   
   void GetParams(Vector<BaseFloat>* wei_copy) const 
   {
@@ -221,6 +228,7 @@ class TCNProjectionComponent : public UpdatableComponent {
     weight_grad_.AddMatMat(1.0, diff, kTrans, input, kNoTrans, mmt);
     bias_grad_.AddRowSumMat(1.0, diff, mmt);
     // l2 regularization
+    /*
     if (l2 != 0.0)
     {
         weight_.AddMat(-lr*l2*batch_size, weight_);
@@ -229,6 +237,7 @@ class TCNProjectionComponent : public UpdatableComponent {
     {
         cu::RegularizeL1(&weight_, &weight_grad_, lr*l1*batch_size, lr);
     }
+    */
     //update
     weight_.AddMat(-lr, weight_grad_);
     bias_.AddVec(-lr_bias, bias_grad_);
@@ -237,15 +246,15 @@ class TCNProjectionComponent : public UpdatableComponent {
 
  private:
   int32 dim_in_,dim_out_;  //these 2 parameters are used for checking
-  int32 wei_dim_1_,wei_dim_2_,wei_dim_3_;
-  int32 input_dim_1_,input_dim_2_;
+  int32 wei_dim_1_,wei_dim_2_,wei_dim_3_,wei_dim_4_;
+  int32 input_dim_1_,input_dim_2_,input_dim_3_;
   //int32 output_dim_;
   
-  CuMatrix<BaseFloat> weight_;        //i3 * (i1 * i2)
-  CuMatrix<BaseFloat> weight_grad_;   //i3 * (i1 * i2)
+  CuMatrix<BaseFloat> weight_;        //i4 * (i1 * i2 * i3)
+  CuMatrix<BaseFloat> weight_grad_;   //i4 * (i1 * i2 * i4)
 
-  CuVector<BaseFloat> bias_;          //i3 
-  CuVector<BaseFloat> bias_grad_;     //i3
+  CuVector<BaseFloat> bias_;          //i4 
+  CuVector<BaseFloat> bias_grad_;     //i4
 
   BaseFloat learn_rate_coef_;
   BaseFloat bias_learn_rate_coef_;

@@ -30,6 +30,8 @@
 
 #include "nnet/nnet-tcn.h"
 #include "nnet/nnet-tcn-projection.h"
+#include "nnet/nnet-tcn-3way.h"
+#include "nnet/nnet-tcn-3way-projection.h"
 
 #include "nnet/nnet-convolutional-component.h"
 #include "nnet/nnet-average-pooling-component.h"
@@ -79,7 +81,10 @@ const struct Component::key_value Component::kMarkerMap[] = {
   { Component::kFramePoolingComponent, "<FramePoolingComponent>"},
   { Component::kParallelComponent, "<ParallelComponent>"},
   { Component::scTCNComponent, "<TCNComponent>"},
-  { Component::scTCNProjectionComponent, "<TCNProjectionComponent>"}
+  { Component::scTCNProjectionComponent, "<TCNProjectionComponent>"},
+  { Component::scTCN3WayComponent, "<TCN3WayComponent>"},
+  { Component::scTCN3WayProjectionComponent, "<TCN3WayProjectionComponent>"}
+
 };
 
 
@@ -196,6 +201,14 @@ Component* Component::NewComponentOfType(ComponentType comp_type,
     // new TCNProjection Component
     case Component::scTCNProjectionComponent :
       ans = new TCNProjectionComponent(input_dim, output_dim);
+      break;
+    // new TCN 3way Component
+    case Component::scTCN3WayComponent :
+      ans = new TCN3WayComponent(input_dim, output_dim);
+      break;
+    // new TCN 3way Projection Component
+    case Component::scTCN3WayProjectionComponent :
+      ans = new TCN3WayProjectionComponent(input_dim, output_dim);
       break;
     case Component::kUnknown :
     default :

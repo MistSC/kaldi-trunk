@@ -55,8 +55,10 @@ class Component {
     kConvolutional2DComponent,
     kLstmProjectedStreams,
     kBLstmProjectedStreams,
-    scTCNComponent,//my TCN method
-    scTCNProjectionComponent,//my TCN projection method
+    scTCNComponent,//TCN method
+    scTCNProjectionComponent,//TCN projection method
+    scTCN3WayComponent,//TCN 3way method
+    scTCN3WayProjectionComponent,//TCN 3way projection method
 
     kActivationFunction = 0x0200, 
     kSoftmax, 

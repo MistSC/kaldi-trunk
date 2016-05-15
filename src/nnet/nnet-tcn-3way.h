@@ -1,7 +1,7 @@
 // nnet/nnet-tcn.h
 
-#ifndef KALDI_NNET_NNET_TCN_H_
-#define KALDI_NNET_NNET_TCN_H_
+#ifndef KALDI_NNET_NNET_TCN_3WAY_H_
+#define KALDI_NNET_NNET_TCN_3WAY_H_
 
 #include <iostream>
 #include <vector>
@@ -13,7 +13,7 @@ namespace kaldi {
 namespace nnet1 {
 class TCN3WayComponent : public UpdatableComponent {
  public:
- TCNComponent(int32 dim_in,int32 dim_out)
+ TCN3WayComponent(int32 dim_in,int32 dim_out)
     : UpdatableComponent(dim_in, dim_out),
       //initial dimension parameters
       dim_in_(dim_in),dim_out_(dim_out),
@@ -24,13 +24,13 @@ class TCN3WayComponent : public UpdatableComponent {
       //initial learning rate
       learn_rate_coef_(1.0), bias_learn_rate_coef_(1.0)
   { }
-  ~TCNComponent()
+  ~TCN3WayComponent()
   { }
 
   
 
-  Component* Copy() const { return new TCNComponent(*this); }
-  ComponentType GetType() const { return scTCNComponent; }
+  Component* Copy() const { return new TCN3WayComponent(*this); }
+  ComponentType GetType() const { return scTCN3WayComponent; }
 
   void InitData(std::istream &is) {
     // define options
@@ -122,12 +122,12 @@ class TCN3WayComponent : public UpdatableComponent {
     mode_3_wei_ = mat_w3;     //mode 3 product weight
 
     //initialize bias
-    Matrix<BaseFloat> mat_b(wei_1_j1_ * wei_2_j2_ * wei_3_j3_);
-    for (int32 c = 0; r < wei_1_j1_ * wei_2_j2_ * wei_3_j3_; r++) {
+    Vector<BaseFloat> vec(wei_1_j1_ * wei_2_j2_ * wei_3_j3_);
+    for (int32 i = 0; i < wei_1_j1_ * wei_2_j2_ * wei_3_j3_; i++) {
         // +/- 1/2*bias_range      from bias_mean:
-        mat_b(0,c) = bias_mean + (RandUniform() - 0.5) * bias_range;
+        vec(i) = bias_mean + (RandUniform() - 0.5) * bias_range;
     }
-    bias_ = mat_b;
+    bias_ = vec;
 
     learn_rate_coef_ = learn_rate_coef;
     bias_learn_rate_coef_ = bias_learn_rate_coef;
@@ -234,7 +234,7 @@ class TCN3WayComponent : public UpdatableComponent {
     return mode_1_wei_.NumRows() * mode_1_wei_.NumCols()\
            + mode_2_wei_.NumRows() * mode_2_wei_.NumCols()\
            + mode_3_wei_.NumRows() * mode_3_wei_.NumCols()\
-           + bias_.NumRows() * bias_.NumCols(); 
+           + bias_.Dim(); 
   }
 
   void GetParams(Vector<BaseFloat>* wei_copy) const {
@@ -243,12 +243,12 @@ class TCN3WayComponent : public UpdatableComponent {
     int32 weight_1_num_elem = mode_1_wei_.NumRows() * mode_1_wei_.NumCols();
     int32 weight_2_num_elem = mode_2_wei_.NumRows() * mode_2_wei_.NumCols();
     int32 weight_3_num_elem = mode_3_wei_.NumRows() * mode_3_wei_.NumCols();
-    int32 bias_num_elem = bias_.NumRows() * bias_.NumCols();
+    int32 bias_num_elem = bias_.Dim();
     //Range(o,l) o:original l:length
     wei_copy->Range(0, weight_1_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_1_wei_));
     wei_copy->Range(weight_1_num_elem, weight_2_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_2_wei_));
     wei_copy->Range(weight_1_num_elem+weight_2_num_elem,weight_3_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(mode_3_wei_));
-    wei_copy->Range(weight_1_num_elem+weight_2_num_elem+weight_3_num_elem, bias_num_elem).CopyRowsFromMat(Matrix<BaseFloat>(bias_));
+    wei_copy->Range(weight_1_num_elem+weight_2_num_elem+weight_3_num_elem, bias_num_elem).CopyFromVec(Vector<BaseFloat>(bias_));
   }
 
   std::string Info() const {
@@ -280,7 +280,7 @@ class TCN3WayComponent : public UpdatableComponent {
      CuTensor<BaseFloat> mode_3_res(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,3);
      // mode n product
      mode_1_res.mode_1_product(rs_input,kNoTrans,mode_1_wei_,kTrans);
-     mode_2_res.mode_2_product(mode_1_resi,kNoTrans,mode_2_wei_,kTrans);
+     mode_2_res.mode_2_product(mode_1_res,kNoTrans,mode_2_wei_,kTrans);
      mode_3_res.mode_3_product(mode_2_res,kNoTrans,mode_3_wei_,kTrans);
      // copy tensor result
      out->ReshapeFromTensor(mode_3_res,30);
@@ -325,41 +325,47 @@ class TCN3WayComponent : public UpdatableComponent {
     j1 = wei_1_j1_; j2 = wei_2_j2_; j3 = wei_3_j3_;
 
     // compute gradient
-    CuTensor<Real> t_input(in,ib,i1,i2,i3);
-    CuTensor<Real> t_diff(in,ib,j1,j2,j3);
+    CuTensor<BaseFloat> t_input(in,ib,i1,i2,i3);
+    CuTensor<BaseFloat> t_diff(in,ib,j1,j2,j3);
     // copute w1 gradient
-    CuMatrix<BaseFloat> *m2 = new CuMatrix<BaseFloat>(ib,i1,j2,i3,0);          // (b,i1*j2*i3)
-    CuMatrix<BaseFloat> *m3 = new CuMatrix<BaseFloat>(ib,i1,j2,j3,0);          // (b,i1*j2*j3)
-    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,1);     // (b*j2*j3,j1)
-    CuMatrix<BaseFloat> *rs_m1 = new CuMatrix<BaseFloat>(ib,i1,j2,j3,1);       // (b*j2*j3,i1)
-    m2->mode_2_product_v0(t_input,kNoTrans,mode_2_wei_,kTrans);                // (b,i1*j2*i3)
-    m3->mode_3_product_v0(m2,kNoTrans,mode_3_wei_,kTrans);                     // (b,i1*j2*j3)
-    rs_diff->ReshapeFromTensor(t_diff,1);                                      // (b*j2*j3,j1) 
-    rs_m1->ReshapeFromTensor(m3,1);                                            // (b*j2*j3,i1)
-    mode_1_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m1,kNoTrans,0.0);         // (j1*i1) 
-    delete m2,m3,rs_diff,rs_m1;
+    {
+      CuTensor<BaseFloat> *m2 = new CuTensor<BaseFloat>(ib,i1,j2,i3,0);          // (b,i1*j2*i3)
+      CuTensor<BaseFloat> *m3 = new CuTensor<BaseFloat>(ib,i1,j2,j3,0);          // (b,i1*j2*j3)
+      CuTensor<BaseFloat> *rs_diff = new CuTensor<BaseFloat>(ib,j1,j2,j3,1);     // (b*j2*j3,j1)
+      CuTensor<BaseFloat> *rs_m1 = new CuTensor<BaseFloat>(ib,i1,j2,j3,1);       // (b*j2*j3,i1)
+      m2->mode_2_product_v0(t_input,kNoTrans,mode_2_wei_,kTrans);                // (b,i1*j2*i3)
+      m3->mode_3_product_v0(*m2,kNoTrans,mode_3_wei_,kTrans);                     // (b,i1*j2*j3)
+      rs_diff->ReshapeFromTensor(t_diff,1);                                      // (b*j2*j3,j1) 
+      rs_m1->ReshapeFromTensor(*m3,1);                                            // (b*j2*j3,i1)
+      mode_1_wei_grad_.AddMatMat(1.0,*rs_diff,kTrans,*rs_m1,kNoTrans,0.0);         // (j1*i1) 
+      delete m2; delete m3; delete rs_diff; delete rs_m1;
+    }
     // copute w2 gradient
-    CuMatrix<BaseFloat> *m1 = new CuMatrix<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
-    CuMatrix<BaseFloat> *m3 = new CuMatrix<BaseFloat>(ib,j1,i2,j3,0);          // (b,j1*i2*j3)
-    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,2);     // (b*j1*j3,j2)
-    CuMatrix<BaseFloat> *rs_m2 = new CuMatrix<BaseFloat>(ib,j1,i2,j3,2);       // (b*j1*j3,i2)
-    m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
-    m3->mode_3_product_v0(m1,kNoTrans,mode_3_wei_,kTrans);                     // (b,j1*i2*j3)
-    rs_diff->ReshapeFromTensor(t_diff,2);                                      // (b*j1*j3,j2) 
-    rs_m3->ReshapeFromTensor(m3,2);                                            // (b*j1*j3,i2)
-    mode_2_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m2,kNoTrans,0.0);         // (j2*i2) 
-    delete m1,m3,rs_diff,rs_m2;
+    {
+      CuTensor<BaseFloat> *m1 = new CuTensor<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
+      CuTensor<BaseFloat> *m3 = new CuTensor<BaseFloat>(ib,j1,i2,j3,0);          // (b,j1*i2*j3)
+      CuTensor<BaseFloat> *rs_diff = new CuTensor<BaseFloat>(ib,j1,j2,j3,2);     // (b*j1*j3,j2)
+      CuTensor<BaseFloat> *rs_m2 = new CuTensor<BaseFloat>(ib,j1,i2,j3,2);       // (b*j1*j3,i2)
+      m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
+      m3->mode_3_product_v0(*m1,kNoTrans,mode_3_wei_,kTrans);                     // (b,j1*i2*j3)
+      rs_diff->ReshapeFromTensor(t_diff,2);                                      // (b*j1*j3,j2) 
+      rs_m2->ReshapeFromTensor(*m3,2);                                            // (b*j1*j3,i2)
+      mode_2_wei_grad_.AddMatMat(1.0,*rs_diff,kTrans,*rs_m2,kNoTrans,0.0);         // (j2*i2) 
+      delete m1; delete m3; delete rs_diff; delete rs_m2;
+    }
     // copute w3 gradient
-    CuMatrix<BaseFloat> *m1 = new CuMatrix<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
-    CuMatrix<BaseFloat> *m2 = new CuMatrix<BaseFloat>(ib,j1,j2,i3,0);          // (b,j1*j2*i3)
-    CuMatrix<BaseFloat> *rs_diff = new CuMatrix<BaseFloat>(ib,j1,j2,j3,3);     // (b*j1*j2,j3)
-    CuMatrix<BaseFloat> *rs_m3 = new CuMatrix<BaseFloat>(ib,j1,j2,i3,3);       // (b*j1*j2,i3)
-    m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
-    m2->mode_2_product_v0(m1,kNoTrans,mode_2_wei_,kTrans);                     // (b,j1*i2*j3)
-    rs_diff->ReshapeFromTensor(t_diff,3);                                      // (b*j1*j2,j3) 
-    rs_m3->ReshapeFromTensor(m2,3);                                            // (b*j1*j2,i3)
-    mode_3_wei_grad_.AddMatMat(1.0,rs_diff,kTrans,rs_m3,kNoTrans,0.0);         // (j3*i3) 
-    delete m1,m2,rs_diff,rs_m3;
+    {
+      CuTensor<BaseFloat> *m1 = new CuTensor<BaseFloat>(ib,j1,i2,i3,0);          // (b,j1*i2*i3)
+      CuTensor<BaseFloat> *m2 = new CuTensor<BaseFloat>(ib,j1,j2,i3,0);          // (b,j1*j2*i3)
+      CuTensor<BaseFloat> *rs_diff = new CuTensor<BaseFloat>(ib,j1,j2,j3,3);     // (b*j1*j2,j3)
+      CuTensor<BaseFloat> *rs_m3 = new CuTensor<BaseFloat>(ib,j1,j2,i3,3);       // (b*j1*j2,i3)
+      m1->mode_1_product_v0(t_input,kNoTrans,mode_1_wei_,kTrans);                // (b,j1*i2*i3)
+      m2->mode_2_product_v0(*m1,kNoTrans,mode_2_wei_,kTrans);                     // (b,j1*i2*j3)
+      rs_diff->ReshapeFromTensor(t_diff,3);                                      // (b*j1*j2,j3) 
+      rs_m3->ReshapeFromTensor(*m2,3);                                            // (b*j1*j2,i3)
+      mode_3_wei_grad_.AddMatMat(1.0,*rs_diff,kTrans,*rs_m3,kNoTrans,0.0);         // (j3*i3) 
+      delete m1; delete m2; delete rs_diff; delete rs_m3;
+    }
     // bias
     bias_grad_.AddRowSumMat(1.0, diff, 0.0);
     // update
@@ -392,7 +398,7 @@ class TCN3WayComponent : public UpdatableComponent {
   CuMatrix<BaseFloat> mode_1_wei_;           //j1*i1
   CuMatrix<BaseFloat> mode_2_wei_;           //j2*i2
   CuMatrix<BaseFloat> mode_3_wei_;           //j3*i3
-  CuVector<BaseFloat> bias_;                 //j1*j2*j3
+  CuVector<BaseFloat> bias_;                 //(j1*j2*j3)
 
   //gradient of mode 1 2 product and bias
   CuMatrix<BaseFloat>  mode_1_wei_grad_;
