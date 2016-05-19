@@ -76,6 +76,12 @@ void GetBlockSizesForSimpleMatrixOperation(int32 num_rows,
                                            dim3 *dimGrid,
                                            dim3 *dimBlock);
 
+void GetBlockSizesForSimpleTensorOperation(int32 ib,
+                                           int32 i1,
+                                           int32 i2,
+                                           int32 i3,
+                                           dim3 *dimGrid,
+                                           dim3 *dimBlock);
 
 }
 

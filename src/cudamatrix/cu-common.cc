@@ -67,6 +67,35 @@ void GetBlockSizesForSimpleMatrixOperation(int32 num_rows,
                "Matrix has too many rows to process");
   dimGrid->z = 1;
 }
+
+void GetBlockSizesForSimpleTensorOperation(int32 ib,
+                                           int32 i1,
+                                           int32 i2,
+                                           int32 i3,
+                                           dim3 *dimGrid,
+                                           dim3 *dimBlock) {
+  KALDI_ASSERT(ib > 0 && i1 > 0 && i2 > 0 && i3 > 0);
+  //int32 num_i1 = 16, num_i2 = 16, num_i3 = 16, num_ib = 16;
+  KALDI_LOG<<"ib: "<<ib<<" i1: "<<i1<<" i2: "<<i2<<" i3: "<<i3;
+  int gridx, gridy, gridz;
+  dimBlock->x = 16;
+  dimBlock->y = 8;
+  dimBlock->z = 8;
+  gridx = 2;
+  gridy = 2;
+  gridz = 2;
+  KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
+  while(dimBlock->x*gridx < ib)
+    gridx *= 2;
+  while(dimBlock->y*gridy < i1)
+    gridy *= 2;
+  while(dimBlock->z*gridz < i2*i3)
+    gridz *= 2;
+  KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
+  dimGrid->x = gridx;
+  dimGrid->y = gridy;
+  dimGrid->z = gridz;
+}
 #endif
 
 } // namespace

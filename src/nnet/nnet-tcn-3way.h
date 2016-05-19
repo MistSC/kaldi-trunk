@@ -40,8 +40,6 @@ class TCN3WayComponent : public UpdatableComponent {
     std::string token;
     while (!is.eof()) {
       ReadToken(is, false, &token);
-      /**//*if  (token == "<InputDim>")      ReadBasicType(is, false, &input_dim_);
-      else if (token == "<OutputDim>")     ReadBasicType(is, false, &output_dim_);*/
       if (token == "<BiasMean>")      ReadBasicType(is, false, &bias_mean);
       else if (token == "<BiasRange>")     ReadBasicType(is, false, &bias_range);
       else if (token == "<ParamStddev>")   ReadBasicType(is, false, &param_stddev);
@@ -51,8 +49,6 @@ class TCN3WayComponent : public UpdatableComponent {
       else if (token == "<OutputDim1>")      ReadBasicType(is, false, &output_dim_1_);
       else if (token == "<OutputDim2>")      ReadBasicType(is, false, &output_dim_2_);
       else if (token == "<OutputDim3>")      ReadBasicType(is, false, &output_dim_3_);
-      //else if (token == "<LearnRateCoef>") ReadBasicType(is, false, &learn_rate_coef);
-      //else if (token == "<BiasLearnRateCoef>") ReadBasicType(is, false, &bias_learn_rate_coef);
       else KALDI_ERR << "Unknown token " << token << ", a typo in config?"
                      << " (ParamStddev|BiasMean|BiasRange|FmapXLen|FmapYLen|FiltXLen|FiltYLen|FiltXStep|FiltYStep|ConnectFmap|LearnRateCoef|BiasLearnRateCoef)";
       is >> std::ws;  // eat-up whitespace
@@ -174,7 +170,7 @@ class TCN3WayComponent : public UpdatableComponent {
     mode_1_wei_.Read(is, binary);
     ExpectToken(is, binary, "<Mode2Weight>");
     mode_2_wei_.Read(is, binary);
-    ExpectToken(is, binary, "<Mode2Weight>");
+    ExpectToken(is, binary, "<Mode3Weight>");
     mode_3_wei_.Read(is, binary);
 
     ExpectToken(is, binary, "<Bias>");
@@ -270,28 +266,32 @@ class TCN3WayComponent : public UpdatableComponent {
 
 
   void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out) 
-  {  
+  { 
+     //KALDI_LOG<<"tcn 3way propagate fnc is ok";
      int32 batch_size = in.NumRows();        // get batch size
-     CuTensor<BaseFloat> input(in,batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_);
-     CuTensor<BaseFloat> rs_input(batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_,1);
-     rs_input.ReshapeFromTensor(input,1);
-     CuTensor<BaseFloat> mode_1_res(batch_size,wei_1_j1_,wei_2_i2_,wei_3_i3_,1);
-     CuTensor<BaseFloat> mode_2_res(batch_size,wei_1_j1_,wei_2_j2_,wei_3_i3_,2);
-     CuTensor<BaseFloat> mode_3_res(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,3);
+     CuTensor<BaseFloat> *input = new CuTensor<BaseFloat>(in,batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_);
+     CuTensor<BaseFloat> *rs_input = new CuTensor<BaseFloat>(batch_size,wei_1_i1_,wei_2_i2_,wei_3_i3_,1);
+     rs_input->ReshapeFromTensor(*input,1);
+     //KALDI_LOG<<"input rs type: "<<input->ReshapeType()<<" rs_input rs type: "<<rs_input->ReshapeType();
+     CuTensor<BaseFloat> *mode_1_res = new CuTensor<BaseFloat>(batch_size,wei_1_j1_,wei_2_i2_,wei_3_i3_,1);
+     CuTensor<BaseFloat> *mode_2_res = new CuTensor<BaseFloat>(batch_size,wei_1_j1_,wei_2_j2_,wei_3_i3_,2);
+     CuTensor<BaseFloat> *mode_3_res = new CuTensor<BaseFloat>(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,3);
      // mode n product
-     mode_1_res.mode_1_product(rs_input,kNoTrans,mode_1_wei_,kTrans);
-     mode_2_res.mode_2_product(mode_1_res,kNoTrans,mode_2_wei_,kTrans);
-     mode_3_res.mode_3_product(mode_2_res,kNoTrans,mode_3_wei_,kTrans);
+     mode_1_res->mode_1_product(*rs_input,kNoTrans,mode_1_wei_,kTrans);
+     mode_2_res->mode_2_product(*mode_1_res,kNoTrans,mode_2_wei_,kTrans);
+     mode_3_res->mode_3_product(*mode_2_res,kNoTrans,mode_3_wei_,kTrans);
      // copy tensor result
-     out->ReshapeFromTensor(mode_3_res,30);
+     out->ReshapeFromTensor(*mode_3_res,30);
      // add bias
      out->AddVecToRows(1.0, bias_, 1.0);
+     delete input; delete rs_input; delete mode_1_res; delete mode_2_res; delete mode_3_res;
   }
 
 
   void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
                         const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)                       
   {
+    //KALDI_LOG<<"tcn 3way backpropagate fnc is ok";
     int32 batch_size = out_diff.NumRows();                  //get batch size
     CuTensor<BaseFloat> outdiff(out_diff,batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_);
     CuTensor<BaseFloat> rs_outdiff(batch_size,wei_1_j1_,wei_2_j2_,wei_3_j3_,1);
@@ -311,6 +311,7 @@ class TCN3WayComponent : public UpdatableComponent {
   //update back propagation
   void Update(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &diff) 
   {
+    //KALDI_LOG<<"tcn 3way update is ok";
     // we use following hyperparameters from the option class
     const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
     const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
@@ -326,7 +327,11 @@ class TCN3WayComponent : public UpdatableComponent {
 
     // compute gradient
     CuTensor<BaseFloat> t_input(in,ib,i1,i2,i3);
-    CuTensor<BaseFloat> t_diff(in,ib,j1,j2,j3);
+    CuTensor<BaseFloat> t_diff(diff,ib,j1,j2,j3);
+    mode_1_wei_grad_.Resize(wei_1_j1_, wei_1_i1_);             // j1*i1
+    mode_2_wei_grad_.Resize(wei_2_j2_, wei_2_i2_);             // j2*i2
+    mode_3_wei_grad_.Resize(wei_3_j3_, wei_3_i3_);             // j3*i3
+    bias_grad_.Resize(wei_1_j1_ * wei_2_j2_ * wei_3_j3_);      // (j1*j2*j3)
     // copute w1 gradient
     {
       CuTensor<BaseFloat> *m2 = new CuTensor<BaseFloat>(ib,i1,j2,i3,0);          // (b,i1*j2*i3)

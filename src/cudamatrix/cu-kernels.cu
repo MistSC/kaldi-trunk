@@ -273,10 +273,25 @@ static void _reshape_from_tensor(Real* dst,
                                  TensorDim src_dim,
                                  int mode) 
 {
-  int i = blockIdx.x;
-  int j = blockIdx.y;
-  int k = blockIdx.z;
-  int l = threadIdx.x;
+  // caution: because we need 4 index for tensor reshape, so j, k must
+  // share blockIdx.z*blockDim.z+threadIdx.z.
+  // We need use a strategy to allocate index for j and k.
+  // Parameter partion is a value to seperate j and k, range of j is 
+  // [0,blockDim.z*gridDim.z/partion], 
+  // range of k is [0,blockDim.z*gridDim.z%partion].
+  // note: 
+  // l allocate to src_dim.ib
+  // i allocate to src_dim.i1
+  // j allocate to src_dim.i2
+  // k allocate to src_dim.i3
+  int partion = gridDim.z*blockDim.z / src_dim.i3;
+  int t = blockIdx.z * blockDim.z + threadIdx.z;
+  int i,j,k,l;
+  i = blockIdx.y * blockDim.y + threadIdx.y;
+  j = t % partion;                             // [0,blockDim.z*gridDim.z / partion]
+  k = t / partion;                             // [0,blockDim.z*gridDim.z % partion]
+  l = blockIdx.x * blockDim.x + threadIdx.x; 
+
   int src_index;
   int dst_index;
   switch(mode)
@@ -358,8 +373,34 @@ static void _reshape_from_tensor(Real* dst,
         dst[dst_index] = src[src_index];
       }
     }
-
   break;
+  case 12:
+    // M(l*i2*i3,i1)->M(l*i1*i3,i2)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride * ((src_dim.i2*src_dim.i3)*l + src_dim.i3*j + k) + i;
+      dst_index = dst_dim.stride * ((src_dim.i1*src_dim.i3)*l + src_dim.i3*i + k) + j;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+  case 23:
+    // M(l*i1*i3,i2)->M(l*i1*i2,i3)
+    if (l < src_dim.ib && i < src_dim.i1 &&
+        j < src_dim.i2 && k < src_dim.i3)
+    {
+      src_index = src_dim.stride * ((src_dim.i1*src_dim.i3)*l + src_dim.i3*i + k) + j;
+      dst_index = dst_dim.stride * ((src_dim.i1*src_dim.i2)*l + src_dim.i2*i + j) + k;
+      if (dst != NULL && src != NULL) 
+      {
+        dst[dst_index] = src[src_index];
+      }
+    }
+  break;
+
   }
 }
 

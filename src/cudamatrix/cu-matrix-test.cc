@@ -26,7 +26,7 @@
 #include <iostream>
 #include <vector>
 #include <cstdlib>
-#include <chrono>
+//#include <chrono>
 
 #include "base/kaldi-common.h"
 #include "util/common-utils.h"
@@ -2588,20 +2588,21 @@ template<typename Real>
 static void UnitTestCuTensorRs()
 {
   int ib,i2,i3,i1;
-  ib = 6; i1 = 2; i2 = 3; i3 = 4;
+  ib = 256; i1 = 4; i2 = 10; i3 = 11;
   CuMatrix<Real> M(ib,i1*i2*i3);
-  for(int i=0;i<ib;i++)
-    for(int j=0;j<i1*i2*i3;j++)
-      M(i,j)=i*i1*i2*i3+j;
+  M.Set(1);
+  //for(int i=0;i<ib;i++)
+  //  for(int j=0;j<i1*i2*i3;j++)
+  //    M(i,j)=i*i1*i2*i3+j;
 
   CuTensor<Real> T(M,ib,i1,i2,i3);
-  CuTensor<Real> T1(ib,i1,i2,i3,2);
+  CuTensor<Real> T1(ib,i1,i2,i3,1);
 
-  T1.ReshapeFromTensor(T,2);
-  T.ReshapeFromTensor(T1,20);
+  T1.ReshapeFromTensor(T,1);
+  T.ReshapeFromTensor(T1,10);
 
-  Print<Real>(M,"M");
-  Print<Real>(T,"T");
+  //Print<Real>(M,"M");
+  //Print<Real>(T,"T");
   Print<Real>(T1,"T1");
 
 }
@@ -2609,34 +2610,23 @@ static void UnitTestCuTensorRs()
 template<typename Real>
 static void UnitTestCuMatrixMul()
 {
-  int ib,i2,i3,i1;
-  ib = 5; i1 = 3; i2 = 4; i3 = 5;
-  int j;
-  j = 5;
-  CuMatrix<Real> M(ib,i1*i2*i3);
-  for(int i=0;i<ib;i++)
-    for(int j=0;j<i1*i2*i3;j++)
-      M(i,j)=i*i1*i2*i3+j;
-
-  CuTensor<Real> T(M,ib,i1,i2,i3);
-  CuTensor<Real> T1(ib,i1,i2,i3,3);
-
-  T1.ReshapeFromTensor(T,3);
-
-  CuMatrix<Real> W(j,i3);
-  W.Set(0.01);
-  CuTensor<Real> res(ib,i1,i2,j,3);
-
-  res.mode_3_product(T,kNoTrans,W,kTrans);
-
-
-  Print<Real>(T,"T");
-  std::cout<< "T type is "<< T.ReshapeType()  <<std::endl;
-  Print<Real>(T1,"T1");
-  std::cout<< "T1 type is "<< T1.ReshapeType()  <<std::endl;
-  Print<Real>(W,"W");
-  Print<Real>(res,"res");
-  std::cout<< "res type is "<< res.ReshapeType()  <<std::endl;
+  CuMatrix<Real> M(256,440);
+  CuMatrix<Real> W1(4,10);
+  CuMatrix<Real> W2(10,10);
+  CuMatrix<Real> W3(11,10);
+  M.Set(1); W1.Set(2); W2.Set(3); W3.Set(4);
+  CuTensor<Real> T0(M,256,4,10,11);
+  CuTensor<Real> T1(256,4,10,11,1);
+  T1.ReshapeFromTensor(T0,1);
+  CuTensor<Real> T1_res(256,10,10,11,1);
+  CuTensor<Real> T2_res(256,10,10,11,2);
+  CuTensor<Real> T3_res(256,10,10,10,3);
+  CuMatrix<Real> M3(256,10*10*10);
+  T1_res.mode_1_product(T1,kNoTrans,W1,kNoTrans);
+  T2_res.mode_2_product(T1_res,kNoTrans,W2,kNoTrans);
+  T3_res.mode_3_product(T2_res,kNoTrans,W3,kNoTrans);
+  M3.ReshapeFromTensor(T3_res,30);
+  Print<Real>(M3,"M3");
 }
 
 template<typename Real> void CudaMatrixUnitTest() 
@@ -2746,8 +2736,8 @@ template<typename Real> void CudaMatrixUnitTest()
   Test4<Real>();
 */
   //UnitTestCuMatrixIndex<Real>();
-  //UnitTestCuTensorRs<Real>();
-  UnitTestCuMatrixMul<Real>();
+  UnitTestCuTensorRs<Real>();
+  //UnitTestCuMatrixMul<Real>();
 }
 
 

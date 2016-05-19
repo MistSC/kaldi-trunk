@@ -370,13 +370,14 @@ void CuMatrixBase<Real>::ReshapeFromTensor(const CuTensor<Real> &T, MatrixIndexT
   KALDI_ASSERT(num_rows_ >=0 && num_cols_ >= 0 &&
                num_rows_ * num_cols_ ==
                T.NumI1() * T.NumI2() * T.NumI3() * T.NumBS());
-  KALDI_ASSERT(T.ReshapeType() == mode);
 #if HAVE_CUDA == 1
   if (CuDevice::Instantiate().Enabled())
   {
     Timer tim;
-    dim3 dimBlock(300);
-    dim3 dimGrid(64,64,64);
+    dim3 dimBlock, dimGrid;
+    GetBlockSizesForSimpleTensorOperation(T.NumBS(), T.NumI1(), 
+                                          T.NumI2(), T.NumI3(),
+                                          &dimGrid, &dimBlock);
     cuda_reshape_from_tensor(dimGrid, dimBlock, data_, T.Data(), Dim(), T.TDim(), mode);
     CU_SAFE_CALL(cudaGetLastError());
     CuDevice::Instantiate().AccuProfile(__func__, tim.Elapsed());
@@ -394,14 +395,18 @@ void CuTensor<Real>::ReshapeFromTensor(const CuTensor<Real> &T, MatrixIndexT mod
                this->num_rows_ * this->num_cols_ == T.NumI1() * T.NumI2() * T.NumI3() * T.NumBS() &&
                this->num_i1_ == T.NumI1() && this->num_i2_ == T.NumI2() && this->num_i3_ == T.NumI3() &&
                this->batch_size_ == T.NumBS());
-  KALDI_ASSERT((T.ReshapeType() == mode || T.ReshapeType() == (int)(mode/10)) && (this->ReshapeType() == 0 || this->ReshapeType() == mode%10));
-  this->reshape_type_ = mode%10;
+  //KALDI_LOG<<"T reshape type "<<T.ReshapeType();
+  //KALDI_LOG<<"this reshape type "<<this->ReshapeType()<<"   "<<mode%10;
+
+  KALDI_ASSERT((T.ReshapeType()*10 + this->ReshapeType()) == mode);
 #if HAVE_CUDA == 1
   if (CuDevice::Instantiate().Enabled())
   {
     Timer tim;
-    dim3 dimBlock(300);
-    dim3 dimGrid(64,64,64);
+    dim3 dimBlock, dimGrid;
+    GetBlockSizesForSimpleTensorOperation(this->batch_size_, this->num_i1_, 
+                                          this->num_i2_, this->num_i3_,
+                                          &dimGrid, &dimBlock);
     cuda_reshape_from_tensor(dimGrid, dimBlock, this->data_, T.Data(), this->Dim(), T.TDim(), mode);
     CU_SAFE_CALL(cudaGetLastError());
     CuDevice::Instantiate().AccuProfile(__func__, tim.Elapsed());
@@ -418,14 +423,11 @@ void CuTensor<Real>::ReshapeFromTensor(const CuTensor<Real> &T, MatrixIndexT mod
 template<typename Real>
 void CuTensor<Real>::mode_1_product_v0(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
-  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI2() == X.NumI2() && this->NumI3() == X.NumI3() &&
-               W.NumCols() == X.NumI1() && W.NumRows() == this->NumI1());
+  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI2() == X.NumI2() && this->NumI3() == X.NumI3());
  
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
   CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),1);
   CuTensor<Real> reshaped_Y(X.NumBS(),this->NumI1(),X.NumI2(),X.NumI3(),1);
   reshaped_X.ReshapeFromTensor(X,1);
-  //this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   reshaped_Y.AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   this->ReshapeFromTensor(reshaped_Y,10);
 }
@@ -433,14 +435,11 @@ void CuTensor<Real>::mode_1_product_v0(const CuTensor<Real>& X, MatrixTransposeT
 template<typename Real>
 void CuTensor<Real>::mode_2_product_v0(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
-  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI3() == X.NumI3() &&
-               W.NumCols() == X.NumI2() && W.NumRows() == this->NumI2());
+  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI3() == X.NumI3());
  
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
   CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),2);
   CuTensor<Real> reshaped_Y(X.NumBS(),X.NumI1(),this->NumI2(),X.NumI3(),2);
   reshaped_X.ReshapeFromTensor(X,2);
-  //this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   reshaped_Y.AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   this->ReshapeFromTensor(reshaped_Y,20);
 }
@@ -448,64 +447,67 @@ void CuTensor<Real>::mode_2_product_v0(const CuTensor<Real>& X, MatrixTransposeT
 template<typename Real>
 void CuTensor<Real>::mode_3_product_v0(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
-  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI2() == X.NumI2() &&
-               W.NumCols() == X.NumI3() && W.NumRows() == this->NumI3());
+  KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI2() == X.NumI2());
  
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
   CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),3);
   CuTensor<Real> reshaped_Y(X.NumBS(),X.NumI1(),X.NumI2(),this->NumI3(),3);
   reshaped_X.ReshapeFromTensor(X,3);
-  //this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   reshaped_Y.AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
   this->ReshapeFromTensor(reshaped_Y,30);
 }
 
 // attention: these function give tensor with the same reshape type as T
+// X: (l*i2*i3)*i1
+// W: j1*i1
+// this: (l*j1*i3)*i2
 template<typename Real>
 void CuTensor<Real>::mode_1_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
+  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI2() == X.NumI2() && this->NumI3() == X.NumI3() &&
-               W.NumCols() == X.NumI1() && W.NumRows() == this->NumI1() &&
                this->ReshapeType() != 0); 
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
-  CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),1);
   CuTensor<Real> reshaped_Y(X.NumBS(),this->NumI1(),X.NumI2(),X.NumI3(),1);
-  reshaped_X.ReshapeFromTensor(X,1);
-  this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
+  this->AddMatMat(1.0,X,transX,W,transW,0.0);
 }
 
+// X: (l*j1*i3)*i2
+// W: j2*i2
+// this: (l*j1*j2)*i3
 template<typename Real>
 void CuTensor<Real>::mode_2_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
+  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI3() == X.NumI3() &&
-               W.NumCols() == X.NumI2() && W.NumRows() == this->NumI2() &&
                this->ReshapeType() != 0); 
- 
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
   CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),2);
   CuTensor<Real> reshaped_Y(X.NumBS(),X.NumI1(),this->NumI2(),X.NumI3(),2);
-  reshaped_X.ReshapeFromTensor(X,2);
+  reshaped_X.ReshapeFromTensor(X,12);
   this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
 }
 
+// X: (l*j1*j2)*i3
+// W: j3*i3
+// this: (l*j1*j2)*i3
 template<typename Real>
 void CuTensor<Real>::mode_3_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
-{
+{ 
+  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI2() == X.NumI2() &&
-               W.NumCols() == X.NumI3() && W.NumRows() == this->NumI3() &&
                this->ReshapeType() != 0);
- 
-  //CuMatrix<Real> reshaped_X(X.NumBS()*X.NumI2()*X.NumI3(),X.NumI1());
   CuTensor<Real> reshaped_X(X.NumBS(),X.NumI1(),X.NumI2(),X.NumI3(),3);
   CuTensor<Real> reshaped_Y(X.NumBS(),X.NumI1(),X.NumI2(),this->NumI3(),3);
-  reshaped_X.ReshapeFromTensor(X,3);
+  reshaped_X.ReshapeFromTensor(X,23);
   this->AddMatMat(1.0,reshaped_X,transX,W,transW,0.0);
 }
-
-
-
-
-
 
 template<typename Real>
 CuMatrix<Real>::CuMatrix(const CuMatrix<Real> &other, MatrixTransposeType trans) {
@@ -1205,6 +1207,10 @@ void CuMatrixBase<Real>::AddMatMat(
     MatrixIndexT k = ((transB==kTrans)? B.NumCols() : B.NumRows());
     MatrixIndexT k1 = ((transA==kTrans)? A.NumRows() : A.NumCols());
 
+    //KALDI_LOG<<m<<" "<<NumCols();
+    //KALDI_LOG<<n<<" "<<NumRows();
+    //KALDI_LOG<<k<<" "<<k1;
+   
     KALDI_ASSERT(m == NumCols());
     KALDI_ASSERT(n == NumRows());
     KALDI_ASSERT(k == k1);

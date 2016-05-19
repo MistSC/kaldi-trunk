@@ -9,7 +9,7 @@ include ../kaldi.mk
 LDFLAGS += $(CUDA_LDFLAGS)
 LDLIBS += $(CUDA_LDLIBS)
 
-BINFILES = cu-matrix-test
+#BINFILES = cu-matrix-test
 TESTFILES = cu-vector-test cu-math-test cu-test cu-sp-matrix-test cu-packed-matrix-test cu-tp-matrix-test \
             cu-block-matrix-test cu-matrix-speed-test cu-vector-speed-test cu-sp-matrix-speed-test cu-array-test \
 			cu-sparse-matrix-test cu-device-test\

@@ -67,6 +67,7 @@ static inline size_t IntegerLog2(size_t i) {
 CuMemoryAllocator::MruCache& CuMemoryAllocator::GetCacheForSize(
     size_t num_bytes) {
   size_t bucket_index = IntegerLog2(num_bytes);
+  //KALDI_LOG<<"bucket index: "<<bucket_index<<" cache size: "<<caches_.size();
   KALDI_ASSERT(num_bytes > 0 && bucket_index < caches_.size());
   return caches_[bucket_index];
 }

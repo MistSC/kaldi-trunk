@@ -391,6 +391,7 @@ else
   case "$network_type" in
     dnn)
       echo "# Network type: DNN"
+      echo "# With layer wise pretrian"
       # first layer
       [ ! -d $dir/pretrain_1 ] && mkdir $dir/pretrain_1
       dir_f=$dir/pretrain_1
@@ -475,12 +476,13 @@ else
       ;;
     tcn)
       echo "# Network type: TCN"
+      echo "# With layerwise pretrain"
       # first layer
       [ ! -d $dir/pretrain_1 ] && mkdir $dir/pretrain_1
       dir_f=$dir/pretrain_1
       echo " make prototype of nnet_pretrain_layer1.proto"
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 1 23 11 'tcn' 64 16 'dnn' >$dir_f/nnet_pretrain_layer1.proto || exit 1
+        $num_fea $num_tgt 1 'tcn' 23 11 64 16 'dnn' >$dir_f/nnet_pretrain_layer1.proto || exit 1
       echo "# initializing the NN nnet_pretrain_layer1.proto -> nnet_pretrain_layer1.init"
       nnet-initialize $dir_f/nnet_pretrain_layer1.proto $dir_f/nnet_pretrain_layer1.init
       steps/nnet/train_for_pretrain_scheduler.sh \
@@ -560,6 +562,7 @@ else
       ;;
     hybrid_tdnn)
       echo "# Network type: hybrid tdnn"
+      echo "# With layerwise pretrian"
       #hid_layers=7
       #tcn_proto_array=(23 11 64 16 64 16 64 16)
       #dnn_proto_array=(1024 1024 1024 1024)

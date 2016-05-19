@@ -781,6 +781,8 @@ class CuTensor: public CuMatrix<Real> {
            const MatrixIndexT num_i2,
            const MatrixIndexT num_i3)
   {
+    // check dim
+    KALDI_ASSERT(T.NumRows() == batch_size && T.NumCols() == num_i1*num_i2*num_i3);
     this->Resize(T.NumRows(),T.NumCols(),kSetZero,kStrideEqualNumCols);
     this->CopyFromMat(T);
 
@@ -800,14 +802,29 @@ class CuTensor: public CuMatrix<Real> {
            MatrixIndexT rt)
   {
     if(rt == 0)
+    {
+      //this->num_rows_ = batch_size;
+      //this->num_cols_ = num_i1*num_i2*num_i3;
       this->Resize(batch_size,num_i1*num_i2*num_i3,kSetZero,kStrideEqualNumCols);
+    }
     else if(rt == 1)
+    {
+      //this->num_rows_ = batch_size*num_i2*num_i3;
+      //this->num_cols_ = num_i1;
       this->Resize(batch_size*num_i2*num_i3,num_i1,kSetZero,kStrideEqualNumCols);
+    }
     else if(rt == 2)
+    {
+      //this->num_rows_ = batch_size*num_i1*num_i3;
+      //this->num_cols_ = num_i2;
       this->Resize(batch_size*num_i1*num_i3,num_i2,kSetZero,kStrideEqualNumCols);
+    }
     else if(rt == 3)
+    {
+      //this->num_rows_ = batch_size*num_i1*num_i2;
+      //this->num_cols_ = num_i3;
       this->Resize(batch_size*num_i1*num_i2,num_i3,kSetZero,kStrideEqualNumCols);
-
+    }
     this->reshape_type_ = rt;
     this->batch_size_ = batch_size;
     this->num_i1_ = num_i1;

@@ -8,7 +8,7 @@ from optparse import OptionParser
 ###
 ### Parse options
 ###
-usage="%prog [options] <feat-dim> <num-leaves> <num-hidden-layers> ( <layer1_dim1> <layer1_dim2>... ) >nnet-proto-file"
+usage="%prog [options] <feat-dim> <num-leaves> <num-hidden-layers> ( <layer1_dim1> <layer1_dim2> <layer1_dim3>... ) >nnet-proto-file"
 parser = OptionParser(usage)
 
 parser.add_option('--activation-type', dest='activation_type',
@@ -35,19 +35,20 @@ assert(index_tcn<=index_dnn or index_tcn!=3)
 (feat_dim, num_leaves, num_hid_layers) = map(int,args[0:3])
 list_tcn_layer_dim = map(int,args[index_tcn+1:index_dnn])
 list_dnn_layer_dim = map(int,args[index_dnn+1:])
-num_tcn_layers = len(list_tcn_layer_dim)/2-1
+assert(len(list_tcn_layer_dim)%3==0)
+num_tcn_layers = len(list_tcn_layer_dim)/3-1
 if num_tcn_layers<0:
   num_tcn_layers=0
 num_dnn_layers = len(list_dnn_layer_dim)
 
 #if num_dnn_layers==0:
 list_dnn_layer_dim.append(num_leaves)
-if num_tcn_layers>0 and num_dnn_layers==0:
+if num_tcn_layers>0 and num_dnn_layers==0:      # only tcn layers
   assert(list_dnn_layer_dim[-1]==num_leaves)
-elif num_tcn_layers>0 and num_dnn_layers!=0:
-  assert(list_dnn_layer_dim[0]==list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1])
+elif num_tcn_layers>0 and num_dnn_layers!=0:    # tcn and dnn layers
+  assert(list_dnn_layer_dim[0]==list_tcn_layer_dim[-3]*list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1])
   assert(list_dnn_layer_dim[-1]==num_leaves)
-elif num_tcn_layers<=0:
+elif num_tcn_layers<=0:                         # only dnn layers
   assert(list_dnn_layer_dim[0]==feat_dim)
   assert(list_dnn_layer_dim[-1]==num_leaves)
 ### End parse options
@@ -66,30 +67,36 @@ print "<NnetProto>"
 
 if num_tcn_layers!=0:
   # First TCN component
-  print "<TCNComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d <OutputDim1> %d <OutputDim2> %d" % \
-       (feat_dim, list_tcn_layer_dim[2]*list_tcn_layer_dim[3],\
+  print "<TCN3WayComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d  <InputDim3> %d <OutputDim1> %d <OutputDim2> %d <OutputDim3> %d" % \
+       (feat_dim, list_tcn_layer_dim[3]*list_tcn_layer_dim[4]*list_tcn_layer_dim[5], \
        o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor, \
-       list_tcn_layer_dim[0], list_tcn_layer_dim[1],\
-       list_tcn_layer_dim[2],list_tcn_layer_dim[3])
+       list_tcn_layer_dim[0], list_tcn_layer_dim[1], list_tcn_layer_dim[2], \
+       list_tcn_layer_dim[3], list_tcn_layer_dim[4], list_tcn_layer_dim[5])
   print "%s <InputDim> %d <OutputDim> %d" % \
-        (o.activation_type, list_tcn_layer_dim[2]*list_tcn_layer_dim[3], list_tcn_layer_dim[2]*list_tcn_layer_dim[3])
+        (o.activation_type, list_tcn_layer_dim[3]*list_tcn_layer_dim[4]*list_tcn_layer_dim[5], list_tcn_layer_dim[3]*list_tcn_layer_dim[4]*list_tcn_layer_dim[5])
 
   # Internal TCN component
   for i in range(1,num_tcn_layers-1):
-    print "<TCNComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d <OutputDim1> %d <OutputDim2> %d" % \
-           (list_tcn_layer_dim[2*i]*list_tcn_layer_dim[2*i+1], list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1], \
+    print "<TCN3WayComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d <InputDim3> %d <OutputDim1> %d <OutputDim2> %d <OutputDim3> %d" % \
+           (list_tcn_layer_dim[3*i]*list_tcn_layer_dim[3*i+1]*list_tcn_layer_dim[3*i+2], list_tcn_layer_dim[3*(i+1)]*list_tcn_layer_dim[3*(i+1)+1]*list_tcn_layer_dim[3*(i+1)+2], \
            o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor, \
-           list_tcn_layer_dim[2*i], list_tcn_layer_dim[2*i+1], list_tcn_layer_dim[2*(i+1)],list_tcn_layer_dim[2*(i+1)+1])
-    #print "<InputDim1> %d <InputDim2> %d" % (list_tcn_layer_dim[2*i],list_tcn_layer_dim[2*i+1])
-    #print "<OutputDim1> %d <OutputDim2> %d" % (list_tcn_layer_dim[2*(i+1)],list_tcn_layer_dim[2*(i+1)+1])
+           list_tcn_layer_dim[3*i], list_tcn_layer_dim[3*i+1], list_tcn_layer_dim[3*i+2], \
+           list_tcn_layer_dim[3*(i+1)],list_tcn_layer_dim[3*(i+1)+1],list_tcn_layer_dim[3*(i+1)+2])
     print "%s <InputDim> %d <OutputDim> %d" % \
-        (o.activation_type, list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1], list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1])
+        (o.activation_type, list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1]*list_tcn_layer_dim[2*(i+1)+2], \
+        list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1]*list_tcn_layer_dim[2*(i+1)+2])
 
   # TCN projection component
-  print "<TCNProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d" % \
-    (list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1], list_dnn_layer_dim[0], \
-    o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
-    list_tcn_layer_dim[-2], list_tcn_layer_dim[-1])
+  if num_hid_layers!=1:
+    print "<TCN3WayProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d <InputDim3> %d" % \
+      (list_tcn_layer_dim[-6]*list_tcn_layer_dim[-5]*list_tcn_layer_dim[-4], list_dnn_layer_dim[0], \
+      o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
+      list_tcn_layer_dim[-6],list_tcn_layer_dim[-5], list_tcn_layer_dim[-4])
+  elif num_hid_layers==1:
+    print "<TCN3WayProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d <InputDim3> %d" % \
+      (list_tcn_layer_dim[-3]*list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1], list_dnn_layer_dim[0], \
+      o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
+      list_tcn_layer_dim[-3],list_tcn_layer_dim[-2], list_tcn_layer_dim[-1])
   if num_dnn_layers!=0:
     print "%s <InputDim> %d <OutputDim> %d" % \
       (o.activation_type, list_dnn_layer_dim[0], list_dnn_layer_dim[0])

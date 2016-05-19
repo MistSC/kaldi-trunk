@@ -86,10 +86,16 @@ if num_tcn_layers!=0:
         (o.activation_type, list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1], list_tcn_layer_dim[2*(i+1)]*list_tcn_layer_dim[2*(i+1)+1])
 
   # TCN projection component
-  print "<TCNProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d" % \
-    (list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1], list_dnn_layer_dim[0], \
-    o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
-    list_tcn_layer_dim[-2], list_tcn_layer_dim[-1])
+  if num_hid_layers!=1:
+    print "<TCNProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d" % \
+      (list_tcn_layer_dim[-4]*list_tcn_layer_dim[-3], list_dnn_layer_dim[0], \
+      o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
+      list_tcn_layer_dim[-4], list_tcn_layer_dim[-3])
+  elif num_hid_layers==1:
+    print "<TCNProjectionComponent> <InputDim> %d <OutputDim> %d <BiasMean> %f <BiasRange> %f <ParamStddev> %f <InputDim1> %d <InputDim2> %d" % \
+      (list_tcn_layer_dim[-2]*list_tcn_layer_dim[-1], list_dnn_layer_dim[0], \
+      o.hid_bias_mean, o.hid_bias_range, o.param_stddev_factor,\
+      list_tcn_layer_dim[-2], list_tcn_layer_dim[-1])
   if num_dnn_layers!=0:
     print "%s <InputDim> %d <OutputDim> %d" % \
       (o.activation_type, list_dnn_layer_dim[0], list_dnn_layer_dim[0])

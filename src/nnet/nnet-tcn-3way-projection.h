@@ -192,9 +192,13 @@ class TCN3WayProjectionComponent : public UpdatableComponent {
   }
 
   
-  // X: batch * (i1*i2)
+  // in: batch * (i1*i2*i3)
+  // weight_ : i4*(i1*i2*i3)
   void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out)
   {
+    //KALDI_LOG<<"tcn 3 way projection propagate fnc is ok";
+    //KALDI_LOG<<"in info: "<<"num rows: "<<in.NumRows()<<" num cols: "<<in.NumCols();
+    //KALDI_LOG<<"weight_ info: "<<"num rows: "<<weight_.NumRows()<<" num cols: "<<weight_.NumCols();
     // propagate
     out->AddMatMat(1.0, in, kNoTrans, weight_, kTrans, 0.0);
     // add bias
@@ -204,6 +208,9 @@ class TCN3WayProjectionComponent : public UpdatableComponent {
   void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
                         const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff) 
   {
+    //KALDI_LOG<<"tcn 3 way projection backpropagate fnc is ok";
+    //KALDI_LOG<<"out info: "<<"num rows: "<<out.NumRows()<<" num cols: "<<out.NumCols();
+
     // multiply error derivative by weights
     in_diff->AddMatMat(1.0, out_diff, kNoTrans, weight_, kNoTrans, 0.0);  
   }
@@ -211,22 +218,25 @@ class TCN3WayProjectionComponent : public UpdatableComponent {
 
   void Update(const CuMatrixBase<BaseFloat> &input, const CuMatrixBase<BaseFloat> &diff)
   {
+    //KALDI_LOG<<"tcn 3 way projection update is ok";
     // initial gradient parameters
-    weight_grad_.Resize(wei_dim_3_, wei_dim_1_ * wei_dim_2_);
-    bias_grad_.Resize(wei_dim_3_);
+    weight_grad_.Resize(wei_dim_4_, wei_dim_1_ * wei_dim_2_ * wei_dim_3_);
+    bias_grad_.Resize(wei_dim_4_);
     // we use following hyperparameters from the option class
     const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
     const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
-    const BaseFloat mmt = opts_.momentum;
-    const BaseFloat l2 = opts_.l2_penalty;
-    const BaseFloat l1 = opts_.l1_penalty;
+    //const BaseFloat mmt = opts_.momentum;
+    //const BaseFloat l2 = opts_.l2_penalty;
+    //const BaseFloat l1 = opts_.l1_penalty;
 
     // we will also need the number of frames in the mini-batch
     const int32 batch_size = input.NumRows();
 
     // compute gradient
-    weight_grad_.AddMatMat(1.0, diff, kTrans, input, kNoTrans, mmt);
-    bias_grad_.AddRowSumMat(1.0, diff, mmt);
+    //KALDI_LOG<<"diff info: "<<"num rows: "<<diff.NumRows()<<" num cols: "<<diff.NumCols();
+    //KALDI_LOG<<"input info: "<<"num rows: "<<input.NumRows()<<" num cols: "<<input.NumCols();
+    weight_grad_.AddMatMat(1.0, diff, kTrans, input, kNoTrans, 0.0);
+    bias_grad_.AddRowSumMat(1.0, diff, 0.0);
     // l2 regularization
     /*
     if (l2 != 0.0)
@@ -251,7 +261,7 @@ class TCN3WayProjectionComponent : public UpdatableComponent {
   //int32 output_dim_;
   
   CuMatrix<BaseFloat> weight_;        //i4 * (i1 * i2 * i3)
-  CuMatrix<BaseFloat> weight_grad_;   //i4 * (i1 * i2 * i4)
+  CuMatrix<BaseFloat> weight_grad_;   //i4 * (i1 * i2 * i3)
 
   CuVector<BaseFloat> bias_;          //i4 
   CuVector<BaseFloat> bias_grad_;     //i4

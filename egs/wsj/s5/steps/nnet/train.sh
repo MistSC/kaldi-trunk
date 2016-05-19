@@ -427,7 +427,7 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 40 9 64 16 >$nnet_proto || exit 1
+        $num_fea $num_tgt 2 'tcn' 40 9 64 16 64 16 'dnn' >$nnet_proto || exit 1
       ;;
     tcn_dnn)
       echo "==========TCN initializing==================="
@@ -438,8 +438,20 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 40 9 64 16 >$nnet_proto || exit 1
+        $num_fea $num_tgt 3 'tcn' 40 9 64 16 'dnn' 1024 >$nnet_proto || exit 1
       ;;
+    tcn_3way)
+      echo "==========TCN 3 way initializing==================="
+      echo "===========input feature dimension==========="
+      echo $num_fea
+      echo $num_tgt
+      #echo "hidden layer number"
+      #echo $hid_layers
+      #echo $proto_opt
+      utils/nnet/make_tcn_3way_proto.py $proto_opts \
+        $num_fea $num_tgt 2 'tcn' 40 9 1 16 16 2 32 16 2 'dnn' >$nnet_proto || exit 1
+      ;;
+
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac
 
