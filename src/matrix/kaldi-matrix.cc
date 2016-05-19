@@ -343,6 +343,32 @@ void MatrixBase<Real>::AddSpSp(const Real alpha, const SpMatrix<Real> &A_in,
 }
 
 template<typename Real>
+void MatrixBase<Real>::OuterProductForEachFrame(const Real alpha, 
+                                                const MatrixBase<Real> &A,
+                                                const MatrixBase<Real> &B)
+{
+  KALDI_ASSERT(num_rows_ == A.NumRows() &&
+               num_rows_ == B.NumRows() &&
+               num_cols_ == A.NumCols() * B.NumCols());
+  Real *data = data_;
+  const Real *dataA = A.Data();
+  const Real *dataB = B.Data();
+  for(MatrixIndexT i=0; i<num_rows_; i++)
+  {
+    for(MatrixIndexT j=0; j<A.NumCols(); j++)
+    {
+      for(MatrixIndexT k=0; k<B.NumCols(); k++)
+      {
+        data[j*A.NumCols()+k] = alpha * dataA[j] * dataB[k];
+      }
+    }
+    data += Stride();
+    dataA += A.Stride();
+    dataB += B.Stride();
+  }
+}
+
+template<typename Real>
 void MatrixBase<Real>::AddMat(const Real alpha, const MatrixBase<Real>& A,
                                MatrixTransposeType transA) {
   if (&A == this) {

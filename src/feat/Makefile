@@ -4,6 +4,7 @@ all:
 
 include ../kaldi.mk
 
+BINFILES = feature-functions-test
 TESTFILES = feature-mfcc-test feature-plp-test feature-fbank-test \
          feature-functions-test pitch-functions-test feature-sdc-test \
          resample-test online-feature-test sinusoid-detection-test \

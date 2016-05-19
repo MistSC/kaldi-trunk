@@ -411,6 +411,16 @@ void SpliceFrames(const MatrixBase<BaseFloat> &input_features,
   }
 }
 
+void ComputerOuterProductFeats(const MatrixBase<BaseFloat> &input_features,
+                               Matrix<BaseFloat> *output_features)
+{
+  int32 r = input_features.NumRows(), c = input_features.NumCols();
+  if (r == 0 || c == 0)
+    KALDI_ERR << "ComputerOuterProductFeats: empty input";
+  output_features->Resize(r,c*c);
+  output_features->OuterProductForEachFrame(1.0, input_features, input_features);
+}
+
 void ReverseFrames(const MatrixBase<BaseFloat> &input_features,
                    Matrix<BaseFloat> *output_features) {
   int32 T = input_features.NumRows(), D = input_features.NumCols();

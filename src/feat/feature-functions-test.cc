@@ -95,8 +95,6 @@ void UnitTestOnlineCmvn() {
 
 }
 
-
-
 int main() {
   using namespace kaldi;
   try {

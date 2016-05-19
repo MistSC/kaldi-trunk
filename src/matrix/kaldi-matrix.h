@@ -538,6 +538,11 @@ class MatrixBase {
   /// *this += alpha * M [or M^T]
   void AddMat(const Real alpha, const MatrixBase<Real> &M,
               MatrixTransposeType transA = kNoTrans);
+  
+  /// *this += alpha * (matrix echa frame(row) outproduct)
+  void OuterProductForEachFrame(const Real alpha,
+                                const MatrixBase<Real> &A,
+                                const MatrixBase<Real> &B);
 
   /// *this = beta * *this + alpha * M M^T, for symmetric matrices.  It only
   /// updates the lower triangle of *this.  It will leave the matrix asymmetric;

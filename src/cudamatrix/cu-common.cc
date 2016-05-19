@@ -74,9 +74,9 @@ void GetBlockSizesForSimpleTensorOperation(int32 ib,
                                            int32 i3,
                                            dim3 *dimGrid,
                                            dim3 *dimBlock) {
-  KALDI_ASSERT(ib > 0 && i1 > 0 && i2 > 0 && i3 > 0);
+  //KALDI_ASSERT(ib > 0 && i1 > 0 && i2 > 0 && i3 > 0);
   //int32 num_i1 = 16, num_i2 = 16, num_i3 = 16, num_ib = 16;
-  KALDI_LOG<<"ib: "<<ib<<" i1: "<<i1<<" i2: "<<i2<<" i3: "<<i3;
+  //KALDI_LOG<<"ib: "<<ib<<" i1: "<<i1<<" i2: "<<i2<<" i3: "<<i3;
   int gridx, gridy, gridz;
   dimBlock->x = 16;
   dimBlock->y = 8;

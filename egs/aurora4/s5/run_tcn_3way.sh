@@ -7,13 +7,13 @@
 
 
 #train TCN 
-dir=exp/tri8a_tcn_3way
+dir=exp/tri8b_tcn_3way
 ali=exp/tri2b_multi_ali_si84
 ali_dev=exp/tri2b_multi_ali_dev_0330
 #feature_transform=exp/tri3a_dnn_pretrain/final.feature_transform
 #dbn=exp/tri3a_dnn_pretrain/7.dbn
 $cuda_cmd $dir/_train_nnet.log \
-  steps/nnet/train.sh --learn-rate 0.001 --network-type "tcn_3way" \
+  steps/nnet/train.sh --learn-rate 0.008 --network-type "tcn_3way" \
   data-fbank/train_si84_multi data-fbank/dev_0330 data/lang $ali $ali_dev $dir || exit 1;
 
 #make graph and decode for average

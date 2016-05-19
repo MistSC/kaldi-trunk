@@ -92,6 +92,20 @@ start:
     goto start;
 }
 
+template<typename Real>
+void Print(Matrix<Real> M, std::string name)
+{
+  std::cout<< "=================Print matrix: "<<name<<" =================" <<std::endl;
+  for(MatrixIndexT i=0; i<M.NumRows(); i++)
+  {
+    for(MatrixIndexT j=0; j<M.NumCols(); j++)
+    {
+      std::cout<< M(i,j) << "  ";
+    }
+    std::cout<<std::endl;
+  }
+}
+
 /*
   HERE(2)
 template<typename Real> static void AssertEqual(const Matrix<Real> &A,
@@ -4616,6 +4630,19 @@ void UnitTestTensor() {
     delete N3;
 }
 
+template<typename Real> 
+void UnitTestOuterProduct()
+{
+  Matrix<Real> M(2,4);
+  Matrix<Real> R(2,16);
+  for(int32 i=0; i<2; i++)
+    for(int32 j=0; j<4; j++)
+      M(i,j) = i*4 + j;
+  
+  R.OuterProductForEachFrame(1.0,M,M);
+  Print<Real>(M,"M");
+  Print<Real>(R,"R");
+}
 
 template<typename Real> static void MatrixUnitTest(bool full_test) {
   /*
@@ -4767,7 +4794,8 @@ template<typename Real> static void MatrixUnitTest(bool full_test) {
   KALDI_LOG << " Point K";
   UnitTestTriVecSolver<Real>();
   */
-  UnitTestTensor<Real>();
+  //UnitTestTensor<Real>();
+  UnitTestOuterProduct<Real>();
 }
 
 

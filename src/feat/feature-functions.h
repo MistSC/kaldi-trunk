@@ -289,6 +289,10 @@ void SpliceFrames(const MatrixBase<BaseFloat> &input_features,
                   int32 right_context,
                   Matrix<BaseFloat> *output_features);
 
+// outer product each frame features
+void ComputerOuterProductFeats(const MatrixBase<BaseFloat> &input_features,
+                               Matrix<BaseFloat> *output_features);
+
 // ReverseFrames reverses the frames in time (used for backwards decoding)
 void ReverseFrames(const MatrixBase<BaseFloat> &input_features,
                   Matrix<BaseFloat> *output_features);

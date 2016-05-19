@@ -463,9 +463,9 @@ void CuTensor<Real>::mode_3_product_v0(const CuTensor<Real>& X, MatrixTransposeT
 template<typename Real>
 void CuTensor<Real>::mode_1_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
-  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
-  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
-  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+  //KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  //KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  //KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
 
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI2() == X.NumI2() && this->NumI3() == X.NumI3() &&
                this->ReshapeType() != 0); 
@@ -479,9 +479,9 @@ void CuTensor<Real>::mode_1_product(const CuTensor<Real>& X, MatrixTransposeType
 template<typename Real>
 void CuTensor<Real>::mode_2_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
-  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
-  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
-  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+  //KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  //KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  //KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
 
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI3() == X.NumI3() &&
                this->ReshapeType() != 0); 
@@ -497,9 +497,9 @@ void CuTensor<Real>::mode_2_product(const CuTensor<Real>& X, MatrixTransposeType
 template<typename Real>
 void CuTensor<Real>::mode_3_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 { 
-  KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
-  KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
-  KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
+  //KALDI_LOG<<"this info: "<<"bs: "<<this->NumBS()<<" i1: "<<this->NumI1()<<" i2: "<<this->NumI2()<<" i3: "<<this->NumI3()<<" rs_type: "<<this->ReshapeType();
+  //KALDI_LOG<<"X info: "<<"bs: "<<X.NumBS()<<" i1: "<<X.NumI1()<<" i2: "<<X.NumI2()<<" i3: "<<X.NumI3()<<" rs_type: "<<X.ReshapeType();
+  //KALDI_LOG<<"W info: "<<"num Cols: "<<W.NumCols()<<" num Rows: "<<W.NumRows();
 
   KALDI_ASSERT(this->NumBS() == X.NumBS() && this->NumI1() == X.NumI1() && this->NumI2() == X.NumI2() &&
                this->ReshapeType() != 0);
