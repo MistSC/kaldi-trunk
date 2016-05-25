@@ -31,7 +31,7 @@ scoring_opts="--min-lmwt 4 --max-lmwt 15"
 
 num_threads=1 # if >1, will use latgen-faster-parallel
 parallel_opts=   # Ignored now.
-use_gpu="no" # yes|no|optionaly
+use_gpu="yes" # yes|no|optionaly
 # End configuration section.
 
 echo "$0 $@"  # Print the command line for logging

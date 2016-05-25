@@ -159,6 +159,12 @@
 %WER 100.00 [ 32118 / 32118, 0 ins, 32118 del, 0 sub ] exp/tri8a_tcn_3way/decode_tgpr_5k_test_B/wer_10
 %WER 100.00 [ 5353 / 5353, 0 ins, 5353 del, 0 sub ] exp/tri8a_tcn_3way/decode_tgpr_5k_test_C/wer_10
 %WER 100.00 [ 32118 / 32118, 0 ins, 32118 del, 0 sub ] exp/tri8a_tcn_3way/decode_tgpr_5k_test_D/wer_10
+%WER 100.00 [ 74942 / 74942, 0 ins, 74942 del, 0 sub ] exp/tri8b_tcn_3way/decode_tgpr_5k_eval92/wer_10
+%WER 100.00 [ 5353 / 5353, 0 ins, 5353 del, 0 sub ] exp/tri8b_tcn_3way/decode_tgpr_5k_test_A/wer_10
+%WER 100.00 [ 32118 / 32118, 0 ins, 32118 del, 0 sub ] exp/tri8b_tcn_3way/decode_tgpr_5k_test_B/wer_10
+%WER 100.00 [ 5353 / 5353, 0 ins, 5353 del, 0 sub ] exp/tri8b_tcn_3way/decode_tgpr_5k_test_C/wer_10
+%WER 100.00 [ 32118 / 32118, 0 ins, 32118 del, 0 sub ] exp/tri8b_tcn_3way/decode_tgpr_5k_test_D/wer_10
+%WER 19.96 [ 14955 / 74942, 1383 ins, 3183 del, 10389 sub ] exp/tri8c_tcn_3way/decode_tgpr_5k_eval92/wer_8
 %WER 14.25 [ 10681 / 74942, 819 ins, 2763 del, 7099 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_eval92/wer_9
 %WER 3.66 [ 196 / 5353, 40 ins, 19 del, 137 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_test_A/wer_10
 %WER 8.11 [ 2604 / 32118, 279 ins, 525 del, 1800 sub ] exp/tri_dnn_layerwise_pretrain/decode_tgpr_5k_test_B/wer_9

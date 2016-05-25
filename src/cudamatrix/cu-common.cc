@@ -84,14 +84,14 @@ void GetBlockSizesForSimpleTensorOperation(int32 ib,
   gridx = 2;
   gridy = 2;
   gridz = 2;
-  KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
+  //KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
   while(dimBlock->x*gridx < ib)
     gridx *= 2;
   while(dimBlock->y*gridy < i1)
     gridy *= 2;
   while(dimBlock->z*gridz < i2*i3)
     gridz *= 2;
-  KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
+  //KALDI_LOG<<"gridx: "<<gridx<<" gridy: "<<gridy<<" gridz: "<<gridz;
   dimGrid->x = gridx;
   dimGrid->y = gridy;
   dimGrid->z = gridz;
