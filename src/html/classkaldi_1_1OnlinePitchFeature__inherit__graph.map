@@ -1,0 +1,4 @@
+<map id="OnlinePitchFeature" name="OnlinePitchFeature">
+<area shape="rect" id="node2" href="$classkaldi_1_1OnlineBaseFeature.html" title="Add a virtual class for &quot;source&quot; features such as MFCC or PLP or pitch features. " alt="" coords="17,80,159,107"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1OnlineFeatureInterface.html" title="OnlineFeatureInterface is an interface for online feature processing (it is also usable in the offlin..." alt="" coords="5,5,171,32"/>
+</map>

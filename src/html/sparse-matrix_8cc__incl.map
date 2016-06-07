@@ -1,0 +1,17 @@
+<map id="matrix/sparse&#45;matrix.cc" name="matrix/sparse&#45;matrix.cc">
+<area shape="rect" id="node5" href="$sparse-matrix_8h.html" title="matrix/sparse&#45;matrix.h" alt="" coords="1281,80,1449,107"/>
+<area shape="rect" id="node30" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="1147,229,1300,256"/>
+<area shape="rect" id="node8" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="945,477,1127,504"/>
+<area shape="rect" id="node32" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1148,395,1300,421"/>
+<area shape="rect" id="node34" href="$compressed-matrix_8h.html" title="matrix/compressed&#45;matrix.h" alt="" coords="1123,155,1327,181"/>
+<area shape="rect" id="node9" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="773,560,932,587"/>
+<area shape="rect" id="node29" href="$kaldi-blas_8h.html" title="matrix/kaldi&#45;blas.h" alt="" coords="967,560,1105,587"/>
+<area shape="rect" id="node18" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="558,709,687,736"/>
+<area shape="rect" id="node20" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="356,635,489,661"/>
+<area shape="rect" id="node22" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="801,709,940,736"/>
+<area shape="rect" id="node24" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1171,635,1289,661"/>
+<area shape="rect" id="node27" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1010,635,1147,661"/>
+<area shape="rect" id="node26" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1292,709,1431,736"/>
+<area shape="rect" id="node31" href="$kaldi-matrix-inl_8h.html" title="matrix/kaldi&#45;matrix\l&#45;inl.h" alt="" coords="1153,305,1295,346"/>
+<area shape="rect" id="node33" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1153,470,1293,511"/>
+</map>

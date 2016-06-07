@@ -1,0 +1,10 @@
+<map id="OnlinePitchFeature" name="OnlinePitchFeature">
+<area shape="rect" id="node2" href="$classkaldi_1_1OnlineBaseFeature.html" title="Add a virtual class for &quot;source&quot; features such as MFCC or PLP or pitch features. " alt="" coords="1373,132,1515,159"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1OnlineFeatureInterface.html" title="OnlineFeatureInterface is an interface for online feature processing (it is also usable in the offlin..." alt="" coords="978,5,1145,32"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1OnlinePitchFeatureImpl.html" title="OnlinePitchFeatureImpl" alt="" coords="1360,352,1528,379"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1ArbitraryResample.html" title="Class ArbitraryResample allows you to resample a signal (assumed zero outside the sample region..." alt="" coords="992,639,1131,665"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="259,352,447,379"/>
+<area shape="rect" id="node18" href="$structkaldi_1_1PitchExtractionOptions.html" title="PitchExtractionOptions" alt="" coords="270,836,437,863"/>
+<area shape="rect" id="node19" href="$classkaldi_1_1LinearResample.html" title="LinearResample is a special case of ArbitraryResample, where we want to resample a signal at linearly..." alt="" coords="1000,396,1123,423"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="614,333,770,360"/>
+</map>

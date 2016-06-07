@@ -1,0 +1,5 @@
+<map id="MatrixRandomizer" name="MatrixRandomizer">
+<area shape="rect" id="node2" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="33,229,204,256"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="5,125,208,152"/>
+<area shape="rect" id="node6" href="$structkaldi_1_1nnet1_1_1NnetDataRandomizerOptions.html" title="Configuration variables that affect how frame&#45;level shuffling is done. " alt="" coords="335,177,544,204"/>
+</map>

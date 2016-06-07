@@ -1,0 +1,33 @@
+<map id="latbin/lattice&#45;combine.cc" name="latbin/lattice&#45;combine.cc">
+<area shape="rect" id="node4" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1105,229,1249,256"/>
+<area shape="rect" id="node39" href="$lattice-functions_8h.html" title="lat/lattice&#45;functions.h" alt="" coords="2105,80,2260,107"/>
+<area shape="rect" id="node48" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="1498,155,1624,181"/>
+<area shape="rect" id="node50" href="$sausages_8h.html" title="lat/sausages.h" alt="" coords="1605,80,1720,107"/>
+<area shape="rect" id="node5" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1437,693,1596,720"/>
+<area shape="rect" id="node21" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1429,528,1573,555"/>
+<area shape="rect" id="node24" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="317,611,419,637"/>
+<area shape="rect" id="node26" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="167,528,320,555"/>
+<area shape="rect" id="node27" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="805,453,935,480"/>
+<area shape="rect" id="node29" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="727,611,840,637"/>
+<area shape="rect" id="node35" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="911,379,1033,405"/>
+<area shape="rect" id="node37" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1010,304,1139,331"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1046,843,1175,869"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="941,768,1075,795"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1355,843,1493,869"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="697,768,815,795"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1935,768,2072,795"/>
+<area shape="rect" id="node23" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1650,611,1763,637"/>
+<area shape="rect" id="node25" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="246,693,367,720"/>
+<area shape="rect" id="node32" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1068,611,1220,637"/>
+<area shape="rect" id="node33" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="665,528,813,555"/>
+<area shape="rect" id="node36" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="447,528,589,555"/>
+<area shape="rect" id="node38" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1265,528,1404,555"/>
+<area shape="rect" id="node40" href="$posterior_8h.html" title="hmm/posterior.h" alt="" coords="2119,304,2247,331"/>
+<area shape="rect" id="node43" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="2005,379,2181,405"/>
+<area shape="rect" id="node44" href="$fstext-lib_8h.html" title="fstext/fstext&#45;lib.h" alt="" coords="1777,229,1905,256"/>
+<area shape="rect" id="node49" href="$decodable-itf_8h.html" title="itf/decodable&#45;itf.h" alt="" coords="2317,155,2448,181"/>
+<area shape="rect" id="node41" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="1953,453,2093,480"/>
+<area shape="rect" id="node42" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="2559,603,2688,645"/>
+<area shape="rect" id="node46" href="$context-fst_8h.html" title="fstext/context&#45;fst.h" alt="" coords="2143,528,2285,555"/>
+<area shape="rect" id="node47" href="$determinize-star_8h.html" title="fstext/determinize\l&#45;star.h" alt="" coords="2193,603,2332,645"/>
+</map>

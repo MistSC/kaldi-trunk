@@ -1,0 +1,36 @@
+<map id="nnet2/online&#45;nnet2&#45;decodable&#45;test.cc" name="nnet2/online&#45;nnet2&#45;decodable&#45;test.cc">
+<area shape="rect" id="node2" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="741,187,917,213"/>
+<area shape="rect" id="node31" href="$_2nnet-component_8h.html" title="nnet2/nnet&#45;component.h" alt="" coords="1182,336,1364,363"/>
+<area shape="rect" id="node35" href="$decodable-am-nnet_8h.html" title="nnet2/decodable&#45;am\l&#45;nnet.h" alt="" coords="547,97,700,138"/>
+<area shape="rect" id="node40" href="$online-nnet2-decodable_8h.html" title="nnet2/online&#45;nnet2\l&#45;decodable.h" alt="" coords="737,97,879,138"/>
+<area shape="rect" id="node42" href="$online-feature_8h.html" title="feat/online&#45;feature.h" alt="" coords="1980,261,2132,288"/>
+<area shape="rect" id="node49" href="$hmm-test-utils_8h.html" title="hmm/hmm&#45;test&#45;utils.h" alt="" coords="955,104,1121,131"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="968,600,1127,627"/>
+<area shape="rect" id="node20" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="568,336,708,363"/>
+<area shape="rect" id="node24" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="199,593,328,634"/>
+<area shape="rect" id="node29" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="806,261,969,288"/>
+<area shape="rect" id="node30" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="965,419,1077,445"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1365,757,1493,784"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1957,683,2091,709"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1201,757,1340,784"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="837,683,955,709"/>
+<area shape="rect" id="node19" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="979,683,1116,709"/>
+<area shape="rect" id="node21" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="665,509,807,536"/>
+<area shape="rect" id="node22" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="251,509,385,536"/>
+<area shape="rect" id="node26" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1085,509,1224,536"/>
+<area shape="rect" id="node27" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="498,419,635,445"/>
+<area shape="rect" id="node32" href="$cu-matrix-lib_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;lib.h" alt="" coords="1249,502,1407,543"/>
+<area shape="rect" id="node33" href="$kaldi-mutex_8h.html" title="thread/kaldi&#45;mutex.h" alt="" coords="1533,509,1687,536"/>
+<area shape="rect" id="node34" href="$nnet-precondition-online_8h.html" title="nnet2/nnet&#45;precondition\l&#45;online.h" alt="" coords="1356,411,1532,453"/>
+<area shape="rect" id="node36" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="106,336,269,363"/>
+<area shape="rect" id="node37" href="$decodable-itf_8h.html" title="itf/decodable&#45;itf.h" alt="" coords="394,187,525,213"/>
+<area shape="rect" id="node38" href="$am-nnet_8h.html" title="nnet2/am&#45;nnet.h" alt="" coords="1045,261,1175,288"/>
+<area shape="rect" id="node39" href="$nnet2_2nnet-compute_8h.html" title="nnet2/nnet&#45;compute.h" alt="" coords="550,187,716,213"/>
+<area shape="rect" id="node41" href="$online-feature-itf_8h.html" title="itf/online&#45;feature\l&#45;itf.h" alt="" coords="1607,411,1733,453"/>
+<area shape="rect" id="node44" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1865,509,2009,536"/>
+<area shape="rect" id="node45" href="$feature-functions_8h.html" title="feat/feature&#45;functions.h" alt="" coords="2013,419,2184,445"/>
+<area shape="rect" id="node46" href="$feature-mfcc_8h.html" title="feat/feature&#45;mfcc.h" alt="" coords="2423,336,2568,363"/>
+<area shape="rect" id="node47" href="$feature-plp_8h.html" title="feat/feature&#45;plp.h" alt="" coords="2041,336,2175,363"/>
+<area shape="rect" id="node48" href="$feature-fbank_8h.html" title="feat/feature&#45;fbank.h" alt="" coords="2249,336,2397,363"/>
+<area shape="rect" id="node50" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="1810,419,1936,445"/>
+</map>

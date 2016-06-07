@@ -1,0 +1,7 @@
+<map id="ComputationChecker" name="ComputationChecker">
+<area shape="rect" id="node2" href="$structkaldi_1_1nnet3_1_1CheckComputationOptions.html" title="CheckComputationOptions" alt="" coords="843,169,1037,196"/>
+<area shape="rect" id="node4" href="$structkaldi_1_1nnet3_1_1NnetComputation.html" title="NnetComputation" alt="" coords="872,413,1008,440"/>
+<area shape="rect" id="node19" href="$classkaldi_1_1nnet3_1_1ComputationVariables.html" title="This class relates the matrices and sub&#45;matrices in the computation to imaginary &quot;variables&quot;, such that we can think of the operations as operating on sets of individual variables, and we can then do analysis that lets us do optimization. " alt="" coords="409,899,572,925"/>
+<area shape="rect" id="node15" href="$structkaldi_1_1nnet3_1_1Analyzer.html" title="This struct exists to set up various pieces of analysis; it helps avoid the repetition of code where ..." alt="" coords="901,840,979,867"/>
+<area shape="rect" id="node23" href="$classkaldi_1_1nnet3_1_1Nnet.html" title="Nnet" alt="" coords="913,1052,967,1079"/>
+</map>

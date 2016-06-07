@@ -1,0 +1,6 @@
+<map id="lat/sausages.h" name="lat/sausages.h">
+<area shape="rect" id="node2" href="$sausages_8cc.html" title="lat/sausages.cc" alt="" coords="5,88,125,115"/>
+<area shape="rect" id="node3" href="$lattice-combine_8cc.html" title="latbin/lattice&#45;combine.cc" alt="" coords="151,88,329,115"/>
+<area shape="rect" id="node4" href="$lattice-mbr-decode_8cc.html" title="latbin/lattice&#45;mbr\l&#45;decode.cc" alt="" coords="353,81,483,122"/>
+<area shape="rect" id="node5" href="$lattice-to-ctm-conf_8cc.html" title="latbin/lattice&#45;to&#45;ctm\l&#45;conf.cc" alt="" coords="507,81,655,122"/>
+</map>

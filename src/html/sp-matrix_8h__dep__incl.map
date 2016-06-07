@@ -1,0 +1,51 @@
+<map id="matrix/sp&#45;matrix.h" name="matrix/sp&#45;matrix.h">
+<area shape="rect" id="node2" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="3503,88,3677,115"/>
+<area shape="rect" id="node3" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1685,171,1824,197"/>
+<area shape="rect" id="node40" href="$jama-svd_8h.html" title="matrix/jama&#45;svd.h" alt="" coords="3176,171,3314,197"/>
+<area shape="rect" id="node41" href="$kaldi-matrix_8cc.html" title="matrix/kaldi&#45;matrix.cc" alt="" coords="4390,253,4549,280"/>
+<area shape="rect" id="node42" href="$kaldi-vector_8cc.html" title="matrix/kaldi&#45;vector.cc" alt="" coords="3339,171,3497,197"/>
+<area shape="rect" id="node44" href="$qr_8cc.html" title="matrix/qr.cc" alt="" coords="3723,171,3820,197"/>
+<area shape="rect" id="node45" href="$sp-matrix_8cc.html" title="matrix/sp&#45;matrix.cc" alt="" coords="3845,171,3992,197"/>
+<area shape="rect" id="node46" href="$tp-matrix_8cc.html" title="matrix/tp&#45;matrix.cc" alt="" coords="4016,171,4160,197"/>
+<area shape="rect" id="node47" href="$matrix-functions_8cc.html" title="matrix/matrix&#45;functions.cc" alt="" coords="3854,88,4044,115"/>
+<area shape="rect" id="node48" href="$optimization_8cc.html" title="matrix/optimization.cc" alt="" coords="4068,88,4232,115"/>
+<area shape="rect" id="node49" href="$cu-sp-matrix_8h.html" title="cudamatrix/cu&#45;sp&#45;matrix.h" alt="" coords="4230,171,4420,197"/>
+<area shape="rect" id="node50" href="$cu-packed-matrix_8h.html" title="cudamatrix/cu&#45;packed\l&#45;matrix.h" alt="" coords="4308,81,4472,122"/>
+<area shape="rect" id="node43" href="$packed-matrix_8cc.html" title="Implementation of specialized PackedMatrix template methods. " alt="" coords="3522,171,3698,197"/>
+<area shape="rect" id="node4" href="$online-feature-itf_8h.html" title="itf/online&#45;feature\l&#45;itf.h" alt="" coords="343,246,469,287"/>
+<area shape="rect" id="node5" href="$online-feature_8h.html" title="feat/online&#45;feature.h" alt="" coords="40,411,192,437"/>
+<area shape="rect" id="node6" href="$pitch-functions_8h.html" title="feat/pitch&#45;functions.h" alt="" coords="226,336,384,363"/>
+<area shape="rect" id="node7" href="$optimizable-itf_8h.html" title="itf/optimizable&#45;itf.h" alt="" coords="494,253,633,280"/>
+<area shape="rect" id="node8" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="1387,253,1561,280"/>
+<area shape="rect" id="node9" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="976,336,1114,363"/>
+<area shape="rect" id="node10" href="$diag-gmm-normal_8h.html" title="gmm/diag&#45;gmm&#45;normal.h" alt="" coords="947,411,1134,437"/>
+<area shape="rect" id="node11" href="$am-sgmm_8h.html" title="sgmm/am&#45;sgmm.h" alt="" coords="1160,411,1306,437"/>
+<area shape="rect" id="node12" href="$sgmm-est-fmllrbasis_8cc.html" title="sgmmbin/sgmm&#45;est&#45;fmllrbasis.cc" alt="" coords="834,485,1069,512"/>
+<area shape="rect" id="node13" href="$am-sgmm2_8h.html" title="sgmm2/am&#45;sgmm2.h" alt="" coords="1330,411,1493,437"/>
+<area shape="rect" id="node14" href="$full-gmm_8h.html" title="gmm/full&#45;gmm.h" alt="" coords="1496,336,1625,363"/>
+<area shape="rect" id="node15" href="$full-gmm-normal_8h.html" title="gmm/full&#45;gmm&#45;normal.h" alt="" coords="1574,411,1753,437"/>
+<area shape="rect" id="node16" href="$model-common_8cc.html" title="gmm/model&#45;common.cc" alt="" coords="1702,336,1881,363"/>
+<area shape="rect" id="node17" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="862,253,998,280"/>
+<area shape="rect" id="node18" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="810,336,950,363"/>
+<area shape="rect" id="node19" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="1074,253,1261,280"/>
+<area shape="rect" id="node20" href="$kaldi-gpsr_8h.html" title="matrix/kaldi&#45;gpsr.h" alt="" coords="1739,253,1878,280"/>
+<area shape="rect" id="node21" href="$matrix-lib-speed-test_8cc.html" title="matrix/matrix&#45;lib&#45;speed\l&#45;test.cc" alt="" coords="1904,246,2074,287"/>
+<area shape="rect" id="node22" href="$matrix-lib-test_8cc.html" title="matrix/matrix&#45;lib&#45;test.cc" alt="" coords="2099,253,2273,280"/>
+<area shape="rect" id="node23" href="$sparse-matrix-test_8cc.html" title="matrix/sparse&#45;matrix\l&#45;test.cc" alt="" coords="2298,246,2453,287"/>
+<area shape="rect" id="node24" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1190,336,1318,363"/>
+<area shape="rect" id="node25" href="$feature-functions_8h.html" title="feat/feature&#45;functions.h" alt="" coords="30,336,201,363"/>
+<area shape="rect" id="node26" href="$mel-computations_8h.html" title="feat/mel&#45;computations.h" alt="" coords="87,253,266,280"/>
+<area shape="rect" id="node27" href="$transform-common_8h.html" title="transform/transform\l&#45;common.h" alt="" coords="2478,246,2630,287"/>
+<area shape="rect" id="node28" href="$hlda_8h.html" title="transform/hlda.h" alt="" coords="2546,336,2674,363"/>
+<area shape="rect" id="node29" href="$cmvn_8h.html" title="transform/cmvn.h" alt="" coords="2705,253,2840,280"/>
+<area shape="rect" id="node30" href="$resample_8h.html" title="] " alt="" coords="2865,253,2988,280"/>
+<area shape="rect" id="node31" href="$sinusoid-detection_8h.html" title="feat/sinusoid&#45;detection.h" alt="" coords="2886,336,3065,363"/>
+<area shape="rect" id="node32" href="$model-test-common_8cc.html" title="gmm/model&#45;test&#45;common.cc" alt="" coords="3062,253,3272,280"/>
+<area shape="rect" id="node33" href="$lda-estimate_8h.html" title="transform/lda&#45;estimate.h" alt="" coords="3298,253,3480,280"/>
+<area shape="rect" id="node34" href="$nnet-component_8h.html" title="nnet/nnet&#45;component.h" alt="" coords="3504,253,3678,280"/>
+<area shape="rect" id="node35" href="$nnet-nnet_8h.html" title="nnet/nnet&#45;nnet.h" alt="" coords="3589,336,3718,363"/>
+<area shape="rect" id="node36" href="$nnet-pdf-prior_8h.html" title="nnet/nnet&#45;pdf&#45;prior.h" alt="" coords="3755,253,3908,280"/>
+<area shape="rect" id="node37" href="$est-pca_8cc.html" title="bin/est&#45;pca.cc" alt="" coords="3932,253,4042,280"/>
+<area shape="rect" id="node38" href="$copy-feats-to-htk_8cc.html" title="featbin/copy&#45;feats\l&#45;to&#45;htk.cc" alt="" coords="4067,246,4204,287"/>
+<area shape="rect" id="node39" href="$copy-feats-to-sphinx_8cc.html" title="featbin/copy&#45;feats\l&#45;to&#45;sphinx.cc" alt="" coords="4228,246,4365,287"/>
+</map>

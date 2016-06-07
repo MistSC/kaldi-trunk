@@ -411,7 +411,11 @@ else
         "$cnn_fea" $num_tgt $hid_layers $hid_dim >>$nnet_proto || exit 1
       ;;
     lstm)
+<<<<<<< HEAD
       utils/nnet/make_lstm_proto_mlp.py $proto_opts \
+=======
+      utils/nnet/make_lstm_proto.py $proto_opts \
+>>>>>>> f341bc910552d165a1e7c5b252714e14a92df546
         $num_fea $num_tgt >$nnet_proto || exit 1 
       ;;
     blstm)

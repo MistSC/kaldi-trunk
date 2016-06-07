@@ -1,0 +1,14 @@
+<map id="UpdatableComponent" name="UpdatableComponent">
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1AffineComponent.html" title="AffineComponent" alt="" coords="401,5,535,32"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1nnet3_1_1BlockAffineComponent.html" title="This class implements an affine transform using a block diagonal matrix e.g., one whose weight matrix..." alt="" coords="385,56,551,83"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1nnet3_1_1CompositeComponent.html" title="CompositeComponent is components representing a sequence of [simple] components. " alt="" coords="385,107,551,133"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1nnet3_1_1Convolutional1dComponent.html" title="Convolutional1dComponent implements convolution over frequency axis. " alt="" coords="369,157,567,184"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1nnet3_1_1ConvolutionComponent.html" title="ConvolutionalComponent implements 2d&#45;convolution. " alt="" coords="382,208,554,235"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html" title="PerElementOffsetComponent" alt="" coords="363,259,573,285"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1nnet3_1_1PerElementScaleComponent.html" title="PerElementScaleComponent" alt="" coords="365,309,571,336"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1nnet3_1_1RepeatedAffineComponent.html" title="RepeatedAffineComponent" alt="" coords="371,367,565,393"/>
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="6,183,103,209"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1NaturalGradientAffineComponent.html" title="Keywords: natural gradient descent, NG&#45;SGD, naturalgradient. " alt="" coords="621,5,856,32"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1nnet3_1_1NaturalGradientPerElementScaleComponent.html" title="NaturalGradientPerElement\lScaleComponent" alt="" coords="639,298,838,339"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1nnet3_1_1NaturalGradientRepeatedAffineComponent.html" title="NaturalGradientRepeatedAffine\lComponent" alt="" coords="629,363,849,405"/>
+</map>

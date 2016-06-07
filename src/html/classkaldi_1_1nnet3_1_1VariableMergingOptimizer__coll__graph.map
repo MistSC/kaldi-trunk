@@ -1,0 +1,9 @@
+<map id="VariableMergingOptimizer" name="VariableMergingOptimizer">
+<area shape="rect" id="node2" href="$structkaldi_1_1nnet3_1_1ComputationRequest.html" title="ComputationRequest" alt="" coords="847,93,1003,120"/>
+<area shape="rect" id="node3" href="$structkaldi_1_1nnet3_1_1MiscComputationInfo.html" title="MiscComputationInfo" alt="" coords="413,5,569,32"/>
+<area shape="rect" id="node6" href="$structkaldi_1_1nnet3_1_1NnetComputation.html" title="NnetComputation" alt="" coords="857,681,993,708"/>
+<area shape="rect" id="node25" href="$structkaldi_1_1nnet3_1_1NnetOptimizeOptions.html" title="NnetOptimizeOptions" alt="" coords="846,732,1005,759"/>
+<area shape="rect" id="node21" href="$classkaldi_1_1nnet3_1_1ComputationVariables.html" title="This class relates the matrices and sub&#45;matrices in the computation to imaginary &quot;variables&quot;, such that we can think of the operations as operating on sets of individual variables, and we can then do analysis that lets us do optimization. " alt="" coords="409,1223,572,1249"/>
+<area shape="rect" id="node17" href="$structkaldi_1_1nnet3_1_1Analyzer.html" title="This struct exists to set up various pieces of analysis; it helps avoid the repetition of code where ..." alt="" coords="887,1223,964,1249"/>
+<area shape="rect" id="node26" href="$classkaldi_1_1nnet3_1_1Nnet.html" title="Nnet" alt="" coords="899,1533,952,1560"/>
+</map>

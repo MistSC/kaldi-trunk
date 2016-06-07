@@ -1,0 +1,27 @@
+var classkaldi_1_1nnet3_1_1NnetDecodableBase =
+[
+    [ "NnetDecodableBase", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#acb54c2115670f4daa42e2764940bbb3f", null ],
+    [ "CheckAndFixConfigs", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#aeb4fbab0a662101fff04c90e166ae8e0", null ],
+    [ "DoNnetComputation", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#af9d1084b9a8c5b78e33871c2f06b58d5", null ],
+    [ "EnsureFrameIsComputed", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a8f98538e5b1872d90bfa56d8f9455dd2", null ],
+    [ "GetCurrentIvector", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a811a50edfb1fb0a2b207be97e4f1145a", null ],
+    [ "GetIvectorDim", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a1158e1f8de8c200d46a059bc12f63751", null ],
+    [ "GetOutput", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a77c7a8019c90ae4357f82c7fc30035ac", null ],
+    [ "GetOutputForFrame", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a420805b6018abe12fe95f37e2837984e", null ],
+    [ "NumFrames", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a3630e4e28241a122aa5b07c946a25ca0", null ],
+    [ "OutputDim", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#ae39b5253d9ea1bf56343664faa2dfc23", null ],
+    [ "compiler_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#acc1c4c518295918abed6546cfd7f065f", null ],
+    [ "current_log_post_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#ad22c360fe2eff04bdfdbdccef7855b02", null ],
+    [ "current_log_post_subsampled_offset_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a8d11588884b1fc7c9117d8ad8c37d8ad", null ],
+    [ "feats_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a8b7e28eb0bdb472bbaa0dec5ac489c52", null ],
+    [ "ivector_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#ad6e6cf176457a8aaf662e876802afac2", null ],
+    [ "log_priors_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#affa368e217bc8fc34f8f9e8b66578343", null ],
+    [ "nnet_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#adbabf05a7702103113a02a113015205f", null ],
+    [ "nnet_left_context_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a3ebd45f46ac397b7ebd5fbbeefc4e6fd", null ],
+    [ "nnet_right_context_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a8b16a776baa63f8889ac479943c35649", null ],
+    [ "num_subsampled_frames_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a44fc096b7c2d9cf44a52c433f513f054", null ],
+    [ "online_ivector_feats_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a9ea694777fa29dfefe1c49fad678cd2a", null ],
+    [ "online_ivector_period_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#a7e62804d492fb4e742cd3fdd1c3385e2", null ],
+    [ "opts_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#ab8dbe4f397b33e643c3f052e669a0bb6", null ],
+    [ "output_dim_", "classkaldi_1_1nnet3_1_1NnetDecodableBase.html#ab7d46c9e0bdb44ef975cfbd362b49345", null ]
+];

@@ -1,0 +1,33 @@
+<map id="sgmmbin/sgmm&#45;comp&#45;prexform.cc" name="sgmmbin/sgmm&#45;comp&#45;prexform.cc">
+<area shape="rect" id="node2" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="995,155,1140,181"/>
+<area shape="rect" id="node40" href="$am-sgmm_8h.html" title="sgmm/am&#45;sgmm.h" alt="" coords="1961,155,2108,181"/>
+<area shape="rect" id="node44" href="$fmllr-sgmm_8h.html" title="sgmm/fmllr&#45;sgmm.h" alt="" coords="1615,80,1767,107"/>
+<area shape="rect" id="node46" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="2702,304,2879,331"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1716,635,1875,661"/>
+<area shape="rect" id="node21" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="497,461,641,488"/>
+<area shape="rect" id="node24" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="407,552,509,579"/>
+<area shape="rect" id="node26" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="216,461,369,488"/>
+<area shape="rect" id="node27" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1105,379,1235,405"/>
+<area shape="rect" id="node29" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="857,552,969,579"/>
+<area shape="rect" id="node35" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1156,304,1279,331"/>
+<area shape="rect" id="node37" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1358,229,1487,256"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="2162,784,2291,811"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="2193,709,2327,736"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1777,784,1916,811"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1203,709,1321,736"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1727,709,1864,736"/>
+<area shape="rect" id="node23" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1802,552,1915,579"/>
+<area shape="rect" id="node25" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="246,635,367,661"/>
+<area shape="rect" id="node32" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="2596,709,2748,736"/>
+<area shape="rect" id="node33" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="1036,461,1184,488"/>
+<area shape="rect" id="node36" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="666,461,808,488"/>
+<area shape="rect" id="node38" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="2379,552,2517,579"/>
+<area shape="rect" id="node39" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="2573,635,2747,661"/>
+<area shape="rect" id="node41" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="2298,461,2472,488"/>
+<area shape="rect" id="node42" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="2032,379,2171,405"/>
+<area shape="rect" id="node43" href="$full-gmm_8h.html" title="gmm/full&#45;gmm.h" alt="" coords="2195,379,2324,405"/>
+<area shape="rect" id="node45" href="$transform-common_8h.html" title="transform/transform\l&#45;common.h" alt="" coords="1615,454,1767,495"/>
+<area shape="rect" id="node47" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="2751,461,2891,488"/>
+<area shape="rect" id="node48" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="2700,545,2829,586"/>
+<area shape="rect" id="node50" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="2829,379,2992,405"/>
+</map>

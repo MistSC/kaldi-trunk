@@ -1,0 +1,8 @@
+<map id="FeatureTransformEstimateMulti" name="FeatureTransformEstimateMulti">
+<area shape="rect" id="node2" href="$classkaldi_1_1FeatureTransformEstimate.html" title="Class for computing a feature transform used for preconditioning of the training data in neural&#45;netwo..." alt="" coords="143,341,333,368"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1LdaEstimate.html" title="Class for computing linear discriminant analysis (LDA) transform. " alt="" coords="187,264,289,291"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1SpMatrix.html" title="SpMatrix\&lt; double \&gt;" alt="" coords="163,173,313,200"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1PackedMatrix.html" title="PackedMatrix\&lt; double \&gt;" alt="" coords="131,96,309,123"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1VectorBase.html" title="Provides a vector abstraction class. " alt="" coords="333,96,501,123"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1Vector.html" title="Vector\&lt; double \&gt;" alt="" coords="340,173,475,200"/>
+</map>

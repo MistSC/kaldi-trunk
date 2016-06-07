@@ -1,0 +1,25 @@
+var classkaldi_1_1PldaEstimator =
+[
+    [ "ClassInfo", "classkaldi_1_1PldaEstimator.html#a2ef1c559463a7d5d291c04a25f06ad3b", null ],
+    [ "PldaEstimator", "classkaldi_1_1PldaEstimator.html#a80f82200ef6939ad05594ac0689793ff", null ],
+    [ "ComputeObjf", "classkaldi_1_1PldaEstimator.html#a0074f9a391d85472483f18a835eb9cb1", null ],
+    [ "ComputeObjfPart1", "classkaldi_1_1PldaEstimator.html#acdb8c49cd3fe86794022d3ff59a9bdf3", null ],
+    [ "ComputeObjfPart2", "classkaldi_1_1PldaEstimator.html#a00cc40e504f80ec480d10d781097012b", null ],
+    [ "Dim", "classkaldi_1_1PldaEstimator.html#a54f91723ab4456a315dafbef7e85408a", null ],
+    [ "Estimate", "classkaldi_1_1PldaEstimator.html#ad0db274500567c1eafc6d7f31f40780e", null ],
+    [ "EstimateFromStats", "classkaldi_1_1PldaEstimator.html#a52f6582aa8be6a3db1b1e52243f257f7", null ],
+    [ "EstimateOneIter", "classkaldi_1_1PldaEstimator.html#a3c7842c025be4f081bb67e80623d582f", null ],
+    [ "GetOutput", "classkaldi_1_1PldaEstimator.html#a04bd97b019179c6bdb8879efe4f3df93", null ],
+    [ "GetStatsFromClassMeans", "classkaldi_1_1PldaEstimator.html#a71bc1c79bfb3e4f57d86f5e6bd235567", null ],
+    [ "GetStatsFromIntraClass", "classkaldi_1_1PldaEstimator.html#a56f28d7d18bce9be6fed59876ff11960", null ],
+    [ "InitParameters", "classkaldi_1_1PldaEstimator.html#a4fb88959cb4f17203aa1c59c7f6181ef", null ],
+    [ "KALDI_DISALLOW_COPY_AND_ASSIGN", "classkaldi_1_1PldaEstimator.html#aa4c6c9ce654c44b97d243b9541d9506f", null ],
+    [ "ResetPerIterStats", "classkaldi_1_1PldaEstimator.html#a7106622bfbec115edab59e50f65937d6", null ],
+    [ "between_var_", "classkaldi_1_1PldaEstimator.html#ae4fd416484831e1456b2ac4da5de5ed2", null ],
+    [ "between_var_count_", "classkaldi_1_1PldaEstimator.html#a249ccb2277b38dad29f0b49cccd3edaf", null ],
+    [ "between_var_stats_", "classkaldi_1_1PldaEstimator.html#a87ccc0a82e9cbf17f4f5f57064e0d606", null ],
+    [ "stats_", "classkaldi_1_1PldaEstimator.html#a83120f103a331aa4916777342205f23c", null ],
+    [ "within_var_", "classkaldi_1_1PldaEstimator.html#a1a68024379e03cc3d0853fe0707af22b", null ],
+    [ "within_var_count_", "classkaldi_1_1PldaEstimator.html#a807238b7b67968cd20ebd5db538e3f17", null ],
+    [ "within_var_stats_", "classkaldi_1_1PldaEstimator.html#a1704294c1cf5584040509cb5f13f3da6", null ]
+];

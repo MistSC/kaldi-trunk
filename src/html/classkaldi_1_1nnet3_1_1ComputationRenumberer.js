@@ -1,0 +1,26 @@
+var classkaldi_1_1nnet3_1_1ComputationRenumberer =
+[
+    [ "PointerCompare", "structkaldi_1_1nnet3_1_1ComputationRenumberer_1_1PointerCompare.html", "structkaldi_1_1nnet3_1_1ComputationRenumberer_1_1PointerCompare" ],
+    [ "SubMatrixHasher", "structkaldi_1_1nnet3_1_1ComputationRenumberer_1_1SubMatrixHasher.html", "structkaldi_1_1nnet3_1_1ComputationRenumberer_1_1SubMatrixHasher" ],
+    [ "ComputationRenumberer", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a8f1ed03be326c0cbf0728194d4ac30d0", null ],
+    [ "ComputeMatrixIsUsed", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a6f8e8995300ee82f98f923a053d66573", null ],
+    [ "ComputeSubmatrixIsUsed", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a356665946a32706f0cc3c880154ff3ca", null ],
+    [ "CreateRenumbering", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a04c50ce17b400e39661d1f8a38c05f1e", null ],
+    [ "CreateRenumbering", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a1c72f841b34be9e125b5268514c72331", null ],
+    [ "RemoveIndexesMultiDuplicates", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a138955c2d9469f28aa78853564c298ce", null ],
+    [ "RemoveUnusedIndexesMulti", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a4ba6b7dba4c539ad7a149e05b59f80aa", null ],
+    [ "Renumber", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a1920fdb81424ab47c050e27102ddcfd6", null ],
+    [ "RenumberIndexes", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a228a7ce7320c66bc72058b3805fec957", null ],
+    [ "RenumberIndexesRanges", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a2d58446b9b01c450142c48ec4732b0b6", null ],
+    [ "RenumberMatrices", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#ac671ddd1b3a2e51149bc86d7a0965b64", null ],
+    [ "RenumberSubmatrices", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#aaa18736d4d5abceba0340d264da8ecd2", null ],
+    [ "SetUpMappings", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a777e19363ed62a4364eeb8743e848889", null ],
+    [ "computation_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a36d13565d1302a2bf74127b141ba3537", null ],
+    [ "matrix_is_used_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a5ce3b0b9947d694dce936488d805cbc9", null ],
+    [ "num_matrices_new_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#af21b8b1c9ede3dc6087eb7f89f7f1b43", null ],
+    [ "num_submatrices_new_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#ab22ae6f823fa687017ff28e30c668156", null ],
+    [ "old_to_new_matrix_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a2e550555b94eb7980bb3f5c0474ef816", null ],
+    [ "old_to_new_submatrix_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#ac9050b561913ee338e9a5b75d1671ac9", null ],
+    [ "submatrix_is_kept_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#a741e7e5a1297b3649eddf521ccede5a4", null ],
+    [ "submatrix_is_used_", "classkaldi_1_1nnet3_1_1ComputationRenumberer.html#ab9f2139eeea0f81f453a7d514d7fb3d2", null ]
+];

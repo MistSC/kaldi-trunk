@@ -1,0 +1,34 @@
+<map id="nnet3/nnet&#45;general&#45;component.cc" name="nnet3/nnet&#45;general&#45;component.cc">
+<area shape="rect" id="node4" href="$nnet-general-component_8h.html" title="nnet3/nnet&#45;general\l&#45;component.h" alt="" coords="182,337,327,378"/>
+<area shape="rect" id="node43" href="$nnet-parse_8h.html" title="nnet3/nnet&#45;parse.h" alt="" coords="1217,699,1361,725"/>
+<area shape="rect" id="node46" href="$nnet-computation-graph_8h.html" title="nnet3/nnet&#45;computation\l&#45;graph.h" alt="" coords="535,97,713,138"/>
+<area shape="rect" id="node5" href="$nnet-common_8h.html" title="nnet3/nnet&#45;common.h" alt="" coords="873,525,1039,552"/>
+<area shape="rect" id="node42" href="$nnet-component-itf_8h.html" title="nnet3/nnet&#45;component\l&#45;itf.h" alt="" coords="339,427,509,469"/>
+<area shape="rect" id="node45" href="$natural-gradient-online_8h.html" title="nnet3/natural&#45;gradient\l&#45;online.h" alt="" coords="483,518,649,559"/>
+<area shape="rect" id="node6" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1424,1088,1583,1115"/>
+<area shape="rect" id="node22" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1533,616,1677,643"/>
+<area shape="rect" id="node25" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1875,1005,1988,1032"/>
+<area shape="rect" id="node38" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="939,773,1077,800"/>
+<area shape="rect" id="node41" href="$cu-matrix-lib_8h.html" title="cudamatrix/cu&#45;matrix\l&#45;lib.h" alt="" coords="678,609,836,650"/>
+<area shape="rect" id="node16" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1314,1237,1443,1264"/>
+<area shape="rect" id="node18" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="925,1163,1059,1189"/>
+<area shape="rect" id="node19" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1075,1237,1213,1264"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1769,1163,1887,1189"/>
+<area shape="rect" id="node21" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1134,1163,1271,1189"/>
+<area shape="rect" id="node23" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="2259,923,2404,949"/>
+<area shape="rect" id="node26" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="1977,923,2079,949"/>
+<area shape="rect" id="node27" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2147,848,2300,875"/>
+<area shape="rect" id="node28" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1467,848,1596,875"/>
+<area shape="rect" id="node30" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="1418,923,1531,949"/>
+<area shape="rect" id="node36" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1645,773,1768,800"/>
+<area shape="rect" id="node37" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1541,699,1669,725"/>
+<area shape="rect" id="node33" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="957,923,1109,949"/>
+<area shape="rect" id="node34" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="729,1005,911,1032"/>
+<area shape="rect" id="node35" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="936,998,1076,1039"/>
+<area shape="rect" id="node39" href="$cblas-wrappers_8h.html" title="matrix/cblas&#45;wrappers.h" alt="" coords="833,848,1007,875"/>
+<area shape="rect" id="node40" href="$kaldi-matrix_8h.html" title="matrix/kaldi&#45;matrix.h" alt="" coords="728,923,881,949"/>
+<area shape="rect" id="node44" href="$kaldi-mutex_8h.html" title="thread/kaldi&#45;mutex.h" alt="" coords="347,616,500,643"/>
+<area shape="rect" id="node47" href="$_2nnet-nnet_8h.html" title="nnet3/nnet&#45;nnet.h" alt="" coords="1915,261,2053,288"/>
+<area shape="rect" id="node49" href="$nnet-computation_8h.html" title="The two main classes defined in this header are struct ComputationRequest, which basically defines a ..." alt="" coords="1889,187,2079,213"/>
+<area shape="rect" id="node48" href="$nnet-descriptor_8h.html" title="This file contains class definitions for classes ForwardingDescriptor, SumDescriptor and Descriptor..." alt="" coords="1898,344,2069,371"/>
+</map>

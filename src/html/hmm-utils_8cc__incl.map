@@ -1,0 +1,37 @@
+<map id="hmm/hmm&#45;utils.cc" name="hmm/hmm&#45;utils.cc">
+<area shape="rect" id="node3" href="$hmm-utils_8h.html" title="hmm/hmm&#45;utils.h" alt="" coords="4315,80,4452,107"/>
+<area shape="rect" id="node20" href="$fstext-lib_8h.html" title="fstext/fstext&#45;lib.h" alt="" coords="2801,229,2929,256"/>
+<area shape="rect" id="node4" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="4675,643,4839,669"/>
+<area shape="rect" id="node16" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="4397,552,4573,579"/>
+<area shape="rect" id="node19" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="4245,155,4371,181"/>
+<area shape="rect" id="node5" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="3419,907,3577,933"/>
+<area shape="rect" id="node9" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="4572,733,4712,760"/>
+<area shape="rect" id="node10" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="2808,726,2937,767"/>
+<area shape="rect" id="node13" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="1947,824,2049,851"/>
+<area shape="rect" id="node18" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="4122,824,4235,851"/>
+<area shape="rect" id="node50" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="3790,733,3935,760"/>
+<area shape="rect" id="node22" href="$context-fst_8h.html" title="fstext/context&#45;fst.h" alt="" coords="1894,312,2036,339"/>
+<area shape="rect" id="node24" href="$fstext-utils_8h.html" title="fstext/fstext&#45;utils.h" alt="" coords="1697,469,1837,496"/>
+<area shape="rect" id="node25" href="$determinize-star_8h.html" title="fstext/determinize\l&#45;star.h" alt="" coords="1181,635,1320,677"/>
+<area shape="rect" id="node31" href="$factor_8h.html" title="fstext/factor.h" alt="" coords="2365,643,2475,669"/>
+<area shape="rect" id="node33" href="$pre-determinize_8h.html" title="fstext/pre&#45;determinize.h" alt="" coords="981,643,1157,669"/>
+<area shape="rect" id="node35" href="$fst-test-utils_8h.html" title="fstext/fst&#45;test&#45;utils.h" alt="" coords="4094,552,4244,579"/>
+<area shape="rect" id="node37" href="$table-matcher_8h.html" title="fstext/table&#45;matcher.h" alt="" coords="2859,643,3023,669"/>
+<area shape="rect" id="node38" href="$trivial-factor-weight_8h.html" title="fstext/trivial&#45;factor\l&#45;weight.h" alt="" coords="408,817,547,858"/>
+<area shape="rect" id="node42" href="$lattice-weight_8h.html" title="fstext/lattice&#45;weight.h" alt="" coords="3099,643,3257,669"/>
+<area shape="rect" id="node43" href="$lattice-utils_8h.html" title="fstext/lattice&#45;utils.h" alt="" coords="2703,552,2847,579"/>
+<area shape="rect" id="node45" href="$determinize-lattice_8h.html" title="fstext/determinize\l&#45;lattice.h" alt="" coords="645,545,784,586"/>
+<area shape="rect" id="node47" href="$deterministic-fst_8h.html" title="fstext/deterministic\l&#45;fst.h" alt="" coords="3325,305,3469,346"/>
+<area shape="rect" id="node49" href="$kaldi-fst-io_8h.html" title="fstext/kaldi&#45;fst&#45;io.h" alt="" coords="3638,552,3777,579"/>
+<area shape="rect" id="node23" href="$context-fst-inl_8h.html" title="context&#45;fst&#45;inl.h" alt="" coords="1805,395,1928,421"/>
+<area shape="rect" id="node27" href="$remove-eps-local_8h.html" title="fstext/remove&#45;eps&#45;local.h" alt="" coords="2155,643,2340,669"/>
+<area shape="rect" id="node28" href="$text-utils_8h.html" title="../util/text&#45;utils.h" alt="" coords="1747,824,1872,851"/>
+<area shape="rect" id="node30" href="$fstext-utils-inl_8h.html" title="fstext/fstext&#45;utils\l&#45;inl.h" alt="" coords="1622,545,1751,586"/>
+<area shape="rect" id="node26" href="$determinize-star-inl_8h.html" title="fstext/determinize\l&#45;star&#45;inl.h" alt="" coords="1027,817,1165,858"/>
+<area shape="rect" id="node32" href="$factor-inl_8h.html" title="factor&#45;inl.h" alt="" coords="2374,733,2463,760"/>
+<area shape="rect" id="node34" href="$pre-determinize-inl_8h.html" title="fstext/pre&#45;determinize\l&#45;inl.h" alt="" coords="798,726,961,767"/>
+<area shape="rect" id="node36" href="$rand-fst_8h.html" title="fstext/rand&#45;fst.h" alt="" coords="4121,643,4244,669"/>
+<area shape="rect" id="node44" href="$lattice-utils-inl_8h.html" title="fstext/lattice&#45;utils\l&#45;inl.h" alt="" coords="2703,635,2835,677"/>
+<area shape="rect" id="node46" href="$determinize-lattice-inl_8h.html" title="fstext/determinize\l&#45;lattice&#45;inl.h" alt="" coords="144,817,283,858"/>
+<area shape="rect" id="node48" href="$deterministic-fst-inl_8h.html" title="deterministic&#45;fst&#45;inl.h" alt="" coords="3101,395,3259,421"/>
+</map>

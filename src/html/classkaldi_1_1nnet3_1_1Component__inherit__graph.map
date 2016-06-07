@@ -1,0 +1,33 @@
+<map id="Component" name="Component">
+<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1ClipGradientComponent.html" title="ClipGradientComponent" alt="" coords="178,5,353,32"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1DistributeComponent.html" title="This Component takes a larger input&#45;dim than output&#45;dim, where the input&#45;dim must be a multiple of th..." alt="" coords="186,56,345,83"/>
+<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1ElementwiseProductComponent.html" title="ElementwiseProductComponent" alt="" coords="152,107,379,133"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1nnet3_1_1FixedAffineComponent.html" title="FixedAffineComponent is an affine transform that is supplied at network initialization time and is no..." alt="" coords="183,157,348,184"/>
+<area shape="rect" id="node6" href="$classkaldi_1_1nnet3_1_1FixedBiasComponent.html" title="FixedBiasComponent applies a fixed per&#45;element bias; it&#39;s similar to the AddShift component in the nn..." alt="" coords="187,208,343,235"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1nnet3_1_1FixedScaleComponent.html" title="FixedScaleComponent applies a fixed per&#45;element scale; it&#39;s similar to the Rescale component in the n..." alt="" coords="183,259,347,285"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1nnet3_1_1MaxpoolingComponent.html" title="MaxPoolingComponent : Maxpooling component was firstly used in ConvNet for selecting an representativ..." alt="" coords="181,309,350,336"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1nnet3_1_1NonlinearComponent.html" title="This kind of Component is a base&#45;class for things like sigmoid, softmax and ReLU: nonlinearities that..." alt="" coords="186,360,345,387"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1nnet3_1_1PermuteComponent.html" title="PermuteComponent changes the order of the columns (i.e. " alt="" coords="189,411,341,437"/>
+<area shape="rect" id="node18" href="$classkaldi_1_1nnet3_1_1PnormComponent.html" title="PnormComponent" alt="" coords="196,461,335,488"/>
+<area shape="rect" id="node19" href="$classkaldi_1_1nnet3_1_1SumGroupComponent.html" title="SumGroupComponent is used to sum up groups of posteriors. " alt="" coords="182,512,349,539"/>
+<area shape="rect" id="node20" href="$classkaldi_1_1nnet3_1_1SumReduceComponent.html" title="This component is a fixed (non&#45;trainable) nonlinearity that sums its inputs to produce outputs..." alt="" coords="179,563,352,589"/>
+<area shape="rect" id="node21" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="184,689,347,716"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1nnet3_1_1LogSoftmaxComponent.html" title="LogSoftmaxComponent" alt="" coords="445,183,619,209"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1nnet3_1_1NoOpComponent.html" title="NoOpComponent" alt="" coords="465,233,599,260"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1nnet3_1_1NormalizeComponent.html" title="NormalizeComponent" alt="" coords="451,284,613,311"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1nnet3_1_1RectifiedLinearComponent.html" title="RectifiedLinearComponent" alt="" coords="437,335,627,361"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1nnet3_1_1SigmoidComponent.html" title="SigmoidComponent" alt="" coords="457,385,607,412"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1nnet3_1_1SoftmaxComponent.html" title="SoftmaxComponent" alt="" coords="457,436,607,463"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1nnet3_1_1TanhComponent.html" title="TanhComponent" alt="" coords="469,487,595,513"/>
+<area shape="rect" id="node22" href="$classkaldi_1_1nnet3_1_1AffineComponent.html" title="AffineComponent" alt="" coords="465,537,599,564"/>
+<area shape="rect" id="node24" href="$classkaldi_1_1nnet3_1_1BlockAffineComponent.html" title="This class implements an affine transform using a block diagonal matrix e.g., one whose weight matrix..." alt="" coords="449,588,615,615"/>
+<area shape="rect" id="node25" href="$classkaldi_1_1nnet3_1_1CompositeComponent.html" title="CompositeComponent is components representing a sequence of [simple] components. " alt="" coords="449,639,615,665"/>
+<area shape="rect" id="node26" href="$classkaldi_1_1nnet3_1_1Convolutional1dComponent.html" title="Convolutional1dComponent implements convolution over frequency axis. " alt="" coords="433,689,631,716"/>
+<area shape="rect" id="node27" href="$classkaldi_1_1nnet3_1_1ConvolutionComponent.html" title="ConvolutionalComponent implements 2d&#45;convolution. " alt="" coords="446,740,618,767"/>
+<area shape="rect" id="node28" href="$classkaldi_1_1nnet3_1_1PerElementOffsetComponent.html" title="PerElementOffsetComponent" alt="" coords="427,791,637,817"/>
+<area shape="rect" id="node29" href="$classkaldi_1_1nnet3_1_1PerElementScaleComponent.html" title="PerElementScaleComponent" alt="" coords="429,841,635,868"/>
+<area shape="rect" id="node31" href="$classkaldi_1_1nnet3_1_1RepeatedAffineComponent.html" title="RepeatedAffineComponent" alt="" coords="435,896,629,923"/>
+<area shape="rect" id="node23" href="$classkaldi_1_1nnet3_1_1NaturalGradientAffineComponent.html" title="Keywords: natural gradient descent, NG&#45;SGD, naturalgradient. " alt="" coords="685,537,920,564"/>
+<area shape="rect" id="node30" href="$classkaldi_1_1nnet3_1_1NaturalGradientPerElementScaleComponent.html" title="NaturalGradientPerElement\lScaleComponent" alt="" coords="703,830,902,871"/>
+<area shape="rect" id="node32" href="$classkaldi_1_1nnet3_1_1NaturalGradientRepeatedAffineComponent.html" title="NaturalGradientRepeatedAffine\lComponent" alt="" coords="693,895,913,937"/>
+</map>

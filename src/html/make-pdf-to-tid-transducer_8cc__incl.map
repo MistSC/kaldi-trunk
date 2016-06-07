@@ -1,0 +1,33 @@
+<map id="bin/make&#45;pdf&#45;to&#45;tid&#45;transducer.cc" name="bin/make&#45;pdf&#45;to&#45;tid&#45;transducer.cc">
+<area shape="rect" id="node2" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="478,245,655,272"/>
+<area shape="rect" id="node36" href="$hmm-utils_8h.html" title="hmm/hmm&#45;utils.h" alt="" coords="674,96,811,123"/>
+<area shape="rect" id="node40" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1527,245,1672,272"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="669,725,828,752"/>
+<area shape="rect" id="node21" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="517,395,657,421"/>
+<area shape="rect" id="node28" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="1029,545,1159,586"/>
+<area shape="rect" id="node34" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="609,320,772,347"/>
+<area shape="rect" id="node35" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="398,643,511,669"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="805,875,933,901"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="552,800,685,827"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="328,875,467,901"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1345,800,1463,827"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="238,800,375,827"/>
+<area shape="rect" id="node22" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="362,469,504,496"/>
+<area shape="rect" id="node23" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="1206,469,1340,496"/>
+<area shape="rect" id="node30" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="543,552,681,579"/>
+<area shape="rect" id="node32" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="581,469,717,496"/>
+<area shape="rect" id="node26" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="1222,643,1324,669"/>
+<area shape="rect" id="node29" href="$const-integer-set-inl_8h.html" title="util/const&#45;integer\l&#45;set&#45;inl.h" alt="" coords="915,635,1044,677"/>
+<area shape="rect" id="node31" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="536,643,688,669"/>
+<area shape="rect" id="node37" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="733,171,859,197"/>
+<area shape="rect" id="node38" href="$fstext-lib_8h.html" title="fstext/fstext&#45;lib.h" alt="" coords="731,245,860,272"/>
+<area shape="rect" id="node41" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1421,552,1565,579"/>
+<area shape="rect" id="node42" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2187,643,2289,669"/>
+<area shape="rect" id="node44" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2276,552,2429,579"/>
+<area shape="rect" id="node45" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1692,469,1821,496"/>
+<area shape="rect" id="node46" href="$text-utils_8h.html" title="../util/text&#45;utils.h" alt="" coords="1603,643,1728,669"/>
+<area shape="rect" id="node49" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1792,395,1915,421"/>
+<area shape="rect" id="node50" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1587,320,1716,347"/>
+<area shape="rect" id="node43" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="2259,725,2380,752"/>
+<area shape="rect" id="node47" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="1893,552,2041,579"/>
+</map>

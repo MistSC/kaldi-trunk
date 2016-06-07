@@ -1,0 +1,36 @@
+<map id="hmm/hmm&#45;utils.h" name="hmm/hmm&#45;utils.h">
+<area shape="rect" id="node2" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="482,155,645,181"/>
+<area shape="rect" id="node30" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="646,80,823,107"/>
+<area shape="rect" id="node33" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="333,80,459,107"/>
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="648,576,807,603"/>
+<area shape="rect" id="node20" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="531,229,671,256"/>
+<area shape="rect" id="node26" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="1311,395,1440,437"/>
+<area shape="rect" id="node14" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="147,725,276,752"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="557,651,691,677"/>
+<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="301,725,440,752"/>
+<area shape="rect" id="node18" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1274,651,1392,677"/>
+<area shape="rect" id="node19" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="94,651,231,677"/>
+<area shape="rect" id="node21" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="605,493,747,520"/>
+<area shape="rect" id="node22" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="1147,312,1281,339"/>
+<area shape="rect" id="node28" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="416,403,555,429"/>
+<area shape="rect" id="node29" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="509,312,645,339"/>
+<area shape="rect" id="node24" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="1586,493,1688,520"/>
+<area shape="rect" id="node27" href="$const-integer-set-inl_8h.html" title="util/const&#45;integer\l&#45;set&#45;inl.h" alt="" coords="1228,486,1357,527"/>
+<area shape="rect" id="node32" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="467,493,580,520"/>
+<area shape="rect" id="node34" href="$fstext-lib_8h.html" title="fstext/fstext&#45;lib.h" alt="" coords="1945,155,2073,181"/>
+<area shape="rect" id="node49" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="145,312,289,339"/>
+<area shape="rect" id="node36" href="$context-fst_8h.html" title="fstext/context&#45;fst.h" alt="" coords="2389,312,2531,339"/>
+<area shape="rect" id="node37" href="$determinize-star_8h.html" title="fstext/determinize\l&#45;star.h" alt="" coords="2087,395,2225,437"/>
+<area shape="rect" id="node38" href="$factor_8h.html" title="fstext/factor.h" alt="" coords="1753,312,1863,339"/>
+<area shape="rect" id="node39" href="$fst-test-utils_8h.html" title="fstext/fst&#45;test&#45;utils.h" alt="" coords="1099,651,1249,677"/>
+<area shape="rect" id="node40" href="$fstext-utils_8h.html" title="fstext/fstext&#45;utils.h" alt="" coords="1939,312,2079,339"/>
+<area shape="rect" id="node41" href="$pre-determinize_8h.html" title="fstext/pre&#45;determinize.h" alt="" coords="2641,403,2817,429"/>
+<area shape="rect" id="node42" href="$table-matcher_8h.html" title="fstext/table&#45;matcher.h" alt="" coords="2351,403,2515,429"/>
+<area shape="rect" id="node43" href="$trivial-factor-weight_8h.html" title="fstext/trivial&#45;factor\l&#45;weight.h" alt="" coords="3316,486,3455,527"/>
+<area shape="rect" id="node44" href="$lattice-weight_8h.html" title="fstext/lattice&#45;weight.h" alt="" coords="975,403,1133,429"/>
+<area shape="rect" id="node45" href="$lattice-utils_8h.html" title="fstext/lattice&#45;utils.h" alt="" coords="1649,229,1793,256"/>
+<area shape="rect" id="node46" href="$determinize-lattice_8h.html" title="fstext/determinize\l&#45;lattice.h" alt="" coords="2607,305,2745,346"/>
+<area shape="rect" id="node47" href="$deterministic-fst_8h.html" title="fstext/deterministic\l&#45;fst.h" alt="" coords="2994,395,3139,437"/>
+<area shape="rect" id="node48" href="$kaldi-fst-io_8h.html" title="fstext/kaldi&#45;fst&#45;io.h" alt="" coords="1466,403,1605,429"/>
+<area shape="rect" id="node50" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="145,403,289,429"/>
+</map>

@@ -1,0 +1,13 @@
+<map id="ComputeNormalizersClass" name="ComputeNormalizersClass">
+<area shape="rect" id="node2" href="$classkaldi_1_1MultiThreadable.html" title="MultiThreadable" alt="" coords="1101,981,1224,1008"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="204,697,391,724"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="203,628,391,655"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1PackedMatrix.html" title="PackedMatrix\&lt; BaseFloat \&gt;" alt="" coords="198,537,397,564"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1AmSgmm.html" title="Class for definition of the subspace Gmm acoustic model. " alt="" coords="1119,335,1206,361"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1FullGmm.html" title="FullGmm" alt="" coords="843,463,922,489"/>
+<area shape="rect" id="node19" href="$classkaldi_1_1AmSgmm2.html" title="Class for definition of the subspace Gmm acoustic model. " alt="" coords="1115,585,1210,612"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="456,697,611,724"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1DiagGmm.html" title="Gaussian Mixture Model with diagonal covariances. " alt="" coords="839,585,926,612"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="455,569,611,596"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1SpMatrix.html" title="SpMatrix\&lt; BaseFloat \&gt;" alt="" coords="797,61,968,88"/>
+</map>

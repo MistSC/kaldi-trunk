@@ -1,0 +1,13 @@
+<map id="DecodeUtteranceLatticeFasterClass" name="DecodeUtteranceLatticeFasterClass">
+<area shape="rect" id="node12" href="$classkaldi_1_1LatticeFasterDecoder.html" title="A bit more optimized version of the lattice decoder. " alt="" coords="1058,552,1217,579"/>
+<area shape="rect" id="node22" href="$structkaldi_1_1LatticeFasterDecoderConfig.html" title="LatticeFasterDecoderConfig" alt="" coords="646,788,845,815"/>
+<area shape="rect" id="node23" href="$structfst_1_1DeterminizeLatticePhonePrunedOptions.html" title="DeterminizeLatticePhonePruned\lOptions" alt="" coords="246,781,474,822"/>
+<area shape="rect" id="node36" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="266,897,454,924"/>
+<area shape="rect" id="node30" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="1077,1069,1197,1096"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="1064,377,1211,404"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1HashList.html" title="HashList\&lt; StateId,\l kaldi::LatticeFasterDecoder\l::Token * \&gt;" alt="" coords="646,245,845,301"/>
+<area shape="rect" id="node19" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="333,52,387,79"/>
+<area shape="rect" id="node28" href="$classkaldi_1_1TableWriter.html" title="A templated class for writing objects to an archive or script file; see The Table concept..." alt="" coords="1056,807,1219,833"/>
+<area shape="rect" id="node32" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="689,1231,802,1257"/>
+<area shape="rect" id="node35" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="667,975,823,1001"/>
+</map>

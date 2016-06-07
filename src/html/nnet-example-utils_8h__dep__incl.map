@@ -1,0 +1,18 @@
+<map id="nnet3/nnet&#45;example&#45;utils.h" name="nnet3/nnet&#45;example&#45;utils.h">
+<area shape="rect" id="node2" href="$nnet-diagnostics_8h.html" title="nnet3/nnet&#45;diagnostics.h" alt="" coords="408,187,589,213"/>
+<area shape="rect" id="node9" href="$nnet-training_8h.html" title="nnet3/nnet&#45;training.h" alt="" coords="596,104,753,131"/>
+<area shape="rect" id="node12" href="$nnet-example-test_8cc.html" title="nnet3/nnet&#45;example\l&#45;test.cc" alt="" coords="777,97,929,138"/>
+<area shape="rect" id="node13" href="$nnet-example-utils_8cc.html" title="nnet3/nnet&#45;example\l&#45;utils.cc" alt="" coords="953,97,1105,138"/>
+<area shape="rect" id="node14" href="$nnet3-acc-lda-stats_8cc.html" title="nnet3bin/nnet3&#45;acc\l&#45;lda&#45;stats.cc" alt="" coords="1129,97,1276,138"/>
+<area shape="rect" id="node15" href="$nnet3-compute-from-egs_8cc.html" title="nnet3bin/nnet3&#45;compute\l&#45;from&#45;egs.cc" alt="" coords="1300,97,1481,138"/>
+<area shape="rect" id="node16" href="$nnet3-copy-egs_8cc.html" title="nnet3bin/nnet3&#45;copy\l&#45;egs.cc" alt="" coords="1505,97,1659,138"/>
+<area shape="rect" id="node17" href="$nnet3-merge-egs_8cc.html" title="nnet3bin/nnet3&#45;merge\l&#45;egs.cc" alt="" coords="1685,97,1851,138"/>
+<area shape="rect" id="node3" href="$nnet-combine_8h.html" title="nnet3/nnet&#45;combine.h" alt="" coords="113,269,276,296"/>
+<area shape="rect" id="node6" href="$nnet-diagnostics_8cc.html" title="nnet3/nnet&#45;diagnostics.cc" alt="" coords="301,269,488,296"/>
+<area shape="rect" id="node7" href="$nnet3-compute-prob_8cc.html" title="nnet3bin/nnet3&#45;compute\l&#45;prob.cc" alt="" coords="512,262,693,303"/>
+<area shape="rect" id="node8" href="$nnet3-show-progress_8cc.html" title="nnet3bin/nnet3&#45;show\l&#45;progress.cc" alt="" coords="718,262,873,303"/>
+<area shape="rect" id="node4" href="$nnet3_2nnet-combine_8cc.html" title="nnet3/nnet&#45;combine.cc" alt="" coords="5,352,176,379"/>
+<area shape="rect" id="node5" href="$nnet3-combine_8cc.html" title="nnet3bin/nnet3&#45;combine.cc" alt="" coords="200,352,397,379"/>
+<area shape="rect" id="node10" href="$nnet-training_8cc.html" title="nnet3/nnet&#45;training.cc" alt="" coords="613,187,776,213"/>
+<area shape="rect" id="node11" href="$nnet3-train_8cc.html" title="nnet3bin/nnet3&#45;train.cc" alt="" coords="800,187,971,213"/>
+</map>

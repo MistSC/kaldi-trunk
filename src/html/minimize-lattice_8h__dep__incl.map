@@ -1,0 +1,9 @@
+<map id="lat/minimize&#45;lattice.h" name="lat/minimize&#45;lattice.h">
+<area shape="rect" id="node2" href="$determinize-lattice-pruned_8cc.html" title="lat/determinize&#45;lattice\l&#45;pruned.cc" alt="" coords="5,81,168,122"/>
+<area shape="rect" id="node3" href="$minimize-lattice-test_8cc.html" title="lat/minimize&#45;lattice\l&#45;test.cc" alt="" coords="192,81,336,122"/>
+<area shape="rect" id="node4" href="$minimize-lattice_8cc.html" title="lat/minimize&#45;lattice.cc" alt="" coords="360,88,523,115"/>
+<area shape="rect" id="node5" href="$lattice-determinize-pruned-parallel_8cc.html" title="latbin/lattice&#45;determinize\l&#45;pruned&#45;parallel.cc" alt="" coords="547,81,728,122"/>
+<area shape="rect" id="node6" href="$lattice-determinize-pruned_8cc.html" title="latbin/lattice&#45;determinize\l&#45;pruned.cc" alt="" coords="752,81,933,122"/>
+<area shape="rect" id="node7" href="$lattice-determinize_8cc.html" title="latbin/lattice&#45;determinize.cc" alt="" coords="958,88,1156,115"/>
+<area shape="rect" id="node8" href="$lattice-minimize_8cc.html" title="latbin/lattice&#45;minimize.cc" alt="" coords="1181,88,1363,115"/>
+</map>

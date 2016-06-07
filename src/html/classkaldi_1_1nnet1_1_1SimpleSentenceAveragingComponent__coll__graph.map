@@ -1,0 +1,7 @@
+<map id="SimpleSentenceAveragingComponent" name="SimpleSentenceAveragingComponent">
+<area shape="rect" id="node2" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="230,189,327,216"/>
+<area shape="rect" id="node3" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="191,97,291,124"/>
+<area shape="rect" id="node10" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="449,97,655,124"/>
+<area shape="rect" id="node5" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="81,97,167,124"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="427,189,600,216"/>
+</map>

@@ -1,0 +1,15 @@
+<map id="feat/feature&#45;mfcc.h" name="feat/feature&#45;mfcc.h">
+<area shape="rect" id="node2" href="$feature-functions-test_8cc.html" title="feat/feature&#45;functions\l&#45;test.cc" alt="" coords="4,81,163,122"/>
+<area shape="rect" id="node3" href="$feature-mfcc-test_8cc.html" title="feat/feature&#45;mfcc&#45;test.cc" alt="" coords="188,88,369,115"/>
+<area shape="rect" id="node4" href="$feature-mfcc_8cc.html" title="feat/feature&#45;mfcc.cc" alt="" coords="394,88,544,115"/>
+<area shape="rect" id="node5" href="$feature-sdc-test_8cc.html" title="feat/feature&#45;sdc&#45;test.cc" alt="" coords="569,88,740,115"/>
+<area shape="rect" id="node6" href="$online-feature_8h.html" title="feat/online&#45;feature.h" alt="" coords="765,88,917,115"/>
+<area shape="rect" id="node11" href="$compute-mfcc-feats_8cc.html" title="featbin/compute&#45;mfcc\l&#45;feats.cc" alt="" coords="941,81,1104,122"/>
+<area shape="rect" id="node12" href="$extract-feature-segments_8cc.html" title="featbin/extract&#45;feature\l&#45;segments.cc" alt="" coords="1129,81,1295,122"/>
+<area shape="rect" id="node13" href="$wav-copy_8cc.html" title="featbin/wav&#45;copy.cc" alt="" coords="1319,88,1464,115"/>
+<area shape="rect" id="node14" href="$wav-to-duration_8cc.html" title="featbin/wav&#45;to&#45;duration.cc" alt="" coords="1489,88,1676,115"/>
+<area shape="rect" id="node7" href="$online-feature-test_8cc.html" title="feat/online&#45;feature\l&#45;test.cc" alt="" coords="505,171,644,213"/>
+<area shape="rect" id="node8" href="$online-feature_8cc.html" title="feat/online&#45;feature.cc" alt="" coords="669,179,827,205"/>
+<area shape="rect" id="node9" href="$pitch-functions_8cc.html" title="feat/pitch&#45;functions.cc" alt="" coords="852,179,1015,205"/>
+<area shape="rect" id="node10" href="$online-nnet2-decodable-test_8cc.html" title="nnet2/online&#45;nnet2\l&#45;decodable&#45;test.cc" alt="" coords="1039,171,1181,213"/>
+</map>

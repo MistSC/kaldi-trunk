@@ -1,0 +1,6 @@
+<map id="Compiler" name="Compiler">
+<area shape="rect" id="node3" href="$structkaldi_1_1nnet3_1_1ComputationRequest.html" title="ComputationRequest" alt="" coords="398,139,554,165"/>
+<area shape="rect" id="node4" href="$structkaldi_1_1nnet3_1_1MiscComputationInfo.html" title="MiscComputationInfo" alt="" coords="21,19,177,45"/>
+<area shape="rect" id="node7" href="$structkaldi_1_1nnet3_1_1ComputationGraph.html" title="The first step in compilation is to turn the ComputationSpecification into a ComputationGraph, where for each Cindex we have a list of other Cindexes that it depends on. " alt="" coords="404,284,548,311"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1nnet3_1_1Nnet.html" title="Nnet" alt="" coords="449,444,503,471"/>
+</map>

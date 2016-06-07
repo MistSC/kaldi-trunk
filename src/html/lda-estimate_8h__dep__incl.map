@@ -1,0 +1,13 @@
+<map id="transform/lda&#45;estimate.h" name="transform/lda&#45;estimate.h">
+<area shape="rect" id="node2" href="$lda-estimate-test_8cc.html" title="transform/lda&#45;estimate\l&#45;test.cc" alt="" coords="5,81,176,122"/>
+<area shape="rect" id="node3" href="$lda-estimate_8cc.html" title="transform/lda&#45;estimate.cc" alt="" coords="201,88,388,115"/>
+<area shape="rect" id="node4" href="$acc-lda_8cc.html" title="bin/acc&#45;lda.cc" alt="" coords="413,88,523,115"/>
+<area shape="rect" id="node5" href="$est-lda_8cc.html" title="bin/est&#45;lda.cc" alt="" coords="547,88,653,115"/>
+<area shape="rect" id="node6" href="$sum-lda-accs_8cc.html" title="bin/sum&#45;lda&#45;accs.cc" alt="" coords="677,88,825,115"/>
+<area shape="rect" id="node7" href="$get-feature-transform_8h.html" title="This file is modified from transform/lda&#45;estimate.h It contains a class intended to be used in precon..." alt="" coords="851,88,1065,115"/>
+<area shape="rect" id="node11" href="$nnet3-acc-lda-stats_8cc.html" title="nnet3bin/nnet3&#45;acc\l&#45;lda&#45;stats.cc" alt="" coords="1091,81,1237,122"/>
+<area shape="rect" id="node12" href="$nnet3-compute-from-egs_8cc.html" title="nnet3bin/nnet3&#45;compute\l&#45;from&#45;egs.cc" alt="" coords="1261,81,1443,122"/>
+<area shape="rect" id="node8" href="$get-feature-transform_8cc.html" title="nnet2/get&#45;feature&#45;transform.cc" alt="" coords="619,179,840,205"/>
+<area shape="rect" id="node9" href="$nnet-get-feature-transform-multi_8cc.html" title="nnet2bin/nnet&#45;get&#45;feature\l&#45;transform&#45;multi.cc" alt="" coords="865,171,1052,213"/>
+<area shape="rect" id="node10" href="$nnet-get-feature-transform_8cc.html" title="nnet2bin/nnet&#45;get&#45;feature\l&#45;transform.cc" alt="" coords="1077,171,1264,213"/>
+</map>

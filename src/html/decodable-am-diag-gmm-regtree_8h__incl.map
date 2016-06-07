@@ -1,0 +1,32 @@
+<map id="transform/decodable&#45;am&#45;diag&#45;gmm&#45;regtree.h" name="transform/decodable&#45;am&#45;diag&#45;gmm&#45;regtree.h">
+<area shape="rect" id="node3" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="686,691,845,717"/>
+<area shape="rect" id="node25" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="724,376,888,403"/>
+<area shape="rect" id="node34" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="371,285,548,312"/>
+<area shape="rect" id="node42" href="$decodable-itf_8h.html" title="itf/decodable&#45;itf.h" alt="" coords="498,195,629,221"/>
+<area shape="rect" id="node43" href="$regression-tree_8h.html" title="transform/regression\l&#45;tree.h" alt="" coords="1018,278,1173,319"/>
+<area shape="rect" id="node45" href="$decodable-am-diag-gmm_8h.html" title="gmm/decodable&#45;am&#45;diag\l&#45;gmm.h" alt="" coords="756,97,940,138"/>
+<area shape="rect" id="node46" href="$regtree-fmllr-diag-gmm_8h.html" title="transform/regtree&#45;fmllr\l&#45;diag&#45;gmm.h" alt="" coords="1758,187,1926,229"/>
+<area shape="rect" id="node49" href="$regtree-mllr-diag-gmm_8h.html" title="transform/regtree&#45;mllr\l&#45;diag&#45;gmm.h" alt="" coords="1014,187,1178,229"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="30,848,158,875"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="410,773,544,800"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="273,848,412,875"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="911,773,1029,800"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="698,773,834,800"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="969,848,1108,875"/>
+<area shape="rect" id="node26" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="1393,459,1532,485"/>
+<area shape="rect" id="node33" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="652,459,765,485"/>
+<area shape="rect" id="node28" href="$model-common_8h.html" title="gmm/model&#45;common.h" alt="" coords="1119,533,1293,560"/>
+<area shape="rect" id="node29" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1200,608,1338,635"/>
+<area shape="rect" id="node30" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="906,533,1042,560"/>
+<area shape="rect" id="node31" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="1369,533,1556,560"/>
+<area shape="rect" id="node32" href="$diag-gmm-inl_8h.html" title="gmm/diag&#45;gmm&#45;inl.h" alt="" coords="1630,533,1788,560"/>
+<area shape="rect" id="node35" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="412,459,552,485"/>
+<area shape="rect" id="node38" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="34,683,164,725"/>
+<area shape="rect" id="node41" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="207,376,370,403"/>
+<area shape="rect" id="node36" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="484,608,626,635"/>
+<area shape="rect" id="node37" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="326,608,460,635"/>
+<area shape="rect" id="node44" href="$transform-common_8h.html" title="transform/transform\l&#45;common.h" alt="" coords="1766,369,1918,410"/>
+<area shape="rect" id="node47" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="2196,459,2318,485"/>
+<area shape="rect" id="node48" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="2348,533,2477,560"/>
+<area shape="rect" id="node50" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="2022,376,2166,403"/>
+</map>

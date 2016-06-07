@@ -1,0 +1,23 @@
+<map id="sgmm/estimate&#45;am&#45;sgmm.h" name="sgmm/estimate&#45;am&#45;sgmm.h">
+<area shape="rect" id="node2" href="$estimate-am-sgmm-ebw_8h.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;ebw.h" alt="" coords="226,81,421,122"/>
+<area shape="rect" id="node5" href="$estimate-am-sgmm-multi-test_8cc.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;multi&#45;test.cc" alt="" coords="447,171,643,213"/>
+<area shape="rect" id="node6" href="$estimate-am-sgmm-multi_8h.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;multi.h" alt="" coords="646,81,841,122"/>
+<area shape="rect" id="node8" href="$sgmm-est-multi_8cc.html" title="sgmmbin/sgmm&#45;est&#45;multi.cc" alt="" coords="887,179,1093,205"/>
+<area shape="rect" id="node9" href="$estimate-am-sgmm-test_8cc.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;test.cc" alt="" coords="918,81,1113,122"/>
+<area shape="rect" id="node10" href="$estimate-am-sgmm_8cc.html" title="sgmm/estimate&#45;am&#45;sgmm.cc" alt="" coords="1138,88,1352,115"/>
+<area shape="rect" id="node11" href="$sgmm-acc-stats-ali_8cc.html" title="sgmmbin/sgmm&#45;acc&#45;stats\l&#45;ali.cc" alt="" coords="1377,81,1567,122"/>
+<area shape="rect" id="node12" href="$sgmm-acc-stats-gpost_8cc.html" title="sgmmbin/sgmm&#45;acc&#45;stats\l&#45;gpost.cc" alt="" coords="1591,81,1781,122"/>
+<area shape="rect" id="node13" href="$sgmm-acc-stats_8cc.html" title="sgmmbin/sgmm&#45;acc&#45;stats.cc" alt="" coords="1806,88,2015,115"/>
+<area shape="rect" id="node14" href="$sgmm-acc-stats2_8cc.html" title="sgmmbin/sgmm&#45;acc&#45;stats2.cc" alt="" coords="2039,88,2256,115"/>
+<area shape="rect" id="node15" href="$sgmm-build-tree_8cc.html" title="sgmmbin/sgmm&#45;build\l&#45;tree.cc" alt="" coords="2281,81,2444,122"/>
+<area shape="rect" id="node16" href="$sgmm-est-spkvecs-gpost_8cc.html" title="sgmmbin/sgmm&#45;est&#45;spkvecs\l&#45;gpost.cc" alt="" coords="2468,81,2676,122"/>
+<area shape="rect" id="node17" href="$sgmm-est-spkvecs_8cc.html" title="sgmmbin/sgmm&#45;est&#45;spkvecs.cc" alt="" coords="2700,88,2927,115"/>
+<area shape="rect" id="node18" href="$sgmm-est_8cc.html" title="sgmmbin/sgmm&#45;est.cc" alt="" coords="2951,88,3121,115"/>
+<area shape="rect" id="node19" href="$sgmm-init-from-tree-stats_8cc.html" title="sgmmbin/sgmm&#45;init&#45;from\l&#45;tree&#45;stats.cc" alt="" coords="3145,81,3332,122"/>
+<area shape="rect" id="node20" href="$sgmm-mixup_8cc.html" title="sgmmbin/sgmm&#45;mixup.cc" alt="" coords="3356,88,3545,115"/>
+<area shape="rect" id="node21" href="$sgmm-post-to-gpost_8cc.html" title="sgmmbin/sgmm&#45;post&#45;to\l&#45;gpost.cc" alt="" coords="3569,81,3748,122"/>
+<area shape="rect" id="node22" href="$sgmm-sum-accs_8cc.html" title="sgmmbin/sgmm&#45;sum&#45;accs.cc" alt="" coords="3773,88,3984,115"/>
+<area shape="rect" id="node3" href="$estimate-am-sgmm-ebw_8cc.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;ebw.cc" alt="" coords="5,171,200,213"/>
+<area shape="rect" id="node4" href="$sgmm-est-ebw_8cc.html" title="sgmmbin/sgmm&#45;est&#45;ebw.cc" alt="" coords="225,179,423,205"/>
+<area shape="rect" id="node7" href="$estimate-am-sgmm-multi_8cc.html" title="sgmm/estimate&#45;am&#45;sgmm\l&#45;multi.cc" alt="" coords="667,171,863,213"/>
+</map>

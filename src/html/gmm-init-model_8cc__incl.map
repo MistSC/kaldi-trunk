@@ -1,0 +1,33 @@
+<map id="gmmbin/gmm&#45;init&#45;model.cc" name="gmmbin/gmm&#45;init&#45;model.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1549,544,1708,571"/>
+<area shape="rect" id="node21" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1350,155,1495,181"/>
+<area shape="rect" id="node29" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="2163,461,2276,488"/>
+<area shape="rect" id="node35" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="819,229,983,256"/>
+<area shape="rect" id="node39" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="323,379,509,405"/>
+<area shape="rect" id="node40" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="2059,155,2236,181"/>
+<area shape="rect" id="node41" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="1861,304,2001,331"/>
+<area shape="rect" id="node47" href="$mle-am-diag-gmm_8h.html" title="gmm/mle&#45;am&#45;diag&#45;gmm.h" alt="" coords="1017,80,1209,107"/>
+<area shape="rect" id="node49" href="$build-tree-utils_8h.html" title="tree/build&#45;tree&#45;utils.h" alt="" coords="1530,80,1685,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="2349,693,2477,720"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="2100,619,2233,645"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1700,693,1839,720"/>
+<area shape="rect" id="node19" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1110,619,1228,645"/>
+<area shape="rect" id="node20" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1685,619,1821,645"/>
+<area shape="rect" id="node22" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1102,379,1247,405"/>
+<area shape="rect" id="node25" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="1425,461,1527,488"/>
+<area shape="rect" id="node26" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="93,379,247,405"/>
+<area shape="rect" id="node27" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1708,379,1837,405"/>
+<area shape="rect" id="node32" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1460,304,1583,331"/>
+<area shape="rect" id="node33" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1511,229,1640,256"/>
+<area shape="rect" id="node24" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="1235,461,1348,488"/>
+<area shape="rect" id="node34" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="869,461,1008,488"/>
+<area shape="rect" id="node36" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="787,304,925,331"/>
+<area shape="rect" id="node37" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="787,379,924,405"/>
+<area shape="rect" id="node38" href="$clusterable-itf_8h.html" title="itf/clusterable&#45;itf.h" alt="" coords="557,461,692,488"/>
+<area shape="rect" id="node44" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="2403,454,2532,495"/>
+<area shape="rect" id="node46" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="2186,229,2349,256"/>
+<area shape="rect" id="node42" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="1774,461,1916,488"/>
+<area shape="rect" id="node43" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="2066,379,2200,405"/>
+<area shape="rect" id="node48" href="$mle-diag-gmm_8h.html" title="gmm/mle&#45;diag&#45;gmm.h" alt="" coords="1030,229,1196,256"/>
+<area shape="rect" id="node50" href="$build-tree-questions_8h.html" title="tree/build&#45;tree&#45;questions.h" alt="" coords="1716,229,1908,256"/>
+</map>

@@ -1,0 +1,33 @@
+<map id="bin/extract&#45;ctx.cc" name="bin/extract&#45;ctx.cc">
+<area shape="rect" id="node4" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="1333,693,1492,720"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="661,229,805,256"/>
+<area shape="rect" id="node34" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="1745,528,1897,555"/>
+<area shape="rect" id="node40" href="$build-tree_8h.html" title="tree/build&#45;tree.h" alt="" coords="1937,80,2063,107"/>
+<area shape="rect" id="node42" href="$build-tree-questions_8h.html" title="tree/build&#45;tree&#45;questions.h" alt="" coords="1741,229,1933,256"/>
+<area shape="rect" id="node44" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="1813,304,1953,331"/>
+<area shape="rect" id="node49" href="$clusterable-classes_8h.html" title="tree/clusterable&#45;classes.h" alt="" coords="1432,379,1619,405"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="798,843,927,869"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="1243,768,1376,795"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="1688,843,1827,869"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="747,768,865,795"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1878,768,2015,795"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="952,843,1091,869"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="878,528,1023,555"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="303,611,405,637"/>
+<area shape="rect" id="node31" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="277,528,431,555"/>
+<area shape="rect" id="node32" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="720,453,849,480"/>
+<area shape="rect" id="node33" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="729,611,841,637"/>
+<area shape="rect" id="node37" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="824,379,947,405"/>
+<area shape="rect" id="node38" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="822,304,951,331"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="933,611,1045,637"/>
+<area shape="rect" id="node30" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="145,693,265,720"/>
+<area shape="rect" id="node35" href="$matrix-common_8h.html" title="matrix/matrix&#45;common.h" alt="" coords="1663,611,1845,637"/>
+<area shape="rect" id="node36" href="$kaldi-vector-inl_8h.html" title="matrix/kaldi&#45;vector\l&#45;inl.h" alt="" coords="1921,603,2061,645"/>
+<area shape="rect" id="node39" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="1752,453,1891,480"/>
+<area shape="rect" id="node41" href="$build-tree-utils_8h.html" title="tree/build&#45;tree&#45;utils.h" alt="" coords="1830,155,1985,181"/>
+<area shape="rect" id="node43" href="$stl-utils_8h.html" title="util/stl&#45;utils.h" alt="" coords="1274,611,1376,637"/>
+<area shape="rect" id="node45" href="$context-dep-itf_8h.html" title="itf/context&#45;dep&#45;itf.h" alt="" coords="1919,453,2061,480"/>
+<area shape="rect" id="node46" href="$event-map_8h.html" title="tree/event&#45;map.h" alt="" coords="1503,528,1637,555"/>
+<area shape="rect" id="node47" href="$cluster-utils_8h.html" title="tree/cluster&#45;utils.h" alt="" coords="1815,379,1952,405"/>
+<area shape="rect" id="node48" href="$clusterable-itf_8h.html" title="itf/clusterable&#45;itf.h" alt="" coords="1455,453,1589,480"/>
+</map>

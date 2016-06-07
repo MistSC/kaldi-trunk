@@ -1,0 +1,23 @@
+<map id="EbwUpdatePhoneVectorsClass" name="EbwUpdatePhoneVectorsClass">
+<area shape="rect" id="node2" href="$classkaldi_1_1MultiThreadable.html" title="MultiThreadable" alt="" coords="1363,247,1485,273"/>
+<area shape="rect" id="node9" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="268,757,455,784"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="267,808,455,835"/>
+<area shape="rect" id="node17" href="$classkaldi_1_1PackedMatrix.html" title="PackedMatrix\&lt; BaseFloat \&gt;" alt="" coords="262,891,461,917"/>
+<area shape="rect" id="node19" href="$classkaldi_1_1MleAmSgmmAccs.html" title="Class for the accumulators associated with the SGMM parameters except speaker vectors. " alt="" coords="1039,1060,1177,1087"/>
+<area shape="rect" id="node23" href="$classkaldi_1_1VectorBase.html" title="Provides a vector abstraction class. " alt="" coords="277,1664,445,1691"/>
+<area shape="rect" id="node25" href="$classkaldi_1_1MleAmSgmm2Accs.html" title="Class for the accumulators associated with the phonetic&#45;subspace model parameters. " alt="" coords="1035,1433,1181,1460"/>
+<area shape="rect" id="node27" href="$classkaldi_1_1MatrixBase.html" title="Base class which provides matrix operations not involving resizing or allocation. ..." alt="" coords="278,1489,445,1516"/>
+<area shape="rect" id="node5" href="$classkaldi_1_1AmSgmm.html" title="Class for definition of the subspace Gmm acoustic model. " alt="" coords="1381,297,1467,324"/>
+<area shape="rect" id="node7" href="$classkaldi_1_1FullGmm.html" title="FullGmm" alt="" coords="1069,479,1147,505"/>
+<area shape="rect" id="node30" href="$classkaldi_1_1AmSgmm2.html" title="Class for definition of the subspace Gmm acoustic model. " alt="" coords="1377,784,1471,811"/>
+<area shape="rect" id="node8" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="688,479,843,505"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1DiagGmm.html" title="Gaussian Mixture Model with diagonal covariances. " alt="" coords="1065,200,1151,227"/>
+<area shape="rect" id="node34" href="$structkaldi_1_1EbwAmSgmm2Options.html" title="This header implements a form of Extended Baum&#45;Welch training for SGMMs. " alt="" coords="486,1921,655,1948"/>
+<area shape="rect" id="node36" href="$structkaldi_1_1EbwAmSgmmOptions.html" title="This header implements a form of Extended Baum&#45;Welch training for SGMMs. " alt="" coords="490,1733,651,1760"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="687,719,843,745"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1SpMatrix.html" title="SpMatrix\&lt; BaseFloat \&gt;" alt="" coords="1023,763,1193,789"/>
+<area shape="rect" id="node22" href="$classkaldi_1_1Vector.html" title="Vector\&lt; double \&gt;" alt="" coords="697,1664,833,1691"/>
+<area shape="rect" id="node33" href="$classkaldi_1_1EbwAmSgmm2Updater.html" title="EbwAmSgmm2Updater" alt="" coords="1022,1787,1194,1813"/>
+<area shape="rect" id="node35" href="$classkaldi_1_1EbwAmSgmmUpdater.html" title="Contains the functions needed to update the SGMM parameters. " alt="" coords="1026,1708,1190,1735"/>
+<area shape="rect" id="node26" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; double \&gt;" alt="" coords="698,1489,833,1516"/>
+</map>

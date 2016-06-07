@@ -1,0 +1,5 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classkaldi_1_1LdaEstimate.html" title="Class for computing linear discriminant analysis (LDA) transform. " alt="" coords="6,12,109,39"/>
+<area shape="rect" id="node2" href="$classkaldi_1_1FeatureTransformEstimate.html" title="Class for computing a feature transform used for preconditioning of the training data in neural&#45;netwo..." alt="" coords="158,12,349,39"/>
+<area shape="rect" id="node3" href="$classkaldi_1_1FeatureTransformEstimateMulti.html" title="FeatureTransformEstimate\lMulti" alt="" coords="398,5,589,46"/>
+</map>

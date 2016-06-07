@@ -1,0 +1,31 @@
+<map id="bin/get&#45;silence&#45;probs.cc" name="bin/get&#45;silence&#45;probs.cc">
+<area shape="rect" id="node2" href="$kaldi-common_8h.html" title="base/kaldi&#45;common.h" alt="" coords="664,693,823,720"/>
+<area shape="rect" id="node25" href="$common-utils_8h.html" title="util/common&#45;utils.h" alt="" coords="1509,229,1653,256"/>
+<area shape="rect" id="node42" href="$am-diag-gmm_8h.html" title="gmm/am&#45;diag&#45;gmm.h" alt="" coords="187,453,351,480"/>
+<area shape="rect" id="node44" href="$transition-model_8h.html" title="hmm/transition&#45;model.h" alt="" coords="578,379,755,405"/>
+<area shape="rect" id="node49" href="$hmm-utils_8h.html" title="hmm/hmm&#45;utils.h" alt="" coords="633,80,769,107"/>
+<area shape="rect" id="node13" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="1510,843,1639,869"/>
+<area shape="rect" id="node16" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="523,768,656,795"/>
+<area shape="rect" id="node18" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="395,843,533,869"/>
+<area shape="rect" id="node20" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="1495,768,1613,795"/>
+<area shape="rect" id="node23" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="885,768,1021,795"/>
+<area shape="rect" id="node22" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1347,843,1485,869"/>
+<area shape="rect" id="node26" href="$parse-options_8h.html" title="util/parse&#45;options.h" alt="" coords="1123,528,1268,555"/>
+<area shape="rect" id="node29" href="$kaldi-io_8h.html" title="util/kaldi&#45;io.h" alt="" coords="2113,611,2215,637"/>
+<area shape="rect" id="node31" href="$simple-io-funcs_8h.html" title="util/simple&#45;io&#45;funcs.h" alt="" coords="2204,528,2357,555"/>
+<area shape="rect" id="node32" href="$kaldi-holder_8h.html" title="util/kaldi&#45;holder.h" alt="" coords="1731,453,1860,480"/>
+<area shape="rect" id="node34" href="$text-utils_8h.html" title="util/text&#45;utils.h" alt="" coords="1659,611,1772,637"/>
+<area shape="rect" id="node38" href="$kaldi-table_8h.html" title="util/kaldi&#45;table.h" alt="" coords="1573,379,1696,405"/>
+<area shape="rect" id="node40" href="$table-types_8h.html" title="util/table&#45;types.h" alt="" coords="1569,304,1697,331"/>
+<area shape="rect" id="node28" href="$options-itf_8h.html" title="itf/options&#45;itf.h" alt="" coords="515,611,628,637"/>
+<area shape="rect" id="node30" href="$kaldi-io-inl_8h.html" title="util/kaldi&#45;io&#45;inl.h" alt="" coords="2163,693,2284,720"/>
+<area shape="rect" id="node35" href="$kaldi-vector_8h.html" title="matrix/kaldi&#45;vector.h" alt="" coords="921,693,1073,720"/>
+<area shape="rect" id="node36" href="$kaldi-holder-inl_8h.html" title="util/kaldi&#45;holder&#45;inl.h" alt="" coords="1837,528,1985,555"/>
+<area shape="rect" id="node39" href="$kaldi-table-inl_8h.html" title="util/kaldi&#45;table&#45;inl.h" alt="" coords="1619,528,1761,555"/>
+<area shape="rect" id="node41" href="$matrix-lib_8h.html" title="matrix/matrix&#45;lib.h" alt="" coords="805,611,944,637"/>
+<area shape="rect" id="node43" href="$diag-gmm_8h.html" title="gmm/diag&#45;gmm.h" alt="" coords="200,528,339,555"/>
+<area shape="rect" id="node45" href="$context-dep_8h.html" title="tree/context&#45;dep.h" alt="" coords="805,528,945,555"/>
+<area shape="rect" id="node46" href="$const-integer-set_8h.html" title="util/const&#45;integer\l&#45;set.h" alt="" coords="1272,603,1401,645"/>
+<area shape="rect" id="node48" href="$hmm-topology_8h.html" title="hmm/hmm&#45;topology.h" alt="" coords="894,453,1057,480"/>
+<area shape="rect" id="node50" href="$kaldi-lattice_8h.html" title="lat/kaldi&#45;lattice.h" alt="" coords="762,155,888,181"/>
+</map>

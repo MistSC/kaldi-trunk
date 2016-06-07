@@ -1,0 +1,12 @@
+<map id="Mfcc" name="Mfcc">
+<area shape="rect" id="node4" href="$structkaldi_1_1MfccOptions.html" title="MfccOptions contains basic options for computing MFCC features It only includes things that can be do..." alt="" coords="703,415,803,441"/>
+<area shape="rect" id="node7" href="$structkaldi_1_1MelBanksOptions.html" title="MelBanksOptions" alt="" coords="389,452,521,479"/>
+<area shape="rect" id="node8" href="$structkaldi_1_1FrameExtractionOptions.html" title="FrameExtractionOptions" alt="" coords="367,195,542,221"/>
+<area shape="rect" id="node12" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="361,564,549,591"/>
+<area shape="rect" id="node14" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="361,680,548,707"/>
+<area shape="rect" id="node16" href="$classkaldi_1_1SplitRadixComplexFft.html" title="SplitRadixComplexFft\l\&lt; BaseFloat \&gt;" alt="" coords="377,826,533,867"/>
+<area shape="rect" id="node10" href="$structkaldi_1_1FeatureWindowFunction.html" title="FeatureWindowFunction" alt="" coords="1035,520,1205,547"/>
+<area shape="rect" id="node11" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="675,572,831,599"/>
+<area shape="rect" id="node13" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="856,664,1011,691"/>
+<area shape="rect" id="node15" href="$classkaldi_1_1SplitRadixRealFft.html" title="SplitRadixRealFft\&lt;\l BaseFloat \&gt;" alt="" coords="685,742,822,783"/>
+</map>
