@@ -411,7 +411,7 @@ else
         "$cnn_fea" $num_tgt $hid_layers $hid_dim >>$nnet_proto || exit 1
       ;;
     lstm)
-      utils/nnet/make_lstm_proto.py $proto_opts \
+      utils/nnet/make_lstm_proto_mlp.py $proto_opts \
         $num_fea $num_tgt >$nnet_proto || exit 1 
       ;;
     blstm)

@@ -1,9 +1,0 @@
-<map id="UpdatableComponent" name="UpdatableComponent">
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1AffineComponent.html" title="AffineComponent" alt="" coords="396,64,529,91"/>
-<area shape="rect" id="node6" href="$classkaldi_1_1nnet2_1_1BlockAffineComponent.html" title="BlockAffineComponent" alt="" coords="379,119,546,145"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1nnet2_1_1Convolutional1dComponent.html" title="Convolutional1dComponent implements convolution over frequency axis. " alt="" coords="363,169,562,196"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="6,119,103,145"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet2_1_1AffineComponentPreconditioned.html" title="AffineComponentPreconditioned" alt="" coords="629,5,857,32"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1nnet2_1_1AffineComponentPreconditionedOnline.html" title="Keywords: natural gradient descent, NG&#45;SGD, naturalgradient. " alt="" coords="629,57,857,98"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1nnet2_1_1BlockAffineComponentPreconditioned.html" title="BlockAffineComponentPreconditioned" alt="" coords="611,123,874,149"/>
-</map>

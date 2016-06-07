@@ -1,7 +1,0 @@
-<map id="LatticePhoneAligner" name="LatticePhoneAligner">
-<area shape="rect" id="node3" href="$structkaldi_1_1PhoneAlignLatticeOptions.html" title="PhoneAlignLatticeOptions" alt="" coords="869,148,1054,175"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="901,395,1021,421"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="506,395,619,421"/>
-<area shape="rect" id="node15" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="163,511,351,537"/>
-<area shape="rect" id="node14" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="485,511,641,537"/>
-</map>

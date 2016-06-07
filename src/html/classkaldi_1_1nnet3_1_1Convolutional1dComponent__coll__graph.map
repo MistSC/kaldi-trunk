@@ -1,8 +1,0 @@
-<map id="Convolutional1dComponent" name="Convolutional1dComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters; it extends the interface of C..." alt="" coords="85,248,248,275"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="5,127,101,153"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="385,127,588,153"/>
-<area shape="rect" id="node6" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="671,248,844,275"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="663,127,868,153"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="417,248,588,275"/>
-</map>

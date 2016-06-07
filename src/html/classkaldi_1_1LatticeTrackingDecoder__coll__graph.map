@@ -1,6 +1,0 @@
-<map id="LatticeTrackingDecoder" name="LatticeTrackingDecoder">
-<area shape="rect" id="node17" href="$structkaldi_1_1LatticeTrackingDecoderConfig.html" title="LatticeTrackingDecoderConfig" alt="" coords="633,567,844,593"/>
-<area shape="rect" id="node19" href="$structfst_1_1DeterminizeLatticePhonePrunedOptions.html" title="DeterminizeLatticePhonePruned\lOptions" alt="" coords="230,629,458,670"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1HashList.html" title="HashList\&lt; StateId,\l kaldi::LatticeTrackingDecoder\l::Token * \&gt;" alt="" coords="633,173,844,229"/>
-<area shape="rect" id="node14" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="317,220,371,247"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="PldaEstimator" name="PldaEstimator">
-<area shape="rect" id="node3" href="$classkaldi_1_1PldaStats.html" title="PldaStats" alt="" coords="433,351,515,377"/>
-<area shape="rect" id="node6" href="$classkaldi_1_1PackedMatrix.html" title="PackedMatrix\&lt; double \&gt;" alt="" coords="216,96,395,123"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1SpMatrix.html" title="SpMatrix\&lt; double \&gt;" alt="" coords="213,208,363,235"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1VectorBase.html" title="Provides a vector abstraction class. " alt="" coords="637,96,805,123"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1Vector.html" title="Vector\&lt; double \&gt;" alt="" coords="637,208,772,235"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="FramePoolingComponent" name="FramePoolingComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters, contains SGD training hyper&#45;p..." alt="" coords="744,197,907,224"/>
-<area shape="rect" id="node3" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="470,104,567,131"/>
-<area shape="rect" id="node4" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="219,125,319,152"/>
-<area shape="rect" id="node6" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="227,75,312,101"/>
-<area shape="rect" id="node9" href="$structkaldi_1_1nnet1_1_1NnetTrainOptions.html" title="NnetTrainOptions" alt="" coords="453,197,584,224"/>
-</map>

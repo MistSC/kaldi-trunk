@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classkaldi_1_1OutputImplBase.html" title="OutputImplBase" alt="" coords="5,56,131,83"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1FileOutputImpl.html" title="FileOutputImpl" alt="" coords="198,5,311,32"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1PipeOutputImpl.html" title="PipeOutputImpl" alt="" coords="195,56,315,83"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1StandardOutputImpl.html" title="StandardOutputImpl" alt="" coords="179,107,331,133"/>
-</map>

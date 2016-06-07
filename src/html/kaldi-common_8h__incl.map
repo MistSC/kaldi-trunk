@@ -1,8 +1,0 @@
-<map id="base/kaldi&#45;common.h" name="base/kaldi&#45;common.h">
-<area shape="rect" id="node12" href="$kaldi-utils_8h.html" title="base/kaldi&#45;utils.h" alt="" coords="681,155,809,181"/>
-<area shape="rect" id="node15" href="$kaldi-error_8h.html" title="base/kaldi&#45;error.h" alt="" coords="339,80,472,107"/>
-<area shape="rect" id="node17" href="$kaldi-types_8h.html" title="base/kaldi&#45;types.h" alt="" coords="835,155,973,181"/>
-<area shape="rect" id="node19" href="$io-funcs_8h.html" title="base/io&#45;funcs.h" alt="" coords="942,80,1060,107"/>
-<area shape="rect" id="node22" href="$kaldi-math_8h.html" title="base/kaldi&#45;math.h" alt="" coords="1085,80,1221,107"/>
-<area shape="rect" id="node21" href="$io-funcs-inl_8h.html" title="base/io&#45;funcs&#45;inl.h" alt="" coords="1136,155,1275,181"/>
-</map>

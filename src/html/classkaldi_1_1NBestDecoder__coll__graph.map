@@ -1,9 +1,0 @@
-<map id="NBestDecoder" name="NBestDecoder">
-<area shape="rect" id="node2" href="$classkaldi_1_1NBestDecoder_1_1TokenStore.html" title="TokenStore" alt="" coords="873,429,967,456"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1HashList.html" title="HashList\&lt; StateId,\l Token * \&gt;" alt="" coords="513,157,655,198"/>
-<area shape="rect" id="node7" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="197,109,251,136"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1NBestDecoder_1_1TokenStore_1_1Token.html" title="Token" alt="" coords="555,527,613,553"/>
-<area shape="rect" id="node14" href="$structkaldi_1_1NBestDecoder_1_1TokenStore_1_1SeqToken.html" title="SeqToken" alt="" coords="183,395,265,421"/>
-<area shape="rect" id="node23" href="$structkaldi_1_1NBestDecoderOptions.html" title="NBestDecoderOptions" alt="" coords="502,827,666,853"/>
-<area shape="rect" id="node18" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="511,640,657,667"/>
-</map>

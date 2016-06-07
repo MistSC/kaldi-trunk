@@ -1,9 +1,0 @@
-<map id="DecodableAmNnet" name="DecodableAmNnet">
-<area shape="rect" id="node2" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="893,60,1040,87"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="711,88,865,115"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="196,88,383,115"/>
-<area shape="rect" id="node13" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="195,145,383,172"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="907,217,1027,244"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="538,247,651,273"/>
-<area shape="rect" id="node12" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="517,145,673,172"/>
-</map>

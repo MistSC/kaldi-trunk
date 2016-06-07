@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classkaldi_1_1nnet3_1_1SumDescriptor.html" title="This is an abstract base&#45;class. " alt="" coords="6,56,125,83"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1BinarySumDescriptor.html" title="BinarySumDescriptor can represent either A + B, or (A if defined, else B). " alt="" coords="179,5,338,32"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1OptionalSumDescriptor.html" title="This is the case of class SumDescriptor, in which we contain just one term, and that term is optional..." alt="" coords="173,56,344,83"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet3_1_1SimpleSumDescriptor.html" title="SimpleSumDescriptor" alt="" coords="177,107,340,133"/>
-</map>

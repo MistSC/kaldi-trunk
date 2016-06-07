@@ -1,9 +1,0 @@
-<map id="DecodableMatrixMappedOffset" name="DecodableMatrixMappedOffset">
-<area shape="rect" id="node2" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="893,5,1040,32"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="196,417,383,444"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="907,217,1027,244"/>
-<area shape="rect" id="node14" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="195,367,383,393"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="711,409,865,436"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="538,312,651,339"/>
-<area shape="rect" id="node13" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="517,364,673,391"/>
-</map>

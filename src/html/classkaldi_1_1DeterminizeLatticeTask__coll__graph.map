@@ -1,9 +1,0 @@
-<map id="DeterminizeLatticeTask" name="DeterminizeLatticeTask">
-<area shape="rect" id="node7" href="$structfst_1_1DeterminizeLatticePhonePrunedOptions.html" title="DeterminizeLatticePhonePruned\lOptions" alt="" coords="862,95,1090,137"/>
-<area shape="rect" id="node9" href="$structfst_1_1DeterminizeLatticePrunedOptions.html" title="DeterminizeLatticePruned\lOptions" alt="" coords="882,314,1070,355"/>
-<area shape="rect" id="node19" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="163,441,351,468"/>
-<area shape="rect" id="node13" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="916,525,1036,552"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1TableWriter.html" title="A templated class for writing objects to an archive or script file; see The Table concept..." alt="" coords="895,380,1057,407"/>
-<area shape="rect" id="node15" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="506,569,619,596"/>
-<area shape="rect" id="node18" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="485,441,641,468"/>
-</map>

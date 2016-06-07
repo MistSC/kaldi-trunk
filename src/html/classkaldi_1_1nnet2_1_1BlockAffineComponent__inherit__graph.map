@@ -1,5 +1,0 @@
-<map id="BlockAffineComponent" name="BlockAffineComponent">
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet2_1_1BlockAffineComponentPreconditioned.html" title="BlockAffineComponentPreconditioned" alt="" coords="5,229,267,256"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters and contains some global param..." alt="" coords="55,80,217,107"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="87,5,184,32"/>
-</map>

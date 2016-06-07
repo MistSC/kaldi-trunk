@@ -1,8 +1,0 @@
-<map id="SentenceAveragingComponent" name="SentenceAveragingComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters, contains SGD training hyper&#45;p..." alt="" coords="803,91,965,117"/>
-<area shape="rect" id="node3" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="490,56,587,83"/>
-<area shape="rect" id="node4" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="219,107,319,133"/>
-<area shape="rect" id="node6" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="227,56,312,83"/>
-<area shape="rect" id="node9" href="$structkaldi_1_1nnet1_1_1NnetTrainOptions.html" title="NnetTrainOptions" alt="" coords="473,120,604,147"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1nnet1_1_1Nnet.html" title="Nnet" alt="" coords="857,181,911,208"/>
-</map>

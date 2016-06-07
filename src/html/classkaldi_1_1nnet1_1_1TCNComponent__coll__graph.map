@@ -1,9 +1,0 @@
-<map id="TCNComponent" name="TCNComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters, contains SGD training hyper&#45;p..." alt="" coords="391,480,553,507"/>
-<area shape="rect" id="node3" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="130,229,227,256"/>
-<area shape="rect" id="node4" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="5,96,104,123"/>
-<area shape="rect" id="node12" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="391,229,593,256"/>
-<area shape="rect" id="node6" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="129,96,215,123"/>
-<area shape="rect" id="node9" href="$structkaldi_1_1nnet1_1_1NnetTrainOptions.html" title="NnetTrainOptions" alt="" coords="617,229,747,256"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="577,480,748,507"/>
-</map>

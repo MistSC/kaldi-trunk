@@ -1,5 +1,0 @@
-<map id="FixedLinearComponent" name="FixedLinearComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="5,176,101,203"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="83,125,285,152"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="93,227,264,253"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="LatticeBiglmFasterDecoder" name="LatticeBiglmFasterDecoder">
-<area shape="rect" id="node2" href="$classfst_1_1DeterministicOnDemandFst.html" title="DeterministicOnDemandFst\l\&lt; fst::StdArc \&gt;" alt="" coords="631,5,830,46"/>
-<area shape="rect" id="node5" href="$structkaldi_1_1LatticeFasterDecoderConfig.html" title="LatticeFasterDecoderConfig" alt="" coords="631,300,830,327"/>
-<area shape="rect" id="node7" href="$structfst_1_1DeterminizeLatticePhonePrunedOptions.html" title="DeterminizeLatticePhonePruned\lOptions" alt="" coords="230,293,458,334"/>
-<area shape="rect" id="node12" href="$classkaldi_1_1HashList.html" title="HashList\&lt; PairId, kaldi\l::LatticeBiglmFasterDecoder\l::Token * \&gt;" alt="" coords="629,609,832,665"/>
-<area shape="rect" id="node16" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="317,744,371,771"/>
-</map>

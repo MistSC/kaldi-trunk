@@ -1,7 +1,0 @@
-<map id="WordAlignedLatticeTester" name="WordAlignedLatticeTester">
-<area shape="rect" id="node2" href="$structkaldi_1_1WordBoundaryInfo.html" title="WordBoundaryInfo" alt="" coords="354,31,491,57"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1TransitionModel.html" title="TransitionModel" alt="" coords="1056,209,1176,236"/>
-<area shape="rect" id="node13" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="329,333,517,360"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1HmmTopology.html" title="A class for storing topology information for phones. " alt="" coords="671,112,785,139"/>
-<area shape="rect" id="node12" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="650,357,806,384"/>
-</map>

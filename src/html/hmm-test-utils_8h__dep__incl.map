@@ -1,9 +1,0 @@
-<map id="hmm/hmm&#45;test&#45;utils.h" name="hmm/hmm&#45;test&#45;utils.h">
-<area shape="rect" id="node2" href="$hmm-test-utils_8cc.html" title="hmm/hmm&#45;test&#45;utils.cc" alt="" coords="5,88,179,115"/>
-<area shape="rect" id="node3" href="$hmm-topology-test_8cc.html" title="hmm/hmm&#45;topology&#45;test.cc" alt="" coords="203,88,405,115"/>
-<area shape="rect" id="node4" href="$hmm-utils-test_8cc.html" title="hmm/hmm&#45;utils&#45;test.cc" alt="" coords="429,88,603,115"/>
-<area shape="rect" id="node5" href="$transition-model-test_8cc.html" title="hmm/transition&#45;model\l&#45;test.cc" alt="" coords="627,81,791,122"/>
-<area shape="rect" id="node6" href="$word-align-lattice-lexicon-test_8cc.html" title="lat/word&#45;align&#45;lattice\l&#45;lexicon&#45;test.cc" alt="" coords="817,81,967,122"/>
-<area shape="rect" id="node7" href="$am-nnet-test_8cc.html" title="nnet2/am&#45;nnet&#45;test.cc" alt="" coords="991,88,1157,115"/>
-<area shape="rect" id="node8" href="$online-nnet2-decodable-test_8cc.html" title="nnet2/online&#45;nnet2\l&#45;decodable&#45;test.cc" alt="" coords="1182,81,1324,122"/>
-</map>

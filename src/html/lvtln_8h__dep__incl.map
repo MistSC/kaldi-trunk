@@ -1,7 +1,0 @@
-<map id="transform/lvtln.h" name="transform/lvtln.h">
-<area shape="rect" id="node2" href="$lvtln_8cc.html" title="transform/lvtln.cc" alt="" coords="5,88,139,115"/>
-<area shape="rect" id="node3" href="$gmm-est-lvtln-trans_8cc.html" title="gmmbin/gmm&#45;est&#45;lvtln\l&#45;trans.cc" alt="" coords="163,81,332,122"/>
-<area shape="rect" id="node4" href="$gmm-global-est-lvtln-trans_8cc.html" title="gmmbin/gmm&#45;global&#45;est\l&#45;lvtln&#45;trans.cc" alt="" coords="357,81,539,122"/>
-<area shape="rect" id="node5" href="$gmm-init-lvtln_8cc.html" title="gmmbin/gmm&#45;init&#45;lvtln.cc" alt="" coords="563,88,749,115"/>
-<area shape="rect" id="node6" href="$gmm-train-lvtln-special_8cc.html" title="gmmbin/gmm&#45;train&#45;lvtln\l&#45;special.cc" alt="" coords="773,81,952,122"/>
-</map>

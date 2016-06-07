@@ -1,5 +1,0 @@
-<map id="LossItf" name="LossItf">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1Mse.html" title="Mse" alt="" coords="5,80,53,107"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet1_1_1MultiTaskLoss.html" title="MultiTaskLoss" alt="" coords="78,80,185,107"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet1_1_1Xent.html" title="Xent" alt="" coords="211,80,261,107"/>
-</map>
