@@ -1,5 +1,0 @@
-<map id="RandomComponent" name="RandomComponent">
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1AdditiveNoiseComponent.html" title="This is a bit similar to dropout but adding (not multiplying) Gaussian noise with a given standard de..." alt="" coords="5,155,189,181"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet2_1_1DropoutComponent.html" title="This Component, if present, randomly zeroes half of the inputs and multiplies the other half by two..." alt="" coords="213,155,361,181"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="143,5,240,32"/>
-</map>

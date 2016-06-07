@@ -1,6 +1,0 @@
-<map id="LatticeFasterOnlineDecoder" name="LatticeFasterOnlineDecoder">
-<area shape="rect" id="node2" href="$classkaldi_1_1HashList.html" title="HashList\&lt; StateId,\l kaldi::LatticeFasterOnline\lDecoder::Token * \&gt;" alt="" coords="641,159,826,215"/>
-<area shape="rect" id="node6" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="317,173,371,200"/>
-<area shape="rect" id="node13" href="$structkaldi_1_1LatticeFasterDecoderConfig.html" title="LatticeFasterDecoderConfig" alt="" coords="634,520,833,547"/>
-<area shape="rect" id="node14" href="$structfst_1_1DeterminizeLatticePhonePrunedOptions.html" title="DeterminizeLatticePhonePruned\lOptions" alt="" coords="230,469,458,510"/>
-</map>

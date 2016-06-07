@@ -1,3 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classkaldi_1_1nnet3_1_1ComputationVariables.html" title="This class relates the matrices and sub&#45;matrices in the computation to imaginary &quot;variables&quot;, such that we can think of the operations as operating on sets of individual variables, and we can then do analysis that lets us do optimization. " alt="" coords="5,5,168,32"/>
-</map>

@@ -1,4 +1,0 @@
-<map id="PowerComponent" name="PowerComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1NonlinearComponent.html" title="This kind of Component is a base&#45;class for things like sigmoid and softmax. " alt="" coords="5,80,163,107"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="35,5,132,32"/>
-</map>

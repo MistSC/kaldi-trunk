@@ -1,7 +1,0 @@
-<map id="RectifiedLinearComponent" name="RectifiedLinearComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1NonlinearComponent.html" title="This kind of Component is a base&#45;class for things like sigmoid and softmax. " alt="" coords="140,301,298,328"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="61,147,158,173"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; double \&gt;" alt="" coords="110,96,295,123"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1Mutex.html" title="This class encapsulates mutex to ensure exclusive access to some critical section which manipulates s..." alt="" coords="392,197,454,224"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; double \&gt;" alt="" coords="142,197,295,224"/>
-</map>

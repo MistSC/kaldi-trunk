@@ -1,8 +1,0 @@
-<map id="DecodableAmDiagGmmUnmapped" name="DecodableAmDiagGmmUnmapped">
-<area shape="rect" id="node2" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="641,5,788,32"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="204,127,391,153"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="203,228,391,255"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1AmDiagGmm.html" title="AmDiagGmm" alt="" coords="660,177,769,204"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="637,127,792,153"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="637,228,793,255"/>
-</map>

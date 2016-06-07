@@ -1,7 +1,0 @@
-<map id="Mse" name="Mse">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1LossItf.html" title="LossItf" alt="" coords="5,203,67,229"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="181,203,352,229"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="145,125,348,152"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="372,125,577,152"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="376,203,549,229"/>
-</map>

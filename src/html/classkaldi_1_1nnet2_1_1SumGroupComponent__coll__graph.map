@@ -1,6 +1,0 @@
-<map id="SumGroupComponent" name="SumGroupComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="110,161,207,188"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuArray.html" title="CuArray\&lt; Int32Pair \&gt;" alt="" coords="195,213,353,240"/>
-<area shape="rect" id="node5" href="$structInt32Pair.html" title="Int32Pair" alt="" coords="288,109,364,136"/>
-<area shape="rect" id="node6" href="$classkaldi_1_1CuArray.html" title="CuArray\&lt; int32 \&gt;" alt="" coords="335,161,469,188"/>
-</map>

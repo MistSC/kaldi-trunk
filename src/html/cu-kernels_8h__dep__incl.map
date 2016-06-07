@@ -1,9 +1,0 @@
-<map id="cudamatrix/cu&#45;kernels.h" name="cudamatrix/cu&#45;kernels.h">
-<area shape="rect" id="node2" href="$cu-math_8cc.html" title="cudamatrix/cu&#45;math.cc" alt="" coords="5,88,176,115"/>
-<area shape="rect" id="node3" href="$cu-matrix_8cc.html" title="cudamatrix/cu&#45;matrix.cc" alt="" coords="201,88,377,115"/>
-<area shape="rect" id="node4" href="$cu-packed-matrix_8cc.html" title="cudamatrix/cu&#45;packed\l&#45;matrix.cc" alt="" coords="402,81,565,122"/>
-<area shape="rect" id="node5" href="$cu-sp-matrix_8cc.html" title="cudamatrix/cu&#45;sp&#45;matrix.cc" alt="" coords="591,88,788,115"/>
-<area shape="rect" id="node6" href="$cu-sparse-matrix_8cc.html" title="cudamatrix/cu&#45;sparse\l&#45;matrix.cc" alt="" coords="813,81,973,122"/>
-<area shape="rect" id="node7" href="$cu-tp-matrix_8cc.html" title="cudamatrix/cu&#45;tp&#45;matrix.cc" alt="" coords="999,88,1193,115"/>
-<area shape="rect" id="node8" href="$cu-vector_8cc.html" title="cudamatrix/cu&#45;vector.cc" alt="" coords="1218,88,1392,115"/>
-</map>

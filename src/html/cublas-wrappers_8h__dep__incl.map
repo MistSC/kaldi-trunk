@@ -1,8 +1,0 @@
-<map id="cudamatrix/cublas&#45;wrappers.h" name="cudamatrix/cublas&#45;wrappers.h">
-<area shape="rect" id="node2" href="$cu-matrix_8cc.html" title="cudamatrix/cu&#45;matrix.cc" alt="" coords="5,88,181,115"/>
-<area shape="rect" id="node3" href="$cu-packed-matrix_8cc.html" title="cudamatrix/cu&#45;packed\l&#45;matrix.cc" alt="" coords="206,81,369,122"/>
-<area shape="rect" id="node4" href="$cu-sp-matrix_8cc.html" title="cudamatrix/cu&#45;sp&#45;matrix.cc" alt="" coords="395,88,592,115"/>
-<area shape="rect" id="node5" href="$cu-sparse-matrix_8cc.html" title="cudamatrix/cu&#45;sparse\l&#45;matrix.cc" alt="" coords="617,81,777,122"/>
-<area shape="rect" id="node6" href="$cu-tp-matrix_8cc.html" title="cudamatrix/cu&#45;tp&#45;matrix.cc" alt="" coords="803,88,997,115"/>
-<area shape="rect" id="node7" href="$cu-vector_8cc.html" title="cudamatrix/cu&#45;vector.cc" alt="" coords="1022,88,1196,115"/>
-</map>

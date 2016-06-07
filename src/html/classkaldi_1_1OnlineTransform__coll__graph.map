@@ -1,7 +1,0 @@
-<map id="OnlineTransform" name="OnlineTransform">
-<area shape="rect" id="node2" href="$classkaldi_1_1OnlineFeatureInterface.html" title="OnlineFeatureInterface is an interface for online feature processing (it is also usable in the offlin..." alt="" coords="5,203,171,229"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1Matrix.html" title="Matrix\&lt; BaseFloat \&gt;" alt="" coords="196,203,349,229"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1MatrixBase.html" title="MatrixBase\&lt; BaseFloat \&gt;" alt="" coords="160,125,347,152"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1VectorBase.html" title="VectorBase\&lt; BaseFloat \&gt;" alt="" coords="371,125,559,152"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1Vector.html" title="Vector\&lt; BaseFloat \&gt;" alt="" coords="377,203,532,229"/>
-</map>

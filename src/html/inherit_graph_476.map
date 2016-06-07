@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classkaldi_1_1RandomAccessTableReaderImplBase.html" title="RandomAccessTableReaderImpl\lBase\&lt; Holder \&gt;" alt="" coords="6,103,229,145"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1RandomAccessTableReaderArchiveImplBase.html" title="RandomAccessTableReaderArchive\lImplBase\&lt; Holder \&gt;" alt="" coords="277,70,520,111"/>
-<area shape="rect" id="node6" href="$classkaldi_1_1RandomAccessTableReaderScriptImpl.html" title="RandomAccessTableReaderScript\lImpl\&lt; Holder \&gt;" alt="" coords="282,135,515,177"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1RandomAccessTableReaderDSortedArchiveImpl.html" title="RandomAccessTableReaderDSorted\lArchiveImpl\&lt; Holder \&gt;" alt="" coords="571,5,821,46"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1RandomAccessTableReaderSortedArchiveImpl.html" title="RandomAccessTableReaderSorted\lArchiveImpl\&lt; Holder \&gt;" alt="" coords="577,70,815,111"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1RandomAccessTableReaderUnsortedArchiveImpl.html" title="RandomAccessTableReaderUnsorted\lArchiveImpl\&lt; Holder \&gt;" alt="" coords="569,135,823,177"/>
-</map>

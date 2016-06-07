@@ -1,4 +1,0 @@
-<map id="LogSoftmaxComponent" name="LogSoftmaxComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1NonlinearComponent.html" title="This kind of Component is a base&#45;class for things like sigmoid, softmax and ReLU: nonlinearities that..." alt="" coords="13,80,171,107"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="43,5,140,32"/>
-</map>

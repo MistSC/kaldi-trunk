@@ -1,5 +1,0 @@
-<map id="MultiTaskLoss" name="MultiTaskLoss">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet1_1_1LossItf.html" title="LossItf" alt="" coords="502,5,565,32"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="448,56,619,83"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="195,56,397,83"/>
-</map>

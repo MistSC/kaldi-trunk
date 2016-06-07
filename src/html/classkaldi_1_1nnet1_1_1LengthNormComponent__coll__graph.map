@@ -1,9 +1,0 @@
-<map id="LengthNormComponent" name="LengthNormComponent">
-<area shape="rect" id="node2" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="242,219,339,245"/>
-<area shape="rect" id="node3" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="327,127,427,153"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="452,127,657,153"/>
-<area shape="rect" id="node12" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="681,127,884,153"/>
-<area shape="rect" id="node5" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="72,127,157,153"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="468,219,641,245"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="673,219,844,245"/>
-</map>

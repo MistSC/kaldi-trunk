@@ -1,9 +1,0 @@
-<map id="BlockAffineComponentPreconditioned" name="BlockAffineComponentPreconditioned">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1BlockAffineComponent.html" title="BlockAffineComponent" alt="" coords="319,307,485,333"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1nnet2_1_1UpdatableComponent.html" title="Class UpdatableComponent is a Component which has trainable parameters and contains some global param..." alt="" coords="321,216,484,243"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="286,125,383,152"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="5,125,211,152"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="552,125,755,152"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="31,216,204,243"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="519,216,689,243"/>
-</map>

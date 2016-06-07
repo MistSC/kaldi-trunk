@@ -1,8 +1,0 @@
-<map id="nnet/nnet&#45;pdf&#45;prior.h" name="nnet/nnet&#45;pdf&#45;prior.h">
-<area shape="rect" id="node2" href="$nnet-pdf-prior_8cc.html" title="nnet/nnet&#45;pdf&#45;prior.cc" alt="" coords="5,88,163,115"/>
-<area shape="rect" id="node3" href="$nnet-forward-new_8cc.html" title="nnetbin/nnet&#45;forward\l&#45;new.cc" alt="" coords="188,81,341,122"/>
-<area shape="rect" id="node4" href="$nnet-forward-old_8cc.html" title="nnetbin/nnet&#45;forward\l&#45;old.cc" alt="" coords="367,81,520,122"/>
-<area shape="rect" id="node5" href="$nnet-forward_8cc.html" title="nnetbin/nnet&#45;forward.cc" alt="" coords="545,88,719,115"/>
-<area shape="rect" id="node6" href="$nnet-train-mmi-sequential_8cc.html" title="nnetbin/nnet&#45;train\l&#45;mmi&#45;sequential.cc" alt="" coords="743,81,888,122"/>
-<area shape="rect" id="node7" href="$nnet-train-mpe-sequential_8cc.html" title="nnetbin/nnet&#45;train\l&#45;mpe&#45;sequential.cc" alt="" coords="913,81,1057,122"/>
-</map>

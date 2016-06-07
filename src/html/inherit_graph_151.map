@@ -1,6 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classkaldi_1_1EventMap.html" title="A class that is capable of representing a generic mapping from EventType (which is a vector of (key..." alt="" coords="5,56,91,83"/>
-<area shape="rect" id="node2" href="$classkaldi_1_1ConstantEventMap.html" title="ConstantEventMap" alt="" coords="139,5,282,32"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1SplitEventMap.html" title="SplitEventMap" alt="" coords="154,56,267,83"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1TableEventMap.html" title="TableEventMap" alt="" coords="152,107,269,133"/>
-</map>

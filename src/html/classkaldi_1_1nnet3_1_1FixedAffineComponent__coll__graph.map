@@ -1,7 +1,0 @@
-<map id="FixedAffineComponent" name="FixedAffineComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet3_1_1Component.html" title="Abstract base&#45;class for neural&#45;net components. " alt="" coords="5,203,101,229"/>
-<area shape="rect" id="node3" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="127,203,300,229"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="91,125,296,152"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="320,125,523,152"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="325,203,496,229"/>
-</map>

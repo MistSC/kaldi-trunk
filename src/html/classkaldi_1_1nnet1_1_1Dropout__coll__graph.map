@@ -1,8 +1,0 @@
-<map id="Dropout" name="Dropout">
-<area shape="rect" id="node2" href="$structkaldi_1_1nnet1_1_1Component.html" title="Abstract class, building block of the network. " alt="" coords="261,363,357,389"/>
-<area shape="rect" id="node3" href="$classkMarkerMap.html" title="kMarkerMap" alt="" coords="303,229,403,256"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="556,125,759,152"/>
-<area shape="rect" id="node11" href="$classkaldi_1_1CuRand.html" title="CuRand\&lt; BaseFloat \&gt;" alt="" coords="435,363,599,389"/>
-<area shape="rect" id="node5" href="$structkaldi_1_1nnet1_1_1Component_1_1key__value.html" title="A pair of type and marker. " alt="" coords="120,229,205,256"/>
-<area shape="rect" id="node9" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="577,229,748,256"/>
-</map>

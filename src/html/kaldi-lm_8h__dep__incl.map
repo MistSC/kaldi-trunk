@@ -1,6 +1,0 @@
-<map id="lm/kaldi&#45;lm.h" name="lm/kaldi&#45;lm.h">
-<area shape="rect" id="node2" href="$arpa-file-parser-test_8cc.html" title="lm/arpa&#45;file&#45;parser\l&#45;test.cc" alt="" coords="5,81,144,122"/>
-<area shape="rect" id="node3" href="$kaldi-lm_8cc.html" title="Language model FST implementation. " alt="" coords="169,88,279,115"/>
-<area shape="rect" id="node4" href="$lm-lib-test_8cc.html" title="Unit tests for language model code. " alt="" coords="304,88,429,115"/>
-<area shape="rect" id="node5" href="$arpa2fst_8cc.html" title="Example for converting an ARPA format language model into an FST. " alt="" coords="454,88,569,115"/>
-</map>

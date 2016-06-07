@@ -1,7 +1,0 @@
-<map id="NBestDecoder::TokenStore" name="NBestDecoder::TokenStore">
-<area shape="rect" id="node2" href="$classkaldi_1_1HashList.html" title="HashList\&lt; StateId,\l Token * \&gt;" alt="" coords="513,130,655,171"/>
-<area shape="rect" id="node6" href="$structkaldi_1_1HashList_1_1Elem.html" title="Elem" alt="" coords="197,175,251,201"/>
-<area shape="rect" id="node10" href="$classkaldi_1_1NBestDecoder_1_1TokenStore_1_1Token.html" title="Token" alt="" coords="555,520,613,547"/>
-<area shape="rect" id="node13" href="$structkaldi_1_1NBestDecoder_1_1TokenStore_1_1SeqToken.html" title="SeqToken" alt="" coords="183,419,265,445"/>
-<area shape="rect" id="node17" href="$classkaldi_1_1DecodableInterface.html" title="DecodableInterface provides a link between the (acoustic&#45;modeling and feature&#45;processing) code and th..." alt="" coords="511,713,657,740"/>
-</map>

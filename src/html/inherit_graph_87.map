@@ -1,9 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node2" href="$classfst_1_1ContextMatcher.html" title="ContextMatcher\&lt; Arc,\l LabelT \&gt;" alt="" coords="170,5,334,46"/>
-<area shape="rect" id="node3" href="$classfst_1_1TableMatcher.html" title="TableMatcher\&lt; F, Backoff\lMatcher \&gt;" alt="" coords="161,70,343,111"/>
-<area shape="rect" id="node4" href="$classfst_1_1TableMatcherImpl.html" title="TableMatcherImpl\&lt; F,\l BackoffMatcher \&gt;" alt="" coords="173,135,331,177"/>
-<area shape="rect" id="node5" href="$classfst_1_1TableMatcher.html" title="TableMatcher\&lt; F \&gt;" alt="" coords="181,201,323,228"/>
-<area shape="rect" id="node6" href="$classfst_1_1TableMatcher.html" title="TableMatcher\&lt; fst::\lFst\&lt; fst::StdArc \&gt; \&gt;" alt="" coords="175,253,329,294"/>
-<area shape="rect" id="node7" href="$classfst_1_1TableMatcherImpl.html" title="TableMatcherImpl\&lt; F,\l SortedMatcher\&lt; F \&gt; \&gt;" alt="" coords="165,318,339,359"/>
-<area shape="rect" id="node8" href="$classfst_1_1TableMatcherImpl.html" title="TableMatcherImpl\&lt; fst\l::Fst\&lt; fst::StdArc \&gt;,\l SortedMatcher\&lt; fst::Fst\l\&lt; fst::StdArc \&gt; \&gt; \&gt;" alt="" coords="163,383,341,454"/>
-</map>

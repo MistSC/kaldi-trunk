@@ -1,7 +1,0 @@
-<map id="FixedAffineComponent" name="FixedAffineComponent">
-<area shape="rect" id="node2" href="$classkaldi_1_1nnet2_1_1Component.html" title="Abstract class, basic element of the network, it is a box with defined inputs, outputs, and tranformation functions interface. " alt="" coords="197,176,293,203"/>
-<area shape="rect" id="node5" href="$classkaldi_1_1CuVectorBase.html" title="CuVectorBase\&lt; BaseFloat \&gt;" alt="" coords="283,125,488,152"/>
-<area shape="rect" id="node8" href="$classkaldi_1_1CuMatrixBase.html" title="CuMatrixBase\&lt; BaseFloat \&gt;" alt="" coords="5,125,208,152"/>
-<area shape="rect" id="node4" href="$classkaldi_1_1CuVector.html" title="CuVector\&lt; BaseFloat \&gt;" alt="" coords="287,227,460,253"/>
-<area shape="rect" id="node7" href="$classkaldi_1_1CuMatrix.html" title="CuMatrix\&lt; BaseFloat \&gt;" alt="" coords="32,227,203,253"/>
-</map>
