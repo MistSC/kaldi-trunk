@@ -65,6 +65,9 @@ GSYMS
 /egs/*/s*/plp
 /egs/*/s*/exp
 /egs/*/s*/data
+/egs/*/s*/data*
+/egs/*/s*/exp*
+/egs/*/s*/fbank
 
 # /tools/
 /tools/ATLAS/
