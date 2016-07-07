@@ -10,6 +10,8 @@ model=              # non-default location of transition model (optional)
 class_frame_counts= # non-default location of PDF counts (optional)
 srcdir=             # non-default location of DNN-dir (decouples model dir from decode dir)
 ivector=            # rx-specifier with i-vectors (ark-with-vectors),
+apply_outer_product=false
+save_feats=false
 
 blocksoftmax_dims=   # 'csl' with block-softmax dimensions: dim1,dim2,dim3,...
 blocksoftmax_active= # '1' for the 1st block, 
@@ -107,7 +109,13 @@ D=$srcdir
 [ -e $D/delta_opts ] && delta_opts=$(cat $D/delta_opts)
 #
 # Create the feature stream,
-feats="ark,s,cs:copy-feats scp:$sdata/JOB/feats.scp ark:- |"
+if [ "$apply_outer_product" == "true" ]; then
+  echo " Apply outer product feature"
+  feats="ark,s,cs:outer-product-feats scp:$sdata/JOB/feats.scp ark:- |"
+else
+  echo " Don't apply outer product feature"
+  feats="ark,s,cs:copy-feats scp:$sdata/JOB/feats.scp ark:- |"
+fi
 # apply-cmvn (optional),
 [ ! -z "$cmvn_opts" -a ! -f $sdata/1/cmvn.scp ] && echo "$0: Missing $sdata/1/cmvn.scp" && exit 1
 [ ! -z "$cmvn_opts" ] && feats="$feats apply-cmvn $cmvn_opts --utt2spk=ark:$sdata/JOB/utt2spk scp:$sdata/JOB/cmvn.scp ark:- ark:- |"
@@ -142,23 +150,23 @@ if [ ! -z "$blocksoftmax_dims" ]; then
 fi
 
 # Run the decoding in the queue,
-#if [ $stage -le 0 ]; then
-#  $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
-#    nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
-#    latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
-#    --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
-#    $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
-#fi
-frame_index=11
-mkdir -p $dir/EachLayerFeats
 if [ $stage -le 0 ]; then
-  $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
-    nnet-forward-new $nnet_forward_opts --is-binary=false --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu --frame-index=$frame_index --is-binary=false --file-name=$dir/EachLayerFeats "$nnet" "$feats" ark:- \| \
-    latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
-    --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
-    $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
+  if [ $save_feats == 'flase' ]
+    $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
+      nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
+      latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
+      --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
+      $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
+  else 
+    frame_index=11
+    mkdir -p $dir/EachLayerFeats
+    $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
+      nnet-forward-new $nnet_forward_opts --is-binary=false --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu --frame-index=$frame_index --is-binary=false --file-name=$dir/EachLayerFeats "$nnet" "$feats" ark:- \| \
+      latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \
+      --lattice-beam=$lattice_beam --acoustic-scale=$acwt --allow-partial=true --word-symbol-table=$graphdir/words.txt \
+      $model $graphdir/HCLG.fst ark:- "ark:|gzip -c > $dir/lat.JOB.gz" || exit 1;
+  fi
 fi
-
 
 # Run the scoring
 if ! $skip_scoring ; then

@@ -13,7 +13,7 @@ hid_layers=4        # nr. of hidden layers (before sotfmax or bottleneck),
 hid_dim=1024        # number of neurons per layer,
 bn_dim=             # (optional) adds bottleneck and one more hidden layer to the NN,
 dbn=                # (optional) prepend layers to the initialized NN,
-tcn_proto_array=(40 11 1 32 16 2 32 16 2 32 16 2)
+tcn_proto_array=(13 13 11 16 16 8 16 16 8 16 16 8)
 dnn_proto_array=(1024 1024 1024 1024)
 
 
@@ -29,6 +29,7 @@ splice=5            # (default) splice features both-ways along time axis,
 cmvn_opts=          # (optional) adds 'apply-cmvn' to input feature pipeline, see opts,
 delta_opts=         # (optional) adds 'add-deltas' to input feature pipeline, see opts,
 ivector=            # (optional) adds 'append-vector-to-feats', it's rx-filename,
+apply_outer_product=
 
 feat_type=plain  
 traps_dct_basis=11    # (feat_type=traps) nr. of DCT basis, 11 is good with splice=10,
@@ -169,8 +170,16 @@ echo "# PREPARING FEATURES"
 if [ "$copy_feats" == "true" ]; then
   echo "# re-saving features to local disk,"
   tmpdir=$(mktemp -d $copy_feats_tmproot)
-  copy-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
-  copy-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  if [ "$apply_outer_product" == "true" ]; then
+    echo " Apply outer product feature"
+    outer-product-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
+    outer-product-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  else
+    echo " Don't apply outer product feature"
+    copy-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
+    copy-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  fi
+   
   trap "echo \"# Removing features tmpdir $tmpdir @ $(hostname)\"; ls $tmpdir; rm -r $tmpdir" EXIT
 else
   # or copy the list,
@@ -724,10 +733,11 @@ else
       echo "# Network type: hybrid tdnn 3way"
       echo "# With layerwise pretrian"
       echo ${tcn_proto_array[*]}
+      echo ${dnn_proto_array[*]}
 
       #hid_layers=7
-      #tcn_proto_array=(23 11 64 16 64 16 64 16)
-      #dnn_proto_array=(1024 1024 1024 1024)
+      tcn_proto_array=(13 13 11 16 16 8 16 16 8 16 16 8)
+      dnn_proto_array=(1024 1024 1024 1024)
       tcn_layers=$(((${#tcn_proto_array[*]}-3)/3))
       dnn_layers=$((${#dnn_proto_array[*]}))
       #network_prototype="$num_fea $num_tgt $hid_layers tcn $tcn_prototype dnn $dnn_prototype";
@@ -886,9 +896,22 @@ else
         $dir_l/nnet_pretrain_layer_last_final.init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir_l || exit 1
       # copy final.nnet to main folder
       cp $dir_l/final.nnet $dir_l/../
-
       ;;
-
+      blstm)
+        utils/nnet/make_blstm_proto.py $proto_opts \
+          $num_fea $num_tgt >"$nnet_proto" || exit 1
+      echo "# RUNNING THE BLSTM-TRAINING SCHEDULER"
+      steps/nnet/train_scheduler.sh \
+        ${scheduler_opts} \
+        ${train_tool:+ --train-tool "$train_tool"} \
+        ${train_tool_opts:+ --train-tool-opts "$train_tool_opts"} \
+        ${feature_transform:+ --feature-transform $feature_transform} \
+        --learn-rate $learn_rate \
+        ${frame_weights:+ --frame-weights "$frame_weights"} \
+        ${utt_weights:+ --utt-weights "$utt_weights"} \
+        ${config:+ --config $config} \
+        $nnet_init "$feats_tr" "$feats_cv" "$labels_tr" "$labels_cv" $dir || exit 1
+      ;;
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac
 fi

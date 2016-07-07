@@ -371,6 +371,8 @@ class TCN3WayComponent : public UpdatableComponent {
       mode_3_wei_grad_.AddMatMat(1.0,*rs_diff,kTrans,*rs_m3,kNoTrans,0.0);         // (j3*i3) 
       delete m1; delete m2; delete rs_diff; delete rs_m3;
     }
+        
+
     // bias
     bias_grad_.AddRowSumMat(1.0, diff, 0.0);
     // update

@@ -68,6 +68,32 @@ void GetBlockSizesForSimpleMatrixOperation(int32 num_rows,
   dimGrid->z = 1;
 }
 
+void GetBlockSizesForOuterProductOperation(int32 i,
+                                           int32 j,
+                                           int32 k,
+                                           dim3 *dimGrid,
+                                           dim3 *dimBlock) {
+  KALDI_ASSERT(i > 0 && j > 0 && k > 0);
+
+  dimBlock->x = 8;
+  dimBlock->y = 8;
+  dimBlock->z = 8;
+  int gridx = 2;
+  int gridy = 2;
+  int gridz = 2;
+  while(dimBlock->x*gridx < i)
+    gridx *= 2;
+  while(dimBlock->y*gridy < j)
+    gridy *= 2;
+  while(dimBlock->z*gridz < k)
+    gridz *= 2;
+
+  dimGrid->x = gridx;
+  dimGrid->y = gridy;
+  dimGrid->z = gridz;
+}
+
+
 void GetBlockSizesForSimpleTensorOperation(int32 ib,
                                            int32 i1,
                                            int32 i2,

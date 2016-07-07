@@ -22,7 +22,7 @@
 
 #include "feat/feature-functions.h"
 #include "matrix/matrix-functions.h"
-
+//#include "matrix/kaldi-matrix.h"
 
 namespace kaldi {
 
@@ -540,6 +540,14 @@ void SlidingWindowCmn(const SlidingWindowCmnOptions &opts,
   output->CopyFromMat(output_dbl);
 }
 
+void ApplyOuterProductFeats(const int32 alpha,
+                            const MatrixBase<BaseFloat> &A,
+                            const MatrixBase<BaseFloat> &B,
+                            Matrix<BaseFloat> *C)
+{
+    C->Resize(A.NumRows(), A.NumCols() * B.NumCols());
+    C->OuterProductForEachFrame(alpha, A, B);
+}
 
 
 }  // namespace kaldi

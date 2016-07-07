@@ -59,6 +59,8 @@ class Component {
     scTCNProjectionComponent,//TCN projection method
     scTCN3WayComponent,//TCN 3way method
     scTCN3WayProjectionComponent,//TCN 3way projection method
+    scLstmTcnProjectedStreams,//LSTM TCN mode
+    scLstmTcnProjectedStreamsSpeed,//LSTM TCN mode speedy edition for 2 way
 
     kActivationFunction = 0x0200, 
     kSoftmax, 

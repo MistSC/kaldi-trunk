@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 # Copyright 2015  Brno University of Technology (Author: Karel Vesely)
 # Apache 2.0
@@ -15,7 +15,7 @@
 . utils/parse_options.sh || exit 1;
 
 # Train the DNN optimizing per-frame cross-entropy.
-dir=exp/tri10g_lstm
+dir=exp/tri10test_lstm
 ali=exp/tri2b_multi_ali_si84
 ali_dev=exp/tri2b_multi_ali_dev_0330
 

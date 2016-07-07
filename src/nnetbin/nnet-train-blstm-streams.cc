@@ -73,7 +73,25 @@ int main(int argc, char *argv[]) {
 
     std::string use_gpu = "yes";
     // po.Register("use-gpu", &use_gpu, "yes|no|optional, only has effect if compiled with CUDA");
+  
+    //
+    int32 targets_delay=5;
+    po.Register("targets-delay", &targets_delay, "---LSTM--- BPTT targets delay");
 
+    int32 batch_size=20;
+    po.Register("batch-size", &batch_size, "---LSTM--- BPTT batch size");
+
+    int32 num_stream=4;
+    po.Register("num-stream", &num_stream, "---LSTM--- BPTT multi-stream training");
+
+    int32 dump_interval=0;
+    po.Register("dump-interval", &dump_interval, "---LSTM--- num utts between model dumping [ 0 == disabled ]");
+    // Add dummy randomizer options, to make the tool compatible with standard scripts
+    NnetDataRandomizerOptions rnd_opts;
+    rnd_opts.Register(&po);
+    bool randomize = false;
+    po.Register("randomize", &randomize, "Dummy option, for compatibility...");
+    //
     po.Read(argc, argv);
 
     if (po.NumArgs() != 4-(crossvalidate?1:0)) {

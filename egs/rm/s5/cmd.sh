@@ -5,13 +5,13 @@
 # (make sure your --num-jobs options are no more than
 # the number of cpus on your machine.
 
-train_cmd="queue.pl -l arch=*64"
-decode_cmd="queue.pl -l arch=*64"
+train_cmd="run.pl"
+decode_cmd="run.pl"
 
 # cuda_cmd is used for nnet1 scripts e.g. local/run_dnn.sh, but
 # in the nnet2 scripts e.g. local/run_nnet2.sh, this is not
 # used and we append options to train_cmd.
-cuda_cmd="queue.pl -l arch=*64 -l gpu=1"
+cuda_cmd="run.pl"
 
 #train_cmd="run.pl"
 # with run.pl we do training locally.  Note: for jobs on smallish subsets,
@@ -20,11 +20,11 @@ cuda_cmd="queue.pl -l arch=*64 -l gpu=1"
 
 
 # BUT cluster:
-if [ "$(hostname -d)" == "fit.vutbr.cz" ]; then
-  queue="all.q@@blade,all.q@@speech"
-  gpu_queue="long.q@supergpu*,long.q@dellgpu*,long.q@pcspeech-gpu,long.q@pcgpu*"
-  storage="matylda5"
-  export train_cmd="queue.pl -q $queue -l ram_free=1500M,mem_free=1500M,${storage}=1"
-  export decode_cmd="queue.pl -q $queue -l ram_free=2500M,mem_free=2500M,${storage}=0.5"
-  export cuda_cmd="queue.pl -q $gpu_queue -l gpu=1" 
-fi
+#if [ "$(hostname -d)" == "fit.vutbr.cz" ]; then
+#  queue="all.q@@blade,all.q@@speech"
+#  gpu_queue="long.q@supergpu*,long.q@dellgpu*,long.q@pcspeech-gpu,long.q@pcgpu*"
+#  storage="matylda5"
+#  export train_cmd="queue.pl -q $queue -l ram_free=1500M,mem_free=1500M,${storage}=1"
+#  export decode_cmd="queue.pl -q $queue -l ram_free=2500M,mem_free=2500M,${storage}=0.5"
+#  export cuda_cmd="queue.pl -q $gpu_queue -l gpu=1" 
+#fi

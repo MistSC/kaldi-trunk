@@ -404,6 +404,23 @@ static void _reshape_from_tensor(Real* dst,
   }
 }
 
+template<typename Real>
+__global__
+static void _frame_outer_product(Real *data, const Real *srcA_data, const Real *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, Real alpha) {
+  int32_cuda i = blockIdx.x * blockDim.x + threadIdx.x;  // row index
+  int32_cuda j = blockIdx.y * blockDim.y + threadIdx.y;  // A col index
+  int32_cuda k = blockIdx.z * blockDim.z + threadIdx.z;  // B col index
+
+  int32_cuda data_index = dim.stride * i + dimA.cols * j + k;
+  int32_cuda srcA_index = dimA.stride * i + j;
+  int32_cuda srcB_index = dimB.stride * i + k;
+  if (i < dim.rows && j < dimA.cols && k < dimB.cols)
+  {
+    data[data_index] = alpha * srcA_data[srcA_index] * srcB_data[srcB_index];
+  }
+}
+
+
 
 template<typename Real>
 __global__
@@ -2292,6 +2309,17 @@ void cudaF_reshape_from_tensor(dim3 Gr, dim3 Bl, float* dst, const float* src, M
   _reshape_from_tensor<<<Gr,Bl>>>(dst, src, dst_dim, src_dim, mode);
 }
 
+void cudaF_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha, float beta, int batch_index)
+{
+  _add_vec_mat_point_mul_vec<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index);
+}
+
+void cudaF_frame_outer_product(dim3 Gr, dim3 Bl, float *data, const float *A, const float *B, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha) {
+  _frame_outer_product<<<Gr,Bl>>>(data, A, B, dim, dimA, dimB, alpha);
+}
+
+// sc function end
+
 void cudaF_transpose_matrix(dim3 Gr, dim3 Bl, float* mat, MatrixDim d) {
   _transpose_matrix<<<Gr,Bl>>>(mat, d);
 }
@@ -2470,12 +2498,6 @@ void cudaF_add_mat_diag_vec(dim3 Gr, dim3 Bl, float alpha, float *mat, MatrixDim
 
 void cudaF_add_mat_mat_elements(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, int srcA_stride, int srcB_stride, float alpha, float beta) {
     _add_mat_mat_elements<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, srcA_stride, srcB_stride, alpha, beta);
-}
-
-// sc funtion
-void cudaF_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha, float beta, int batch_index)
-{
-    _add_vec_mat_point_mul_vec<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index);
 }
 
 // CURRENTLY UNUSED...
@@ -2765,6 +2787,17 @@ void cudaD_reshape_from_tensor(dim3 Gr, dim3 Bl, double* dst, const double* src,
   _reshape_from_tensor<<<Gr,Bl>>>(dst, src, dst_dim, src_dim, mode);
 }
 
+void cudaD_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha, double beta, int batch_index)
+{
+  _add_vec_mat_point_mul_vec<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index);
+}
+
+void cudaD_frame_outer_product(dim3 Gr, dim3 Bl, double *data, const double *A, const double *B, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha) {
+  _frame_outer_product<<<Gr,Bl>>>(data, A, B, dim, dimA, dimB, alpha);
+}
+
+// sc function end
+
 void cudaD_transpose_matrix(dim3 Gr, dim3 Bl, double* mat, MatrixDim d) {
   _transpose_matrix<<<Gr,Bl>>>(mat, d);
 }
@@ -2941,12 +2974,6 @@ void cudaD_add_mat_diag_vec(dim3 Gr, dim3 Bl, double alpha, double *mat, MatrixD
 
 void cudaD_add_mat_mat_elements(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, int srcA_stride, int srcB_stride, double alpha, double beta) {
     _add_mat_mat_elements<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, srcA_stride, srcB_stride, alpha, beta);
-}
-
-// sc funtion
-void cudaD_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha, double beta, int batch_index)
-{
-    _add_vec_mat_point_mul_vec<<<Gr, Bl>>>(data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index);
 }
 
 // CURRENTLY UNUSED...

@@ -113,6 +113,14 @@ inline void cuda_reshape_from_tensor(dim3 Gr, dim3 Bl, float* dst, const float* 
   cudaF_reshape_from_tensor(Gr, Bl, dst, src, dst_dim ,src_dim, mode); 
 }
 
+inline void cuda_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha, float beta, int batch_index) { cudaF_add_vec_mat_point_mul_vec(Gr, Bl, data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index); }
+
+inline void cuda_frame_outer_product(dim3 Gr, dim3 Bl, float *data, const float *A, const float *B, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha) {
+  cudaF_frame_outer_product(Gr, Bl, data, A, B, dim, dimA, dimB, alpha);
+}
+
+// sc function end
+
 inline void cuda_trace_mat_smat(dim3 Gr, dim3 Bl, const float* mat_in, const MatrixElement<float>* smat_in, MatrixDim mat_d_in, MatrixIndexT_cuda smat_d_in, float* trace_vec_out) {
   cudaF_trace_mat_smat(Gr, Bl, mat_in, smat_in, mat_d_in, smat_d_in, trace_vec_out);
 }
@@ -182,9 +190,6 @@ inline void cuda_transpose_matrix(dim3 Gr, dim3 Bl, float* mat, MatrixDim d) { c
 inline void cuda_sy_add_tr2(dim3 Gr, dim3 Bl, float alpha, float beta, const float* T, MatrixDim tdim, float *S, MatrixDim sdim) { cudaF_sy_add_tr2(Gr, Bl, alpha, beta, T, tdim, S, sdim); }
 inline void cuda_add_mat_diag_vec(dim3 Gr, dim3 Bl, float alpha, float *mat, MatrixDim mat_dim, const float *mat2, int mat2_row_stride, int mat2_col_stride, const float *vec,  float beta) { cudaF_add_mat_diag_vec(Gr, Bl, alpha, mat, mat_dim, mat2, mat2_row_stride, mat2_col_stride, vec, beta); }
 inline void cuda_add_mat_mat_elements(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, int srcA_stride, int srcB_stride, float alpha, float beta) { cudaF_add_mat_mat_elements(Gr, Bl, data, srcA_data, srcB_data, dim, srcA_stride, srcB_stride, alpha, beta); } 
-// sc function
-inline void cuda_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, float *data, const float *srcA_data, const float *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, float alpha, float beta, int batch_index) { cudaF_add_vec_mat_point_mul_vec(Gr, Bl, data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index); }
-
  
 /*
  * CuVector
@@ -319,6 +324,14 @@ inline void cuda_reshape_from_tensor(dim3 Gr, dim3 Bl, double* dst, const double
   cudaD_reshape_from_tensor(Gr, Bl, dst, src, dst_dim, src_dim, mode);
 }
 
+inline void cuda_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha, double beta, int batch_index) { cudaD_add_vec_mat_point_mul_vec(Gr, Bl, data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index); }
+
+inline void cuda_frame_outer_product(dim3 Gr, dim3 Bl, double *data, const double *A, const double *B, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha) {
+  cudaD_frame_outer_product(Gr, Bl, data, A, B, dim, dimA, dimB, alpha);
+}
+
+// sc function end
+
 inline void cuda_apply_exp(dim3 Gr, dim3 Bl, double* mat, MatrixDim d) { cudaD_apply_exp(Gr,Bl,mat,d); }
 inline void cuda_apply_pow(dim3 Gr, dim3 Bl, double* mat, double power, MatrixDim dim) { cudaD_apply_pow(Gr,Bl,mat,power,dim); }
 inline void cuda_apply_pow_abs(dim3 Gr, dim3 Bl, double* mat, double power, bool include_sign, MatrixDim dim) { cudaD_apply_pow_abs(Gr,Bl,mat,power,include_sign,dim); }
@@ -375,8 +388,6 @@ inline void cuda_transpose_matrix(dim3 Gr, dim3 Bl, double *mat, MatrixDim d) { 
 inline void cuda_sy_add_tr2(dim3 Gr, dim3 Bl, double alpha, double beta, const double* T, MatrixDim tdim, double *S, MatrixDim sdim) { cudaD_sy_add_tr2(Gr, Bl, alpha, beta, T, tdim, S, sdim); }
 inline void cuda_add_mat_diag_vec(dim3 Gr, dim3 Bl, double alpha, double *mat, MatrixDim mat_dim, const double *mat2, int mat2_row_stride, int mat2_col_stride, const double *vec,  double beta) { cudaD_add_mat_diag_vec(Gr, Bl, alpha, mat, mat_dim, mat2, mat2_row_stride, mat2_col_stride, vec, beta); }
 inline void cuda_add_mat_mat_elements(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, int srcA_stride, int srcB_stride, double alpha, double beta) { cudaD_add_mat_mat_elements(Gr, Bl, data, srcA_data, srcB_data, dim, srcA_stride, srcB_stride, alpha, beta); }
-// sc function
-inline void cuda_add_vec_mat_point_mul_vec(dim3 Gr, dim3 Bl, double *data, const double *srcA_data, const double *srcB_data, MatrixDim dim, MatrixDim dimA, MatrixDim dimB, double alpha, double beta, int batch_index) { cudaD_add_vec_mat_point_mul_vec(Gr, Bl, data, srcA_data, srcB_data, dim, dimA, dimB, alpha, beta, batch_index); }
 /*
  * CuVector
  */

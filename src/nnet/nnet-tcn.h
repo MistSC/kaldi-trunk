@@ -119,7 +119,10 @@ class TCNComponent : public UpdatableComponent {
 
     learn_rate_coef_ = learn_rate_coef;
     bias_learn_rate_coef_ = bias_learn_rate_coef;
-    //
+    // initial gradients
+    mode_1_wei_grad_.Resize(wei_1_j1_, wei_1_i1_);
+    mode_2_wei_grad_.Resize(wei_2_j2_, wei_2_i2_);
+    bias_grad_.Resize(wei_1_j1_, wei_2_j2_);
   }
 
   void ReadData(std::istream &is, bool binary) {
@@ -155,6 +158,12 @@ class TCNComponent : public UpdatableComponent {
     mode_2_wei_.Read(is, binary);
     ExpectToken(is, binary, "<Bias>");
     bias_.Read(is, binary);
+
+    // initial gradients
+    mode_1_wei_grad_.Resize(wei_1_j1_, wei_1_i1_);
+    mode_2_wei_grad_.Resize(wei_2_j2_, wei_2_i2_);
+    bias_grad_.Resize(wei_1_j1_, wei_2_j2_);
+
   }
 
   void WriteData(std::ostream &os, bool binary) const {
@@ -226,66 +235,64 @@ class TCNComponent : public UpdatableComponent {
            ", lr-coef " + ToString(bias_learn_rate_coef_);
   }
 
-
-  //if n=1  X:i1*i2 w:j1*i1 out:j1*i2
-  //out = w * X
-  //if n=2  X:i1*i2 w:j2*i2 out:i1*j2
-  //out = X * w^T
-  //X *1 w1 *2 w2 = w1 * X * w2^T
-  void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out) 
-  {  
-     int32 batch_size = in.NumRows();        // get batch size
-     // give initial size
-     CuMatrix<BaseFloat> output(batch_size, wei_1_j1_ * wei_2_j2_);
-     CuMatrix<BaseFloat> temp(batch_size, wei_1_j1_ * wei_2_i2_);
-     // reshape to std::vector
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_input;
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_output;
-     std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp;
-     // w1_vec and w2_vec used to parallel
-     std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
-     std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-     CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-     CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);
-     // initial some vectors
-     for(int32 i = 0; i < batch_size; i++)
-     {
-        CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,wei_1_i1_,wei_2_i2_);
-        CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,wei_1_j1_,wei_2_i2_);
-        CuSubMatrix<BaseFloat> *temp_reshaped_output = new CuSubMatrix<BaseFloat>(output,i,wei_1_j1_,wei_2_j2_);
-        w1_vec.push_back(w1);
-        w2_vec.push_back(w2);
-        reshaped_input.push_back(temp_reshaped_input);
-        reshaped_temp.push_back(temp_reshaped_temp);
-        reshaped_output.push_back(temp_reshaped_output);
-     }
-
-     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp,w1_vec,kNoTrans,reshaped_input,kNoTrans,0.0);
-     AddMatMatBatched<BaseFloat>(1.0,reshaped_output,reshaped_temp,kNoTrans,w2_vec,kTrans,0.0);
-  
-     out->CopyFromMat(output);
-     CuVector<BaseFloat> bias_vec(wei_1_j1_ * wei_2_j2_);
-     bias_vec.CopyRowsFromMat(bias_);
-     out->AddVecToRows(1.0,bias_vec,1.0);
-     // delete pointers
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
-       delete *i;
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_output.begin(); i!=reshaped_output.end(); ++i)
-       delete *i;
-     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp.begin(); i!=reshaped_temp.end(); ++i)
-       delete *i;
-     delete w1;
-     delete w2;
-  }
-
-
-  void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
-                        const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)                       
+void TuckerFeedForward(const CuMatrixBase<BaseFloat> &wei1, const CuMatrixBase<BaseFloat> &wei2,
+                         const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat>* out)
   {
-    int32 batch_size = in.NumRows();                  //get batch size
+    //KALDI_LOG<<"wei1:"<<"("<<wei1.NumRows()<<","<<wei1.NumCols()<<")";
+    //KALDI_LOG<<"wei2:"<<"("<<wei2.NumRows()<<","<<wei2.NumCols()<<")";
+    //KALDI_LOG<<"in:("<<in.NumRows()<<","<<in.NumCols()<<")";
+    //KALDI_LOG<<"out"<<"("<<out->NumRows()<<","<<out->NumCols()<<")";
+
+    int32 ib = out->NumRows();
+    int32 j1 = wei1.NumRows(), i1 = wei1.NumCols();
+    int32 j2 = wei2.NumRows(), i2 = wei2.NumCols();
     // give initial size
-    CuMatrix<BaseFloat> temp(batch_size, wei_1_i1_ * wei_2_j2_);
-    CuMatrix<BaseFloat> input_diff(batch_size, wei_1_i1_ * wei_2_i2_);
+    CuMatrix<BaseFloat> output(ib, j1 * j2);
+    CuMatrix<BaseFloat> temp(ib, j1 * i2);
+    // reshape to std::vector
+    std::vector< CuSubMatrix<BaseFloat>* > reshaped_input;
+    std::vector< CuSubMatrix<BaseFloat>* > reshaped_output;
+    std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp;
+    // w1_vec and w2_vec used to parallel
+    std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
+    std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
+    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(wei1,0,j1,0,i1);
+    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(wei2,0,j2,0,i2);
+    // initial some vectors
+    for(int32 i = 0; i < ib; i++)
+    {
+      CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,i1,i2);
+      CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,j1,i2);
+      CuSubMatrix<BaseFloat> *temp_reshaped_output = new CuSubMatrix<BaseFloat>(output,i,j1,j2);
+      w1_vec.push_back(w1);
+      w2_vec.push_back(w2);
+      reshaped_input.push_back(temp_reshaped_input);
+      reshaped_temp.push_back(temp_reshaped_temp);
+      reshaped_output.push_back(temp_reshaped_output);
+    }
+    AddMatMatBatched<BaseFloat>(1.0,reshaped_temp,w1_vec,kNoTrans,reshaped_input,kNoTrans,0.0);
+    AddMatMatBatched<BaseFloat>(1.0,reshaped_output,reshaped_temp,kNoTrans,w2_vec,kTrans,0.0);
+    out->CopyFromMat(output);
+    // delete pointers
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_output.begin(); i!=reshaped_output.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp.begin(); i!=reshaped_temp.end(); ++i)
+      delete *i;
+    delete w1; delete w2;
+  }
+  
+  // note: out_diff should be tensor type 1, this can save some memory and computation
+  void TuckerBackProp(const CuMatrixBase<BaseFloat> &wei1, const CuMatrixBase<BaseFloat> &wei2,
+                      const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)
+  {
+    int32 ib = out_diff.NumRows();
+    int32 j1 = wei1.NumRows(), i1 = wei1.NumCols();
+    int32 j2 = wei2.NumRows(), i2 = wei2.NumCols();
+    // given initial size
+    CuMatrix<BaseFloat> temp(ib, i1 * j2);
+    CuMatrix<BaseFloat> input_diff(ib, i1 * i2);
     // reshape to std::vector
     std::vector< CuSubMatrix<BaseFloat>* > reshaped_temp;
     std::vector< CuSubMatrix<BaseFloat>* > reshaped_input_diff;
@@ -293,22 +300,20 @@ class TCNComponent : public UpdatableComponent {
     // w1_vec and w2_vec used to parallel
     std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
     std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);    
-
+    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(wei1,0,j1,0,i1);
+    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(wei2,0,j2,0,i2);
     // initial some vectors
-    for(int32 i = 0; i < in.NumRows(); i++)
+    for(int32 i = 0; i < ib; i++)
     {
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,wei_1_i1_,wei_2_j2_);               //i1 * j2
-       CuSubMatrix<BaseFloat> *temp_reshaped_output_diff = new CuSubMatrix<BaseFloat>(out_diff,i,wei_1_j1_,wei_2_j2_);    //j1 * j2
-       CuSubMatrix<BaseFloat> *temp_reshaped_input_diff = new CuSubMatrix<BaseFloat>(input_diff,i,wei_1_i1_,wei_2_i2_);   //i1 * i2
-       w1_vec.push_back(w1);
-       w2_vec.push_back(w2);
-       reshaped_temp.push_back(temp_reshaped_temp);
-       reshaped_output_diff.push_back(temp_reshaped_output_diff);
-       reshaped_input_diff.push_back(temp_reshaped_input_diff);
+      CuSubMatrix<BaseFloat> *temp_reshaped_temp = new CuSubMatrix<BaseFloat>(temp,i,i1,j2);               //i1 * j2
+      CuSubMatrix<BaseFloat> *temp_reshaped_output_diff = new CuSubMatrix<BaseFloat>(out_diff,i,j1,j2);    //j1 * j2
+      CuSubMatrix<BaseFloat> *temp_reshaped_input_diff = new CuSubMatrix<BaseFloat>(input_diff,i,i1,i2);   //i1 * i2
+      w1_vec.push_back(w1);
+      w2_vec.push_back(w2);
+      reshaped_temp.push_back(temp_reshaped_temp);
+      reshaped_output_diff.push_back(temp_reshaped_output_diff);
+      reshaped_input_diff.push_back(temp_reshaped_input_diff);
     }
-
     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp,w1_vec,kTrans,reshaped_output_diff,kNoTrans,0.0);
     AddMatMatBatched<BaseFloat>(1.0,reshaped_input_diff,reshaped_temp,kNoTrans,w2_vec,kNoTrans,0.0);
     
@@ -320,32 +325,35 @@ class TCNComponent : public UpdatableComponent {
       delete *i;
     for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_output_diff.begin(); i!=reshaped_output_diff.end(); ++i)
       delete *i;
-    delete w1;
-    delete w2;
+    delete w1; delete w2;
   }
 
-  //update back propagation
-  void Update(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &diff) 
+    // note: in and diff should be tensor type 0, it's easy to compute
+  void TuckerCalcGrad(const CuMatrixBase<BaseFloat> &wei1, const CuMatrixBase<BaseFloat> &wei2,
+                      const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &diff,
+                      CuMatrixBase<BaseFloat> *gw1, CuMatrixBase<BaseFloat> *gw2, CuMatrixBase<BaseFloat> *gb, 
+                      const BaseFloat mmt)
   {
-    // we use following hyperparameters from the option class
-    const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
-    const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
-    const BaseFloat mmt = opts_.momentum;
-    const BaseFloat l2 = opts_.l2_penalty;
-    const BaseFloat l1 = opts_.l1_penalty;
+    //KALDI_LOG<<"wei1:("<<wei1.NumRows()<<","<<wei1.NumCols()<<")";
+    //KALDI_LOG<<"wei2:("<<wei2.NumRows()<<","<<wei2.NumCols()<<")";
+    //KALDI_LOG<<"in:("<<in.NumRows()<<","<<in.NumCols()<<")";
+    //KALDI_LOG<<"diff:("<<diff.NumRows()<<","<<diff.NumCols()<<")";
+    //KALDI_LOG<<"gw1:("<<gw1->NumRows()<<","<<gw1->NumCols()<<")";
+    //KALDI_LOG<<"gw2:("<<gw2->NumRows()<<","<<gw2->NumCols()<<")";
+    //KALDI_LOG<<"gb:("<<gb->NumRows()<<","<<gb->NumCols()<<")";
 
-    // we will also need the number of frames in the mini-batch
-    const int32 batch_size = in.NumRows();
+    int32 ib = in.NumRows();
+    int32 j1 = wei1.NumRows(), i1 = wei1.NumCols();
+    int32 j2 = wei2.NumRows(), i2 = wei2.NumCols();
     // give initial size
-    mode_1_wei_grad_.Resize(wei_1_j1_, wei_1_i1_);
-    mode_2_wei_grad_.Resize(wei_2_j2_, wei_2_i2_);
-    bias_grad_.Resize(wei_1_j1_, wei_2_j2_);
-    CuMatrix<BaseFloat> input(batch_size, wei_1_j1_ * wei_2_i2_);
-    CuMatrix<BaseFloat> dif(batch_size, wei_1_j1_ * wei_2_j2_);
-    CuMatrix<BaseFloat> temp_w1(batch_size, wei_1_j1_ * wei_2_i2_);
-    CuMatrix<BaseFloat> temp_w2(batch_size, wei_2_j2_ * wei_1_i1_);
-    CuMatrix<BaseFloat> w1_grad_batch(batch_size, wei_1_j1_ * wei_1_i1_);
-    CuMatrix<BaseFloat> w2_grad_batch(batch_size, wei_2_j2_ * wei_2_i2_);
+    //gw1->Resize(j1, i1);
+    //gw2->Resize(j2, i2);
+    CuMatrix<BaseFloat> input(ib, j1 * i2);
+    CuMatrix<BaseFloat> dif(ib, j1 * j2);
+    CuMatrix<BaseFloat> temp_w1(ib, j1 * i2);
+    CuMatrix<BaseFloat> temp_w2(ib, j2 * i1);
+    CuMatrix<BaseFloat> w1_grad_batch(ib, j1 * i1);
+    CuMatrix<BaseFloat> w2_grad_batch(ib, j2 * i2);
     // reshape to std::vector
     std::vector< CuSubMatrix<BaseFloat>* > reshaped_input;
     std::vector< CuSubMatrix<BaseFloat>* > reshaped_diff;
@@ -356,48 +364,105 @@ class TCNComponent : public UpdatableComponent {
     // w1_vec and w2_vec used to parallel
     std::vector< CuSubMatrix<BaseFloat>* > w1_vec;
     std::vector< CuSubMatrix<BaseFloat>* > w2_vec;
-    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(mode_1_wei_,0,wei_1_j1_,0,wei_1_i1_);
-    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(mode_2_wei_,0,wei_2_j2_,0,wei_2_i2_);    
-
+    CuSubMatrix<BaseFloat>* w1 = new CuSubMatrix<BaseFloat>(wei1,0,j1,0,i1);
+    CuSubMatrix<BaseFloat>* w2 = new CuSubMatrix<BaseFloat>(wei2,0,j2,0,i2);
     // initial some vectors
-    for(int32 i = 0; i < in.NumRows(); i++)
-    {  
-       CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,wei_1_i1_,wei_2_i2_);
-       CuSubMatrix<BaseFloat> *temp_reshaped_diff = new CuSubMatrix<BaseFloat>(diff,i,wei_1_j1_,wei_2_j2_);
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp_w1 = new CuSubMatrix<BaseFloat>(temp_w1,i,wei_1_j1_,wei_2_i2_);                  //j1 * i2
-       CuSubMatrix<BaseFloat> *temp_reshaped_temp_w2 = new CuSubMatrix<BaseFloat>(temp_w2,i,wei_2_j2_,wei_1_i1_);                  //j2 * i1
-       CuSubMatrix<BaseFloat> *temp_w1_grad_batch = new CuSubMatrix<BaseFloat>(w1_grad_batch,i,wei_1_j1_,wei_1_i1_);               //j1 * i1
-       CuSubMatrix<BaseFloat> *temp_w2_grad_batch = new CuSubMatrix<BaseFloat>(w2_grad_batch,i,wei_2_j2_,wei_2_i2_);               //j2 * i2
-       w1_vec.push_back(w1);
-       w2_vec.push_back(w2);
-       reshaped_input.push_back(temp_reshaped_input);
-       reshaped_diff.push_back(temp_reshaped_diff);
-       reshaped_temp_w1.push_back(temp_reshaped_temp_w1);
-       reshaped_temp_w2.push_back(temp_reshaped_temp_w2);
-       reshaped_w1_grad_batch.push_back(temp_w1_grad_batch);
-       reshaped_w2_grad_batch.push_back(temp_w2_grad_batch);
+    for(int32 i = 0; i < ib; i++)
+    {
+      CuSubMatrix<BaseFloat> *temp_reshaped_input = new CuSubMatrix<BaseFloat>(in,i,i1,i2);
+      CuSubMatrix<BaseFloat> *temp_reshaped_diff = new CuSubMatrix<BaseFloat>(diff,i,j1,j2);
+      CuSubMatrix<BaseFloat> *temp_reshaped_temp_w1 = new CuSubMatrix<BaseFloat>(temp_w1,i,j1,i2);                  //j1 * i2
+      CuSubMatrix<BaseFloat> *temp_reshaped_temp_w2 = new CuSubMatrix<BaseFloat>(temp_w2,i,j2,i1);                  //j2 * i1
+      CuSubMatrix<BaseFloat> *temp_w1_grad_batch = new CuSubMatrix<BaseFloat>(w1_grad_batch,i,j1,i1);               //j1 * i1
+      CuSubMatrix<BaseFloat> *temp_w2_grad_batch = new CuSubMatrix<BaseFloat>(w2_grad_batch,i,j2,i2);               //j2 * i2
+      w1_vec.push_back(w1);
+      w2_vec.push_back(w2);
+      reshaped_input.push_back(temp_reshaped_input);
+      reshaped_diff.push_back(temp_reshaped_diff);
+      reshaped_temp_w1.push_back(temp_reshaped_temp_w1);
+      reshaped_temp_w2.push_back(temp_reshaped_temp_w2);
+      reshaped_w1_grad_batch.push_back(temp_w1_grad_batch);
+      reshaped_w2_grad_batch.push_back(temp_w2_grad_batch);
     }
     // compute gradient
     // we have w1 and w2 gradient
     // compute w1 grad
     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp_w1,reshaped_diff,kNoTrans,w2_vec,kNoTrans,0.0);
     AddMatMatBatched<BaseFloat>(1.0,reshaped_w1_grad_batch,reshaped_temp_w1,kNoTrans,reshaped_input,kTrans,0.0);
-    CuVector<BaseFloat> w1_grad_vec_temp(wei_1_j1_ * wei_1_i1_);
+    CuVector<BaseFloat> w1_grad_vec_temp(j1 * i1);
     w1_grad_vec_temp.AddRowSumMat(1.0,w1_grad_batch);
-    mode_1_wei_grad_.CopyRowsFromVec(w1_grad_vec_temp); 
-    mode_1_wei_grad_.AddMat(mmt,mode_1_wei_grad_);
+    gw1->CopyRowsFromVec(w1_grad_vec_temp);
+    gw1->AddMat(mmt,*gw1);
     // compute w2 grad
     AddMatMatBatched<BaseFloat>(1.0,reshaped_temp_w2,reshaped_diff,kTrans,w1_vec,kNoTrans,0.0);
     AddMatMatBatched<BaseFloat>(1.0,reshaped_w2_grad_batch,reshaped_temp_w2,kNoTrans,reshaped_input,kNoTrans,0.0);
-    CuVector<BaseFloat> w2_grad_vec_temp(wei_2_j2_ * wei_2_i2_);
+    CuVector<BaseFloat> w2_grad_vec_temp(j2 * i2);
     w2_grad_vec_temp.AddRowSumMat(1.0,w2_grad_batch);
-    mode_2_wei_grad_.CopyRowsFromVec(w2_grad_vec_temp);
-    mode_2_wei_grad_.AddMat(mmt,mode_2_wei_grad_);
+    gw2->CopyRowsFromVec(w2_grad_vec_temp);
+    gw2->AddMat(mmt,*gw2);
     // bias
-    CuVector<BaseFloat> bias_grad_vec_temp(wei_1_j1_ * wei_2_j2_);
+    CuVector<BaseFloat> bias_grad_vec_temp(j1 * j2);
     bias_grad_vec_temp.AddRowSumMat(1.0,diff);
-    bias_grad_.CopyRowsFromVec(bias_grad_vec_temp);
-    bias_grad_.AddMat(mmt,bias_grad_);
+    gb->CopyRowsFromVec(bias_grad_vec_temp);
+    gb->AddMat(mmt,*gb);
+    // delete pointers
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_diff.begin(); i!=reshaped_diff.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w1.begin(); i!=reshaped_temp_w1.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w2.begin(); i!=reshaped_temp_w2.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w1_grad_batch.begin(); i!=reshaped_w1_grad_batch.end(); ++i)
+      delete *i;
+    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w2_grad_batch.begin(); i!=reshaped_w2_grad_batch.end(); ++i)
+      delete *i;
+    delete w1; delete w2;
+  }
+
+  
+  
+  //if n=1  X:i1*i2 w:j1*i1 out:j1*i2
+  //out = w * X
+  //if n=2  X:i1*i2 w:j2*i2 out:i1*j2
+  //out = X * w^T
+  //X *1 w1 *2 w2 = w1 * X * w2^T
+  void PropagateFnc(const CuMatrixBase<BaseFloat> &in, CuMatrixBase<BaseFloat> *out) 
+  { 
+     //KALDI_LOG<<"FeedForward";
+     TuckerFeedForward(mode_1_wei_, mode_2_wei_,
+                       in, out);
+  }
+
+
+  void BackpropagateFnc(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &out,
+                        const CuMatrixBase<BaseFloat> &out_diff, CuMatrixBase<BaseFloat> *in_diff)                       
+  {
+    //KALDI_LOG<<"BackpropagateFnc";
+    TuckerBackProp(mode_1_wei_, mode_2_wei_,
+                   out_diff, in_diff);
+    
+    const BaseFloat mmt = opts_.momentum;
+    TuckerCalcGrad(mode_1_wei_, mode_2_wei_,
+                   in, out_diff,
+                   &mode_1_wei_grad_,&mode_2_wei_grad_, &bias_grad_, 
+                   mmt);
+  }
+
+  //update back propagation
+  void Update(const CuMatrixBase<BaseFloat> &in, const CuMatrixBase<BaseFloat> &diff) 
+  {
+   // KALDI_LOG<<"Update";
+    // we use following hyperparameters from the option class
+    const BaseFloat lr = opts_.learn_rate * learn_rate_coef_;
+    const BaseFloat lr_bias = opts_.learn_rate * bias_learn_rate_coef_;
+    //const BaseFloat mmt = opts_.momentum;
+    const BaseFloat l2 = opts_.l2_penalty;
+    const BaseFloat l1 = opts_.l1_penalty;
+
+    // we will also need the number of frames in the mini-batch
+    const int32 batch_size = in.NumRows();
     // l2 regularization
     if (l2 != 0.0)
     {
@@ -414,21 +479,6 @@ class TCNComponent : public UpdatableComponent {
     mode_1_wei_.AddMat(-lr, mode_1_wei_grad_);
     mode_2_wei_.AddMat(-lr,mode_2_wei_grad_);
     bias_.AddMat(-lr_bias,bias_grad_);
-    // delete pointers
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_input.begin(); i!=reshaped_input.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_diff.begin(); i!=reshaped_diff.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w1.begin(); i!=reshaped_temp_w1.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_temp_w2.begin(); i!=reshaped_temp_w2.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w1_grad_batch.begin(); i!=reshaped_w1_grad_batch.end(); ++i)
-      delete *i;
-    for(std::vector< CuSubMatrix<BaseFloat>* >::iterator i=reshaped_w2_grad_batch.begin(); i!=reshaped_w2_grad_batch.end(); ++i)
-      delete *i;
-    delete w1;
-    delete w2;
   }
 
   const CuMatrixBase<BaseFloat>& GetCuMatrixBase(CuMatrix<BaseFloat>& cumatrix)

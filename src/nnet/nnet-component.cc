@@ -32,6 +32,8 @@
 #include "nnet/nnet-tcn-projection.h"
 #include "nnet/nnet-tcn-3way.h"
 #include "nnet/nnet-tcn-3way-projection.h"
+#include "nnet/nnet-lstm-tcn-projected-streams.h"
+#include "nnet/nnet-lstm-tcn-projected-streams-speed.h"
 
 #include "nnet/nnet-convolutional-component.h"
 #include "nnet/nnet-average-pooling-component.h"
@@ -83,8 +85,9 @@ const struct Component::key_value Component::kMarkerMap[] = {
   { Component::scTCNComponent, "<TCNComponent>"},
   { Component::scTCNProjectionComponent, "<TCNProjectionComponent>"},
   { Component::scTCN3WayComponent, "<TCN3WayComponent>"},
-  { Component::scTCN3WayProjectionComponent, "<TCN3WayProjectionComponent>"}
-
+  { Component::scTCN3WayProjectionComponent, "<TCN3WayProjectionComponent>"},
+  { Component::scLstmTcnProjectedStreams, "<LstmTcnProjectedStreams>"},
+  { Component::scLstmTcnProjectedStreamsSpeed, "<LstmTcnProjectedStreamsSpeed>"}
 };
 
 
@@ -209,6 +212,14 @@ Component* Component::NewComponentOfType(ComponentType comp_type,
     // new TCN 3way Projection Component
     case Component::scTCN3WayProjectionComponent :
       ans = new TCN3WayProjectionComponent(input_dim, output_dim);
+      break;
+    // new flstm component
+    case Component::scLstmTcnProjectedStreams :
+      ans = new LstmTcnProjectedStreams(input_dim, output_dim);
+      break;
+    // new flstm component speedy edition
+    case Component::scLstmTcnProjectedStreamsSpeed :
+      ans = new LstmTcnProjectedStreamsSpeed(input_dim, output_dim);
       break;
     case Component::kUnknown :
     default :

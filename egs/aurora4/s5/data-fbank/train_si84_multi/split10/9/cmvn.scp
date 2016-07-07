@@ -1,7 +1,7 @@
-40a /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:16528
-40b /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:16771
-40c /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17014
-40d /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17257
-40e /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17500
-40f /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17743
-40g /home/sc/kaldi-20160109/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17986
+40a /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:16528
+40b /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:16771
+40c /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17014
+40d /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17257
+40e /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17500
+40f /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17743
+40g /home/shen/kaldi-trunk/egs/aurora4/s5/mfcc/cmvn_train_si84_multi.ark:17986

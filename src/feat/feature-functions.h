@@ -29,6 +29,7 @@
 #include "util/common-utils.h"
 #include "base/kaldi-error.h"
 #include "feat/mel-computations.h"
+//#include "matrix/kaldi-matrix.h"
 
 namespace kaldi {
 /// @addtogroup  feat FeatureExtraction
@@ -348,6 +349,10 @@ void SlidingWindowCmn(const SlidingWindowCmnOptions &opts,
                       const MatrixBase<BaseFloat> &input,
                       MatrixBase<BaseFloat> *output);
 
+void ApplyOuterProductFeats(const int32 alpha,
+                            const MatrixBase<BaseFloat> &A,
+                            const MatrixBase<BaseFloat> &B,
+                            Matrix<BaseFloat> *C);
 
 /// @} End of "addtogroup feat"
 }  // namespace kaldi

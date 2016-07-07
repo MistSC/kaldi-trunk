@@ -267,6 +267,7 @@ int main(int argc, char *argv[]) {
         // 1st minibatch : show what happens in network 
         if (kaldi::g_kaldi_verbose_level >= 1 && total_frames == 0) { // vlog-1
             KALDI_VLOG(1) << "### After " << total_frames << " frames,";
+            KALDI_VLOG(1) << nnet.Info();
             KALDI_VLOG(1) << nnet.InfoPropagate();
             if (!crossvalidate) {
                 KALDI_VLOG(1) << nnet.InfoBackPropagate();
@@ -287,6 +288,7 @@ int main(int argc, char *argv[]) {
         if (kaldi::g_kaldi_verbose_level >= 2) { // vlog-2
             if ((total_frames-frame_progress)/25000 != (total_frames/25000)) { // print every 25k frames
                 KALDI_VLOG(2) << "### After " << total_frames << " frames,";
+                KALDI_VLOG(1) << nnet.Info();
                 KALDI_VLOG(2) << nnet.InfoPropagate();
                 if (!crossvalidate) {
                     KALDI_VLOG(2) << nnet.InfoBackPropagate();
@@ -322,6 +324,7 @@ int main(int argc, char *argv[]) {
     // after last minibatch : show what happens in network 
     if (kaldi::g_kaldi_verbose_level >= 1) { // vlog-1
       KALDI_VLOG(1) << "### After " << total_frames << " frames,";
+      KALDI_VLOG(1) << nnet.Info();
       KALDI_VLOG(1) << nnet.InfoPropagate();
       if (!crossvalidate) {
         KALDI_VLOG(1) << nnet.InfoBackPropagate();

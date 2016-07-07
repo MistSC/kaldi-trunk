@@ -83,6 +83,13 @@ void GetBlockSizesForSimpleTensorOperation(int32 ib,
                                            dim3 *dimGrid,
                                            dim3 *dimBlock);
 
+void GetBlockSizesForOuterProductOperation(int32 i,
+                                           int32 j,
+                                           int32 k,
+                                           dim3 *dimGrid,
+                                           dim3 *dimBlock);
+
+
 }
 
 #endif // HAVE_CUDA

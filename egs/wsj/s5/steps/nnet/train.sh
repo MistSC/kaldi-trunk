@@ -21,10 +21,11 @@ nnet_init=          # (optional) use this pre-initialized NN,
 nnet_proto=         # (optional) use this NN prototype for initialization,
 
 # feature processing,
-splice=4            # (default) splice features both-ways along time axis,
+splice=5            # (default) splice features both-ways along time axis,
 cmvn_opts=          # (optional) adds 'apply-cmvn' to input feature pipeline, see opts,
 delta_opts=         # (optional) adds 'add-deltas' to input feature pipeline, see opts,
 ivector=            # (optional) adds 'append-vector-to-feats', it's rx-filename,
+apply_outer_product=
 
 feat_type=plain  
 traps_dct_basis=11    # (feat_type=traps) nr. of DCT basis, 11 is good with splice=10,
@@ -161,8 +162,15 @@ echo "# PREPARING FEATURES"
 if [ "$copy_feats" == "true" ]; then
   echo "# re-saving features to local disk,"
   tmpdir=$(mktemp -d $copy_feats_tmproot)
-  copy-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
-  copy-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  if [ "$apply_outer_product" == "true" ]; then
+    echo " Apply outer product feature"
+    outer-product-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
+    outer-product-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  else
+    echo " Don't apply outer product feature"
+    copy-feats scp:$data/feats.scp ark,scp:$tmpdir/train.ark,$dir/train_sorted.scp || exit 1
+    copy-feats scp:$data_cv/feats.scp ark,scp:$tmpdir/cv.ark,$dir/cv.scp || exit 1
+  fi
   trap "echo \"# Removing features tmpdir $tmpdir @ $(hostname)\"; ls $tmpdir; rm -r $tmpdir" EXIT
 else
   # or copy the list,
@@ -411,11 +419,8 @@ else
         "$cnn_fea" $num_tgt $hid_layers $hid_dim >>$nnet_proto || exit 1
       ;;
     lstm)
-<<<<<<< HEAD
       utils/nnet/make_lstm_proto_mlp.py $proto_opts \
-=======
       utils/nnet/make_lstm_proto.py $proto_opts \
->>>>>>> f341bc910552d165a1e7c5b252714e14a92df546
         $num_fea $num_tgt >$nnet_proto || exit 1 
       ;;
     blstm)
@@ -431,7 +436,7 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_proto.py $proto_opts \
-        $num_fea $num_tgt 2 'tcn' 40 9 64 16 64 16 'dnn' >$nnet_proto || exit 1
+        $num_fea $num_tgt 2 'tcn' 13 11 64 16 64 16 'dnn' >$nnet_proto || exit 1
       ;;
     tcn_dnn)
       echo "==========TCN initializing==================="
@@ -453,9 +458,13 @@ else
       #echo $hid_layers
       #echo $proto_opt
       utils/nnet/make_tcn_3way_proto.py $proto_opts \
-        $num_fea $num_tgt 2 'tcn' 40 9 1 64 16 1 64 16 1 'dnn' >$nnet_proto || exit 1
+        $num_fea $num_tgt 2 'tcn' 13 13 11 16 16 8 16 16 8 'dnn' >$nnet_proto || exit 1
       ;;
-
+    flstms)
+      echo "==========flstm speed initializing==================="
+      utils/nnet/make_lstm_tcn_2way_proto.py $proto_opts \
+        $num_fea $num_tgt >$nnet_proto || exit 1
+      ;;
     *) echo "Unknown : --network-type $network_type" && exit 1;
   esac
 

@@ -2629,6 +2629,26 @@ static void UnitTestCuMatrixMul()
   Print<Real>(M3,"M3");
 }
 
+template<typename Real>
+static void UnitTestOuterProduct()
+{
+  int ib,i,j;
+  ib = 10; i = 4; j = 3;
+  CuMatrix<Real> R(ib,i*j);
+  CuMatrix<Real> A(ib,i);
+  CuMatrix<Real> B(ib,j);
+  A.Set(1);
+  B.Set(2);
+
+  R.FrameOuterProduct(1.0, A, B);
+
+  Print<Real>(A,"A");
+  Print<Real>(B,"B");
+  Print<Real>(R,"R");
+
+}
+
+
 template<typename Real> void CudaMatrixUnitTest() 
 {
 /*
@@ -2736,8 +2756,9 @@ template<typename Real> void CudaMatrixUnitTest()
   Test4<Real>();
 */
   //UnitTestCuMatrixIndex<Real>();
-  UnitTestCuTensorRs<Real>();
+  //UnitTestCuTensorRs<Real>();
   //UnitTestCuMatrixMul<Real>();
+  UnitTestOuterProduct<Real>();
 }
 
 

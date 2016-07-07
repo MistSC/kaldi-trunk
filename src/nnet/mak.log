@@ -1,0 +1,153 @@
+g++ -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/home/shen/kaldi-trunk/tools/ATLAS/include -I/home/shen/kaldi-trunk/tools/openfst/include  -g  -DHAVE_CUDA -I/usr/local/cuda/include    -c -o nnet-nnet.o nnet-nnet.cc
+In file included from nnet-nnet.cc:28:0:
+../nnet/nnet-lstm-tcn-projected-streams.h: In constructor ‘kaldi::nnet1::LstmTcnProjectedStreams::LstmTcnProjectedStreams(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:1507:20: warning: ‘kaldi::nnet1::LstmTcnProjectedStreams::output_dim_’ will be initialized after [-Wreorder]
+   int32 input_dim_,output_dim_;
+                    ^
+../nnet/nnet-lstm-tcn-projected-streams.h:1503:9: warning:   ‘kaldi::int32 kaldi::nnet1::LstmTcnProjectedStreams::ncell_’ [-Wreorder]
+   int32 ncell_;
+         ^
+In file included from nnet-nnet.cc:28:0:
+../nnet/nnet-lstm-tcn-projected-streams.h:46:3: warning:   when initialized here [-Wreorder]
+   LstmTcnProjectedStreams(int32 input_dim, int32 output_dim) :
+   ^
+In file included from nnet-nnet.cc:28:0:
+../nnet/nnet-lstm-tcn-projected-streams.h: In member function ‘void kaldi::nnet1::LstmTcnProjectedStreams::TuckerFeedForward(const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuTensor<float>&, kaldi::CuMatrixBase<float>*)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:698:30: warning: unused variable ‘i1’ [-Wunused-variable]
+     int32 j1 = w1.NumRows(), i1 = w1.NumCols();
+                              ^
+../nnet/nnet-lstm-tcn-projected-streams.h: In member function ‘void kaldi::nnet1::LstmTcnProjectedStreams::TuckerBackProp(const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuTensor<float>&, kaldi::CuMatrixBase<float>*)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:718:30: warning: unused variable ‘i1’ [-Wunused-variable]
+     int32 j1 = w1.NumRows(), i1 = w1.NumCols();
+                              ^
+In file included from nnet-nnet.cc:29:0:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h: In constructor ‘kaldi::nnet1::LstmTcnProjectedStreamsSpeed::LstmTcnProjectedStreamsSpeed(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:1378:20: warning: ‘kaldi::nnet1::LstmTcnProjectedStreamsSpeed::output_dim_’ will be initialized after [-Wreorder]
+   int32 input_dim_,output_dim_;
+                    ^
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:1374:9: warning:   ‘kaldi::int32 kaldi::nnet1::LstmTcnProjectedStreamsSpeed::ncell_’ [-Wreorder]
+   int32 ncell_;
+         ^
+In file included from nnet-nnet.cc:29:0:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:47:3: warning:   when initialized here [-Wreorder]
+   LstmTcnProjectedStreamsSpeed(int32 input_dim, int32 output_dim) :
+   ^
+g++ -msse -msse2 -Wall -I.. -pthread -DKALDI_DOUBLEPRECISION=0 -DHAVE_POSIX_MEMALIGN -Wno-sign-compare -Wno-unused-local-typedefs -Winit-self -DHAVE_EXECINFO_H=1 -rdynamic -DHAVE_CXXABI_H -DHAVE_ATLAS -I/home/shen/kaldi-trunk/tools/ATLAS/include -I/home/shen/kaldi-trunk/tools/openfst/include  -g  -DHAVE_CUDA -I/usr/local/cuda/include    -c -o nnet-component.o nnet-component.cc
+In file included from nnet-component.cc:31:0:
+../nnet/nnet-tcn.h: In constructor ‘kaldi::nnet1::TCNComponent::TCNComponent(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-tcn.h:446:17: warning: ‘kaldi::nnet1::TCNComponent::dim_out_’ will be initialized after [-Wreorder]
+   int32 dim_in_,dim_out_;      //these two parameter is used for checking
+                 ^
+../nnet/nnet-tcn.h:441:9: warning:   ‘kaldi::int32 kaldi::nnet1::TCNComponent::wei_1_i1_’ [-Wreorder]
+   int32 wei_1_i1_,wei_1_j1_,       //weight 1 dimensions for input data row
+         ^
+In file included from nnet-component.cc:31:0:
+../nnet/nnet-tcn.h:16:2: warning:   when initialized here [-Wreorder]
+  TCNComponent(int32 dim_in,int32 dim_out)
+  ^
+In file included from nnet-component.cc:31:0:
+../nnet/nnet-tcn.h:442:9: warning: ‘kaldi::nnet1::TCNComponent::wei_2_i2_’ will be initialized after [-Wreorder]
+         wei_2_i2_,wei_2_j2_;       //weight 2 dimensions for input data column
+         ^
+../nnet/nnet-tcn.h:441:19: warning:   ‘kaldi::int32 kaldi::nnet1::TCNComponent::wei_1_j1_’ [-Wreorder]
+   int32 wei_1_i1_,wei_1_j1_,       //weight 1 dimensions for input data row
+                   ^
+In file included from nnet-component.cc:31:0:
+../nnet/nnet-tcn.h:16:2: warning:   when initialized here [-Wreorder]
+  TCNComponent(int32 dim_in,int32 dim_out)
+  ^
+In file included from nnet-component.cc:32:0:
+../nnet/nnet-tcn-projection.h: In constructor ‘kaldi::nnet1::TCNProjectionComponent::TCNProjectionComponent(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-tcn-projection.h:241:22: warning: ‘kaldi::nnet1::TCNProjectionComponent::input_dim_2_’ will be initialized after [-Wreorder]
+   int32 input_dim_1_,input_dim_2_;
+                      ^
+../nnet/nnet-tcn-projection.h:239:9: warning:   ‘kaldi::int32 kaldi::nnet1::TCNProjectionComponent::dim_in_’ [-Wreorder]
+   int32 dim_in_,dim_out_;  //these 2 parameters are used for checking
+         ^
+../nnet/nnet-tcn-projection.h:18:3: warning:   when initialized here [-Wreorder]
+   TCNProjectionComponent(int32 dim_in, int32 dim_out)
+   ^
+In file included from nnet-component.cc:33:0:
+../nnet/nnet-tcn-3way.h: In constructor ‘kaldi::nnet1::TCN3WayComponent::TCN3WayComponent(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-tcn-3way.h:399:17: warning: ‘kaldi::nnet1::TCN3WayComponent::dim_out_’ will be initialized after [-Wreorder]
+   int32 dim_in_,dim_out_;                             //these two parameter is used for checking
+                 ^
+../nnet/nnet-tcn-3way.h:393:9: warning:   ‘kaldi::int32 kaldi::nnet1::TCN3WayComponent::wei_1_i1_’ [-Wreorder]
+   int32 wei_1_i1_,wei_1_j1_,       //weight 1 dimensions for input data row
+         ^
+In file included from nnet-component.cc:33:0:
+../nnet/nnet-tcn-3way.h:16:2: warning:   when initialized here [-Wreorder]
+  TCN3WayComponent(int32 dim_in,int32 dim_out)
+  ^
+In file included from nnet-component.cc:33:0:
+../nnet/nnet-tcn-3way.h:395:9: warning: ‘kaldi::nnet1::TCN3WayComponent::wei_3_i3_’ will be initialized after [-Wreorder]
+         wei_3_i3_,wei_3_j3_;       //weight 3 dimensions for input data column
+         ^
+../nnet/nnet-tcn-3way.h:393:19: warning:   ‘kaldi::int32 kaldi::nnet1::TCN3WayComponent::wei_1_j1_’ [-Wreorder]
+   int32 wei_1_i1_,wei_1_j1_,       //weight 1 dimensions for input data row
+                   ^
+In file included from nnet-component.cc:33:0:
+../nnet/nnet-tcn-3way.h:16:2: warning:   when initialized here [-Wreorder]
+  TCN3WayComponent(int32 dim_in,int32 dim_out)
+  ^
+In file included from nnet-component.cc:33:0:
+../nnet/nnet-tcn-3way.h: In member function ‘virtual void kaldi::nnet1::TCN3WayComponent::Update(const kaldi::CuMatrixBase<float>&, const kaldi::CuMatrixBase<float>&)’:
+../nnet/nnet-tcn-3way.h:318:21: warning: unused variable ‘mmt’ [-Wunused-variable]
+     const BaseFloat mmt = opts_.momentum;
+                     ^
+../nnet/nnet-tcn-3way.h:319:21: warning: unused variable ‘l2’ [-Wunused-variable]
+     const BaseFloat l2 = opts_.l2_penalty;
+                     ^
+../nnet/nnet-tcn-3way.h:320:21: warning: unused variable ‘l1’ [-Wunused-variable]
+     const BaseFloat l1 = opts_.l1_penalty;
+                     ^
+In file included from nnet-component.cc:34:0:
+../nnet/nnet-tcn-3way-projection.h: In constructor ‘kaldi::nnet1::TCN3WayProjectionComponent::TCN3WayProjectionComponent(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-tcn-3way-projection.h:260:35: warning: ‘kaldi::nnet1::TCN3WayProjectionComponent::input_dim_3_’ will be initialized after [-Wreorder]
+   int32 input_dim_1_,input_dim_2_,input_dim_3_;
+                                   ^
+../nnet/nnet-tcn-3way-projection.h:258:9: warning:   ‘kaldi::int32 kaldi::nnet1::TCN3WayProjectionComponent::dim_in_’ [-Wreorder]
+   int32 dim_in_,dim_out_;  //these 2 parameters are used for checking
+         ^
+../nnet/nnet-tcn-3way-projection.h:18:3: warning:   when initialized here [-Wreorder]
+   TCN3WayProjectionComponent(int32 dim_in, int32 dim_out)
+   ^
+../nnet/nnet-tcn-3way-projection.h: In member function ‘virtual void kaldi::nnet1::TCN3WayProjectionComponent::Update(const kaldi::CuMatrixBase<float>&, const kaldi::CuMatrixBase<float>&)’:
+../nnet/nnet-tcn-3way-projection.h:233:17: warning: unused variable ‘batch_size’ [-Wunused-variable]
+     const int32 batch_size = input.NumRows();
+                 ^
+In file included from nnet-component.cc:35:0:
+../nnet/nnet-lstm-tcn-projected-streams.h: In constructor ‘kaldi::nnet1::LstmTcnProjectedStreams::LstmTcnProjectedStreams(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:1507:20: warning: ‘kaldi::nnet1::LstmTcnProjectedStreams::output_dim_’ will be initialized after [-Wreorder]
+   int32 input_dim_,output_dim_;
+                    ^
+../nnet/nnet-lstm-tcn-projected-streams.h:1503:9: warning:   ‘kaldi::int32 kaldi::nnet1::LstmTcnProjectedStreams::ncell_’ [-Wreorder]
+   int32 ncell_;
+         ^
+In file included from nnet-component.cc:35:0:
+../nnet/nnet-lstm-tcn-projected-streams.h:46:3: warning:   when initialized here [-Wreorder]
+   LstmTcnProjectedStreams(int32 input_dim, int32 output_dim) :
+   ^
+In file included from nnet-component.cc:35:0:
+../nnet/nnet-lstm-tcn-projected-streams.h: In member function ‘void kaldi::nnet1::LstmTcnProjectedStreams::TuckerFeedForward(const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuTensor<float>&, kaldi::CuMatrixBase<float>*)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:698:30: warning: unused variable ‘i1’ [-Wunused-variable]
+     int32 j1 = w1.NumRows(), i1 = w1.NumCols();
+                              ^
+../nnet/nnet-lstm-tcn-projected-streams.h: In member function ‘void kaldi::nnet1::LstmTcnProjectedStreams::TuckerBackProp(const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuMatrix<float>&, const kaldi::CuTensor<float>&, kaldi::CuMatrixBase<float>*)’:
+../nnet/nnet-lstm-tcn-projected-streams.h:718:30: warning: unused variable ‘i1’ [-Wunused-variable]
+     int32 j1 = w1.NumRows(), i1 = w1.NumCols();
+                              ^
+In file included from nnet-component.cc:36:0:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h: In constructor ‘kaldi::nnet1::LstmTcnProjectedStreamsSpeed::LstmTcnProjectedStreamsSpeed(kaldi::int32, kaldi::int32)’:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:1378:20: warning: ‘kaldi::nnet1::LstmTcnProjectedStreamsSpeed::output_dim_’ will be initialized after [-Wreorder]
+   int32 input_dim_,output_dim_;
+                    ^
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:1374:9: warning:   ‘kaldi::int32 kaldi::nnet1::LstmTcnProjectedStreamsSpeed::ncell_’ [-Wreorder]
+   int32 ncell_;
+         ^
+In file included from nnet-component.cc:36:0:
+../nnet/nnet-lstm-tcn-projected-streams-speed.h:47:3: warning:   when initialized here [-Wreorder]
+   LstmTcnProjectedStreamsSpeed(int32 input_dim, int32 output_dim) :
+   ^
+ar -cru kaldi-nnet.a nnet-nnet.o nnet-component.o nnet-loss.o nnet-pdf-prior.o nnet-randomizer.o
+ranlib kaldi-nnet.a

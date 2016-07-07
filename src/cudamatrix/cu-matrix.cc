@@ -459,7 +459,7 @@ void CuTensor<Real>::mode_3_product_v0(const CuTensor<Real>& X, MatrixTransposeT
 // attention: these function give tensor with the same reshape type as T
 // X: (l*i2*i3)*i1
 // W: j1*i1
-// this: (l*j1*i3)*i2
+// this: (l*i1*i3)*j1    
 template<typename Real>
 void CuTensor<Real>::mode_1_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
@@ -473,9 +473,9 @@ void CuTensor<Real>::mode_1_product(const CuTensor<Real>& X, MatrixTransposeType
   this->AddMatMat(1.0,X,transX,W,transW,0.0);
 }
 
-// X: (l*j1*i3)*i2
+// X: (l*i2*i3)*j1
 // W: j2*i2
-// this: (l*j1*j2)*i3
+// this: (l*j1*i3)*j2
 template<typename Real>
 void CuTensor<Real>::mode_2_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 {
@@ -493,7 +493,7 @@ void CuTensor<Real>::mode_2_product(const CuTensor<Real>& X, MatrixTransposeType
 
 // X: (l*j1*j2)*i3
 // W: j3*i3
-// this: (l*j1*j2)*i3
+// this: (l*j1*j2)*j3
 template<typename Real>
 void CuTensor<Real>::mode_3_product(const CuTensor<Real>& X, MatrixTransposeType transX, const CuMatrix<Real>& W, MatrixTransposeType transW)
 { 
@@ -1400,6 +1400,33 @@ void CuMatrixBase<Real>::AddVecMatPointMulVec(Real alpha,
         Mat().AddVecMatPointMulVec(alpha, A.Mat(), B.Mat(), beta, batch_index);
     }
 }
+
+template<typename Real>
+void CuMatrixBase<Real>::FrameOuterProduct(Real alpha,
+    const CuMatrixBase<Real>& A, const CuMatrixBase<Real>& B) 
+{
+    KALDI_ASSERT(NumRows() == A.NumRows());
+    KALDI_ASSERT(NumRows() == B.NumRows());
+    KALDI_ASSERT(NumCols() == A.NumCols() * B.NumCols());
+#if HAVE_CUDA == 1
+    if (CuDevice::Instantiate().Enabled()) 
+    {
+        Timer tim;
+        dim3 dimGrid(16,8,8);
+        dim3 dimBlock(16,8,8);
+        //GetBlockSizesForOuterProductOperation(NumRows(),A.NumCols(),B.NumCols(),
+        //                                      &dimGrid, &dimBlock);
+        cuda_frame_outer_product(dimGrid, dimBlock, this->data_, A.Data(),
+                                 B.Data(), Dim(), A.Dim(), B.Dim(), alpha);
+        CuDevice::Instantiate().AccuProfile(__func__, tim.Elapsed());       
+    }
+    else
+#endif
+    {
+      // Mat().OuterProductForEachFrame(alpha, A.Mat(), B.Mat());
+    }
+}
+
 
 template<typename Real>
 void CuMatrixBase<Real>::Sigmoid(const CuMatrixBase<Real> &src) {

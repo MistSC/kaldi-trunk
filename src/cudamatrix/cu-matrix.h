@@ -386,6 +386,9 @@ class CuMatrixBase {
   void AddMat(Real alpha, const CuMatrixBase<Real> &A,
               MatrixTransposeType trans = kNoTrans);
 
+  ///AddSelfOuterProduct
+  void AddSelfOuterProduct(Real alpha, const CuMatrixBase<Real> &A);
+
   /// if A.NumRows() is multiple of (*this)->NumRows and A.NumCols() is multiple of (*this)->NumCols
   /// divide A into blocks of the same size as (*this) and add them to *this (times alpha)
   void AddMatBlocks(Real alpha, const CuMatrixBase<Real> &A, MatrixTransposeType trans = kNoTrans);
@@ -440,6 +443,11 @@ class CuMatrixBase {
                             const CuMatrixBase<Real>& B,
                             const Real beta,
                             MatrixIndexT batch_index);
+
+  void FrameOuterProduct(const Real alpha,
+                         const CuMatrixBase<Real>& A,
+                         const CuMatrixBase<Real>& B);
+
   
   /// this <-- beta*this + alpha*A*B
   void AddMatSp(const Real alpha,
