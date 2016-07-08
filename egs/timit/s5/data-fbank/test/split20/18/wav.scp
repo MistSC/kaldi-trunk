@@ -1,8 +1,0 @@
-MTLS0_SI1370 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SI1370.WAV |
-MTLS0_SI2000 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SI2000.WAV |
-MTLS0_SI740 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SI740.WAV |
-MTLS0_SX110 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SX110.WAV |
-MTLS0_SX20 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SX20.WAV |
-MTLS0_SX200 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SX200.WAV |
-MTLS0_SX290 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SX290.WAV |
-MTLS0_SX380 /home/shen/kaldi-trunk/egs/timit/s5/../../../tools/sph2pipe_v2.5/sph2pipe -f wav /media/datasets/timit/TEST/DR4/MTLS0/SX380.WAV |
