@@ -151,7 +151,7 @@ fi
 
 # Run the decoding in the queue,
 if [ $stage -le 0 ]; then
-  if [ $save_feats == 'flase' ]
+  if [ $save_feats == 'flase' ];then
     $cmd --num-threads $((num_threads+1)) JOB=1:$nj $dir/log/decode.JOB.log \
       nnet-forward $nnet_forward_opts --feature-transform=$feature_transform --class-frame-counts=$class_frame_counts --use-gpu=$use_gpu "$nnet" "$feats" ark:- \| \
       latgen-faster-mapped$thread_string --min-active=$min_active --max-active=$max_active --max-mem=$max_mem --beam=$beam \

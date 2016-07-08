@@ -26,12 +26,12 @@ $cuda_cmd $dir/_train_nnet.log \
     --scheduler-opts "--momentum 0.9 --halving-factor 0.5" \
     --train-tool "nnet-train-lstm-streams" \
     --train-tool-opts "--num-stream=4 --targets-delay=5" \
-    --proto-opts "--lstm-stddev-factor 0.1 \
+    --proto-opts "--lstm-stddev-factor 0.01 \
                   --param-stddev-factor 0.04 \
                   --feat-dim1 40 --feat-dim2 11 \
                   --num-cells-dim1 32 --num-cells-dim2 16 \
                   --num-recurrent-dim1 64 --num-recurrent-dim2 16 \
-                  --num-layers 2 --clip-gradient 5.0" \
+                  --num-layers 2 --clip-gradient 50.0" \
   data-fbank/train_si84_multi data-fbank/dev_0330 data/lang $ali $ali_dev $dir || exit 1;
 
 # Make graph and decode (reuse HCLG graph) for average
